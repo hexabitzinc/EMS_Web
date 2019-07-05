@@ -31,8 +31,12 @@ namespace EMS.Migrations.DefaultDB
                     .WithColumn("FloorID").AsInt32().Identity().PrimaryKey().NotNullable()
                     .WithColumn("BuildingID").AsString(200).NotNullable();
 
-            Create.Table("Type")
+            Create.Table("MeterType")
                     .WithColumn("FloorID").AsInt32().Identity().PrimaryKey().NotNullable()
+                    .WithColumn("BuildingID").AsString(200).NotNullable();
+
+            Create.Table("MeterParameter")
+                    .WithColumn("MeterParameterID").AsInt32().Identity().PrimaryKey().NotNullable()
                     .WithColumn("BuildingID").AsString(200).NotNullable();
 
             #endregion
