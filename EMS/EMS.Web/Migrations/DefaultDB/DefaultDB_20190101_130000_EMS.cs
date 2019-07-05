@@ -19,6 +19,27 @@ namespace EMS.Migrations.DefaultDB
                     .WithColumn("BuildingID").AsInt32().Identity().PrimaryKey().NotNullable()
                     .WithColumn("Name").AsString(200).NotNullable();
 
+            Create.Table("Floor")
+                    .WithColumn("FloorID").AsInt32().Identity().PrimaryKey().NotNullable()
+                    .WithColumn("BuildingID").AsString(200).NotNullable();
+
+            #endregion
+
+            #region meters
+
+            Create.Table("Meter")
+                    .WithColumn("FloorID").AsInt32().Identity().PrimaryKey().NotNullable()
+                    .WithColumn("BuildingID").AsString(200).NotNullable();
+
+            Create.Table("Type")
+                    .WithColumn("FloorID").AsInt32().Identity().PrimaryKey().NotNullable()
+                    .WithColumn("BuildingID").AsString(200).NotNullable();
+
+            #endregion
+
+            #region EMS_Devices
+
+
             #endregion
         }
     }
