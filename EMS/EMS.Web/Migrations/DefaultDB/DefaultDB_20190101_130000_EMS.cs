@@ -23,6 +23,11 @@ namespace EMS.Migrations.DefaultDB
                     .WithColumn("FloorID").AsInt32().Identity().PrimaryKey().NotNullable()
                     .WithColumn("BuildingID").AsString(200).NotNullable();
 
+
+            Alter.Table("Building")
+                .AddColumn("CityID").AsInt32().Nullable()
+                    .ForeignKey("FK_Building_city", "dbo", "City", "CityID");
+
             #endregion
 
             #region meters
