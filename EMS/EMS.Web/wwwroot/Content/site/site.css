@@ -8098,3 +8098,15 @@ section.content > .s-DataGrid {
 .s-Zooning-BuildingDialog .caption {
   width: 150px;
 }
+.s-Zoning-BuildingDialog > .size {
+  width: 650px;
+}
+.s-Zoning-BuildingDialog .caption {
+  width: 150px;
+}
+.s-Zoning-CityDialog > .size {
+  width: 650px;
+}
+.s-Zoning-CityDialog .caption {
+  width: 150px;
+}

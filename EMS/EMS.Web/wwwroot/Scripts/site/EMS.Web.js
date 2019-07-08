@@ -489,8 +489,131 @@ var EMS;
 (function (EMS) {
     var Texts;
     (function (Texts) {
-        EMS['Texts'] = Q.proxyTexts(Texts, '', { Db: { Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
+        EMS['Texts'] = Q.proxyTexts(Texts, '', { Db: { Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, Zoning: { Building: { Address: 1, BuildingId: 1, CityDeleted: 1, CityId: 1, CityName: 1, Deleted: 1, Description: 1, StreetAddress: 1, ZipCode: 1 }, City: { CityId: 1, Deleted: 1, Name: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
     })(Texts = EMS.Texts || (EMS.Texts = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var BuildingForm = /** @class */ (function (_super) {
+            __extends(BuildingForm, _super);
+            function BuildingForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!BuildingForm.init) {
+                    BuildingForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.IntegerEditor;
+                    var w2 = s.BooleanEditor;
+                    Q.initFormType(BuildingForm, [
+                        'ZipCode', w0,
+                        'Address', w0,
+                        'StreetAddress', w0,
+                        'Description', w0,
+                        'CityId', w1,
+                        'Deleted', w2
+                    ]);
+                }
+                return _this;
+            }
+            BuildingForm.formKey = 'Zoning.Building';
+            return BuildingForm;
+        }(Serenity.PrefixedContext));
+        Zoning.BuildingForm = BuildingForm;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var BuildingRow;
+        (function (BuildingRow) {
+            BuildingRow.idProperty = 'BuildingId';
+            BuildingRow.nameProperty = 'ZipCode';
+            BuildingRow.localTextPrefix = 'Zoning.Building';
+        })(BuildingRow = Zoning.BuildingRow || (Zoning.BuildingRow = {}));
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var BuildingService;
+        (function (BuildingService) {
+            BuildingService.baseUrl = 'Zoning/Building';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                BuildingService[x] = function (r, s, o) {
+                    return Q.serviceRequest(BuildingService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(BuildingService = Zoning.BuildingService || (Zoning.BuildingService = {}));
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var CityForm = /** @class */ (function (_super) {
+            __extends(CityForm, _super);
+            function CityForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!CityForm.init) {
+                    CityForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.BooleanEditor;
+                    Q.initFormType(CityForm, [
+                        'Name', w0,
+                        'Deleted', w1
+                    ]);
+                }
+                return _this;
+            }
+            CityForm.formKey = 'Zoning.City';
+            return CityForm;
+        }(Serenity.PrefixedContext));
+        Zoning.CityForm = CityForm;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var CityRow;
+        (function (CityRow) {
+            CityRow.idProperty = 'CityId';
+            CityRow.nameProperty = 'Name';
+            CityRow.localTextPrefix = 'Zoning.City';
+        })(CityRow = Zoning.CityRow || (Zoning.CityRow = {}));
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var CityService;
+        (function (CityService) {
+            CityService.baseUrl = 'Zoning/City';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                CityService[x] = function (r, s, o) {
+                    return Q.serviceRequest(CityService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(CityService = Zoning.CityService || (Zoning.CityService = {}));
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
@@ -2652,6 +2775,98 @@ var EMS;
         }());
         Common.UserPreferenceStorage = UserPreferenceStorage;
     })(Common = EMS.Common || (EMS.Common = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var BuildingDialog = /** @class */ (function (_super) {
+            __extends(BuildingDialog, _super);
+            function BuildingDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Zoning.BuildingForm(_this.idPrefix);
+                return _this;
+            }
+            BuildingDialog.prototype.getFormKey = function () { return Zoning.BuildingForm.formKey; };
+            BuildingDialog.prototype.getIdProperty = function () { return Zoning.BuildingRow.idProperty; };
+            BuildingDialog.prototype.getLocalTextPrefix = function () { return Zoning.BuildingRow.localTextPrefix; };
+            BuildingDialog.prototype.getNameProperty = function () { return Zoning.BuildingRow.nameProperty; };
+            BuildingDialog.prototype.getService = function () { return Zoning.BuildingService.baseUrl; };
+            BuildingDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], BuildingDialog);
+            return BuildingDialog;
+        }(Serenity.EntityDialog));
+        Zoning.BuildingDialog = BuildingDialog;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var BuildingGrid = /** @class */ (function (_super) {
+            __extends(BuildingGrid, _super);
+            function BuildingGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            BuildingGrid.prototype.getColumnsKey = function () { return 'Zoning.Building'; };
+            BuildingGrid.prototype.getDialogType = function () { return Zoning.BuildingDialog; };
+            BuildingGrid.prototype.getIdProperty = function () { return Zoning.BuildingRow.idProperty; };
+            BuildingGrid.prototype.getLocalTextPrefix = function () { return Zoning.BuildingRow.localTextPrefix; };
+            BuildingGrid.prototype.getService = function () { return Zoning.BuildingService.baseUrl; };
+            BuildingGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], BuildingGrid);
+            return BuildingGrid;
+        }(Serenity.EntityGrid));
+        Zoning.BuildingGrid = BuildingGrid;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var CityDialog = /** @class */ (function (_super) {
+            __extends(CityDialog, _super);
+            function CityDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Zoning.CityForm(_this.idPrefix);
+                return _this;
+            }
+            CityDialog.prototype.getFormKey = function () { return Zoning.CityForm.formKey; };
+            CityDialog.prototype.getIdProperty = function () { return Zoning.CityRow.idProperty; };
+            CityDialog.prototype.getLocalTextPrefix = function () { return Zoning.CityRow.localTextPrefix; };
+            CityDialog.prototype.getNameProperty = function () { return Zoning.CityRow.nameProperty; };
+            CityDialog.prototype.getService = function () { return Zoning.CityService.baseUrl; };
+            CityDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CityDialog);
+            return CityDialog;
+        }(Serenity.EntityDialog));
+        Zoning.CityDialog = CityDialog;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var CityGrid = /** @class */ (function (_super) {
+            __extends(CityGrid, _super);
+            function CityGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            CityGrid.prototype.getColumnsKey = function () { return 'Zoning.City'; };
+            CityGrid.prototype.getDialogType = function () { return Zoning.CityDialog; };
+            CityGrid.prototype.getIdProperty = function () { return Zoning.CityRow.idProperty; };
+            CityGrid.prototype.getLocalTextPrefix = function () { return Zoning.CityRow.localTextPrefix; };
+            CityGrid.prototype.getService = function () { return Zoning.CityService.baseUrl; };
+            CityGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CityGrid);
+            return CityGrid;
+        }(Serenity.EntityGrid));
+        Zoning.CityGrid = CityGrid;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {

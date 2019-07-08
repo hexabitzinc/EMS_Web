@@ -55,8 +55,10 @@ namespace EMS.Migrations.DefaultDB
             #region meters
 
             Create.Table("Meter")
-                    .WithColumn("FloorID").AsInt32().Identity().PrimaryKey().NotNullable()
-                    .WithColumn("BuildingID").AsString(200).NotNullable();
+                    .WithColumn("MeterID").AsInt32().Identity().PrimaryKey()
+                    .WithColumn("ApartmentID").AsInt32().Nullable().ForeignKey("FK_Meter_Apartment", "dbo", "Apartment", "ApartmentID")
+                    .WithColumn("ConsumerID").AsInt32().Nullable().ForeignKey("FK_Meter_Consumer", "dbo", "Users", "UserId")
+                    .WithColumn("Deleted").AsBoolean().Nullable();
 
             Create.Table("MeterType")
                     .WithColumn("FloorID").AsInt32().Identity().PrimaryKey().NotNullable()

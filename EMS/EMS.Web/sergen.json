@@ -11,7 +11,13 @@
         {
           "Tablename": "dbo.Building",
           "Identifier": "Building",
-          "Module": "Zooning",
+          "Module": "Zoning",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.City",
+          "Identifier": "City",
+          "Module": "Zoning",
           "PermissionKey": "Administration:General"
         }
       ]

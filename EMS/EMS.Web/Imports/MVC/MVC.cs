@@ -152,5 +152,19 @@ namespace MVC
             public const string LeftNavigation = "~/Views/Shared/LeftNavigation.cshtml";
         }
 
+        public static class Zoning
+        {
+            public static class Building
+            {
+                public const string BuildingIndex = "~/Modules/Zoning/Building/BuildingIndex.cshtml";
+            }
+
+            public static class City
+            {
+                public const string CityIndex = "~/Modules/Zoning/City/CityIndex.cshtml";
+            }
+
+        }
+
     }
 }

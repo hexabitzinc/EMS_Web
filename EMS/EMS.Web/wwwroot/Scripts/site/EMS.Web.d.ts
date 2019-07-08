@@ -580,6 +580,116 @@ declare namespace EMS {
 }
 declare namespace EMS.Texts {
 }
+declare namespace EMS.Zoning {
+}
+declare namespace EMS.Zoning {
+    interface BuildingForm {
+        ZipCode: Serenity.StringEditor;
+        Address: Serenity.StringEditor;
+        StreetAddress: Serenity.StringEditor;
+        Description: Serenity.StringEditor;
+        CityId: Serenity.IntegerEditor;
+        Deleted: Serenity.BooleanEditor;
+    }
+    class BuildingForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace EMS.Zoning {
+    interface BuildingRow {
+        BuildingId?: number;
+        ZipCode?: string;
+        Address?: string;
+        StreetAddress?: string;
+        Description?: string;
+        CityId?: number;
+        Deleted?: boolean;
+        CityName?: string;
+        CityDeleted?: boolean;
+    }
+    namespace BuildingRow {
+        const idProperty = "BuildingId";
+        const nameProperty = "ZipCode";
+        const localTextPrefix = "Zoning.Building";
+        const enum Fields {
+            BuildingId = "BuildingId",
+            ZipCode = "ZipCode",
+            Address = "Address",
+            StreetAddress = "StreetAddress",
+            Description = "Description",
+            CityId = "CityId",
+            Deleted = "Deleted",
+            CityName = "CityName",
+            CityDeleted = "CityDeleted"
+        }
+    }
+}
+declare namespace EMS.Zoning {
+    namespace BuildingService {
+        const baseUrl = "Zoning/Building";
+        function Create(request: Serenity.SaveRequest<BuildingRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<BuildingRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<BuildingRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<BuildingRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Zoning/Building/Create",
+            Update = "Zoning/Building/Update",
+            Delete = "Zoning/Building/Delete",
+            Retrieve = "Zoning/Building/Retrieve",
+            List = "Zoning/Building/List"
+        }
+    }
+}
+declare namespace EMS.Zoning {
+}
+declare namespace EMS.Zoning {
+    interface CityForm {
+        Name: Serenity.StringEditor;
+        Deleted: Serenity.BooleanEditor;
+    }
+    class CityForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace EMS.Zoning {
+    interface CityRow {
+        CityId?: number;
+        Name?: string;
+        Deleted?: boolean;
+    }
+    namespace CityRow {
+        const idProperty = "CityId";
+        const nameProperty = "Name";
+        const localTextPrefix = "Zoning.City";
+        const enum Fields {
+            CityId = "CityId",
+            Name = "Name",
+            Deleted = "Deleted"
+        }
+    }
+}
+declare namespace EMS.Zoning {
+    namespace CityService {
+        const baseUrl = "Zoning/City";
+        function Create(request: Serenity.SaveRequest<CityRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<CityRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CityRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CityRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Zoning/City/Create",
+            Update = "Zoning/City/Update",
+            Delete = "Zoning/City/Delete",
+            Retrieve = "Zoning/City/Retrieve",
+            List = "Zoning/City/List"
+        }
+    }
+}
 declare namespace EMS.LanguageList {
     function getValue(): string[][];
 }
@@ -1002,6 +1112,46 @@ declare namespace EMS.Common {
     class UserPreferenceStorage implements Serenity.SettingStorage {
         getItem(key: string): string;
         setItem(key: string, data: string): void;
+    }
+}
+declare namespace EMS.Zoning {
+    class BuildingDialog extends Serenity.EntityDialog<BuildingRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: BuildingForm;
+    }
+}
+declare namespace EMS.Zoning {
+    class BuildingGrid extends Serenity.EntityGrid<BuildingRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof BuildingDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace EMS.Zoning {
+    class CityDialog extends Serenity.EntityDialog<CityRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: CityForm;
+    }
+}
+declare namespace EMS.Zoning {
+    class CityGrid extends Serenity.EntityGrid<CityRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CityDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
     }
 }
 declare namespace EMS.Authorization {
