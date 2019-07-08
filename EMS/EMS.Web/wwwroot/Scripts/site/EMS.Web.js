@@ -487,10 +487,248 @@ var EMS;
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterForm = /** @class */ (function (_super) {
+            __extends(MeterForm, _super);
+            function MeterForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!MeterForm.init) {
+                    MeterForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.BooleanEditor;
+                    Q.initFormType(MeterForm, [
+                        'ApartmentId', w0,
+                        'ConsumerId', w0,
+                        'Deleted', w1
+                    ]);
+                }
+                return _this;
+            }
+            MeterForm.formKey = 'Meters.Meter';
+            return MeterForm;
+        }(Serenity.PrefixedContext));
+        Meters.MeterForm = MeterForm;
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterParameterForm = /** @class */ (function (_super) {
+            __extends(MeterParameterForm, _super);
+            function MeterParameterForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!MeterParameterForm.init) {
+                    MeterParameterForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    Q.initFormType(MeterParameterForm, [
+                        'BuildingId', w0
+                    ]);
+                }
+                return _this;
+            }
+            MeterParameterForm.formKey = 'Meters.MeterParameter';
+            return MeterParameterForm;
+        }(Serenity.PrefixedContext));
+        Meters.MeterParameterForm = MeterParameterForm;
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterParameterRow;
+        (function (MeterParameterRow) {
+            MeterParameterRow.idProperty = 'MeterParameterId';
+            MeterParameterRow.nameProperty = 'BuildingId';
+            MeterParameterRow.localTextPrefix = 'Meters.MeterParameter';
+        })(MeterParameterRow = Meters.MeterParameterRow || (Meters.MeterParameterRow = {}));
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterParameterService;
+        (function (MeterParameterService) {
+            MeterParameterService.baseUrl = 'Meters/MeterParameter';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                MeterParameterService[x] = function (r, s, o) {
+                    return Q.serviceRequest(MeterParameterService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(MeterParameterService = Meters.MeterParameterService || (Meters.MeterParameterService = {}));
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterRow;
+        (function (MeterRow) {
+            MeterRow.idProperty = 'MeterId';
+            MeterRow.localTextPrefix = 'Meters.Meter';
+        })(MeterRow = Meters.MeterRow || (Meters.MeterRow = {}));
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterService;
+        (function (MeterService) {
+            MeterService.baseUrl = 'Meters/Meter';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                MeterService[x] = function (r, s, o) {
+                    return Q.serviceRequest(MeterService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(MeterService = Meters.MeterService || (Meters.MeterService = {}));
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterTypeForm = /** @class */ (function (_super) {
+            __extends(MeterTypeForm, _super);
+            function MeterTypeForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!MeterTypeForm.init) {
+                    MeterTypeForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    Q.initFormType(MeterTypeForm, [
+                        'BuildingId', w0
+                    ]);
+                }
+                return _this;
+            }
+            MeterTypeForm.formKey = 'Meters.MeterType';
+            return MeterTypeForm;
+        }(Serenity.PrefixedContext));
+        Meters.MeterTypeForm = MeterTypeForm;
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterTypeRow;
+        (function (MeterTypeRow) {
+            MeterTypeRow.idProperty = 'FloorId';
+            MeterTypeRow.nameProperty = 'BuildingId';
+            MeterTypeRow.localTextPrefix = 'Meters.MeterType';
+        })(MeterTypeRow = Meters.MeterTypeRow || (Meters.MeterTypeRow = {}));
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterTypeService;
+        (function (MeterTypeService) {
+            MeterTypeService.baseUrl = 'Meters/MeterType';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                MeterTypeService[x] = function (r, s, o) {
+                    return Q.serviceRequest(MeterTypeService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(MeterTypeService = Meters.MeterTypeService || (Meters.MeterTypeService = {}));
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
     var Texts;
     (function (Texts) {
-        EMS['Texts'] = Q.proxyTexts(Texts, '', { Db: { Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, Zoning: { Building: { Address: 1, BuildingId: 1, CityDeleted: 1, CityId: 1, CityName: 1, Deleted: 1, Description: 1, StreetAddress: 1, ZipCode: 1 }, City: { CityId: 1, Deleted: 1, Name: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
+        EMS['Texts'] = Q.proxyTexts(Texts, '', { Db: { Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, Meters: { Meter: { ApartmentAddress: 1, ApartmentDeleted: 1, ApartmentDescribtion: 1, ApartmentId: 1, ApartmentName: 1, ApartmentRoomNumber: 1, ApartmentSectionId: 1, ApartmentType: 1, ConsumerDisplayName: 1, ConsumerEmail: 1, ConsumerId: 1, ConsumerInsertDate: 1, ConsumerInsertUserId: 1, ConsumerIsActive: 1, ConsumerLastDirectoryUpdate: 1, ConsumerPasswordHash: 1, ConsumerPasswordSalt: 1, ConsumerSource: 1, ConsumerUpdateDate: 1, ConsumerUpdateUserId: 1, ConsumerUserImage: 1, ConsumerUsername: 1, Deleted: 1, MeterId: 1 }, MeterParameter: { BuildingId: 1, MeterParameterId: 1 }, MeterType: { BuildingId: 1, FloorId: 1 } }, Zoning: { Apartment: { Address: 1, ApartmentId: 1, Deleted: 1, Describtion: 1, Name: 1, RoomNumber: 1, SectionDeleted: 1, SectionDescribtion: 1, SectionFloorId: 1, SectionId: 1, SectionName: 1, Type: 1 }, Building: { Address: 1, BuildingId: 1, CityDeleted: 1, CityId: 1, CityName: 1, Deleted: 1, Description: 1, StreetAddress: 1, ZipCode: 1 }, City: { CityId: 1, Deleted: 1, Name: 1 }, Floor: { BuildingAddress: 1, BuildingCityId: 1, BuildingDeleted: 1, BuildingDescription: 1, BuildingId: 1, BuildingStreetAddress: 1, BuildingZipCode: 1, Deleted: 1, Describtion: 1, FloorId: 1, FloorNumber: 1, Name: 1 }, Section: { Deleted: 1, Describtion: 1, FloorBuildingId: 1, FloorDeleted: 1, FloorDescribtion: 1, FloorFloorNumber: 1, FloorId: 1, FloorName: 1, Name: 1, SectionId: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
     })(Texts = EMS.Texts || (EMS.Texts = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var ApartmentForm = /** @class */ (function (_super) {
+            __extends(ApartmentForm, _super);
+            function ApartmentForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ApartmentForm.init) {
+                    ApartmentForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.IntegerEditor;
+                    var w2 = s.BooleanEditor;
+                    Q.initFormType(ApartmentForm, [
+                        'Name', w0,
+                        'Type', w0,
+                        'Address', w0,
+                        'RoomNumber', w0,
+                        'Describtion', w0,
+                        'SectionId', w1,
+                        'Deleted', w2
+                    ]);
+                }
+                return _this;
+            }
+            ApartmentForm.formKey = 'Zoning.Apartment';
+            return ApartmentForm;
+        }(Serenity.PrefixedContext));
+        Zoning.ApartmentForm = ApartmentForm;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var ApartmentRow;
+        (function (ApartmentRow) {
+            ApartmentRow.idProperty = 'ApartmentId';
+            ApartmentRow.nameProperty = 'Name';
+            ApartmentRow.localTextPrefix = 'Zoning.Apartment';
+        })(ApartmentRow = Zoning.ApartmentRow || (Zoning.ApartmentRow = {}));
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var ApartmentService;
+        (function (ApartmentService) {
+            ApartmentService.baseUrl = 'Zoning/Apartment';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ApartmentService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ApartmentService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ApartmentService = Zoning.ApartmentService || (Zoning.ApartmentService = {}));
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
@@ -613,6 +851,131 @@ var EMS;
                 };
             });
         })(CityService = Zoning.CityService || (Zoning.CityService = {}));
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var FloorForm = /** @class */ (function (_super) {
+            __extends(FloorForm, _super);
+            function FloorForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!FloorForm.init) {
+                    FloorForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.BooleanEditor;
+                    Q.initFormType(FloorForm, [
+                        'FloorNumber', w0,
+                        'Name', w1,
+                        'Describtion', w1,
+                        'BuildingId', w0,
+                        'Deleted', w2
+                    ]);
+                }
+                return _this;
+            }
+            FloorForm.formKey = 'Zoning.Floor';
+            return FloorForm;
+        }(Serenity.PrefixedContext));
+        Zoning.FloorForm = FloorForm;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var FloorRow;
+        (function (FloorRow) {
+            FloorRow.idProperty = 'FloorId';
+            FloorRow.nameProperty = 'Name';
+            FloorRow.localTextPrefix = 'Zoning.Floor';
+        })(FloorRow = Zoning.FloorRow || (Zoning.FloorRow = {}));
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var FloorService;
+        (function (FloorService) {
+            FloorService.baseUrl = 'Zoning/Floor';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                FloorService[x] = function (r, s, o) {
+                    return Q.serviceRequest(FloorService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(FloorService = Zoning.FloorService || (Zoning.FloorService = {}));
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var SectionForm = /** @class */ (function (_super) {
+            __extends(SectionForm, _super);
+            function SectionForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!SectionForm.init) {
+                    SectionForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.IntegerEditor;
+                    var w2 = s.BooleanEditor;
+                    Q.initFormType(SectionForm, [
+                        'Name', w0,
+                        'Describtion', w0,
+                        'FloorId', w1,
+                        'Deleted', w2
+                    ]);
+                }
+                return _this;
+            }
+            SectionForm.formKey = 'Zoning.Section';
+            return SectionForm;
+        }(Serenity.PrefixedContext));
+        Zoning.SectionForm = SectionForm;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var SectionRow;
+        (function (SectionRow) {
+            SectionRow.idProperty = 'SectionId';
+            SectionRow.nameProperty = 'Name';
+            SectionRow.localTextPrefix = 'Zoning.Section';
+        })(SectionRow = Zoning.SectionRow || (Zoning.SectionRow = {}));
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var SectionService;
+        (function (SectionService) {
+            SectionService.baseUrl = 'Zoning/Section';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                SectionService[x] = function (r, s, o) {
+                    return Q.serviceRequest(SectionService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(SectionService = Zoning.SectionService || (Zoning.SectionService = {}));
     })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
 })(EMS || (EMS = {}));
 var EMS;
@@ -2778,6 +3141,189 @@ var EMS;
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterDialog = /** @class */ (function (_super) {
+            __extends(MeterDialog, _super);
+            function MeterDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Meters.MeterForm(_this.idPrefix);
+                return _this;
+            }
+            MeterDialog.prototype.getFormKey = function () { return Meters.MeterForm.formKey; };
+            MeterDialog.prototype.getIdProperty = function () { return Meters.MeterRow.idProperty; };
+            MeterDialog.prototype.getLocalTextPrefix = function () { return Meters.MeterRow.localTextPrefix; };
+            MeterDialog.prototype.getService = function () { return Meters.MeterService.baseUrl; };
+            MeterDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], MeterDialog);
+            return MeterDialog;
+        }(Serenity.EntityDialog));
+        Meters.MeterDialog = MeterDialog;
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterGrid = /** @class */ (function (_super) {
+            __extends(MeterGrid, _super);
+            function MeterGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            MeterGrid.prototype.getColumnsKey = function () { return 'Meters.Meter'; };
+            MeterGrid.prototype.getDialogType = function () { return Meters.MeterDialog; };
+            MeterGrid.prototype.getIdProperty = function () { return Meters.MeterRow.idProperty; };
+            MeterGrid.prototype.getLocalTextPrefix = function () { return Meters.MeterRow.localTextPrefix; };
+            MeterGrid.prototype.getService = function () { return Meters.MeterService.baseUrl; };
+            MeterGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], MeterGrid);
+            return MeterGrid;
+        }(Serenity.EntityGrid));
+        Meters.MeterGrid = MeterGrid;
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterParameterDialog = /** @class */ (function (_super) {
+            __extends(MeterParameterDialog, _super);
+            function MeterParameterDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Meters.MeterParameterForm(_this.idPrefix);
+                return _this;
+            }
+            MeterParameterDialog.prototype.getFormKey = function () { return Meters.MeterParameterForm.formKey; };
+            MeterParameterDialog.prototype.getIdProperty = function () { return Meters.MeterParameterRow.idProperty; };
+            MeterParameterDialog.prototype.getLocalTextPrefix = function () { return Meters.MeterParameterRow.localTextPrefix; };
+            MeterParameterDialog.prototype.getNameProperty = function () { return Meters.MeterParameterRow.nameProperty; };
+            MeterParameterDialog.prototype.getService = function () { return Meters.MeterParameterService.baseUrl; };
+            MeterParameterDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], MeterParameterDialog);
+            return MeterParameterDialog;
+        }(Serenity.EntityDialog));
+        Meters.MeterParameterDialog = MeterParameterDialog;
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterParameterGrid = /** @class */ (function (_super) {
+            __extends(MeterParameterGrid, _super);
+            function MeterParameterGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            MeterParameterGrid.prototype.getColumnsKey = function () { return 'Meters.MeterParameter'; };
+            MeterParameterGrid.prototype.getDialogType = function () { return Meters.MeterParameterDialog; };
+            MeterParameterGrid.prototype.getIdProperty = function () { return Meters.MeterParameterRow.idProperty; };
+            MeterParameterGrid.prototype.getLocalTextPrefix = function () { return Meters.MeterParameterRow.localTextPrefix; };
+            MeterParameterGrid.prototype.getService = function () { return Meters.MeterParameterService.baseUrl; };
+            MeterParameterGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], MeterParameterGrid);
+            return MeterParameterGrid;
+        }(Serenity.EntityGrid));
+        Meters.MeterParameterGrid = MeterParameterGrid;
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterTypeDialog = /** @class */ (function (_super) {
+            __extends(MeterTypeDialog, _super);
+            function MeterTypeDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Meters.MeterTypeForm(_this.idPrefix);
+                return _this;
+            }
+            MeterTypeDialog.prototype.getFormKey = function () { return Meters.MeterTypeForm.formKey; };
+            MeterTypeDialog.prototype.getIdProperty = function () { return Meters.MeterTypeRow.idProperty; };
+            MeterTypeDialog.prototype.getLocalTextPrefix = function () { return Meters.MeterTypeRow.localTextPrefix; };
+            MeterTypeDialog.prototype.getNameProperty = function () { return Meters.MeterTypeRow.nameProperty; };
+            MeterTypeDialog.prototype.getService = function () { return Meters.MeterTypeService.baseUrl; };
+            MeterTypeDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], MeterTypeDialog);
+            return MeterTypeDialog;
+        }(Serenity.EntityDialog));
+        Meters.MeterTypeDialog = MeterTypeDialog;
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meters;
+    (function (Meters) {
+        var MeterTypeGrid = /** @class */ (function (_super) {
+            __extends(MeterTypeGrid, _super);
+            function MeterTypeGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            MeterTypeGrid.prototype.getColumnsKey = function () { return 'Meters.MeterType'; };
+            MeterTypeGrid.prototype.getDialogType = function () { return Meters.MeterTypeDialog; };
+            MeterTypeGrid.prototype.getIdProperty = function () { return Meters.MeterTypeRow.idProperty; };
+            MeterTypeGrid.prototype.getLocalTextPrefix = function () { return Meters.MeterTypeRow.localTextPrefix; };
+            MeterTypeGrid.prototype.getService = function () { return Meters.MeterTypeService.baseUrl; };
+            MeterTypeGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], MeterTypeGrid);
+            return MeterTypeGrid;
+        }(Serenity.EntityGrid));
+        Meters.MeterTypeGrid = MeterTypeGrid;
+    })(Meters = EMS.Meters || (EMS.Meters = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var ApartmentDialog = /** @class */ (function (_super) {
+            __extends(ApartmentDialog, _super);
+            function ApartmentDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Zoning.ApartmentForm(_this.idPrefix);
+                return _this;
+            }
+            ApartmentDialog.prototype.getFormKey = function () { return Zoning.ApartmentForm.formKey; };
+            ApartmentDialog.prototype.getIdProperty = function () { return Zoning.ApartmentRow.idProperty; };
+            ApartmentDialog.prototype.getLocalTextPrefix = function () { return Zoning.ApartmentRow.localTextPrefix; };
+            ApartmentDialog.prototype.getNameProperty = function () { return Zoning.ApartmentRow.nameProperty; };
+            ApartmentDialog.prototype.getService = function () { return Zoning.ApartmentService.baseUrl; };
+            ApartmentDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ApartmentDialog);
+            return ApartmentDialog;
+        }(Serenity.EntityDialog));
+        Zoning.ApartmentDialog = ApartmentDialog;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var ApartmentGrid = /** @class */ (function (_super) {
+            __extends(ApartmentGrid, _super);
+            function ApartmentGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ApartmentGrid.prototype.getColumnsKey = function () { return 'Zoning.Apartment'; };
+            ApartmentGrid.prototype.getDialogType = function () { return Zoning.ApartmentDialog; };
+            ApartmentGrid.prototype.getIdProperty = function () { return Zoning.ApartmentRow.idProperty; };
+            ApartmentGrid.prototype.getLocalTextPrefix = function () { return Zoning.ApartmentRow.localTextPrefix; };
+            ApartmentGrid.prototype.getService = function () { return Zoning.ApartmentService.baseUrl; };
+            ApartmentGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ApartmentGrid);
+            return ApartmentGrid;
+        }(Serenity.EntityGrid));
+        Zoning.ApartmentGrid = ApartmentGrid;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
     var Zoning;
     (function (Zoning) {
         var BuildingDialog = /** @class */ (function (_super) {
@@ -2866,6 +3412,98 @@ var EMS;
             return CityGrid;
         }(Serenity.EntityGrid));
         Zoning.CityGrid = CityGrid;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var FloorDialog = /** @class */ (function (_super) {
+            __extends(FloorDialog, _super);
+            function FloorDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Zoning.FloorForm(_this.idPrefix);
+                return _this;
+            }
+            FloorDialog.prototype.getFormKey = function () { return Zoning.FloorForm.formKey; };
+            FloorDialog.prototype.getIdProperty = function () { return Zoning.FloorRow.idProperty; };
+            FloorDialog.prototype.getLocalTextPrefix = function () { return Zoning.FloorRow.localTextPrefix; };
+            FloorDialog.prototype.getNameProperty = function () { return Zoning.FloorRow.nameProperty; };
+            FloorDialog.prototype.getService = function () { return Zoning.FloorService.baseUrl; };
+            FloorDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], FloorDialog);
+            return FloorDialog;
+        }(Serenity.EntityDialog));
+        Zoning.FloorDialog = FloorDialog;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var FloorGrid = /** @class */ (function (_super) {
+            __extends(FloorGrid, _super);
+            function FloorGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            FloorGrid.prototype.getColumnsKey = function () { return 'Zoning.Floor'; };
+            FloorGrid.prototype.getDialogType = function () { return Zoning.FloorDialog; };
+            FloorGrid.prototype.getIdProperty = function () { return Zoning.FloorRow.idProperty; };
+            FloorGrid.prototype.getLocalTextPrefix = function () { return Zoning.FloorRow.localTextPrefix; };
+            FloorGrid.prototype.getService = function () { return Zoning.FloorService.baseUrl; };
+            FloorGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], FloorGrid);
+            return FloorGrid;
+        }(Serenity.EntityGrid));
+        Zoning.FloorGrid = FloorGrid;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var SectionDialog = /** @class */ (function (_super) {
+            __extends(SectionDialog, _super);
+            function SectionDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Zoning.SectionForm(_this.idPrefix);
+                return _this;
+            }
+            SectionDialog.prototype.getFormKey = function () { return Zoning.SectionForm.formKey; };
+            SectionDialog.prototype.getIdProperty = function () { return Zoning.SectionRow.idProperty; };
+            SectionDialog.prototype.getLocalTextPrefix = function () { return Zoning.SectionRow.localTextPrefix; };
+            SectionDialog.prototype.getNameProperty = function () { return Zoning.SectionRow.nameProperty; };
+            SectionDialog.prototype.getService = function () { return Zoning.SectionService.baseUrl; };
+            SectionDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], SectionDialog);
+            return SectionDialog;
+        }(Serenity.EntityDialog));
+        Zoning.SectionDialog = SectionDialog;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var SectionGrid = /** @class */ (function (_super) {
+            __extends(SectionGrid, _super);
+            function SectionGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            SectionGrid.prototype.getColumnsKey = function () { return 'Zoning.Section'; };
+            SectionGrid.prototype.getDialogType = function () { return Zoning.SectionDialog; };
+            SectionGrid.prototype.getIdProperty = function () { return Zoning.SectionRow.idProperty; };
+            SectionGrid.prototype.getLocalTextPrefix = function () { return Zoning.SectionRow.localTextPrefix; };
+            SectionGrid.prototype.getService = function () { return Zoning.SectionService.baseUrl; };
+            SectionGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], SectionGrid);
+            return SectionGrid;
+        }(Serenity.EntityGrid));
+        Zoning.SectionGrid = SectionGrid;
     })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
 })(EMS || (EMS = {}));
 var EMS;

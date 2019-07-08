@@ -8110,3 +8110,39 @@ section.content > .s-DataGrid {
 .s-Zoning-CityDialog .caption {
   width: 150px;
 }
+.s-Zoning-ApartmentDialog > .size {
+  width: 650px;
+}
+.s-Zoning-ApartmentDialog .caption {
+  width: 150px;
+}
+.s-Zoning-FloorDialog > .size {
+  width: 650px;
+}
+.s-Zoning-FloorDialog .caption {
+  width: 150px;
+}
+.s-Zoning-SectionDialog > .size {
+  width: 650px;
+}
+.s-Zoning-SectionDialog .caption {
+  width: 150px;
+}
+.s-Meters-MeterDialog > .size {
+  width: 650px;
+}
+.s-Meters-MeterDialog .caption {
+  width: 150px;
+}
+.s-Meters-MeterParameterDialog > .size {
+  width: 650px;
+}
+.s-Meters-MeterParameterDialog .caption {
+  width: 150px;
+}
+.s-Meters-MeterTypeDialog > .size {
+  width: 650px;
+}
+.s-Meters-MeterTypeDialog .caption {
+  width: 150px;
+}

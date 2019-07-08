@@ -139,6 +139,25 @@ namespace MVC
                     public const string AccountSignUp_AdminLTE = "~/Modules/Membership/Account/SignUp/AccountSignUp.AdminLTE.cshtml";
                 }
             }
+
+        }
+
+        public static class Meters
+        {
+            public static class Meter
+            {
+                public const string MeterIndex = "~/Modules/Meters/Meter/MeterIndex.cshtml";
+            }
+
+            public static class MeterParameter
+            {
+                public const string MeterParameterIndex = "~/Modules/Meters/MeterParameter/MeterParameterIndex.cshtml";
+            }
+
+            public static class MeterType
+            {
+                public const string MeterTypeIndex = "~/Modules/Meters/MeterType/MeterTypeIndex.cshtml";
+            }
         }
 
         public static class Shared
@@ -154,6 +173,11 @@ namespace MVC
 
         public static class Zoning
         {
+            public static class Apartment
+            {
+                public const string ApartmentIndex = "~/Modules/Zoning/Apartment/ApartmentIndex.cshtml";
+            }
+
             public static class Building
             {
                 public const string BuildingIndex = "~/Modules/Zoning/Building/BuildingIndex.cshtml";
@@ -162,6 +186,16 @@ namespace MVC
             public static class City
             {
                 public const string CityIndex = "~/Modules/Zoning/City/CityIndex.cshtml";
+            }
+
+            public static class Floor
+            {
+                public const string FloorIndex = "~/Modules/Zoning/Floor/FloorIndex.cshtml";
+            }
+
+            public static class Section
+            {
+                public const string SectionIndex = "~/Modules/Zoning/Section/SectionIndex.cshtml";
             }
 
         }

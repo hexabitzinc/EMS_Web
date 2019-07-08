@@ -9,6 +9,12 @@
       "Key": "Default",
       "Tables": [
         {
+          "Tablename": "dbo.Apartment",
+          "Identifier": "Apartment",
+          "Module": "Zoning",
+          "PermissionKey": "Administration:General"
+        },
+        {
           "Tablename": "dbo.Building",
           "Identifier": "Building",
           "Module": "Zoning",
@@ -17,6 +23,36 @@
         {
           "Tablename": "dbo.City",
           "Identifier": "City",
+          "Module": "Zoning",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Floor",
+          "Identifier": "Floor",
+          "Module": "Zoning",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Meter",
+          "Identifier": "Meter",
+          "Module": "Meters",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.MeterParameter",
+          "Identifier": "MeterParameter",
+          "Module": "Meters",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.MeterType",
+          "Identifier": "MeterType",
+          "Module": "Meters",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Section",
+          "Identifier": "Section",
           "Module": "Zoning",
           "PermissionKey": "Administration:General"
         }
