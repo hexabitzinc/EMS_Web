@@ -1,16 +1,16 @@
 ﻿namespace EMS.Zoning {
     export interface ApartmentRow {
         ApartmentId?: number;
+        SectionId?: number;
         Name?: string;
         Type?: string;
         Address?: string;
         RoomNumber?: string;
         Describtion?: string;
-        SectionId?: number;
         Deleted?: boolean;
+        SectionFloorId?: number;
         SectionName?: string;
         SectionDescribtion?: string;
-        SectionFloorId?: number;
         SectionDeleted?: boolean;
     }
 
@@ -21,16 +21,16 @@
 
         export declare const enum Fields {
             ApartmentId = "ApartmentId",
+            SectionId = "SectionId",
             Name = "Name",
             Type = "Type",
             Address = "Address",
             RoomNumber = "RoomNumber",
             Describtion = "Describtion",
-            SectionId = "SectionId",
             Deleted = "Deleted",
+            SectionFloorId = "SectionFloorId",
             SectionName = "SectionName",
             SectionDescribtion = "SectionDescribtion",
-            SectionFloorId = "SectionFloorId",
             SectionDeleted = "SectionDeleted"
         }
     }

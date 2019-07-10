@@ -15,11 +15,11 @@ namespace EMS.Zoning.Columns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
         public Int32 FloorId { get; set; }
-        public Int32 FloorNumber { get; set; }
+        public String BuildingName { get; set; }
         [EditLink]
         public String Name { get; set; }
+        public Int32 FloorNumber { get; set; }
         public String Describtion { get; set; }
-        public String BuildingZipCode { get; set; }
         public Boolean Deleted { get; set; }
     }
 }

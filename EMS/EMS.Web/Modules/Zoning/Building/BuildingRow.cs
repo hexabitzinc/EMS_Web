@@ -22,14 +22,28 @@ namespace EMS.Zoning.Entities
             set { Fields.BuildingId[this] = value; }
         }
 
-        [DisplayName("Zip Code"), Size(200), QuickSearch]
+        [DisplayName("City"), Column("CityID"), ForeignKey("[dbo].[City]", "CityID"), LeftJoin("jCity"), TextualField("CityName")]
+        public Int32? CityId
+        {
+            get { return Fields.CityId[this]; }
+            set { Fields.CityId[this] = value; }
+        }
+
+        [DisplayName("Name"), Size(200), QuickSearch]
+        public String Name
+        {
+            get { return Fields.Name[this]; }
+            set { Fields.Name[this] = value; }
+        }
+
+        [DisplayName("Zip Code"), Size(200)]
         public String ZipCode
         {
             get { return Fields.ZipCode[this]; }
             set { Fields.ZipCode[this] = value; }
         }
 
-        [DisplayName("Address"), Size(200)]
+        [DisplayName("Address"), Size(1000)]
         public String Address
         {
             get { return Fields.Address[this]; }
@@ -50,14 +64,7 @@ namespace EMS.Zoning.Entities
             set { Fields.Description[this] = value; }
         }
 
-        [DisplayName("City"), Column("CityID"), ForeignKey("[dbo].[City]", "CityID"), LeftJoin("jCity"), TextualField("CityName")]
-        public Int32? CityId
-        {
-            get { return Fields.CityId[this]; }
-            set { Fields.CityId[this] = value; }
-        }
-
-        [DisplayName("Deleted")]
+        [DisplayName("Deleted"), NotNull]
         public Boolean? Deleted
         {
             get { return Fields.Deleted[this]; }
@@ -69,6 +76,13 @@ namespace EMS.Zoning.Entities
         {
             get { return Fields.CityName[this]; }
             set { Fields.CityName[this] = value; }
+        }
+
+        [DisplayName("City Description"), Expression("jCity.[Description]")]
+        public String CityDescription
+        {
+            get { return Fields.CityDescription[this]; }
+            set { Fields.CityDescription[this] = value; }
         }
 
         [DisplayName("City Deleted"), Expression("jCity.[Deleted]")]
@@ -85,7 +99,7 @@ namespace EMS.Zoning.Entities
 
         StringField INameRow.NameField
         {
-            get { return Fields.ZipCode; }
+            get { return Fields.Name; }
         }
 
         public static readonly RowFields Fields = new RowFields().Init();
@@ -98,14 +112,16 @@ namespace EMS.Zoning.Entities
         public class RowFields : RowFieldsBase
         {
             public Int32Field BuildingId;
+            public Int32Field CityId;
+            public StringField Name;
             public StringField ZipCode;
             public StringField Address;
             public StringField StreetAddress;
             public StringField Description;
-            public Int32Field CityId;
             public BooleanField Deleted;
 
             public StringField CityName;
+            public StringField CityDescription;
             public BooleanField CityDeleted;
         }
     }

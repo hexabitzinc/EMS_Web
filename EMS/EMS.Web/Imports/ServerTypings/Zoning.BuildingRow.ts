@@ -1,30 +1,34 @@
 ﻿namespace EMS.Zoning {
     export interface BuildingRow {
         BuildingId?: number;
+        CityId?: number;
+        Name?: string;
         ZipCode?: string;
         Address?: string;
         StreetAddress?: string;
         Description?: string;
-        CityId?: number;
         Deleted?: boolean;
         CityName?: string;
+        CityDescription?: string;
         CityDeleted?: boolean;
     }
 
     export namespace BuildingRow {
         export const idProperty = 'BuildingId';
-        export const nameProperty = 'ZipCode';
+        export const nameProperty = 'Name';
         export const localTextPrefix = 'Zoning.Building';
 
         export declare const enum Fields {
             BuildingId = "BuildingId",
+            CityId = "CityId",
+            Name = "Name",
             ZipCode = "ZipCode",
             Address = "Address",
             StreetAddress = "StreetAddress",
             Description = "Description",
-            CityId = "CityId",
             Deleted = "Deleted",
             CityName = "CityName",
+            CityDescription = "CityDescription",
             CityDeleted = "CityDeleted"
         }
     }

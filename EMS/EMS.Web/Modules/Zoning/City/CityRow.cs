@@ -29,7 +29,14 @@ namespace EMS.Zoning.Entities
             set { Fields.Name[this] = value; }
         }
 
-        [DisplayName("Deleted")]
+        [DisplayName("Description"), Size(1000)]
+        public String Description
+        {
+            get { return Fields.Description[this]; }
+            set { Fields.Description[this] = value; }
+        }
+
+        [DisplayName("Deleted"), NotNull]
         public Boolean? Deleted
         {
             get { return Fields.Deleted[this]; }
@@ -57,6 +64,7 @@ namespace EMS.Zoning.Entities
         {
             public Int32Field CityId;
             public StringField Name;
+            public StringField Description;
             public BooleanField Deleted;
         }
     }

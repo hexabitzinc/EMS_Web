@@ -2,6 +2,7 @@
     export interface CityRow {
         CityId?: number;
         Name?: string;
+        Description?: string;
         Deleted?: boolean;
     }
 
@@ -13,6 +14,7 @@
         export declare const enum Fields {
             CityId = "CityId",
             Name = "Name",
+            Description = "Description",
             Deleted = "Deleted"
         }
     }

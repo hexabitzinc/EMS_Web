@@ -8128,6 +8128,18 @@ section.content > .s-DataGrid {
 .s-Zoning-SectionDialog .caption {
   width: 150px;
 }
+.s-Zoning-CommonLocationDialog > .size {
+  width: 650px;
+}
+.s-Zoning-CommonLocationDialog .caption {
+  width: 150px;
+}
+.s-Zoning-ZoningGroupDialog > .size {
+  width: 650px;
+}
+.s-Zoning-ZoningGroupDialog .caption {
+  width: 150px;
+}
 .s-Meters-MeterDialog > .size {
   width: 650px;
 }
@@ -8144,5 +8156,59 @@ section.content > .s-DataGrid {
   width: 650px;
 }
 .s-Meters-MeterTypeDialog .caption {
+  width: 150px;
+}
+.s-EMSDevice-EmsSettingDialog > .size {
+  width: 650px;
+}
+.s-EMSDevice-EmsSettingDialog .caption {
+  width: 150px;
+}
+.s-EMSDevice-EmsParameterDialog > .size {
+  width: 650px;
+}
+.s-EMSDevice-EmsParameterDialog .caption {
+  width: 150px;
+}
+.s-EMSDevice-EmsDeviceDialog > .size {
+  width: 650px;
+}
+.s-EMSDevice-EmsDeviceDialog .caption {
+  width: 150px;
+}
+.s-Meter-MeterDialog > .size {
+  width: 650px;
+}
+.s-Meter-MeterDialog .caption {
+  width: 150px;
+}
+.s-Meter-MeterParametersDialog > .size {
+  width: 650px;
+}
+.s-Meter-MeterParametersDialog .caption {
+  width: 150px;
+}
+.s-Meter-MeterTypeDialog > .size {
+  width: 650px;
+}
+.s-Meter-MeterTypeDialog .caption {
+  width: 150px;
+}
+.s-Parameter-ParameterDialog > .size {
+  width: 650px;
+}
+.s-Parameter-ParameterDialog .caption {
+  width: 150px;
+}
+.s-Parameter-ParameterGroupDialog > .size {
+  width: 650px;
+}
+.s-Parameter-ParameterGroupDialog .caption {
+  width: 150px;
+}
+.s-Parameter-ParameterTypeDialog > .size {
+  width: 650px;
+}
+.s-Parameter-ParameterTypeDialog .caption {
   width: 150px;
 }

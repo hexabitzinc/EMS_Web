@@ -17,6 +17,7 @@ namespace EMS.Zoning.Columns
         public Int32 CityId { get; set; }
         [EditLink]
         public String Name { get; set; }
+        public String Description { get; set; }
         public Boolean Deleted { get; set; }
     }
 }

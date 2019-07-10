@@ -1,6 +1,7 @@
 ﻿namespace EMS.Zoning {
     export interface CityForm {
         Name: Serenity.StringEditor;
+        Description: Serenity.StringEditor;
         Deleted: Serenity.BooleanEditor;
     }
 
@@ -20,6 +21,7 @@
 
                 Q.initFormType(CityForm, [
                     'Name', w0,
+                    'Description', w0,
                     'Deleted', w1
                 ]);
             }

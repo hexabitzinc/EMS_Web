@@ -1,10 +1,11 @@
 ﻿namespace EMS.Zoning {
     export interface BuildingForm {
+        CityId: Serenity.IntegerEditor;
+        Name: Serenity.StringEditor;
         ZipCode: Serenity.StringEditor;
         Address: Serenity.StringEditor;
         StreetAddress: Serenity.StringEditor;
         Description: Serenity.StringEditor;
-        CityId: Serenity.IntegerEditor;
         Deleted: Serenity.BooleanEditor;
     }
 
@@ -19,16 +20,17 @@
                 BuildingForm.init = true;
 
                 var s = Serenity;
-                var w0 = s.StringEditor;
-                var w1 = s.IntegerEditor;
+                var w0 = s.IntegerEditor;
+                var w1 = s.StringEditor;
                 var w2 = s.BooleanEditor;
 
                 Q.initFormType(BuildingForm, [
-                    'ZipCode', w0,
-                    'Address', w0,
-                    'StreetAddress', w0,
-                    'Description', w0,
-                    'CityId', w1,
+                    'CityId', w0,
+                    'Name', w1,
+                    'ZipCode', w1,
+                    'Address', w1,
+                    'StreetAddress', w1,
+                    'Description', w1,
                     'Deleted', w2
                 ]);
             }

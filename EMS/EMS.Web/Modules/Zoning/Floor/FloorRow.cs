@@ -22,11 +22,11 @@ namespace EMS.Zoning.Entities
             set { Fields.FloorId[this] = value; }
         }
 
-        [DisplayName("Floor Number")]
-        public Int32? FloorNumber
+        [DisplayName("Building"), Column("BuildingID"), ForeignKey("[dbo].[Building]", "BuildingID"), LeftJoin("jBuilding"), TextualField("BuildingName")]
+        public Int32? BuildingId
         {
-            get { return Fields.FloorNumber[this]; }
-            set { Fields.FloorNumber[this] = value; }
+            get { return Fields.BuildingId[this]; }
+            set { Fields.BuildingId[this] = value; }
         }
 
         [DisplayName("Name"), Size(200), QuickSearch]
@@ -36,6 +36,13 @@ namespace EMS.Zoning.Entities
             set { Fields.Name[this] = value; }
         }
 
+        [DisplayName("Floor Number")]
+        public Int32? FloorNumber
+        {
+            get { return Fields.FloorNumber[this]; }
+            set { Fields.FloorNumber[this] = value; }
+        }
+
         [DisplayName("Describtion"), Size(200)]
         public String Describtion
         {
@@ -43,18 +50,25 @@ namespace EMS.Zoning.Entities
             set { Fields.Describtion[this] = value; }
         }
 
-        [DisplayName("Building"), Column("BuildingID"), ForeignKey("[dbo].[Building]", "BuildingID"), LeftJoin("jBuilding"), TextualField("BuildingZipCode")]
-        public Int32? BuildingId
-        {
-            get { return Fields.BuildingId[this]; }
-            set { Fields.BuildingId[this] = value; }
-        }
-
-        [DisplayName("Deleted")]
+        [DisplayName("Deleted"), NotNull]
         public Boolean? Deleted
         {
             get { return Fields.Deleted[this]; }
             set { Fields.Deleted[this] = value; }
+        }
+
+        [DisplayName("Building City Id"), Expression("jBuilding.[CityID]")]
+        public Int32? BuildingCityId
+        {
+            get { return Fields.BuildingCityId[this]; }
+            set { Fields.BuildingCityId[this] = value; }
+        }
+
+        [DisplayName("Building Name"), Expression("jBuilding.[Name]")]
+        public String BuildingName
+        {
+            get { return Fields.BuildingName[this]; }
+            set { Fields.BuildingName[this] = value; }
         }
 
         [DisplayName("Building Zip Code"), Expression("jBuilding.[ZipCode]")]
@@ -85,13 +99,6 @@ namespace EMS.Zoning.Entities
             set { Fields.BuildingDescription[this] = value; }
         }
 
-        [DisplayName("Building City Id"), Expression("jBuilding.[CityID]")]
-        public Int32? BuildingCityId
-        {
-            get { return Fields.BuildingCityId[this]; }
-            set { Fields.BuildingCityId[this] = value; }
-        }
-
         [DisplayName("Building Deleted"), Expression("jBuilding.[Deleted]")]
         public Boolean? BuildingDeleted
         {
@@ -119,17 +126,18 @@ namespace EMS.Zoning.Entities
         public class RowFields : RowFieldsBase
         {
             public Int32Field FloorId;
-            public Int32Field FloorNumber;
-            public StringField Name;
-            public StringField Describtion;
             public Int32Field BuildingId;
+            public StringField Name;
+            public Int32Field FloorNumber;
+            public StringField Describtion;
             public BooleanField Deleted;
 
+            public Int32Field BuildingCityId;
+            public StringField BuildingName;
             public StringField BuildingZipCode;
             public StringField BuildingAddress;
             public StringField BuildingStreetAddress;
             public StringField BuildingDescription;
-            public Int32Field BuildingCityId;
             public BooleanField BuildingDeleted;
         }
     }

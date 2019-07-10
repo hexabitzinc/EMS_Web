@@ -100,6 +100,25 @@ namespace MVC
             {
                 public const string ReportPage = "~/Modules/Common/Reporting/ReportPage.cshtml";
             }
+
+        }
+
+        public static class EMSDevice
+        {
+            public static class EmsDevice
+            {
+                public const string EmsDeviceIndex = "~/Modules/EMSDevice/EmsDevice/EmsDeviceIndex.cshtml";
+            }
+
+            public static class EmsParameter
+            {
+                public const string EmsParameterIndex = "~/Modules/EMSDevice/EmsParameter/EmsParameterIndex.cshtml";
+            }
+
+            public static class EmsSetting
+            {
+                public const string EmsSettingIndex = "~/Modules/EMSDevice/EmsSetting/EmsSettingIndex.cshtml";
+            }
         }
 
         public static class Errors
@@ -142,21 +161,40 @@ namespace MVC
 
         }
 
-        public static class Meters
+        public static class Meter
         {
-            public static class Meter
+            public static class Meter_
             {
-                public const string MeterIndex = "~/Modules/Meters/Meter/MeterIndex.cshtml";
+                public const string MeterIndex = "~/Modules/Meter/Meter/MeterIndex.cshtml";
             }
 
-            public static class MeterParameter
+            public static class MeterParameters
             {
-                public const string MeterParameterIndex = "~/Modules/Meters/MeterParameter/MeterParameterIndex.cshtml";
+                public const string MeterParametersIndex = "~/Modules/Meter/MeterParameters/MeterParametersIndex.cshtml";
             }
 
             public static class MeterType
             {
-                public const string MeterTypeIndex = "~/Modules/Meters/MeterType/MeterTypeIndex.cshtml";
+                public const string MeterTypeIndex = "~/Modules/Meter/MeterType/MeterTypeIndex.cshtml";
+            }
+
+        }
+
+        public static class Parameter
+        {
+            public static class Parameter_
+            {
+                public const string ParameterIndex = "~/Modules/Parameter/Parameter/ParameterIndex.cshtml";
+            }
+
+            public static class ParameterGroup
+            {
+                public const string ParameterGroupIndex = "~/Modules/Parameter/ParameterGroup/ParameterGroupIndex.cshtml";
+            }
+
+            public static class ParameterType
+            {
+                public const string ParameterTypeIndex = "~/Modules/Parameter/ParameterType/ParameterTypeIndex.cshtml";
             }
         }
 
@@ -188,14 +226,19 @@ namespace MVC
                 public const string CityIndex = "~/Modules/Zoning/City/CityIndex.cshtml";
             }
 
+            public static class CommonLocation
+            {
+                public const string CommonLocationIndex = "~/Modules/Zoning/CommonLocation/CommonLocationIndex.cshtml";
+            }
+
             public static class Floor
             {
                 public const string FloorIndex = "~/Modules/Zoning/Floor/FloorIndex.cshtml";
             }
 
-            public static class Section
+            public static class ZoningGroup
             {
-                public const string SectionIndex = "~/Modules/Zoning/Section/SectionIndex.cshtml";
+                public const string ZoningGroupIndex = "~/Modules/Zoning/ZoningGroup/ZoningGroupIndex.cshtml";
             }
 
         }

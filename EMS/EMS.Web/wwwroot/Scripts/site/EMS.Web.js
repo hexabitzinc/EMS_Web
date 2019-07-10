@@ -356,6 +356,207 @@ var EMS;
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsDeviceForm = /** @class */ (function (_super) {
+            __extends(EmsDeviceForm, _super);
+            function EmsDeviceForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!EmsDeviceForm.init) {
+                    EmsDeviceForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.DateEditor;
+                    var w3 = s.BooleanEditor;
+                    Q.initFormType(EmsDeviceForm, [
+                        'BuildingId', w0,
+                        'EmsParameterId', w0,
+                        'EmsSettingId', w0,
+                        'ConsumerId', w0,
+                        'Name', w1,
+                        'SerialNumber', w1,
+                        'Make', w1,
+                        'PhysicalLocation', w1,
+                        'AssignedLocation', w1,
+                        'CommunicationMethod', w1,
+                        'SerialCommunicationSetting', w1,
+                        'RegistrationDate', w2,
+                        'Notes', w1,
+                        'Deleted', w3
+                    ]);
+                }
+                return _this;
+            }
+            EmsDeviceForm.formKey = 'EMSDevice.EmsDevice';
+            return EmsDeviceForm;
+        }(Serenity.PrefixedContext));
+        EMSDevice.EmsDeviceForm = EmsDeviceForm;
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsDeviceRow;
+        (function (EmsDeviceRow) {
+            EmsDeviceRow.idProperty = 'EmsDeviceId';
+            EmsDeviceRow.nameProperty = 'Name';
+            EmsDeviceRow.localTextPrefix = 'EMSDevice.EmsDevice';
+        })(EmsDeviceRow = EMSDevice.EmsDeviceRow || (EMSDevice.EmsDeviceRow = {}));
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsDeviceService;
+        (function (EmsDeviceService) {
+            EmsDeviceService.baseUrl = 'EMSDevice/EmsDevice';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                EmsDeviceService[x] = function (r, s, o) {
+                    return Q.serviceRequest(EmsDeviceService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(EmsDeviceService = EMSDevice.EmsDeviceService || (EMSDevice.EmsDeviceService = {}));
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsParameterForm = /** @class */ (function (_super) {
+            __extends(EmsParameterForm, _super);
+            function EmsParameterForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!EmsParameterForm.init) {
+                    EmsParameterForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.BooleanEditor;
+                    Q.initFormType(EmsParameterForm, [
+                        'ParameterTypeId', w0,
+                        'Name', w1,
+                        'Value', w1,
+                        'Address', w1,
+                        'Notes', w1,
+                        'Deleted', w2
+                    ]);
+                }
+                return _this;
+            }
+            EmsParameterForm.formKey = 'EMSDevice.EmsParameter';
+            return EmsParameterForm;
+        }(Serenity.PrefixedContext));
+        EMSDevice.EmsParameterForm = EmsParameterForm;
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsParameterRow;
+        (function (EmsParameterRow) {
+            EmsParameterRow.idProperty = 'EmsParameterId';
+            EmsParameterRow.nameProperty = 'Name';
+            EmsParameterRow.localTextPrefix = 'EMSDevice.EmsParameter';
+        })(EmsParameterRow = EMSDevice.EmsParameterRow || (EMSDevice.EmsParameterRow = {}));
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsParameterService;
+        (function (EmsParameterService) {
+            EmsParameterService.baseUrl = 'EMSDevice/EmsParameter';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                EmsParameterService[x] = function (r, s, o) {
+                    return Q.serviceRequest(EmsParameterService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(EmsParameterService = EMSDevice.EmsParameterService || (EMSDevice.EmsParameterService = {}));
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsSettingForm = /** @class */ (function (_super) {
+            __extends(EmsSettingForm, _super);
+            function EmsSettingForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!EmsSettingForm.init) {
+                    EmsSettingForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.BooleanEditor;
+                    Q.initFormType(EmsSettingForm, [
+                        'ParameterTypeId', w0,
+                        'Name', w1,
+                        'Value', w1,
+                        'Address', w1,
+                        'Notes', w1,
+                        'Deleted', w2
+                    ]);
+                }
+                return _this;
+            }
+            EmsSettingForm.formKey = 'EMSDevice.EmsSetting';
+            return EmsSettingForm;
+        }(Serenity.PrefixedContext));
+        EMSDevice.EmsSettingForm = EmsSettingForm;
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsSettingRow;
+        (function (EmsSettingRow) {
+            EmsSettingRow.idProperty = 'EmsSettingId';
+            EmsSettingRow.nameProperty = 'Name';
+            EmsSettingRow.localTextPrefix = 'EMSDevice.EmsSetting';
+        })(EmsSettingRow = EMSDevice.EmsSettingRow || (EMSDevice.EmsSettingRow = {}));
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsSettingService;
+        (function (EmsSettingService) {
+            EmsSettingService.baseUrl = 'EMSDevice/EmsSetting';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                EmsSettingService[x] = function (r, s, o) {
+                    return Q.serviceRequest(EmsSettingService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(EmsSettingService = EMSDevice.EmsSettingService || (EMSDevice.EmsSettingService = {}));
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
     var Membership;
     (function (Membership) {
         var ChangePasswordForm = /** @class */ (function (_super) {
@@ -487,8 +688,8 @@ var EMS;
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
+    var Meter;
+    (function (Meter) {
         var MeterForm = /** @class */ (function (_super) {
             __extends(MeterForm, _super);
             function MeterForm(prefix) {
@@ -497,64 +698,79 @@ var EMS;
                     MeterForm.init = true;
                     var s = Serenity;
                     var w0 = s.IntegerEditor;
-                    var w1 = s.BooleanEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.DateEditor;
+                    var w3 = s.BooleanEditor;
                     Q.initFormType(MeterForm, [
                         'ApartmentId', w0,
+                        'CommonLocationId', w0,
+                        'MeterTypeId', w0,
                         'ConsumerId', w0,
+                        'Name', w1,
+                        'SerialNumber', w1,
+                        'Make', w1,
+                        'PhysicalLocation', w1,
+                        'AssignedLocation', w1,
+                        'CommunicationMethod', w1,
+                        'SerialCommunicationSetting', w1,
+                        'RegistrationDate', w2,
+                        'Notes', w1,
+                        'Deleted', w3
+                    ]);
+                }
+                return _this;
+            }
+            MeterForm.formKey = 'Meter.Meter';
+            return MeterForm;
+        }(Serenity.PrefixedContext));
+        Meter.MeterForm = MeterForm;
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meter;
+    (function (Meter) {
+        var MeterParametersForm = /** @class */ (function (_super) {
+            __extends(MeterParametersForm, _super);
+            function MeterParametersForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!MeterParametersForm.init) {
+                    MeterParametersForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.BooleanEditor;
+                    Q.initFormType(MeterParametersForm, [
+                        'ParameterGroupId', w0,
+                        'ParameterId', w0,
                         'Deleted', w1
                     ]);
                 }
                 return _this;
             }
-            MeterForm.formKey = 'Meters.Meter';
-            return MeterForm;
+            MeterParametersForm.formKey = 'Meter.MeterParameters';
+            return MeterParametersForm;
         }(Serenity.PrefixedContext));
-        Meters.MeterForm = MeterForm;
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+        Meter.MeterParametersForm = MeterParametersForm;
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
-        var MeterParameterForm = /** @class */ (function (_super) {
-            __extends(MeterParameterForm, _super);
-            function MeterParameterForm(prefix) {
-                var _this = _super.call(this, prefix) || this;
-                if (!MeterParameterForm.init) {
-                    MeterParameterForm.init = true;
-                    var s = Serenity;
-                    var w0 = s.StringEditor;
-                    Q.initFormType(MeterParameterForm, [
-                        'BuildingId', w0
-                    ]);
-                }
-                return _this;
-            }
-            MeterParameterForm.formKey = 'Meters.MeterParameter';
-            return MeterParameterForm;
-        }(Serenity.PrefixedContext));
-        Meters.MeterParameterForm = MeterParameterForm;
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+    var Meter;
+    (function (Meter) {
+        var MeterParametersRow;
+        (function (MeterParametersRow) {
+            MeterParametersRow.idProperty = 'MeterParameterId';
+            MeterParametersRow.localTextPrefix = 'Meter.MeterParameters';
+        })(MeterParametersRow = Meter.MeterParametersRow || (Meter.MeterParametersRow = {}));
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
-        var MeterParameterRow;
-        (function (MeterParameterRow) {
-            MeterParameterRow.idProperty = 'MeterParameterId';
-            MeterParameterRow.nameProperty = 'BuildingId';
-            MeterParameterRow.localTextPrefix = 'Meters.MeterParameter';
-        })(MeterParameterRow = Meters.MeterParameterRow || (Meters.MeterParameterRow = {}));
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
-})(EMS || (EMS = {}));
-var EMS;
-(function (EMS) {
-    var Meters;
-    (function (Meters) {
-        var MeterParameterService;
-        (function (MeterParameterService) {
-            MeterParameterService.baseUrl = 'Meters/MeterParameter';
+    var Meter;
+    (function (Meter) {
+        var MeterParametersService;
+        (function (MeterParametersService) {
+            MeterParametersService.baseUrl = 'Meter/MeterParameters';
             [
                 'Create',
                 'Update',
@@ -562,31 +778,32 @@ var EMS;
                 'Retrieve',
                 'List'
             ].forEach(function (x) {
-                MeterParameterService[x] = function (r, s, o) {
-                    return Q.serviceRequest(MeterParameterService.baseUrl + '/' + x, r, s, o);
+                MeterParametersService[x] = function (r, s, o) {
+                    return Q.serviceRequest(MeterParametersService.baseUrl + '/' + x, r, s, o);
                 };
             });
-        })(MeterParameterService = Meters.MeterParameterService || (Meters.MeterParameterService = {}));
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+        })(MeterParametersService = Meter.MeterParametersService || (Meter.MeterParametersService = {}));
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
+    var Meter;
+    (function (Meter) {
         var MeterRow;
         (function (MeterRow) {
             MeterRow.idProperty = 'MeterId';
-            MeterRow.localTextPrefix = 'Meters.Meter';
-        })(MeterRow = Meters.MeterRow || (Meters.MeterRow = {}));
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+            MeterRow.nameProperty = 'Name';
+            MeterRow.localTextPrefix = 'Meter.Meter';
+        })(MeterRow = Meter.MeterRow || (Meter.MeterRow = {}));
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
+    var Meter;
+    (function (Meter) {
         var MeterService;
         (function (MeterService) {
-            MeterService.baseUrl = 'Meters/Meter';
+            MeterService.baseUrl = 'Meter/Meter';
             [
                 'Create',
                 'Update',
@@ -598,13 +815,13 @@ var EMS;
                     return Q.serviceRequest(MeterService.baseUrl + '/' + x, r, s, o);
                 };
             });
-        })(MeterService = Meters.MeterService || (Meters.MeterService = {}));
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+        })(MeterService = Meter.MeterService || (Meter.MeterService = {}));
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
+    var Meter;
+    (function (Meter) {
         var MeterTypeForm = /** @class */ (function (_super) {
             __extends(MeterTypeForm, _super);
             function MeterTypeForm(prefix) {
@@ -613,37 +830,39 @@ var EMS;
                     MeterTypeForm.init = true;
                     var s = Serenity;
                     var w0 = s.StringEditor;
+                    var w1 = s.BooleanEditor;
                     Q.initFormType(MeterTypeForm, [
-                        'BuildingId', w0
+                        'Name', w0,
+                        'Deleted', w1
                     ]);
                 }
                 return _this;
             }
-            MeterTypeForm.formKey = 'Meters.MeterType';
+            MeterTypeForm.formKey = 'Meter.MeterType';
             return MeterTypeForm;
         }(Serenity.PrefixedContext));
-        Meters.MeterTypeForm = MeterTypeForm;
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+        Meter.MeterTypeForm = MeterTypeForm;
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
+    var Meter;
+    (function (Meter) {
         var MeterTypeRow;
         (function (MeterTypeRow) {
-            MeterTypeRow.idProperty = 'FloorId';
-            MeterTypeRow.nameProperty = 'BuildingId';
-            MeterTypeRow.localTextPrefix = 'Meters.MeterType';
-        })(MeterTypeRow = Meters.MeterTypeRow || (Meters.MeterTypeRow = {}));
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+            MeterTypeRow.idProperty = 'MeterTypeId';
+            MeterTypeRow.nameProperty = 'Name';
+            MeterTypeRow.localTextPrefix = 'Meter.MeterType';
+        })(MeterTypeRow = Meter.MeterTypeRow || (Meter.MeterTypeRow = {}));
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
+    var Meter;
+    (function (Meter) {
         var MeterTypeService;
         (function (MeterTypeService) {
-            MeterTypeService.baseUrl = 'Meters/MeterType';
+            MeterTypeService.baseUrl = 'Meter/MeterType';
             [
                 'Create',
                 'Update',
@@ -655,14 +874,196 @@ var EMS;
                     return Q.serviceRequest(MeterTypeService.baseUrl + '/' + x, r, s, o);
                 };
             });
-        })(MeterTypeService = Meters.MeterTypeService || (Meters.MeterTypeService = {}));
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+        })(MeterTypeService = Meter.MeterTypeService || (Meter.MeterTypeService = {}));
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterForm = /** @class */ (function (_super) {
+            __extends(ParameterForm, _super);
+            function ParameterForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ParameterForm.init) {
+                    ParameterForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.BooleanEditor;
+                    Q.initFormType(ParameterForm, [
+                        'ParameterTypeId', w0,
+                        'Name', w1,
+                        'Value', w1,
+                        'Address', w1,
+                        'Notes', w1,
+                        'Deleted', w2
+                    ]);
+                }
+                return _this;
+            }
+            ParameterForm.formKey = 'Parameter.Parameter';
+            return ParameterForm;
+        }(Serenity.PrefixedContext));
+        Parameter.ParameterForm = ParameterForm;
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterGroupForm = /** @class */ (function (_super) {
+            __extends(ParameterGroupForm, _super);
+            function ParameterGroupForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ParameterGroupForm.init) {
+                    ParameterGroupForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.BooleanEditor;
+                    Q.initFormType(ParameterGroupForm, [
+                        'Name', w0,
+                        'Deleted', w1
+                    ]);
+                }
+                return _this;
+            }
+            ParameterGroupForm.formKey = 'Parameter.ParameterGroup';
+            return ParameterGroupForm;
+        }(Serenity.PrefixedContext));
+        Parameter.ParameterGroupForm = ParameterGroupForm;
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterGroupRow;
+        (function (ParameterGroupRow) {
+            ParameterGroupRow.idProperty = 'ParameterGroupId';
+            ParameterGroupRow.nameProperty = 'Name';
+            ParameterGroupRow.localTextPrefix = 'Parameter.ParameterGroup';
+        })(ParameterGroupRow = Parameter.ParameterGroupRow || (Parameter.ParameterGroupRow = {}));
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterGroupService;
+        (function (ParameterGroupService) {
+            ParameterGroupService.baseUrl = 'Parameter/ParameterGroup';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ParameterGroupService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ParameterGroupService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ParameterGroupService = Parameter.ParameterGroupService || (Parameter.ParameterGroupService = {}));
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterRow;
+        (function (ParameterRow) {
+            ParameterRow.idProperty = 'ParameterId';
+            ParameterRow.nameProperty = 'Name';
+            ParameterRow.localTextPrefix = 'Parameter.Parameter';
+        })(ParameterRow = Parameter.ParameterRow || (Parameter.ParameterRow = {}));
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterService;
+        (function (ParameterService) {
+            ParameterService.baseUrl = 'Parameter/Parameter';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ParameterService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ParameterService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ParameterService = Parameter.ParameterService || (Parameter.ParameterService = {}));
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterTypeForm = /** @class */ (function (_super) {
+            __extends(ParameterTypeForm, _super);
+            function ParameterTypeForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ParameterTypeForm.init) {
+                    ParameterTypeForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.BooleanEditor;
+                    Q.initFormType(ParameterTypeForm, [
+                        'Name', w0,
+                        'Deleted', w1
+                    ]);
+                }
+                return _this;
+            }
+            ParameterTypeForm.formKey = 'Parameter.ParameterType';
+            return ParameterTypeForm;
+        }(Serenity.PrefixedContext));
+        Parameter.ParameterTypeForm = ParameterTypeForm;
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterTypeRow;
+        (function (ParameterTypeRow) {
+            ParameterTypeRow.idProperty = 'ParameterTypeId';
+            ParameterTypeRow.nameProperty = 'Name';
+            ParameterTypeRow.localTextPrefix = 'Parameter.ParameterType';
+        })(ParameterTypeRow = Parameter.ParameterTypeRow || (Parameter.ParameterTypeRow = {}));
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterTypeService;
+        (function (ParameterTypeService) {
+            ParameterTypeService.baseUrl = 'Parameter/ParameterType';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ParameterTypeService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ParameterTypeService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ParameterTypeService = Parameter.ParameterTypeService || (Parameter.ParameterTypeService = {}));
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
     var Texts;
     (function (Texts) {
-        EMS['Texts'] = Q.proxyTexts(Texts, '', { Db: { Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, Meters: { Meter: { ApartmentAddress: 1, ApartmentDeleted: 1, ApartmentDescribtion: 1, ApartmentId: 1, ApartmentName: 1, ApartmentRoomNumber: 1, ApartmentSectionId: 1, ApartmentType: 1, ConsumerDisplayName: 1, ConsumerEmail: 1, ConsumerId: 1, ConsumerInsertDate: 1, ConsumerInsertUserId: 1, ConsumerIsActive: 1, ConsumerLastDirectoryUpdate: 1, ConsumerPasswordHash: 1, ConsumerPasswordSalt: 1, ConsumerSource: 1, ConsumerUpdateDate: 1, ConsumerUpdateUserId: 1, ConsumerUserImage: 1, ConsumerUsername: 1, Deleted: 1, MeterId: 1 }, MeterParameter: { BuildingId: 1, MeterParameterId: 1 }, MeterType: { BuildingId: 1, FloorId: 1 } }, Zoning: { Apartment: { Address: 1, ApartmentId: 1, Deleted: 1, Describtion: 1, Name: 1, RoomNumber: 1, SectionDeleted: 1, SectionDescribtion: 1, SectionFloorId: 1, SectionId: 1, SectionName: 1, Type: 1 }, Building: { Address: 1, BuildingId: 1, CityDeleted: 1, CityId: 1, CityName: 1, Deleted: 1, Description: 1, StreetAddress: 1, ZipCode: 1 }, City: { CityId: 1, Deleted: 1, Name: 1 }, Floor: { BuildingAddress: 1, BuildingCityId: 1, BuildingDeleted: 1, BuildingDescription: 1, BuildingId: 1, BuildingStreetAddress: 1, BuildingZipCode: 1, Deleted: 1, Describtion: 1, FloorId: 1, FloorNumber: 1, Name: 1 }, Section: { Deleted: 1, Describtion: 1, FloorBuildingId: 1, FloorDeleted: 1, FloorDescribtion: 1, FloorFloorNumber: 1, FloorId: 1, FloorName: 1, Name: 1, SectionId: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
+        EMS['Texts'] = Q.proxyTexts(Texts, '', { Db: { Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, EMSDevice: { EmsDevice: { AssignedLocation: 1, BuildingAddress: 1, BuildingCityId: 1, BuildingDeleted: 1, BuildingDescription: 1, BuildingId: 1, BuildingName: 1, BuildingStreetAddress: 1, BuildingZipCode: 1, CommunicationMethod: 1, ConsumerAddress: 1, ConsumerDeleted: 1, ConsumerEmail: 1, ConsumerFirstName: 1, ConsumerGender: 1, ConsumerId: 1, ConsumerLastName: 1, ConsumerMobile: 1, ConsumerOtherInformation: 1, ConsumerPhone: 1, Deleted: 1, EmsDeviceId: 1, EmsParameterAddress: 1, EmsParameterDeleted: 1, EmsParameterId: 1, EmsParameterName: 1, EmsParameterNotes: 1, EmsParameterParameterTypeId: 1, EmsParameterValue: 1, EmsSettingAddress: 1, EmsSettingDeleted: 1, EmsSettingId: 1, EmsSettingName: 1, EmsSettingNotes: 1, EmsSettingParameterTypeId: 1, EmsSettingValue: 1, Make: 1, Name: 1, Notes: 1, PhysicalLocation: 1, RegistrationDate: 1, SerialCommunicationSetting: 1, SerialNumber: 1 }, EmsParameter: { Address: 1, Deleted: 1, EmsParameterId: 1, Name: 1, Notes: 1, ParameterTypeDeleted: 1, ParameterTypeId: 1, ParameterTypeName: 1, Value: 1 }, EmsSetting: { Address: 1, Deleted: 1, EmsSettingId: 1, Name: 1, Notes: 1, ParameterTypeDeleted: 1, ParameterTypeId: 1, ParameterTypeName: 1, Value: 1 } }, Meter: { Meter: { ApartmentAddress: 1, ApartmentDeleted: 1, ApartmentDescribtion: 1, ApartmentId: 1, ApartmentName: 1, ApartmentRoomNumber: 1, ApartmentSectionId: 1, ApartmentType: 1, AssignedLocation: 1, CommonLocationBuildingId: 1, CommonLocationDeleted: 1, CommonLocationDescription: 1, CommonLocationId: 1, CommonLocationName: 1, CommunicationMethod: 1, ConsumerAddress: 1, ConsumerDeleted: 1, ConsumerEmail: 1, ConsumerFirstName: 1, ConsumerGender: 1, ConsumerId: 1, ConsumerLastName: 1, ConsumerMobile: 1, ConsumerOtherInformation: 1, ConsumerPhone: 1, Deleted: 1, Make: 1, MeterId: 1, MeterTypeDeleted: 1, MeterTypeId: 1, MeterTypeName: 1, Name: 1, Notes: 1, PhysicalLocation: 1, RegistrationDate: 1, SerialCommunicationSetting: 1, SerialNumber: 1 }, MeterParameters: { Deleted: 1, MeterParameterId: 1, ParameterAddress: 1, ParameterDeleted: 1, ParameterGroupDeleted: 1, ParameterGroupId: 1, ParameterGroupName: 1, ParameterId: 1, ParameterName: 1, ParameterNotes: 1, ParameterParameterTypeId: 1, ParameterValue: 1 }, MeterType: { Deleted: 1, MeterTypeId: 1, Name: 1 } }, Parameter: { Parameter: { Address: 1, Deleted: 1, Name: 1, Notes: 1, ParameterId: 1, ParameterTypeDeleted: 1, ParameterTypeId: 1, ParameterTypeName: 1, Value: 1 }, ParameterGroup: { Deleted: 1, Name: 1, ParameterGroupId: 1 }, ParameterType: { Deleted: 1, Name: 1, ParameterTypeId: 1 } }, Zoning: { Apartment: { Address: 1, ApartmentId: 1, Deleted: 1, Describtion: 1, Name: 1, RoomNumber: 1, SectionDeleted: 1, SectionDescribtion: 1, SectionFloorId: 1, SectionId: 1, SectionName: 1, Type: 1 }, Building: { Address: 1, BuildingId: 1, CityDeleted: 1, CityDescription: 1, CityId: 1, CityName: 1, Deleted: 1, Description: 1, Name: 1, StreetAddress: 1, ZipCode: 1 }, City: { CityId: 1, Deleted: 1, Description: 1, Name: 1 }, CommonLocation: { BuildingAddress: 1, BuildingCityId: 1, BuildingDeleted: 1, BuildingDescription: 1, BuildingId: 1, BuildingName: 1, BuildingStreetAddress: 1, BuildingZipCode: 1, CommonLocationId: 1, Deleted: 1, Description: 1, Name: 1 }, Floor: { BuildingAddress: 1, BuildingCityId: 1, BuildingDeleted: 1, BuildingDescription: 1, BuildingId: 1, BuildingName: 1, BuildingStreetAddress: 1, BuildingZipCode: 1, Deleted: 1, Describtion: 1, FloorId: 1, FloorNumber: 1, Name: 1 }, ZoningGroup: { Deleted: 1, Name: 1, ZoningGroupId: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
     })(Texts = EMS.Texts || (EMS.Texts = {}));
 })(EMS || (EMS = {}));
 var EMS;
@@ -676,16 +1077,16 @@ var EMS;
                 if (!ApartmentForm.init) {
                     ApartmentForm.init = true;
                     var s = Serenity;
-                    var w0 = s.StringEditor;
-                    var w1 = s.IntegerEditor;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.StringEditor;
                     var w2 = s.BooleanEditor;
                     Q.initFormType(ApartmentForm, [
-                        'Name', w0,
-                        'Type', w0,
-                        'Address', w0,
-                        'RoomNumber', w0,
-                        'Describtion', w0,
-                        'SectionId', w1,
+                        'SectionId', w0,
+                        'Name', w1,
+                        'Type', w1,
+                        'Address', w1,
+                        'RoomNumber', w1,
+                        'Describtion', w1,
                         'Deleted', w2
                     ]);
                 }
@@ -741,15 +1142,16 @@ var EMS;
                 if (!BuildingForm.init) {
                     BuildingForm.init = true;
                     var s = Serenity;
-                    var w0 = s.StringEditor;
-                    var w1 = s.IntegerEditor;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.StringEditor;
                     var w2 = s.BooleanEditor;
                     Q.initFormType(BuildingForm, [
-                        'ZipCode', w0,
-                        'Address', w0,
-                        'StreetAddress', w0,
-                        'Description', w0,
-                        'CityId', w1,
+                        'CityId', w0,
+                        'Name', w1,
+                        'ZipCode', w1,
+                        'Address', w1,
+                        'StreetAddress', w1,
+                        'Description', w1,
                         'Deleted', w2
                     ]);
                 }
@@ -768,7 +1170,7 @@ var EMS;
         var BuildingRow;
         (function (BuildingRow) {
             BuildingRow.idProperty = 'BuildingId';
-            BuildingRow.nameProperty = 'ZipCode';
+            BuildingRow.nameProperty = 'Name';
             BuildingRow.localTextPrefix = 'Zoning.Building';
         })(BuildingRow = Zoning.BuildingRow || (Zoning.BuildingRow = {}));
     })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
@@ -809,6 +1211,7 @@ var EMS;
                     var w1 = s.BooleanEditor;
                     Q.initFormType(CityForm, [
                         'Name', w0,
+                        'Description', w0,
                         'Deleted', w1
                     ]);
                 }
@@ -857,6 +1260,68 @@ var EMS;
 (function (EMS) {
     var Zoning;
     (function (Zoning) {
+        var CommonLocationForm = /** @class */ (function (_super) {
+            __extends(CommonLocationForm, _super);
+            function CommonLocationForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!CommonLocationForm.init) {
+                    CommonLocationForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.BooleanEditor;
+                    Q.initFormType(CommonLocationForm, [
+                        'BuildingId', w0,
+                        'Name', w1,
+                        'Description', w1,
+                        'Deleted', w2
+                    ]);
+                }
+                return _this;
+            }
+            CommonLocationForm.formKey = 'Zoning.CommonLocation';
+            return CommonLocationForm;
+        }(Serenity.PrefixedContext));
+        Zoning.CommonLocationForm = CommonLocationForm;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var CommonLocationRow;
+        (function (CommonLocationRow) {
+            CommonLocationRow.idProperty = 'CommonLocationId';
+            CommonLocationRow.nameProperty = 'Name';
+            CommonLocationRow.localTextPrefix = 'Zoning.CommonLocation';
+        })(CommonLocationRow = Zoning.CommonLocationRow || (Zoning.CommonLocationRow = {}));
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var CommonLocationService;
+        (function (CommonLocationService) {
+            CommonLocationService.baseUrl = 'Zoning/CommonLocation';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                CommonLocationService[x] = function (r, s, o) {
+                    return Q.serviceRequest(CommonLocationService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(CommonLocationService = Zoning.CommonLocationService || (Zoning.CommonLocationService = {}));
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
         var FloorForm = /** @class */ (function (_super) {
             __extends(FloorForm, _super);
             function FloorForm(prefix) {
@@ -868,10 +1333,10 @@ var EMS;
                     var w1 = s.StringEditor;
                     var w2 = s.BooleanEditor;
                     Q.initFormType(FloorForm, [
-                        'FloorNumber', w0,
-                        'Name', w1,
-                        'Describtion', w1,
                         'BuildingId', w0,
+                        'Name', w1,
+                        'FloorNumber', w0,
+                        'Describtion', w1,
                         'Deleted', w2
                     ]);
                 }
@@ -920,50 +1385,47 @@ var EMS;
 (function (EMS) {
     var Zoning;
     (function (Zoning) {
-        var SectionForm = /** @class */ (function (_super) {
-            __extends(SectionForm, _super);
-            function SectionForm(prefix) {
+        var ZoningGroupForm = /** @class */ (function (_super) {
+            __extends(ZoningGroupForm, _super);
+            function ZoningGroupForm(prefix) {
                 var _this = _super.call(this, prefix) || this;
-                if (!SectionForm.init) {
-                    SectionForm.init = true;
+                if (!ZoningGroupForm.init) {
+                    ZoningGroupForm.init = true;
                     var s = Serenity;
                     var w0 = s.StringEditor;
-                    var w1 = s.IntegerEditor;
-                    var w2 = s.BooleanEditor;
-                    Q.initFormType(SectionForm, [
+                    var w1 = s.BooleanEditor;
+                    Q.initFormType(ZoningGroupForm, [
                         'Name', w0,
-                        'Describtion', w0,
-                        'FloorId', w1,
-                        'Deleted', w2
+                        'Deleted', w1
                     ]);
                 }
                 return _this;
             }
-            SectionForm.formKey = 'Zoning.Section';
-            return SectionForm;
+            ZoningGroupForm.formKey = 'Zoning.ZoningGroup';
+            return ZoningGroupForm;
         }(Serenity.PrefixedContext));
-        Zoning.SectionForm = SectionForm;
+        Zoning.ZoningGroupForm = ZoningGroupForm;
     })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
     var Zoning;
     (function (Zoning) {
-        var SectionRow;
-        (function (SectionRow) {
-            SectionRow.idProperty = 'SectionId';
-            SectionRow.nameProperty = 'Name';
-            SectionRow.localTextPrefix = 'Zoning.Section';
-        })(SectionRow = Zoning.SectionRow || (Zoning.SectionRow = {}));
+        var ZoningGroupRow;
+        (function (ZoningGroupRow) {
+            ZoningGroupRow.idProperty = 'ZoningGroupId';
+            ZoningGroupRow.nameProperty = 'Name';
+            ZoningGroupRow.localTextPrefix = 'Zoning.ZoningGroup';
+        })(ZoningGroupRow = Zoning.ZoningGroupRow || (Zoning.ZoningGroupRow = {}));
     })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
     var Zoning;
     (function (Zoning) {
-        var SectionService;
-        (function (SectionService) {
-            SectionService.baseUrl = 'Zoning/Section';
+        var ZoningGroupService;
+        (function (ZoningGroupService) {
+            ZoningGroupService.baseUrl = 'Zoning/ZoningGroup';
             [
                 'Create',
                 'Update',
@@ -971,11 +1433,11 @@ var EMS;
                 'Retrieve',
                 'List'
             ].forEach(function (x) {
-                SectionService[x] = function (r, s, o) {
-                    return Q.serviceRequest(SectionService.baseUrl + '/' + x, r, s, o);
+                ZoningGroupService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ZoningGroupService.baseUrl + '/' + x, r, s, o);
                 };
             });
-        })(SectionService = Zoning.SectionService || (Zoning.SectionService = {}));
+        })(ZoningGroupService = Zoning.ZoningGroupService || (Zoning.ZoningGroupService = {}));
     })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
 })(EMS || (EMS = {}));
 var EMS;
@@ -3141,140 +3603,416 @@ var EMS;
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsDeviceDialog = /** @class */ (function (_super) {
+            __extends(EmsDeviceDialog, _super);
+            function EmsDeviceDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new EMSDevice.EmsDeviceForm(_this.idPrefix);
+                return _this;
+            }
+            EmsDeviceDialog.prototype.getFormKey = function () { return EMSDevice.EmsDeviceForm.formKey; };
+            EmsDeviceDialog.prototype.getIdProperty = function () { return EMSDevice.EmsDeviceRow.idProperty; };
+            EmsDeviceDialog.prototype.getLocalTextPrefix = function () { return EMSDevice.EmsDeviceRow.localTextPrefix; };
+            EmsDeviceDialog.prototype.getNameProperty = function () { return EMSDevice.EmsDeviceRow.nameProperty; };
+            EmsDeviceDialog.prototype.getService = function () { return EMSDevice.EmsDeviceService.baseUrl; };
+            EmsDeviceDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], EmsDeviceDialog);
+            return EmsDeviceDialog;
+        }(Serenity.EntityDialog));
+        EMSDevice.EmsDeviceDialog = EmsDeviceDialog;
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsDeviceGrid = /** @class */ (function (_super) {
+            __extends(EmsDeviceGrid, _super);
+            function EmsDeviceGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            EmsDeviceGrid.prototype.getColumnsKey = function () { return 'EMSDevice.EmsDevice'; };
+            EmsDeviceGrid.prototype.getDialogType = function () { return EMSDevice.EmsDeviceDialog; };
+            EmsDeviceGrid.prototype.getIdProperty = function () { return EMSDevice.EmsDeviceRow.idProperty; };
+            EmsDeviceGrid.prototype.getLocalTextPrefix = function () { return EMSDevice.EmsDeviceRow.localTextPrefix; };
+            EmsDeviceGrid.prototype.getService = function () { return EMSDevice.EmsDeviceService.baseUrl; };
+            EmsDeviceGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], EmsDeviceGrid);
+            return EmsDeviceGrid;
+        }(Serenity.EntityGrid));
+        EMSDevice.EmsDeviceGrid = EmsDeviceGrid;
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsParameterDialog = /** @class */ (function (_super) {
+            __extends(EmsParameterDialog, _super);
+            function EmsParameterDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new EMSDevice.EmsParameterForm(_this.idPrefix);
+                return _this;
+            }
+            EmsParameterDialog.prototype.getFormKey = function () { return EMSDevice.EmsParameterForm.formKey; };
+            EmsParameterDialog.prototype.getIdProperty = function () { return EMSDevice.EmsParameterRow.idProperty; };
+            EmsParameterDialog.prototype.getLocalTextPrefix = function () { return EMSDevice.EmsParameterRow.localTextPrefix; };
+            EmsParameterDialog.prototype.getNameProperty = function () { return EMSDevice.EmsParameterRow.nameProperty; };
+            EmsParameterDialog.prototype.getService = function () { return EMSDevice.EmsParameterService.baseUrl; };
+            EmsParameterDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], EmsParameterDialog);
+            return EmsParameterDialog;
+        }(Serenity.EntityDialog));
+        EMSDevice.EmsParameterDialog = EmsParameterDialog;
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsParameterGrid = /** @class */ (function (_super) {
+            __extends(EmsParameterGrid, _super);
+            function EmsParameterGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            EmsParameterGrid.prototype.getColumnsKey = function () { return 'EMSDevice.EmsParameter'; };
+            EmsParameterGrid.prototype.getDialogType = function () { return EMSDevice.EmsParameterDialog; };
+            EmsParameterGrid.prototype.getIdProperty = function () { return EMSDevice.EmsParameterRow.idProperty; };
+            EmsParameterGrid.prototype.getLocalTextPrefix = function () { return EMSDevice.EmsParameterRow.localTextPrefix; };
+            EmsParameterGrid.prototype.getService = function () { return EMSDevice.EmsParameterService.baseUrl; };
+            EmsParameterGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], EmsParameterGrid);
+            return EmsParameterGrid;
+        }(Serenity.EntityGrid));
+        EMSDevice.EmsParameterGrid = EmsParameterGrid;
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsSettingDialog = /** @class */ (function (_super) {
+            __extends(EmsSettingDialog, _super);
+            function EmsSettingDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new EMSDevice.EmsSettingForm(_this.idPrefix);
+                return _this;
+            }
+            EmsSettingDialog.prototype.getFormKey = function () { return EMSDevice.EmsSettingForm.formKey; };
+            EmsSettingDialog.prototype.getIdProperty = function () { return EMSDevice.EmsSettingRow.idProperty; };
+            EmsSettingDialog.prototype.getLocalTextPrefix = function () { return EMSDevice.EmsSettingRow.localTextPrefix; };
+            EmsSettingDialog.prototype.getNameProperty = function () { return EMSDevice.EmsSettingRow.nameProperty; };
+            EmsSettingDialog.prototype.getService = function () { return EMSDevice.EmsSettingService.baseUrl; };
+            EmsSettingDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], EmsSettingDialog);
+            return EmsSettingDialog;
+        }(Serenity.EntityDialog));
+        EMSDevice.EmsSettingDialog = EmsSettingDialog;
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var EMSDevice;
+    (function (EMSDevice) {
+        var EmsSettingGrid = /** @class */ (function (_super) {
+            __extends(EmsSettingGrid, _super);
+            function EmsSettingGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            EmsSettingGrid.prototype.getColumnsKey = function () { return 'EMSDevice.EmsSetting'; };
+            EmsSettingGrid.prototype.getDialogType = function () { return EMSDevice.EmsSettingDialog; };
+            EmsSettingGrid.prototype.getIdProperty = function () { return EMSDevice.EmsSettingRow.idProperty; };
+            EmsSettingGrid.prototype.getLocalTextPrefix = function () { return EMSDevice.EmsSettingRow.localTextPrefix; };
+            EmsSettingGrid.prototype.getService = function () { return EMSDevice.EmsSettingService.baseUrl; };
+            EmsSettingGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], EmsSettingGrid);
+            return EmsSettingGrid;
+        }(Serenity.EntityGrid));
+        EMSDevice.EmsSettingGrid = EmsSettingGrid;
+    })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Meter;
+    (function (Meter) {
         var MeterDialog = /** @class */ (function (_super) {
             __extends(MeterDialog, _super);
             function MeterDialog() {
                 var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Meters.MeterForm(_this.idPrefix);
+                _this.form = new Meter.MeterForm(_this.idPrefix);
                 return _this;
             }
-            MeterDialog.prototype.getFormKey = function () { return Meters.MeterForm.formKey; };
-            MeterDialog.prototype.getIdProperty = function () { return Meters.MeterRow.idProperty; };
-            MeterDialog.prototype.getLocalTextPrefix = function () { return Meters.MeterRow.localTextPrefix; };
-            MeterDialog.prototype.getService = function () { return Meters.MeterService.baseUrl; };
+            MeterDialog.prototype.getFormKey = function () { return Meter.MeterForm.formKey; };
+            MeterDialog.prototype.getIdProperty = function () { return Meter.MeterRow.idProperty; };
+            MeterDialog.prototype.getLocalTextPrefix = function () { return Meter.MeterRow.localTextPrefix; };
+            MeterDialog.prototype.getNameProperty = function () { return Meter.MeterRow.nameProperty; };
+            MeterDialog.prototype.getService = function () { return Meter.MeterService.baseUrl; };
             MeterDialog = __decorate([
                 Serenity.Decorators.registerClass()
             ], MeterDialog);
             return MeterDialog;
         }(Serenity.EntityDialog));
-        Meters.MeterDialog = MeterDialog;
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+        Meter.MeterDialog = MeterDialog;
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
+    var Meter;
+    (function (Meter) {
         var MeterGrid = /** @class */ (function (_super) {
             __extends(MeterGrid, _super);
             function MeterGrid(container) {
                 return _super.call(this, container) || this;
             }
-            MeterGrid.prototype.getColumnsKey = function () { return 'Meters.Meter'; };
-            MeterGrid.prototype.getDialogType = function () { return Meters.MeterDialog; };
-            MeterGrid.prototype.getIdProperty = function () { return Meters.MeterRow.idProperty; };
-            MeterGrid.prototype.getLocalTextPrefix = function () { return Meters.MeterRow.localTextPrefix; };
-            MeterGrid.prototype.getService = function () { return Meters.MeterService.baseUrl; };
+            MeterGrid.prototype.getColumnsKey = function () { return 'Meter.Meter'; };
+            MeterGrid.prototype.getDialogType = function () { return Meter.MeterDialog; };
+            MeterGrid.prototype.getIdProperty = function () { return Meter.MeterRow.idProperty; };
+            MeterGrid.prototype.getLocalTextPrefix = function () { return Meter.MeterRow.localTextPrefix; };
+            MeterGrid.prototype.getService = function () { return Meter.MeterService.baseUrl; };
             MeterGrid = __decorate([
                 Serenity.Decorators.registerClass()
             ], MeterGrid);
             return MeterGrid;
         }(Serenity.EntityGrid));
-        Meters.MeterGrid = MeterGrid;
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+        Meter.MeterGrid = MeterGrid;
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
-        var MeterParameterDialog = /** @class */ (function (_super) {
-            __extends(MeterParameterDialog, _super);
-            function MeterParameterDialog() {
+    var Meter;
+    (function (Meter) {
+        var MeterParametersDialog = /** @class */ (function (_super) {
+            __extends(MeterParametersDialog, _super);
+            function MeterParametersDialog() {
                 var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Meters.MeterParameterForm(_this.idPrefix);
+                _this.form = new Meter.MeterParametersForm(_this.idPrefix);
                 return _this;
             }
-            MeterParameterDialog.prototype.getFormKey = function () { return Meters.MeterParameterForm.formKey; };
-            MeterParameterDialog.prototype.getIdProperty = function () { return Meters.MeterParameterRow.idProperty; };
-            MeterParameterDialog.prototype.getLocalTextPrefix = function () { return Meters.MeterParameterRow.localTextPrefix; };
-            MeterParameterDialog.prototype.getNameProperty = function () { return Meters.MeterParameterRow.nameProperty; };
-            MeterParameterDialog.prototype.getService = function () { return Meters.MeterParameterService.baseUrl; };
-            MeterParameterDialog = __decorate([
+            MeterParametersDialog.prototype.getFormKey = function () { return Meter.MeterParametersForm.formKey; };
+            MeterParametersDialog.prototype.getIdProperty = function () { return Meter.MeterParametersRow.idProperty; };
+            MeterParametersDialog.prototype.getLocalTextPrefix = function () { return Meter.MeterParametersRow.localTextPrefix; };
+            MeterParametersDialog.prototype.getService = function () { return Meter.MeterParametersService.baseUrl; };
+            MeterParametersDialog = __decorate([
                 Serenity.Decorators.registerClass()
-            ], MeterParameterDialog);
-            return MeterParameterDialog;
+            ], MeterParametersDialog);
+            return MeterParametersDialog;
         }(Serenity.EntityDialog));
-        Meters.MeterParameterDialog = MeterParameterDialog;
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+        Meter.MeterParametersDialog = MeterParametersDialog;
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
-        var MeterParameterGrid = /** @class */ (function (_super) {
-            __extends(MeterParameterGrid, _super);
-            function MeterParameterGrid(container) {
+    var Meter;
+    (function (Meter) {
+        var MeterParametersGrid = /** @class */ (function (_super) {
+            __extends(MeterParametersGrid, _super);
+            function MeterParametersGrid(container) {
                 return _super.call(this, container) || this;
             }
-            MeterParameterGrid.prototype.getColumnsKey = function () { return 'Meters.MeterParameter'; };
-            MeterParameterGrid.prototype.getDialogType = function () { return Meters.MeterParameterDialog; };
-            MeterParameterGrid.prototype.getIdProperty = function () { return Meters.MeterParameterRow.idProperty; };
-            MeterParameterGrid.prototype.getLocalTextPrefix = function () { return Meters.MeterParameterRow.localTextPrefix; };
-            MeterParameterGrid.prototype.getService = function () { return Meters.MeterParameterService.baseUrl; };
-            MeterParameterGrid = __decorate([
+            MeterParametersGrid.prototype.getColumnsKey = function () { return 'Meter.MeterParameters'; };
+            MeterParametersGrid.prototype.getDialogType = function () { return Meter.MeterParametersDialog; };
+            MeterParametersGrid.prototype.getIdProperty = function () { return Meter.MeterParametersRow.idProperty; };
+            MeterParametersGrid.prototype.getLocalTextPrefix = function () { return Meter.MeterParametersRow.localTextPrefix; };
+            MeterParametersGrid.prototype.getService = function () { return Meter.MeterParametersService.baseUrl; };
+            MeterParametersGrid = __decorate([
                 Serenity.Decorators.registerClass()
-            ], MeterParameterGrid);
-            return MeterParameterGrid;
+            ], MeterParametersGrid);
+            return MeterParametersGrid;
         }(Serenity.EntityGrid));
-        Meters.MeterParameterGrid = MeterParameterGrid;
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+        Meter.MeterParametersGrid = MeterParametersGrid;
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
+    var Meter;
+    (function (Meter) {
         var MeterTypeDialog = /** @class */ (function (_super) {
             __extends(MeterTypeDialog, _super);
             function MeterTypeDialog() {
                 var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Meters.MeterTypeForm(_this.idPrefix);
+                _this.form = new Meter.MeterTypeForm(_this.idPrefix);
                 return _this;
             }
-            MeterTypeDialog.prototype.getFormKey = function () { return Meters.MeterTypeForm.formKey; };
-            MeterTypeDialog.prototype.getIdProperty = function () { return Meters.MeterTypeRow.idProperty; };
-            MeterTypeDialog.prototype.getLocalTextPrefix = function () { return Meters.MeterTypeRow.localTextPrefix; };
-            MeterTypeDialog.prototype.getNameProperty = function () { return Meters.MeterTypeRow.nameProperty; };
-            MeterTypeDialog.prototype.getService = function () { return Meters.MeterTypeService.baseUrl; };
+            MeterTypeDialog.prototype.getFormKey = function () { return Meter.MeterTypeForm.formKey; };
+            MeterTypeDialog.prototype.getIdProperty = function () { return Meter.MeterTypeRow.idProperty; };
+            MeterTypeDialog.prototype.getLocalTextPrefix = function () { return Meter.MeterTypeRow.localTextPrefix; };
+            MeterTypeDialog.prototype.getNameProperty = function () { return Meter.MeterTypeRow.nameProperty; };
+            MeterTypeDialog.prototype.getService = function () { return Meter.MeterTypeService.baseUrl; };
             MeterTypeDialog = __decorate([
                 Serenity.Decorators.registerClass()
             ], MeterTypeDialog);
             return MeterTypeDialog;
         }(Serenity.EntityDialog));
-        Meters.MeterTypeDialog = MeterTypeDialog;
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+        Meter.MeterTypeDialog = MeterTypeDialog;
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
-    var Meters;
-    (function (Meters) {
+    var Meter;
+    (function (Meter) {
         var MeterTypeGrid = /** @class */ (function (_super) {
             __extends(MeterTypeGrid, _super);
             function MeterTypeGrid(container) {
                 return _super.call(this, container) || this;
             }
-            MeterTypeGrid.prototype.getColumnsKey = function () { return 'Meters.MeterType'; };
-            MeterTypeGrid.prototype.getDialogType = function () { return Meters.MeterTypeDialog; };
-            MeterTypeGrid.prototype.getIdProperty = function () { return Meters.MeterTypeRow.idProperty; };
-            MeterTypeGrid.prototype.getLocalTextPrefix = function () { return Meters.MeterTypeRow.localTextPrefix; };
-            MeterTypeGrid.prototype.getService = function () { return Meters.MeterTypeService.baseUrl; };
+            MeterTypeGrid.prototype.getColumnsKey = function () { return 'Meter.MeterType'; };
+            MeterTypeGrid.prototype.getDialogType = function () { return Meter.MeterTypeDialog; };
+            MeterTypeGrid.prototype.getIdProperty = function () { return Meter.MeterTypeRow.idProperty; };
+            MeterTypeGrid.prototype.getLocalTextPrefix = function () { return Meter.MeterTypeRow.localTextPrefix; };
+            MeterTypeGrid.prototype.getService = function () { return Meter.MeterTypeService.baseUrl; };
             MeterTypeGrid = __decorate([
                 Serenity.Decorators.registerClass()
             ], MeterTypeGrid);
             return MeterTypeGrid;
         }(Serenity.EntityGrid));
-        Meters.MeterTypeGrid = MeterTypeGrid;
-    })(Meters = EMS.Meters || (EMS.Meters = {}));
+        Meter.MeterTypeGrid = MeterTypeGrid;
+    })(Meter = EMS.Meter || (EMS.Meter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterDialog = /** @class */ (function (_super) {
+            __extends(ParameterDialog, _super);
+            function ParameterDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Parameter.ParameterForm(_this.idPrefix);
+                return _this;
+            }
+            ParameterDialog.prototype.getFormKey = function () { return Parameter.ParameterForm.formKey; };
+            ParameterDialog.prototype.getIdProperty = function () { return Parameter.ParameterRow.idProperty; };
+            ParameterDialog.prototype.getLocalTextPrefix = function () { return Parameter.ParameterRow.localTextPrefix; };
+            ParameterDialog.prototype.getNameProperty = function () { return Parameter.ParameterRow.nameProperty; };
+            ParameterDialog.prototype.getService = function () { return Parameter.ParameterService.baseUrl; };
+            ParameterDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ParameterDialog);
+            return ParameterDialog;
+        }(Serenity.EntityDialog));
+        Parameter.ParameterDialog = ParameterDialog;
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterGrid = /** @class */ (function (_super) {
+            __extends(ParameterGrid, _super);
+            function ParameterGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ParameterGrid.prototype.getColumnsKey = function () { return 'Parameter.Parameter'; };
+            ParameterGrid.prototype.getDialogType = function () { return Parameter.ParameterDialog; };
+            ParameterGrid.prototype.getIdProperty = function () { return Parameter.ParameterRow.idProperty; };
+            ParameterGrid.prototype.getLocalTextPrefix = function () { return Parameter.ParameterRow.localTextPrefix; };
+            ParameterGrid.prototype.getService = function () { return Parameter.ParameterService.baseUrl; };
+            ParameterGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ParameterGrid);
+            return ParameterGrid;
+        }(Serenity.EntityGrid));
+        Parameter.ParameterGrid = ParameterGrid;
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterGroupDialog = /** @class */ (function (_super) {
+            __extends(ParameterGroupDialog, _super);
+            function ParameterGroupDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Parameter.ParameterGroupForm(_this.idPrefix);
+                return _this;
+            }
+            ParameterGroupDialog.prototype.getFormKey = function () { return Parameter.ParameterGroupForm.formKey; };
+            ParameterGroupDialog.prototype.getIdProperty = function () { return Parameter.ParameterGroupRow.idProperty; };
+            ParameterGroupDialog.prototype.getLocalTextPrefix = function () { return Parameter.ParameterGroupRow.localTextPrefix; };
+            ParameterGroupDialog.prototype.getNameProperty = function () { return Parameter.ParameterGroupRow.nameProperty; };
+            ParameterGroupDialog.prototype.getService = function () { return Parameter.ParameterGroupService.baseUrl; };
+            ParameterGroupDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ParameterGroupDialog);
+            return ParameterGroupDialog;
+        }(Serenity.EntityDialog));
+        Parameter.ParameterGroupDialog = ParameterGroupDialog;
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterGroupGrid = /** @class */ (function (_super) {
+            __extends(ParameterGroupGrid, _super);
+            function ParameterGroupGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ParameterGroupGrid.prototype.getColumnsKey = function () { return 'Parameter.ParameterGroup'; };
+            ParameterGroupGrid.prototype.getDialogType = function () { return Parameter.ParameterGroupDialog; };
+            ParameterGroupGrid.prototype.getIdProperty = function () { return Parameter.ParameterGroupRow.idProperty; };
+            ParameterGroupGrid.prototype.getLocalTextPrefix = function () { return Parameter.ParameterGroupRow.localTextPrefix; };
+            ParameterGroupGrid.prototype.getService = function () { return Parameter.ParameterGroupService.baseUrl; };
+            ParameterGroupGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ParameterGroupGrid);
+            return ParameterGroupGrid;
+        }(Serenity.EntityGrid));
+        Parameter.ParameterGroupGrid = ParameterGroupGrid;
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterTypeDialog = /** @class */ (function (_super) {
+            __extends(ParameterTypeDialog, _super);
+            function ParameterTypeDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Parameter.ParameterTypeForm(_this.idPrefix);
+                return _this;
+            }
+            ParameterTypeDialog.prototype.getFormKey = function () { return Parameter.ParameterTypeForm.formKey; };
+            ParameterTypeDialog.prototype.getIdProperty = function () { return Parameter.ParameterTypeRow.idProperty; };
+            ParameterTypeDialog.prototype.getLocalTextPrefix = function () { return Parameter.ParameterTypeRow.localTextPrefix; };
+            ParameterTypeDialog.prototype.getNameProperty = function () { return Parameter.ParameterTypeRow.nameProperty; };
+            ParameterTypeDialog.prototype.getService = function () { return Parameter.ParameterTypeService.baseUrl; };
+            ParameterTypeDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ParameterTypeDialog);
+            return ParameterTypeDialog;
+        }(Serenity.EntityDialog));
+        Parameter.ParameterTypeDialog = ParameterTypeDialog;
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Parameter;
+    (function (Parameter) {
+        var ParameterTypeGrid = /** @class */ (function (_super) {
+            __extends(ParameterTypeGrid, _super);
+            function ParameterTypeGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ParameterTypeGrid.prototype.getColumnsKey = function () { return 'Parameter.ParameterType'; };
+            ParameterTypeGrid.prototype.getDialogType = function () { return Parameter.ParameterTypeDialog; };
+            ParameterTypeGrid.prototype.getIdProperty = function () { return Parameter.ParameterTypeRow.idProperty; };
+            ParameterTypeGrid.prototype.getLocalTextPrefix = function () { return Parameter.ParameterTypeRow.localTextPrefix; };
+            ParameterTypeGrid.prototype.getService = function () { return Parameter.ParameterTypeService.baseUrl; };
+            ParameterTypeGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ParameterTypeGrid);
+            return ParameterTypeGrid;
+        }(Serenity.EntityGrid));
+        Parameter.ParameterTypeGrid = ParameterTypeGrid;
+    })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
@@ -3418,6 +4156,52 @@ var EMS;
 (function (EMS) {
     var Zoning;
     (function (Zoning) {
+        var CommonLocationDialog = /** @class */ (function (_super) {
+            __extends(CommonLocationDialog, _super);
+            function CommonLocationDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Zoning.CommonLocationForm(_this.idPrefix);
+                return _this;
+            }
+            CommonLocationDialog.prototype.getFormKey = function () { return Zoning.CommonLocationForm.formKey; };
+            CommonLocationDialog.prototype.getIdProperty = function () { return Zoning.CommonLocationRow.idProperty; };
+            CommonLocationDialog.prototype.getLocalTextPrefix = function () { return Zoning.CommonLocationRow.localTextPrefix; };
+            CommonLocationDialog.prototype.getNameProperty = function () { return Zoning.CommonLocationRow.nameProperty; };
+            CommonLocationDialog.prototype.getService = function () { return Zoning.CommonLocationService.baseUrl; };
+            CommonLocationDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CommonLocationDialog);
+            return CommonLocationDialog;
+        }(Serenity.EntityDialog));
+        Zoning.CommonLocationDialog = CommonLocationDialog;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
+        var CommonLocationGrid = /** @class */ (function (_super) {
+            __extends(CommonLocationGrid, _super);
+            function CommonLocationGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            CommonLocationGrid.prototype.getColumnsKey = function () { return 'Zoning.CommonLocation'; };
+            CommonLocationGrid.prototype.getDialogType = function () { return Zoning.CommonLocationDialog; };
+            CommonLocationGrid.prototype.getIdProperty = function () { return Zoning.CommonLocationRow.idProperty; };
+            CommonLocationGrid.prototype.getLocalTextPrefix = function () { return Zoning.CommonLocationRow.localTextPrefix; };
+            CommonLocationGrid.prototype.getService = function () { return Zoning.CommonLocationService.baseUrl; };
+            CommonLocationGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CommonLocationGrid);
+            return CommonLocationGrid;
+        }(Serenity.EntityGrid));
+        Zoning.CommonLocationGrid = CommonLocationGrid;
+    })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
+})(EMS || (EMS = {}));
+var EMS;
+(function (EMS) {
+    var Zoning;
+    (function (Zoning) {
         var FloorDialog = /** @class */ (function (_super) {
             __extends(FloorDialog, _super);
             function FloorDialog() {
@@ -3464,46 +4248,46 @@ var EMS;
 (function (EMS) {
     var Zoning;
     (function (Zoning) {
-        var SectionDialog = /** @class */ (function (_super) {
-            __extends(SectionDialog, _super);
-            function SectionDialog() {
+        var ZoningGroupDialog = /** @class */ (function (_super) {
+            __extends(ZoningGroupDialog, _super);
+            function ZoningGroupDialog() {
                 var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Zoning.SectionForm(_this.idPrefix);
+                _this.form = new Zoning.ZoningGroupForm(_this.idPrefix);
                 return _this;
             }
-            SectionDialog.prototype.getFormKey = function () { return Zoning.SectionForm.formKey; };
-            SectionDialog.prototype.getIdProperty = function () { return Zoning.SectionRow.idProperty; };
-            SectionDialog.prototype.getLocalTextPrefix = function () { return Zoning.SectionRow.localTextPrefix; };
-            SectionDialog.prototype.getNameProperty = function () { return Zoning.SectionRow.nameProperty; };
-            SectionDialog.prototype.getService = function () { return Zoning.SectionService.baseUrl; };
-            SectionDialog = __decorate([
+            ZoningGroupDialog.prototype.getFormKey = function () { return Zoning.ZoningGroupForm.formKey; };
+            ZoningGroupDialog.prototype.getIdProperty = function () { return Zoning.ZoningGroupRow.idProperty; };
+            ZoningGroupDialog.prototype.getLocalTextPrefix = function () { return Zoning.ZoningGroupRow.localTextPrefix; };
+            ZoningGroupDialog.prototype.getNameProperty = function () { return Zoning.ZoningGroupRow.nameProperty; };
+            ZoningGroupDialog.prototype.getService = function () { return Zoning.ZoningGroupService.baseUrl; };
+            ZoningGroupDialog = __decorate([
                 Serenity.Decorators.registerClass()
-            ], SectionDialog);
-            return SectionDialog;
+            ], ZoningGroupDialog);
+            return ZoningGroupDialog;
         }(Serenity.EntityDialog));
-        Zoning.SectionDialog = SectionDialog;
+        Zoning.ZoningGroupDialog = ZoningGroupDialog;
     })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
 })(EMS || (EMS = {}));
 var EMS;
 (function (EMS) {
     var Zoning;
     (function (Zoning) {
-        var SectionGrid = /** @class */ (function (_super) {
-            __extends(SectionGrid, _super);
-            function SectionGrid(container) {
+        var ZoningGroupGrid = /** @class */ (function (_super) {
+            __extends(ZoningGroupGrid, _super);
+            function ZoningGroupGrid(container) {
                 return _super.call(this, container) || this;
             }
-            SectionGrid.prototype.getColumnsKey = function () { return 'Zoning.Section'; };
-            SectionGrid.prototype.getDialogType = function () { return Zoning.SectionDialog; };
-            SectionGrid.prototype.getIdProperty = function () { return Zoning.SectionRow.idProperty; };
-            SectionGrid.prototype.getLocalTextPrefix = function () { return Zoning.SectionRow.localTextPrefix; };
-            SectionGrid.prototype.getService = function () { return Zoning.SectionService.baseUrl; };
-            SectionGrid = __decorate([
+            ZoningGroupGrid.prototype.getColumnsKey = function () { return 'Zoning.ZoningGroup'; };
+            ZoningGroupGrid.prototype.getDialogType = function () { return Zoning.ZoningGroupDialog; };
+            ZoningGroupGrid.prototype.getIdProperty = function () { return Zoning.ZoningGroupRow.idProperty; };
+            ZoningGroupGrid.prototype.getLocalTextPrefix = function () { return Zoning.ZoningGroupRow.localTextPrefix; };
+            ZoningGroupGrid.prototype.getService = function () { return Zoning.ZoningGroupService.baseUrl; };
+            ZoningGroupGrid = __decorate([
                 Serenity.Decorators.registerClass()
-            ], SectionGrid);
-            return SectionGrid;
+            ], ZoningGroupGrid);
+            return ZoningGroupGrid;
         }(Serenity.EntityGrid));
-        Zoning.SectionGrid = SectionGrid;
+        Zoning.ZoningGroupGrid = ZoningGroupGrid;
     })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
 })(EMS || (EMS = {}));
 var EMS;

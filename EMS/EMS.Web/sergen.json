@@ -27,6 +27,30 @@
           "PermissionKey": "Administration:General"
         },
         {
+          "Tablename": "dbo.CommonLocation",
+          "Identifier": "CommonLocation",
+          "Module": "Zoning",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.EMSDevice",
+          "Identifier": "EmsDevice",
+          "Module": "EMSDevice",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.EMSParameter",
+          "Identifier": "EmsParameter",
+          "Module": "EMSDevice",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.EMSSetting",
+          "Identifier": "EmsSetting",
+          "Module": "EMSDevice",
+          "PermissionKey": "Administration:General"
+        },
+        {
           "Tablename": "dbo.Floor",
           "Identifier": "Floor",
           "Module": "Zoning",
@@ -35,7 +59,7 @@
         {
           "Tablename": "dbo.Meter",
           "Identifier": "Meter",
-          "Module": "Meters",
+          "Module": "Meter",
           "PermissionKey": "Administration:General"
         },
         {
@@ -45,14 +69,44 @@
           "PermissionKey": "Administration:General"
         },
         {
+          "Tablename": "dbo.MeterParameters",
+          "Identifier": "MeterParameters",
+          "Module": "Meter",
+          "PermissionKey": "Administration:General"
+        },
+        {
           "Tablename": "dbo.MeterType",
           "Identifier": "MeterType",
-          "Module": "Meters",
+          "Module": "Meter",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Parameter",
+          "Identifier": "Parameter",
+          "Module": "Parameter",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.ParameterGroup",
+          "Identifier": "ParameterGroup",
+          "Module": "Parameter",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.ParameterType",
+          "Identifier": "ParameterType",
+          "Module": "Parameter",
           "PermissionKey": "Administration:General"
         },
         {
           "Tablename": "dbo.Section",
           "Identifier": "Section",
+          "Module": "Zoning",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.ZoningGroup",
+          "Identifier": "ZoningGroup",
           "Module": "Zoning",
           "PermissionKey": "Administration:General"
         }

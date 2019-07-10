@@ -89,4 +89,7 @@
   <ItemGroup>
     <DotNetCliToolReference Include="Serenity.CodeGenerator" Version="3.9.6" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
 </Project>

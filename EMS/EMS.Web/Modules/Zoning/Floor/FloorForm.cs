@@ -13,10 +13,10 @@ namespace EMS.Zoning.Forms
     [BasedOnRow(typeof(Entities.FloorRow), CheckNames = true)]
     public class FloorForm
     {
-        public Int32 FloorNumber { get; set; }
-        public String Name { get; set; }
-        public String Describtion { get; set; }
         public Int32 BuildingId { get; set; }
+        public String Name { get; set; }
+        public Int32 FloorNumber { get; set; }
+        public String Describtion { get; set; }
         public Boolean Deleted { get; set; }
     }
 }

@@ -14,6 +14,7 @@ namespace EMS.Zoning.Forms
     public class CityForm
     {
         public String Name { get; set; }
+        public String Description { get; set; }
         public Boolean Deleted { get; set; }
     }
 }
