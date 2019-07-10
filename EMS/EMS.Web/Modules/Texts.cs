@@ -160,7 +160,7 @@ namespace EMS
 
             public static class Layout
             {
-                public static LocalText FooterCopyright = "Copyright (c) 2019.";
+                public static LocalText FooterCopyright = "Hexabitz Inc. © 2019";
                 public static LocalText FooterInfo = "EcoBuild Energy Management System ";
                 public static LocalText FooterRights = "All rights reserved.";
                 public static LocalText GeneralSettings = "General Settings";
