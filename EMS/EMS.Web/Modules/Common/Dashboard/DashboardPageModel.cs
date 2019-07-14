@@ -7,5 +7,11 @@ namespace EMS.Common
         public int ClosedOrderPercent { get; set; }
         public int CustomerCount { get; set; }
         public int ProductCount { get; set; }
+
+
+
+        public int TotalCities { get; set; }
+
+        
     }
 }
