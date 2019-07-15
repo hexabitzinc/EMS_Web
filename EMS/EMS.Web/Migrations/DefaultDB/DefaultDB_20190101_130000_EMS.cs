@@ -288,7 +288,7 @@ namespace EMS.Migrations.DefaultDB
 
             #endregion
 
-            #region inserting data
+            #region Inserting Data
 
             Insert.IntoTable("City")
                 .Row(new
@@ -303,12 +303,38 @@ namespace EMS.Migrations.DefaultDB
                 });
 
 
-
             Insert.IntoTable("Building")
                 .Row(new
                 {
                     Name = "The HQ building",
                     CityID = "1",
+                    ZipCode = "+9846",
+                    Address = "The Address",
+                    StreetAddress = "Street address",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "Sub building",
+                    CityID = "1",
+                    ZipCode = "+9846",
+                    Address = "The Address",
+                    StreetAddress = "Street address",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "The HQ building",
+                    CityID = "2",
+                    ZipCode = "+9846",
+                    Address = "The Address",
+                    StreetAddress = "Street address",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "Sub building",
+                    CityID = "2",
                     ZipCode = "+9846",
                     Address = "The Address",
                     StreetAddress = "Street address",

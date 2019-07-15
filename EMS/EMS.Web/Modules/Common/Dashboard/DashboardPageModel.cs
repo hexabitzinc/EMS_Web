@@ -11,7 +11,9 @@ namespace EMS.Common
 
 
         public int TotalCities { get; set; }
+        public int TotalConsumption { get; set; }
+        public int CurrentCost { get; set; }
 
-        
+
     }
 }

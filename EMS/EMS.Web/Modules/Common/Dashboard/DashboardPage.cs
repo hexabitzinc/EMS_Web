@@ -20,22 +20,17 @@ namespace EMS.Common.Pages
                 {
                     var model = new DashboardPageModel();
                     var o = CityRow.Fields;
-                    using (var connection = SqlConnections.NewFor<CityRow>())
-                    {
-                        model.TotalCities = connection.Count<CityRow>();
+                    var connection = SqlConnections.NewFor<CityRow>();
+                    model.TotalCities = connection.Count<CityRow>();
 
 
-
-
-
-                        //model.OpenOrders = connection.Count<CityRow>(o.ShippingState == (int)OrderShippingState.NotShipped);
-                        //var closedOrders = connection.Count<CityRow>(o.ShippingState == (int)OrderShippingState.Shipped);
-                        //var totalOrders = model.OpenOrders + closedOrders;
-                        //model.ClosedOrderPercent = (int)Math.Round(totalOrders == 0 ? 100 :
-                        //    ((double)closedOrders / (double)totalOrders * 100));
-                        //model.CustomerCount = connection.Count<CityRow>();
-                        //model.ProductCount = connection.Count<CityRow>();
-                    }
+                    //model.OpenOrders = connection.Count<CityRow>(o.ShippingState == (int)OrderShippingState.NotShipped);
+                    //var closedOrders = connection.Count<CityRow>(o.ShippingState == (int)OrderShippingState.Shipped);
+                    //var totalOrders = model.OpenOrders + closedOrders;
+                    //model.ClosedOrderPercent = (int)Math.Round(totalOrders == 0 ? 100 :
+                    //    ((double)closedOrders / (double)totalOrders * 100));
+                    //model.CustomerCount = connection.Count<CityRow>();
+                    //model.ProductCount = connection.Count<CityRow>();
                     return model;
                 });
             return View(MVC.Views.Common.Dashboard.DashboardIndex, cachedModel);
