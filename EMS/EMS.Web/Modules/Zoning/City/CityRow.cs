@@ -1,6 +1,7 @@
 ﻿
 namespace EMS.Zoning.Entities
 {
+    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -13,6 +14,8 @@ namespace EMS.Zoning.Entities
     [DisplayName("City"), InstanceName("City")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [JsonConverter(typeof(JsonRowConverter))]
+    [LookupScript("Zoning.City")]
     public sealed class CityRow : Row, IIdRow, INameRow
     {
         [DisplayName("City Id"), Column("CityID"), Identity]

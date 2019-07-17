@@ -1,6 +1,7 @@
 ﻿
 namespace EMS.Zoning.Entities
 {
+    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -13,6 +14,8 @@ namespace EMS.Zoning.Entities
     [DisplayName("Apartment"), InstanceName("Apartment")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [JsonConverter(typeof(JsonRowConverter))]
+    [LookupScript("Zoning.Apartment")]
     public sealed class ApartmentRow : Row, IIdRow, INameRow
     {
         [DisplayName("Apartment Id"), Column("ApartmentID"), Identity]
@@ -23,6 +26,7 @@ namespace EMS.Zoning.Entities
         }
 
         [DisplayName("Section"), Column("SectionID"), ForeignKey("[dbo].[Section]", "SectionID"), LeftJoin("jSection"), TextualField("SectionName")]
+        [LookupEditor("Zoning.Section")]
         public Int32? SectionId
         {
             get { return Fields.SectionId[this]; }

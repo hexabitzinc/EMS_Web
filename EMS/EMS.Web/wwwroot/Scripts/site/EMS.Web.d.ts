@@ -1245,7 +1245,7 @@ declare namespace EMS.Zoning {
 }
 declare namespace EMS.Zoning {
     interface ApartmentForm {
-        SectionId: Serenity.IntegerEditor;
+        SectionId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         Type: Serenity.StringEditor;
         Address: Serenity.StringEditor;
@@ -1278,6 +1278,8 @@ declare namespace EMS.Zoning {
         const idProperty = "ApartmentId";
         const nameProperty = "Name";
         const localTextPrefix = "Zoning.Apartment";
+        const lookupKey = "Zoning.Apartment";
+        function getLookup(): Q.Lookup<ApartmentRow>;
         const enum Fields {
             ApartmentId = "ApartmentId",
             SectionId = "SectionId",
@@ -1315,7 +1317,7 @@ declare namespace EMS.Zoning {
 }
 declare namespace EMS.Zoning {
     interface BuildingForm {
-        CityId: Serenity.IntegerEditor;
+        CityId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         ZipCode: Serenity.StringEditor;
         Address: Serenity.StringEditor;
@@ -1347,6 +1349,8 @@ declare namespace EMS.Zoning {
         const idProperty = "BuildingId";
         const nameProperty = "Name";
         const localTextPrefix = "Zoning.Building";
+        const lookupKey = "Zoning.Building";
+        function getLookup(): Q.Lookup<BuildingRow>;
         const enum Fields {
             BuildingId = "BuildingId",
             CityId = "CityId",
@@ -1404,6 +1408,8 @@ declare namespace EMS.Zoning {
         const idProperty = "CityId";
         const nameProperty = "Name";
         const localTextPrefix = "Zoning.City";
+        const lookupKey = "Zoning.City";
+        function getLookup(): Q.Lookup<CityRow>;
         const enum Fields {
             CityId = "CityId",
             Name = "Name",
@@ -1433,7 +1439,7 @@ declare namespace EMS.Zoning {
 }
 declare namespace EMS.Zoning {
     interface CommonLocationForm {
-        BuildingId: Serenity.IntegerEditor;
+        BuildingId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         Description: Serenity.StringEditor;
         Deleted: Serenity.BooleanEditor;
@@ -1463,6 +1469,8 @@ declare namespace EMS.Zoning {
         const idProperty = "CommonLocationId";
         const nameProperty = "Name";
         const localTextPrefix = "Zoning.CommonLocation";
+        const lookupKey = "Zoning.CommonLocation";
+        function getLookup(): Q.Lookup<CommonLocationRow>;
         const enum Fields {
             CommonLocationId = "CommonLocationId",
             BuildingId = "BuildingId",
@@ -1500,7 +1508,7 @@ declare namespace EMS.Zoning {
 }
 declare namespace EMS.Zoning {
     interface FloorForm {
-        BuildingId: Serenity.IntegerEditor;
+        BuildingId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         FloorNumber: Serenity.IntegerEditor;
         Describtion: Serenity.StringEditor;
@@ -1532,6 +1540,8 @@ declare namespace EMS.Zoning {
         const idProperty = "FloorId";
         const nameProperty = "Name";
         const localTextPrefix = "Zoning.Floor";
+        const lookupKey = "Zoning.Floor";
+        function getLookup(): Q.Lookup<FloorRow>;
         const enum Fields {
             FloorId = "FloorId",
             BuildingId = "BuildingId",
@@ -1563,6 +1573,71 @@ declare namespace EMS.Zoning {
             Delete = "Zoning/Floor/Delete",
             Retrieve = "Zoning/Floor/Retrieve",
             List = "Zoning/Floor/List"
+        }
+    }
+}
+declare namespace EMS.Zoning {
+}
+declare namespace EMS.Zoning {
+    interface SectionForm {
+        FloorId: Serenity.LookupEditor;
+        Name: Serenity.StringEditor;
+        Describtion: Serenity.StringEditor;
+        Deleted: Serenity.BooleanEditor;
+    }
+    class SectionForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace EMS.Zoning {
+    interface SectionRow {
+        SectionId?: number;
+        FloorId?: number;
+        Name?: string;
+        Describtion?: string;
+        Deleted?: boolean;
+        FloorBuildingId?: number;
+        FloorName?: string;
+        FloorFloorNumber?: number;
+        FloorDescribtion?: string;
+        FloorDeleted?: boolean;
+    }
+    namespace SectionRow {
+        const idProperty = "SectionId";
+        const nameProperty = "Name";
+        const localTextPrefix = "Zoning.Section";
+        const lookupKey = "Zoning.Section";
+        function getLookup(): Q.Lookup<SectionRow>;
+        const enum Fields {
+            SectionId = "SectionId",
+            FloorId = "FloorId",
+            Name = "Name",
+            Describtion = "Describtion",
+            Deleted = "Deleted",
+            FloorBuildingId = "FloorBuildingId",
+            FloorName = "FloorName",
+            FloorFloorNumber = "FloorFloorNumber",
+            FloorDescribtion = "FloorDescribtion",
+            FloorDeleted = "FloorDeleted"
+        }
+    }
+}
+declare namespace EMS.Zoning {
+    namespace SectionService {
+        const baseUrl = "Zoning/Section";
+        function Create(request: Serenity.SaveRequest<SectionRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SectionRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SectionRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SectionRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Zoning/Section/Create",
+            Update = "Zoning/Section/Update",
+            Delete = "Zoning/Section/Delete",
+            Retrieve = "Zoning/Section/Retrieve",
+            List = "Zoning/Section/List"
         }
     }
 }
@@ -2310,6 +2385,26 @@ declare namespace EMS.Zoning {
     class FloorGrid extends Serenity.EntityGrid<FloorRow, any> {
         protected getColumnsKey(): string;
         protected getDialogType(): typeof FloorDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace EMS.Zoning {
+    class SectionDialog extends Serenity.EntityDialog<SectionRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SectionForm;
+    }
+}
+declare namespace EMS.Zoning {
+    class SectionGrid extends Serenity.EntityGrid<SectionRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SectionDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;

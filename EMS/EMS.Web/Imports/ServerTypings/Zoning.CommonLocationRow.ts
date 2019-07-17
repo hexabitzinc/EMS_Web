@@ -18,6 +18,11 @@
         export const idProperty = 'CommonLocationId';
         export const nameProperty = 'Name';
         export const localTextPrefix = 'Zoning.CommonLocation';
+        export const lookupKey = 'Zoning.CommonLocation';
+
+        export function getLookup(): Q.Lookup<CommonLocationRow> {
+            return Q.getLookup<CommonLocationRow>('Zoning.CommonLocation');
+        }
 
         export declare const enum Fields {
             CommonLocationId = "CommonLocationId",

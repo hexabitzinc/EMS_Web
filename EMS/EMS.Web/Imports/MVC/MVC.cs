@@ -236,6 +236,11 @@ namespace MVC
                 public const string FloorIndex = "~/Modules/Zoning/Floor/FloorIndex.cshtml";
             }
 
+            public static class Section
+            {
+                public const string SectionIndex = "~/Modules/Zoning/Section/SectionIndex.cshtml";
+            }
+
             public static class ZoningGroup
             {
                 public const string ZoningGroupIndex = "~/Modules/Zoning/ZoningGroup/ZoningGroupIndex.cshtml";

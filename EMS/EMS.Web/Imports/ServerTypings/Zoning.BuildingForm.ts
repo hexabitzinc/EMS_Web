@@ -1,6 +1,6 @@
 ﻿namespace EMS.Zoning {
     export interface BuildingForm {
-        CityId: Serenity.IntegerEditor;
+        CityId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         ZipCode: Serenity.StringEditor;
         Address: Serenity.StringEditor;
@@ -20,7 +20,7 @@
                 BuildingForm.init = true;
 
                 var s = Serenity;
-                var w0 = s.IntegerEditor;
+                var w0 = s.LookupEditor;
                 var w1 = s.StringEditor;
                 var w2 = s.BooleanEditor;
 
