@@ -18,7 +18,7 @@ namespace EMS.Zoning.Columns
         public String FloorName { get; set; }
         [EditLink]
         public String Name { get; set; }
-        public String Describtion { get; set; }
+        public String Description { get; set; }
         public Boolean Deleted { get; set; }
     }
 }

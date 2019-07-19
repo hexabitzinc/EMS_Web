@@ -1,6 +1,6 @@
 ﻿namespace EMS.EMSDevice {
     export interface EmsSettingForm {
-        ParameterTypeId: Serenity.LookupEditor;
+        ParameterTypeId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
         Value: Serenity.StringEditor;
         Address: Serenity.StringEditor;
@@ -19,7 +19,7 @@
                 EmsSettingForm.init = true;
 
                 var s = Serenity;
-                var w0 = s.LookupEditor;
+                var w0 = s.IntegerEditor;
                 var w1 = s.StringEditor;
                 var w2 = s.BooleanEditor;
 

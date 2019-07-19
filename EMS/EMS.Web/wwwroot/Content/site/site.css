@@ -8194,6 +8194,18 @@ section.content > .s-DataGrid {
 .s-Meter-MeterTypeDialog .caption {
   width: 150px;
 }
+.s-Meter-MeterDetailDialog > .size {
+  width: 650px;
+}
+.s-Meter-MeterDetailDialog .caption {
+  width: 150px;
+}
+.s-Meter-SchedulingDialog > .size {
+  width: 650px;
+}
+.s-Meter-SchedulingDialog .caption {
+  width: 150px;
+}
 .s-Parameter-ParameterDialog > .size {
   width: 650px;
 }
@@ -8210,5 +8222,11 @@ section.content > .s-DataGrid {
   width: 650px;
 }
 .s-Parameter-ParameterTypeDialog .caption {
+  width: 150px;
+}
+.s-Consumer-ConsumerDialog > .size {
+  width: 650px;
+}
+.s-Consumer-ConsumerDialog .caption {
   width: 150px;
 }

@@ -15,7 +15,6 @@ namespace EMS.Parameter.Forms
     {
         public Int32 ParameterTypeId { get; set; }
         public String Name { get; set; }
-        public String Value { get; set; }
         public String Address { get; set; }
         public String Notes { get; set; }
         public Boolean Deleted { get; set; }

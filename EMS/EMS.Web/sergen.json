@@ -33,6 +33,12 @@
           "PermissionKey": "Administration:General"
         },
         {
+          "Tablename": "dbo.Consumer",
+          "Identifier": "Consumer",
+          "Module": "Consumer",
+          "PermissionKey": "Administration:General"
+        },
+        {
           "Tablename": "dbo.EMSDevice",
           "Identifier": "EmsDevice",
           "Module": "EMSDevice",
@@ -59,6 +65,12 @@
         {
           "Tablename": "dbo.Meter",
           "Identifier": "Meter",
+          "Module": "Meter",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.MeterDetail",
+          "Identifier": "MeterDetail",
           "Module": "Meter",
           "PermissionKey": "Administration:General"
         },
@@ -96,6 +108,12 @@
           "Tablename": "dbo.ParameterType",
           "Identifier": "ParameterType",
           "Module": "Parameter",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Scheduling",
+          "Identifier": "Scheduling",
+          "Module": "Meter",
           "PermissionKey": "Administration:General"
         },
         {

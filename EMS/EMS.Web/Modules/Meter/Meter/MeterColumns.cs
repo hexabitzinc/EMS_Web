@@ -15,8 +15,6 @@ namespace EMS.Meter.Columns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
         public Int32 MeterId { get; set; }
-        public String ApartmentName { get; set; }
-        public String CommonLocationName { get; set; }
         public String MeterTypeName { get; set; }
         public String ConsumerFirstName { get; set; }
         [EditLink]

@@ -454,13 +454,81 @@ declare namespace EMS.Common {
         Value?: string;
     }
 }
+declare namespace EMS.Consumer {
+}
+declare namespace EMS.Consumer {
+    interface ConsumerForm {
+        FirstName: Serenity.StringEditor;
+        LastName: Serenity.StringEditor;
+        Gender: Serenity.StringEditor;
+        Address: Serenity.StringEditor;
+        Phone: Serenity.StringEditor;
+        OtherInformation: Serenity.StringEditor;
+        Mobile: Serenity.StringEditor;
+        Email: Serenity.StringEditor;
+        Deleted: Serenity.BooleanEditor;
+    }
+    class ConsumerForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace EMS.Consumer {
+    interface ConsumerRow {
+        ConsumerId?: number;
+        FirstName?: string;
+        LastName?: string;
+        Gender?: string;
+        Address?: string;
+        Phone?: string;
+        OtherInformation?: string;
+        Mobile?: string;
+        Email?: string;
+        Deleted?: boolean;
+    }
+    namespace ConsumerRow {
+        const idProperty = "ConsumerId";
+        const nameProperty = "FirstName";
+        const localTextPrefix = "Consumer.Consumer";
+        const enum Fields {
+            ConsumerId = "ConsumerId",
+            FirstName = "FirstName",
+            LastName = "LastName",
+            Gender = "Gender",
+            Address = "Address",
+            Phone = "Phone",
+            OtherInformation = "OtherInformation",
+            Mobile = "Mobile",
+            Email = "Email",
+            Deleted = "Deleted"
+        }
+    }
+}
+declare namespace EMS.Consumer {
+    namespace ConsumerService {
+        const baseUrl = "Consumer/Consumer";
+        function Create(request: Serenity.SaveRequest<ConsumerRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ConsumerRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ConsumerRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ConsumerRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Consumer/Consumer/Create",
+            Update = "Consumer/Consumer/Update",
+            Delete = "Consumer/Consumer/Delete",
+            Retrieve = "Consumer/Consumer/Retrieve",
+            List = "Consumer/Consumer/List"
+        }
+    }
+}
 declare namespace EMS.EMSDevice {
 }
 declare namespace EMS.EMSDevice {
     interface EmsDeviceForm {
-        BuildingId: Serenity.LookupEditor;
-        EmsParameterId: Serenity.LookupEditor;
-        EmsSettingId: Serenity.LookupEditor;
+        BuildingId: Serenity.IntegerEditor;
+        EmsParameterId: Serenity.IntegerEditor;
+        EmsSettingId: Serenity.IntegerEditor;
         ConsumerId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
         SerialNumber: Serenity.StringEditor;
@@ -529,8 +597,6 @@ declare namespace EMS.EMSDevice {
         const idProperty = "EmsDeviceId";
         const nameProperty = "Name";
         const localTextPrefix = "EMSDevice.EmsDevice";
-        const lookupKey = "EMSDevice.EMSDevice";
-        function getLookup(): Q.Lookup<EmsDeviceRow>;
         const enum Fields {
             EmsDeviceId = "EmsDeviceId",
             BuildingId = "BuildingId",
@@ -599,7 +665,7 @@ declare namespace EMS.EMSDevice {
 }
 declare namespace EMS.EMSDevice {
     interface EmsParameterForm {
-        ParameterTypeId: Serenity.LookupEditor;
+        ParameterTypeId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
         Value: Serenity.StringEditor;
         Address: Serenity.StringEditor;
@@ -628,8 +694,6 @@ declare namespace EMS.EMSDevice {
         const idProperty = "EmsParameterId";
         const nameProperty = "Name";
         const localTextPrefix = "EMSDevice.EmsParameter";
-        const lookupKey = "EMSDevice.EMSParameter";
-        function getLookup(): Q.Lookup<EmsParameterRow>;
         const enum Fields {
             EmsParameterId = "EmsParameterId",
             ParameterTypeId = "ParameterTypeId",
@@ -664,7 +728,7 @@ declare namespace EMS.EMSDevice {
 }
 declare namespace EMS.EMSDevice {
     interface EmsSettingForm {
-        ParameterTypeId: Serenity.LookupEditor;
+        ParameterTypeId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
         Value: Serenity.StringEditor;
         Address: Serenity.StringEditor;
@@ -693,8 +757,6 @@ declare namespace EMS.EMSDevice {
         const idProperty = "EmsSettingId";
         const nameProperty = "Name";
         const localTextPrefix = "EMSDevice.EmsSetting";
-        const lookupKey = "EMSDevice.EMSSetting";
-        function getLookup(): Q.Lookup<EmsSettingRow>;
         const enum Fields {
             EmsSettingId = "EmsSettingId",
             ParameterTypeId = "ParameterTypeId",
@@ -842,10 +904,118 @@ declare namespace EMS.Membership {
 declare namespace EMS.Meter {
 }
 declare namespace EMS.Meter {
+}
+declare namespace EMS.Meter {
+    interface MeterDetailForm {
+        ParameterGroupId: Serenity.IntegerEditor;
+        ParameterId: Serenity.IntegerEditor;
+        SchedulingId: Serenity.IntegerEditor;
+        ApartmentId: Serenity.IntegerEditor;
+        CommonLocationId: Serenity.IntegerEditor;
+        Value: Serenity.StringEditor;
+        Deleted: Serenity.BooleanEditor;
+    }
+    class MeterDetailForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace EMS.Meter {
+    interface MeterDetailRow {
+        MeterDetailId?: number;
+        ParameterGroupId?: number;
+        ParameterId?: number;
+        SchedulingId?: number;
+        ApartmentId?: number;
+        CommonLocationId?: number;
+        Value?: string;
+        Deleted?: boolean;
+        ParameterGroupName?: string;
+        ParameterGroupDeleted?: boolean;
+        ParameterParameterTypeId?: number;
+        ParameterName?: string;
+        ParameterAddress?: string;
+        ParameterNotes?: string;
+        ParameterDeleted?: boolean;
+        SchedulingYear?: string;
+        SchedulingMonth?: string;
+        SchedulingDay?: string;
+        SchedulingTime?: string;
+        SchedulingFullDate?: string;
+        SchedulingDeleted?: boolean;
+        ApartmentSectionId?: number;
+        ApartmentName?: string;
+        ApartmentType?: string;
+        ApartmentAddress?: string;
+        ApartmentRoomNumber?: string;
+        ApartmentDescription?: string;
+        ApartmentDeleted?: boolean;
+        CommonLocationBuildingId?: number;
+        CommonLocationName?: string;
+        CommonLocationDescription?: string;
+        CommonLocationDeleted?: boolean;
+    }
+    namespace MeterDetailRow {
+        const idProperty = "MeterDetailId";
+        const nameProperty = "Value";
+        const localTextPrefix = "Meter.MeterDetail";
+        const enum Fields {
+            MeterDetailId = "MeterDetailId",
+            ParameterGroupId = "ParameterGroupId",
+            ParameterId = "ParameterId",
+            SchedulingId = "SchedulingId",
+            ApartmentId = "ApartmentId",
+            CommonLocationId = "CommonLocationId",
+            Value = "Value",
+            Deleted = "Deleted",
+            ParameterGroupName = "ParameterGroupName",
+            ParameterGroupDeleted = "ParameterGroupDeleted",
+            ParameterParameterTypeId = "ParameterParameterTypeId",
+            ParameterName = "ParameterName",
+            ParameterAddress = "ParameterAddress",
+            ParameterNotes = "ParameterNotes",
+            ParameterDeleted = "ParameterDeleted",
+            SchedulingYear = "SchedulingYear",
+            SchedulingMonth = "SchedulingMonth",
+            SchedulingDay = "SchedulingDay",
+            SchedulingTime = "SchedulingTime",
+            SchedulingFullDate = "SchedulingFullDate",
+            SchedulingDeleted = "SchedulingDeleted",
+            ApartmentSectionId = "ApartmentSectionId",
+            ApartmentName = "ApartmentName",
+            ApartmentType = "ApartmentType",
+            ApartmentAddress = "ApartmentAddress",
+            ApartmentRoomNumber = "ApartmentRoomNumber",
+            ApartmentDescription = "ApartmentDescription",
+            ApartmentDeleted = "ApartmentDeleted",
+            CommonLocationBuildingId = "CommonLocationBuildingId",
+            CommonLocationName = "CommonLocationName",
+            CommonLocationDescription = "CommonLocationDescription",
+            CommonLocationDeleted = "CommonLocationDeleted"
+        }
+    }
+}
+declare namespace EMS.Meter {
+    namespace MeterDetailService {
+        const baseUrl = "Meter/MeterDetail";
+        function Create(request: Serenity.SaveRequest<MeterDetailRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<MeterDetailRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<MeterDetailRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<MeterDetailRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Meter/MeterDetail/Create",
+            Update = "Meter/MeterDetail/Update",
+            Delete = "Meter/MeterDetail/Delete",
+            Retrieve = "Meter/MeterDetail/Retrieve",
+            List = "Meter/MeterDetail/List"
+        }
+    }
+}
+declare namespace EMS.Meter {
     interface MeterForm {
-        ApartmentId: Serenity.LookupEditor;
-        CommonLocationId: Serenity.LookupEditor;
-        MeterTypeId: Serenity.LookupEditor;
+        MeterTypeId: Serenity.IntegerEditor;
         ConsumerId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
         SerialNumber: Serenity.StringEditor;
@@ -865,77 +1035,8 @@ declare namespace EMS.Meter {
     }
 }
 declare namespace EMS.Meter {
-}
-declare namespace EMS.Meter {
-    interface MeterParametersForm {
-        ParameterGroupId: Serenity.LookupEditor;
-        ParameterId: Serenity.LookupEditor;
-        Deleted: Serenity.BooleanEditor;
-    }
-    class MeterParametersForm extends Serenity.PrefixedContext {
-        static formKey: string;
-        private static init;
-        constructor(prefix: string);
-    }
-}
-declare namespace EMS.Meter {
-    interface MeterParametersRow {
-        MeterParameterId?: number;
-        ParameterGroupId?: number;
-        ParameterId?: number;
-        Deleted?: boolean;
-        ParameterGroupName?: string;
-        ParameterGroupDeleted?: boolean;
-        ParameterParameterTypeId?: number;
-        ParameterName?: string;
-        ParameterValue?: string;
-        ParameterAddress?: string;
-        ParameterNotes?: string;
-        ParameterDeleted?: boolean;
-    }
-    namespace MeterParametersRow {
-        const idProperty = "MeterParameterId";
-        const localTextPrefix = "Meter.MeterParameters";
-        const lookupKey = "Meter.MeterParameters";
-        function getLookup(): Q.Lookup<MeterParametersRow>;
-        const enum Fields {
-            MeterParameterId = "MeterParameterId",
-            ParameterGroupId = "ParameterGroupId",
-            ParameterId = "ParameterId",
-            Deleted = "Deleted",
-            ParameterGroupName = "ParameterGroupName",
-            ParameterGroupDeleted = "ParameterGroupDeleted",
-            ParameterParameterTypeId = "ParameterParameterTypeId",
-            ParameterName = "ParameterName",
-            ParameterValue = "ParameterValue",
-            ParameterAddress = "ParameterAddress",
-            ParameterNotes = "ParameterNotes",
-            ParameterDeleted = "ParameterDeleted"
-        }
-    }
-}
-declare namespace EMS.Meter {
-    namespace MeterParametersService {
-        const baseUrl = "Meter/MeterParameters";
-        function Create(request: Serenity.SaveRequest<MeterParametersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<MeterParametersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<MeterParametersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<MeterParametersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
-        const enum Methods {
-            Create = "Meter/MeterParameters/Create",
-            Update = "Meter/MeterParameters/Update",
-            Delete = "Meter/MeterParameters/Delete",
-            Retrieve = "Meter/MeterParameters/Retrieve",
-            List = "Meter/MeterParameters/List"
-        }
-    }
-}
-declare namespace EMS.Meter {
     interface MeterRow {
         MeterId?: number;
-        ApartmentId?: number;
-        CommonLocationId?: number;
         MeterTypeId?: number;
         ConsumerId?: number;
         Name?: string;
@@ -948,17 +1049,6 @@ declare namespace EMS.Meter {
         RegistrationDate?: string;
         Notes?: string;
         Deleted?: boolean;
-        ApartmentSectionId?: number;
-        ApartmentName?: string;
-        ApartmentType?: string;
-        ApartmentAddress?: string;
-        ApartmentRoomNumber?: string;
-        ApartmentDescribtion?: string;
-        ApartmentDeleted?: boolean;
-        CommonLocationBuildingId?: number;
-        CommonLocationName?: string;
-        CommonLocationDescription?: string;
-        CommonLocationDeleted?: boolean;
         MeterTypeName?: string;
         MeterTypeDeleted?: boolean;
         ConsumerFirstName?: string;
@@ -975,12 +1065,8 @@ declare namespace EMS.Meter {
         const idProperty = "MeterId";
         const nameProperty = "Name";
         const localTextPrefix = "Meter.Meter";
-        const lookupKey = "Zoning.Meter";
-        function getLookup(): Q.Lookup<MeterRow>;
         const enum Fields {
             MeterId = "MeterId",
-            ApartmentId = "ApartmentId",
-            CommonLocationId = "CommonLocationId",
             MeterTypeId = "MeterTypeId",
             ConsumerId = "ConsumerId",
             Name = "Name",
@@ -993,17 +1079,6 @@ declare namespace EMS.Meter {
             RegistrationDate = "RegistrationDate",
             Notes = "Notes",
             Deleted = "Deleted",
-            ApartmentSectionId = "ApartmentSectionId",
-            ApartmentName = "ApartmentName",
-            ApartmentType = "ApartmentType",
-            ApartmentAddress = "ApartmentAddress",
-            ApartmentRoomNumber = "ApartmentRoomNumber",
-            ApartmentDescribtion = "ApartmentDescribtion",
-            ApartmentDeleted = "ApartmentDeleted",
-            CommonLocationBuildingId = "CommonLocationBuildingId",
-            CommonLocationName = "CommonLocationName",
-            CommonLocationDescription = "CommonLocationDescription",
-            CommonLocationDeleted = "CommonLocationDeleted",
             MeterTypeName = "MeterTypeName",
             MeterTypeDeleted = "MeterTypeDeleted",
             ConsumerFirstName = "ConsumerFirstName",
@@ -1058,8 +1133,6 @@ declare namespace EMS.Meter {
         const idProperty = "MeterTypeId";
         const nameProperty = "Name";
         const localTextPrefix = "Meter.MeterType";
-        const lookupKey = "Meter.MeterType";
-        function getLookup(): Q.Lookup<MeterTypeRow>;
         const enum Fields {
             MeterTypeId = "MeterTypeId",
             Name = "Name",
@@ -1084,13 +1157,71 @@ declare namespace EMS.Meter {
         }
     }
 }
+declare namespace EMS.Meter {
+}
+declare namespace EMS.Meter {
+    interface SchedulingForm {
+        Year: Serenity.StringEditor;
+        Month: Serenity.StringEditor;
+        Day: Serenity.StringEditor;
+        Time: Serenity.StringEditor;
+        FullDate: Serenity.DateEditor;
+        Deleted: Serenity.BooleanEditor;
+    }
+    class SchedulingForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace EMS.Meter {
+    interface SchedulingRow {
+        SchedulingId?: number;
+        Year?: string;
+        Month?: string;
+        Day?: string;
+        Time?: string;
+        FullDate?: string;
+        Deleted?: boolean;
+    }
+    namespace SchedulingRow {
+        const idProperty = "SchedulingId";
+        const nameProperty = "Year";
+        const localTextPrefix = "Meter.Scheduling";
+        const enum Fields {
+            SchedulingId = "SchedulingId",
+            Year = "Year",
+            Month = "Month",
+            Day = "Day",
+            Time = "Time",
+            FullDate = "FullDate",
+            Deleted = "Deleted"
+        }
+    }
+}
+declare namespace EMS.Meter {
+    namespace SchedulingService {
+        const baseUrl = "Meter/Scheduling";
+        function Create(request: Serenity.SaveRequest<SchedulingRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SchedulingRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SchedulingRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SchedulingRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Meter/Scheduling/Create",
+            Update = "Meter/Scheduling/Update",
+            Delete = "Meter/Scheduling/Delete",
+            Retrieve = "Meter/Scheduling/Retrieve",
+            List = "Meter/Scheduling/List"
+        }
+    }
+}
 declare namespace EMS.Parameter {
 }
 declare namespace EMS.Parameter {
     interface ParameterForm {
-        ParameterTypeId: Serenity.LookupEditor;
+        ParameterTypeId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
-        Value: Serenity.StringEditor;
         Address: Serenity.StringEditor;
         Notes: Serenity.StringEditor;
         Deleted: Serenity.BooleanEditor;
@@ -1124,8 +1255,6 @@ declare namespace EMS.Parameter {
         const idProperty = "ParameterGroupId";
         const nameProperty = "Name";
         const localTextPrefix = "Parameter.ParameterGroup";
-        const lookupKey = "Parameter.ParameterGroup";
-        function getLookup(): Q.Lookup<ParameterGroupRow>;
         const enum Fields {
             ParameterGroupId = "ParameterGroupId",
             Name = "Name",
@@ -1155,7 +1284,6 @@ declare namespace EMS.Parameter {
         ParameterId?: number;
         ParameterTypeId?: number;
         Name?: string;
-        Value?: string;
         Address?: string;
         Notes?: string;
         Deleted?: boolean;
@@ -1166,13 +1294,10 @@ declare namespace EMS.Parameter {
         const idProperty = "ParameterId";
         const nameProperty = "Name";
         const localTextPrefix = "Parameter.Parameter";
-        const lookupKey = "Parameter.Parameter";
-        function getLookup(): Q.Lookup<ParameterRow>;
         const enum Fields {
             ParameterId = "ParameterId",
             ParameterTypeId = "ParameterTypeId",
             Name = "Name",
-            Value = "Value",
             Address = "Address",
             Notes = "Notes",
             Deleted = "Deleted",
@@ -1221,8 +1346,6 @@ declare namespace EMS.Parameter {
         const idProperty = "ParameterTypeId";
         const nameProperty = "Name";
         const localTextPrefix = "Parameter.ParameterType";
-        const lookupKey = "Parameter.ParameterType";
-        function getLookup(): Q.Lookup<ParameterTypeRow>;
         const enum Fields {
             ParameterTypeId = "ParameterTypeId",
             Name = "Name",
@@ -1263,12 +1386,12 @@ declare namespace EMS.Zoning {
 }
 declare namespace EMS.Zoning {
     interface ApartmentForm {
-        SectionId: Serenity.LookupEditor;
+        SectionId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
         Type: Serenity.StringEditor;
         Address: Serenity.StringEditor;
         RoomNumber: Serenity.StringEditor;
-        Describtion: Serenity.StringEditor;
+        Description: Serenity.StringEditor;
         Deleted: Serenity.BooleanEditor;
     }
     class ApartmentForm extends Serenity.PrefixedContext {
@@ -1285,19 +1408,17 @@ declare namespace EMS.Zoning {
         Type?: string;
         Address?: string;
         RoomNumber?: string;
-        Describtion?: string;
+        Description?: string;
         Deleted?: boolean;
         SectionFloorId?: number;
         SectionName?: string;
-        SectionDescribtion?: string;
+        SectionDescription?: string;
         SectionDeleted?: boolean;
     }
     namespace ApartmentRow {
         const idProperty = "ApartmentId";
         const nameProperty = "Name";
         const localTextPrefix = "Zoning.Apartment";
-        const lookupKey = "Zoning.Apartment";
-        function getLookup(): Q.Lookup<ApartmentRow>;
         const enum Fields {
             ApartmentId = "ApartmentId",
             SectionId = "SectionId",
@@ -1305,11 +1426,11 @@ declare namespace EMS.Zoning {
             Type = "Type",
             Address = "Address",
             RoomNumber = "RoomNumber",
-            Describtion = "Describtion",
+            Description = "Description",
             Deleted = "Deleted",
             SectionFloorId = "SectionFloorId",
             SectionName = "SectionName",
-            SectionDescribtion = "SectionDescribtion",
+            SectionDescription = "SectionDescription",
             SectionDeleted = "SectionDeleted"
         }
     }
@@ -1526,10 +1647,10 @@ declare namespace EMS.Zoning {
 }
 declare namespace EMS.Zoning {
     interface FloorForm {
-        BuildingId: Serenity.LookupEditor;
+        BuildingId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
         FloorNumber: Serenity.IntegerEditor;
-        Describtion: Serenity.StringEditor;
+        Description: Serenity.StringEditor;
         Deleted: Serenity.BooleanEditor;
     }
     class FloorForm extends Serenity.PrefixedContext {
@@ -1544,7 +1665,7 @@ declare namespace EMS.Zoning {
         BuildingId?: number;
         Name?: string;
         FloorNumber?: number;
-        Describtion?: string;
+        Description?: string;
         Deleted?: boolean;
         BuildingCityId?: number;
         BuildingName?: string;
@@ -1558,14 +1679,12 @@ declare namespace EMS.Zoning {
         const idProperty = "FloorId";
         const nameProperty = "Name";
         const localTextPrefix = "Zoning.Floor";
-        const lookupKey = "Zoning.Floor";
-        function getLookup(): Q.Lookup<FloorRow>;
         const enum Fields {
             FloorId = "FloorId",
             BuildingId = "BuildingId",
             Name = "Name",
             FloorNumber = "FloorNumber",
-            Describtion = "Describtion",
+            Description = "Description",
             Deleted = "Deleted",
             BuildingCityId = "BuildingCityId",
             BuildingName = "BuildingName",
@@ -1598,9 +1717,9 @@ declare namespace EMS.Zoning {
 }
 declare namespace EMS.Zoning {
     interface SectionForm {
-        FloorId: Serenity.LookupEditor;
+        FloorId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
-        Describtion: Serenity.StringEditor;
+        Description: Serenity.StringEditor;
         Deleted: Serenity.BooleanEditor;
     }
     class SectionForm extends Serenity.PrefixedContext {
@@ -1614,30 +1733,28 @@ declare namespace EMS.Zoning {
         SectionId?: number;
         FloorId?: number;
         Name?: string;
-        Describtion?: string;
+        Description?: string;
         Deleted?: boolean;
         FloorBuildingId?: number;
         FloorName?: string;
         FloorFloorNumber?: number;
-        FloorDescribtion?: string;
+        FloorDescription?: string;
         FloorDeleted?: boolean;
     }
     namespace SectionRow {
         const idProperty = "SectionId";
         const nameProperty = "Name";
         const localTextPrefix = "Zoning.Section";
-        const lookupKey = "Zoning.Section";
-        function getLookup(): Q.Lookup<SectionRow>;
         const enum Fields {
             SectionId = "SectionId",
             FloorId = "FloorId",
             Name = "Name",
-            Describtion = "Describtion",
+            Description = "Description",
             Deleted = "Deleted",
             FloorBuildingId = "FloorBuildingId",
             FloorName = "FloorName",
             FloorFloorNumber = "FloorFloorNumber",
-            FloorDescribtion = "FloorDescribtion",
+            FloorDescription = "FloorDescription",
             FloorDeleted = "FloorDeleted"
         }
     }
@@ -2130,6 +2247,26 @@ declare namespace EMS.Common {
         setItem(key: string, data: string): void;
     }
 }
+declare namespace EMS.Consumer {
+    class ConsumerDialog extends Serenity.EntityDialog<ConsumerRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ConsumerForm;
+    }
+}
+declare namespace EMS.Consumer {
+    class ConsumerGrid extends Serenity.EntityGrid<ConsumerRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ConsumerDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
 declare namespace EMS.EMSDevice {
     class EmsDeviceDialog extends Serenity.EntityDialog<EmsDeviceRow, any> {
         protected getFormKey(): string;
@@ -2211,18 +2348,19 @@ declare namespace EMS.Meter {
     }
 }
 declare namespace EMS.Meter {
-    class MeterParametersDialog extends Serenity.EntityDialog<MeterParametersRow, any> {
+    class MeterDetailDialog extends Serenity.EntityDialog<MeterDetailRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
         protected getService(): string;
-        protected form: MeterParametersForm;
+        protected form: MeterDetailForm;
     }
 }
 declare namespace EMS.Meter {
-    class MeterParametersGrid extends Serenity.EntityGrid<MeterParametersRow, any> {
+    class MeterDetailGrid extends Serenity.EntityGrid<MeterDetailRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof MeterParametersDialog;
+        protected getDialogType(): typeof MeterDetailDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
@@ -2243,6 +2381,26 @@ declare namespace EMS.Meter {
     class MeterTypeGrid extends Serenity.EntityGrid<MeterTypeRow, any> {
         protected getColumnsKey(): string;
         protected getDialogType(): typeof MeterTypeDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace EMS.Meter {
+    class SchedulingDialog extends Serenity.EntityDialog<SchedulingRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SchedulingForm;
+    }
+}
+declare namespace EMS.Meter {
+    class SchedulingGrid extends Serenity.EntityGrid<SchedulingRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SchedulingDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;

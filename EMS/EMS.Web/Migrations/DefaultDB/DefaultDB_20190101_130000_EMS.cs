@@ -55,7 +55,7 @@ namespace EMS.Migrations.DefaultDB
                .WithColumn("Type").AsString(200).Nullable()
                .WithColumn("Address").AsString(1000).Nullable()
                .WithColumn("RoomNumber").AsString(200).Nullable()
-               .WithColumn("Descrition").AsString(1000).Nullable()
+               .WithColumn("Description").AsString(1000).Nullable()
                .WithColumn("Deleted").AsBoolean().NotNullable().WithDefaultValue(false);
 
             Create.Table("CommonLocation")
@@ -139,7 +139,6 @@ namespace EMS.Migrations.DefaultDB
 
             Create.Table("Meter")
                 .WithColumn("MeterID").AsInt32().Identity().PrimaryKey()
-                .WithColumn("CommonLocationID").AsInt32().Nullable().ForeignKey("FK_Meter_CommonLocation", "dbo", "CommonLocation", "CommonLocationID")
                 .WithColumn("MeterTypeID").AsInt32().Nullable().ForeignKey("FK_Meter_MeterType", "dbo", "MeterType", "MeterTypeID")
                 .WithColumn("ConsumerID").AsInt32().Nullable().ForeignKey("FK_Meter_Consumer", "dbo", "Consumer", "ConsumerID")
                 .WithColumn("Name").AsString(200).NotNullable()
@@ -168,6 +167,7 @@ namespace EMS.Migrations.DefaultDB
                 .WithColumn("ParameterID").AsInt32().Nullable().ForeignKey("FK_MeterDetail_Parameter", "dbo", "Parameter", "ParameterID")
                 .WithColumn("SchedulingID").AsInt32().Nullable().ForeignKey("FK_MeterDetail_Scheduling", "dbo", "Scheduling", "SchedulingID")
                 .WithColumn("ApartmentID").AsInt32().Nullable().ForeignKey("FK_MeterDetail_Apartment", "dbo", "Apartment", "ApartmentID")
+                .WithColumn("CommonLocationID").AsInt32().Nullable().ForeignKey("FK_MeterDetail_CommonLocation", "dbo", "CommonLocation", "CommonLocationID")
                 .WithColumn("Value").AsString(200).Nullable()
                 .WithColumn("Deleted").AsBoolean().NotNullable().WithDefaultValue(false);
 
@@ -409,7 +409,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Current average",
-                    Value = "",
+                    
                     Address = "3913",
                     Notes = "",
                     Deleted = false
@@ -418,7 +418,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Current, phase 1",
-                    Value = "",
+                    
                     Address = "3929",
                     Notes = "",
                     Deleted = false
@@ -427,7 +427,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Current, phase 2",
-                    Value = "",
+                    
                     Address = "3943",
                     Notes = "",
                     Deleted = false
@@ -436,7 +436,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Current, phase 3",
-                    Value = "",
+                    
                     Address = "3957",
                     Notes = "",
                     Deleted = false
@@ -445,7 +445,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Line to line average voltage",
-                    Value = "",
+                    
                     Address = "3909",
                     Notes = "",
                     Deleted = false
@@ -454,7 +454,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Line to neutral voltage",
-                    Value = "",
+                    
                     Address = "3911",
                     Notes = "",
                     Deleted = false
@@ -463,7 +463,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Voltage phase 1 to phase 2",
-                    Value = "",
+                    
                     Address = "3925",
                     Notes = "",
                     Deleted = false
@@ -472,7 +472,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Voltage phase 2 to phase 3",
-                    Value = "",
+                    
                     Address = "3939",
                     Notes = "",
                     Deleted = false
@@ -481,7 +481,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Voltage phase 3 to phase 1",
-                    Value = "",
+                    
                     Address = "3939",
                     Notes = "",
                     Deleted = false
@@ -490,7 +490,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Voltage phase 1 to neutral",
-                    Value = "",
+                    
                     Address = "3927",
                     Notes = "",
                     Deleted = false
@@ -499,7 +499,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Voltage phase 2 to neutral",
-                    Value = "",
+                    
                     Address = "3941",
                     Notes = "",
                     Deleted = false
@@ -508,7 +508,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Voltage phase 3 to neutral",
-                    Value = "",
+                    
                     Address = "3955",
                     Notes = "",
                     Deleted = false
@@ -517,7 +517,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Active power, total",
-                    Value = "",
+                    
                     Address = "3903",
                     Notes = "",
                     Deleted = false
@@ -526,7 +526,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Active power, phase 1",
-                    Value = "",
+                    
                     Address = "3919",
                     Notes = "",
                     Deleted = false
@@ -535,7 +535,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Active power, phase 2",
-                    Value = "",
+                    
                     Address = "3933",
                     Notes = "",
                     Deleted = false
@@ -544,7 +544,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Active power, phase 3",
-                    Value = "",
+                    
                     Address = "3947",
                     Notes = "",
                     Deleted = false
@@ -553,7 +553,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Reactive power, total",
-                    Value = "",
+                    
                     Address = "3905",
                     Notes = "",
                     Deleted = false
@@ -562,7 +562,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Reactive power, phase 1",
-                    Value = "",
+                    
                     Address = "3921",
                     Notes = "",
                     Deleted = false
@@ -571,7 +571,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Reactive power, phase 2",
-                    Value = "",
+                    
                     Address = "3935",
                     Notes = "",
                     Deleted = false
@@ -580,7 +580,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Reactive power, phase 3",
-                    Value = "",
+                    
                     Address = "3949",
                     Notes = "",
                     Deleted = false
@@ -589,7 +589,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Apparent power, total",
-                    Value = "",
+                    
                     Address = "3901",
                     Notes = "",
                     Deleted = false
@@ -598,7 +598,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Apparent power, phase 1",
-                    Value = "",
+                    
                     Address = "3917",
                     Notes = "",
                     Deleted = false
@@ -607,7 +607,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Apparent power, phase 2",
-                    Value = "",
+                    
                     Address = "3931",
                     Notes = "",
                     Deleted = false
@@ -616,7 +616,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Apparent power, phase 3",
-                    Value = "",
+                    
                     Address = "3945",
                     Notes = "",
                     Deleted = false
@@ -625,7 +625,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Power factor average",
-                    Value = "",
+                    
                     Address = "3907",
                     Notes = "",
                     Deleted = false
@@ -634,7 +634,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Power factor, phase 1",
-                    Value = "",
+                    
                     Address = "3923",
                     Notes = "",
                     Deleted = false
@@ -643,7 +643,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Power factor, phase 2",
-                    Value = "",
+                    
                     Address = "3937",
                     Notes = "",
                     Deleted = false
@@ -652,7 +652,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Power factor, phase 3",
-                    Value = "",
+                    
                     Address = "3951",
                     Notes = "",
                     Deleted = false
@@ -661,7 +661,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Frequency, Hz",
-                    Value = "",
+                    
                     Address = "3915",
                     Notes = "",
                     Deleted = false
@@ -670,7 +670,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Voltage THD, phase 1",
-                    Value = "",
+                    
                     Address = "3861",
                     Notes = "",
                     Deleted = false
@@ -679,7 +679,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Voltage THD, phase 2",
-                    Value = "",
+                    
                     Address = "3863",
                     Notes = "",
                     Deleted = false
@@ -688,7 +688,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Voltage THD, phase 3",
-                    Value = "",
+                    
                     Address = "3865",
                     Notes = "",
                     Deleted = false
@@ -697,7 +697,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Current THD, phase 1",
-                    Value = "",
+                    
                     Address = "3867",
                     Notes = "",
                     Deleted = false
@@ -706,7 +706,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Current THD, phase 2",
-                    Value = "",
+                    
                     Address = "3869",
                     Notes = "",
                     Deleted = false
@@ -715,7 +715,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Current THD, phase 3",
-                    Value = "",
+                    
                     Address = "3871",
                     Notes = "",
                     Deleted = false
@@ -724,7 +724,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Forward apparent energy",
-                    Value = "",
+                    
                     Address = "3959",
                     Notes = "",
                     Deleted = false
@@ -733,7 +733,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Forward active energy",
-                    Value = "",
+                    
                     Address = "3961",
                     Notes = "",
                     Deleted = false
@@ -742,7 +742,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Forward reactive inductive energy",
-                    Value = "",
+                    
                     Address = "3963",
                     Notes = "",
                     Deleted = false
@@ -751,7 +751,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Forward reactive capacitive energy",
-                    Value = "",
+                    
                     Address = "3965",
                     Notes = "",
                     Deleted = false
@@ -760,7 +760,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Reverse apparent energy",
-                    Value = "",
+                    
                     Address = "3967",
                     Notes = "",
                     Deleted = false
@@ -769,7 +769,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Reverse active energy",
-                    Value = "",
+                    
                     Address = "3969",
                     Notes = "",
                     Deleted = false
@@ -778,7 +778,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Reverse reactive inductive energy",
-                    Value = "",
+                    
                     Address = "3971",
                     Notes = "",
                     Deleted = false
@@ -787,7 +787,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Reverse reactive capacitive energy",
-                    Value = "",
+                    
                     Address = "3973",
                     Notes = "",
                     Deleted = false
@@ -796,7 +796,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "On hours",
-                    Value = "",
+                    
                     Address = "3993",
                     Notes = "",
                     Deleted = false
@@ -805,7 +805,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 4,
                     Name = "Forward run seconds",
-                    Value = "",
+                    
                     Address = "3995",
                     Notes = "",
                     Deleted = false
@@ -814,7 +814,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 4,
                     Name = "Reverse run seconds",
-                    Value = "",
+                    
                     Address = "3997",
                     Notes = "",
                     Deleted = false
@@ -823,7 +823,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 4,
                     Name = "Number of power interruptions",
-                    Value = "",
+                    
                     Address = "3999",
                     Notes = "",
                     Deleted = false
@@ -832,7 +832,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Present demand",
-                    Value = "",
+                    
                     Address = "3975",
                     Notes = "",
                     Deleted = false
@@ -841,7 +841,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Rising demand",
-                    Value = "",
+                    
                     Address = "3977",
                     Notes = "",
                     Deleted = false
@@ -850,7 +850,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Maximum demand",
-                    Value = "",
+                    
                     Address = "3979",
                     Notes = "",
                     Deleted = false
@@ -859,7 +859,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 4,
                     Name = "Maximum demand occurrence time",
-                    Value = "",
+                    
                     Address = "3981",
                     Notes = "",
                     Deleted = false
@@ -868,7 +868,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Average load percentage",
-                    Value = "",
+                    
                     Address = "3881",
                     Notes = "",
                     Deleted = false
@@ -877,7 +877,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Percentage of phase 1 load",
-                    Value = "",
+                    
                     Address = "3883",
                     Notes = "",
                     Deleted = false
@@ -886,7 +886,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Percentage of phase 2 load",
-                    Value = "",
+                    
                     Address = "3885",
                     Notes = "",
                     Deleted = false
@@ -895,7 +895,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Percentage of phase 3 load",
-                    Value = "",
+                    
                     Address = "3887",
                     Notes = "",
                     Deleted = false
@@ -904,7 +904,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Unbalanced % load",
-                    Value = "",
+                    
                     Address = "3889",
                     Notes = "",
                     Deleted = false
@@ -913,7 +913,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Unbalanced % voltage",
-                    Value = "",
+                    
                     Address = "3891",
                     Notes = "",
                     Deleted = false
@@ -922,7 +922,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 4,
                     Name = "Model, Options and version numbers",
-                    Value = "",
+                    
                     Address = "0085",
                     Notes = "",
                     Deleted = false
@@ -931,7 +931,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 4,
                     Name = "EMS hardware ID",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -940,7 +940,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 2,
                     Name = "EMS hardware model",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -949,7 +949,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 1,
                     Name = "EMS hardware version",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -958,7 +958,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 1,
                     Name = "EMS firmware version major",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -967,7 +967,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 1,
                     Name = "EMS firmware version minor",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -976,7 +976,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 1,
                     Name = "EMS firmware version patch",
-                    Value = "",
+                    
                     Address = "3969",
                     Notes = "",
                     Deleted = false
@@ -985,7 +985,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 1,
                     Name = "EMS firmware date (YY)",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -994,7 +994,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 1,
                     Name = "EMS firmware date (MM)",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -1003,7 +1003,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 1,
                     Name = "EMS firmware date (DD)",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -1012,7 +1012,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 1,
                     Name = "EMS firmware date (HH)",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -1021,7 +1021,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 1,
                     Name = "EMS firmware date (MM)",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -1030,7 +1030,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 1,
                     Name = "EMS firmware date (mm)",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -1039,7 +1039,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 1,
                     Name = "EMS firmware date (SS)",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -1048,7 +1048,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 2,
                     Name = "Database version",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -1057,7 +1057,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 1,
                     Name = "Number of meters",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -1066,7 +1066,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Polling frequency, Hz",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -1075,7 +1075,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Upload frequency, Hz",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -1084,7 +1084,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 2,
                     Name = "Number of stored samples",
-                    Value = "",
+                    
                     Address = "",
                     Notes = "",
                     Deleted = false
@@ -1093,7 +1093,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Current primary",
-                    Value = "",
+                    
                     Address = "0101",
                     Notes = "",
                     Deleted = false
@@ -1102,7 +1102,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Current secondary",
-                    Value = "",
+                    
                     Address = "0103",
                     Notes = "",
                     Deleted = false
@@ -1111,7 +1111,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Voltage primary",
-                    Value = "",
+                    
                     Address = "0105",
                     Notes = "",
                     Deleted = false
@@ -1120,7 +1120,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Voltage secondary",
-                    Value = "",
+                    
                     Address = "0107",
                     Notes = "",
                     Deleted = false
@@ -1129,7 +1129,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "System Configuration",
-                    Value = "",
+                    
                     Address = "0109",
                     Notes = "",
                     Deleted = false
@@ -1138,7 +1138,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Phase Labeling",
-                    Value = "",
+                    
                     Address = "0111",
                     Notes = "",
                     Deleted = false
@@ -1147,7 +1147,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "VA Function selection",
-                    Value = "",
+                    
                     Address = "0113",
                     Notes = "",
                     Deleted = false
@@ -1156,7 +1156,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Demand Selection",
-                    Value = "",
+                    
                     Address = "0115",
                     Notes = "",
                     Deleted = false
@@ -1165,7 +1165,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Demand parameter",
-                    Value = "",
+                    
                     Address = "0117",
                     Notes = "",
                     Deleted = false
@@ -1174,7 +1174,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Demand period",
-                    Value = "",
+                    
                     Address = "0119",
                     Notes = "",
                     Deleted = false
@@ -1183,7 +1183,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Baud rate",
-                    Value = "",
+                    
                     Address = "0121",
                     Notes = "",
                     Deleted = false
@@ -1192,7 +1192,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Parity and stop bit",
-                    Value = "",
+                    
                     Address = "0123",
                     Notes = "",
                     Deleted = false
@@ -1201,7 +1201,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Unit ID",
-                    Value = "",
+                    
                     Address = "0125",
                     Notes = "",
                     Deleted = false
@@ -1210,7 +1210,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "% Full scale",
-                    Value = "",
+                    
                     Address = "0127",
                     Notes = "",
                     Deleted = false
@@ -1219,7 +1219,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Overflow parameter selection",
-                    Value = "",
+                    
                     Address = "0129",
                     Notes = "",
                     Deleted = false
@@ -1228,7 +1228,7 @@ namespace EMS.Migrations.DefaultDB
                 {
                     ParameterTypeID = 3,
                     Name = "Password",
-                    Value = "",
+                    
                     Address = "0133",
                     Notes = "",
                     Deleted = false

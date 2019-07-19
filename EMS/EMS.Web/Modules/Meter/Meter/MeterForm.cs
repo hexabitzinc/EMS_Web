@@ -13,8 +13,6 @@ namespace EMS.Meter.Forms
     [BasedOnRow(typeof(Entities.MeterRow), CheckNames = true)]
     public class MeterForm
     {
-        public Int32 ApartmentId { get; set; }
-        public Int32 CommonLocationId { get; set; }
         public Int32 MeterTypeId { get; set; }
         public Int32 ConsumerId { get; set; }
         public String Name { get; set; }

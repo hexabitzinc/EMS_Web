@@ -1,9 +1,9 @@
 ﻿namespace EMS.Zoning {
     export interface FloorForm {
-        BuildingId: Serenity.LookupEditor;
+        BuildingId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
         FloorNumber: Serenity.IntegerEditor;
-        Describtion: Serenity.StringEditor;
+        Description: Serenity.StringEditor;
         Deleted: Serenity.BooleanEditor;
     }
 
@@ -18,17 +18,16 @@
                 FloorForm.init = true;
 
                 var s = Serenity;
-                var w0 = s.LookupEditor;
+                var w0 = s.IntegerEditor;
                 var w1 = s.StringEditor;
-                var w2 = s.IntegerEditor;
-                var w3 = s.BooleanEditor;
+                var w2 = s.BooleanEditor;
 
                 Q.initFormType(FloorForm, [
                     'BuildingId', w0,
                     'Name', w1,
-                    'FloorNumber', w2,
-                    'Describtion', w1,
-                    'Deleted', w3
+                    'FloorNumber', w0,
+                    'Description', w1,
+                    'Deleted', w2
                 ]);
             }
         }

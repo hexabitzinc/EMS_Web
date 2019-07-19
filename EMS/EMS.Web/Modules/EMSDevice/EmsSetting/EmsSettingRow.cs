@@ -1,7 +1,6 @@
 ﻿
 namespace EMS.EMSDevice.Entities
 {
-    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -14,8 +13,6 @@ namespace EMS.EMSDevice.Entities
     [DisplayName("Ems Setting"), InstanceName("Ems Setting")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    [JsonConverter(typeof(JsonRowConverter))]
-    [LookupScript("EMSDevice.EMSSetting")]
     public sealed class EmsSettingRow : Row, IIdRow, INameRow
     {
         [DisplayName("Ems Setting Id"), Column("EMSSettingID"), Identity]
@@ -24,7 +21,7 @@ namespace EMS.EMSDevice.Entities
             get { return Fields.EmsSettingId[this]; }
             set { Fields.EmsSettingId[this] = value; }
         }
-        [LookupEditor("Parameter.ParameterType")]
+
         [DisplayName("Parameter Type"), Column("ParameterTypeID"), ForeignKey("[dbo].[ParameterType]", "ParameterTypeID"), LeftJoin("jParameterType"), TextualField("ParameterTypeName")]
         public Int32? ParameterTypeId
         {

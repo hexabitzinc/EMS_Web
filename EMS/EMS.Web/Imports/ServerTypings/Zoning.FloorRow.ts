@@ -4,7 +4,7 @@
         BuildingId?: number;
         Name?: string;
         FloorNumber?: number;
-        Describtion?: string;
+        Description?: string;
         Deleted?: boolean;
         BuildingCityId?: number;
         BuildingName?: string;
@@ -19,18 +19,13 @@
         export const idProperty = 'FloorId';
         export const nameProperty = 'Name';
         export const localTextPrefix = 'Zoning.Floor';
-        export const lookupKey = 'Zoning.Floor';
-
-        export function getLookup(): Q.Lookup<FloorRow> {
-            return Q.getLookup<FloorRow>('Zoning.Floor');
-        }
 
         export declare const enum Fields {
             FloorId = "FloorId",
             BuildingId = "BuildingId",
             Name = "Name",
             FloorNumber = "FloorNumber",
-            Describtion = "Describtion",
+            Description = "Description",
             Deleted = "Deleted",
             BuildingCityId = "BuildingCityId",
             BuildingName = "BuildingName",

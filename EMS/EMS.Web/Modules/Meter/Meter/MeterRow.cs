@@ -1,7 +1,6 @@
 ﻿
 namespace EMS.Meter.Entities
 {
-    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -14,8 +13,6 @@ namespace EMS.Meter.Entities
     [DisplayName("Meter"), InstanceName("Meter")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    [JsonConverter(typeof(JsonRowConverter))]
-    [LookupScript("Zoning.Meter")]
     public sealed class MeterRow : Row, IIdRow, INameRow
     {
         [DisplayName("Meter Id"), Column("MeterID"), Identity]
@@ -24,21 +21,7 @@ namespace EMS.Meter.Entities
             get { return Fields.MeterId[this]; }
             set { Fields.MeterId[this] = value; }
         }
-        [LookupEditor("Zoning.Apartment")]
-        [DisplayName("Apartment"), Column("ApartmentID"), ForeignKey("[dbo].[Apartment]", "ApartmentID"), LeftJoin("jApartment"), TextualField("ApartmentName")]
-        public Int32? ApartmentId
-        {
-            get { return Fields.ApartmentId[this]; }
-            set { Fields.ApartmentId[this] = value; }
-        }
-        [LookupEditor("Zoning.CommonLocation")]
-        [DisplayName("Common Location"), Column("CommonLocationID"), ForeignKey("[dbo].[CommonLocation]", "CommonLocationID"), LeftJoin("jCommonLocation"), TextualField("CommonLocationName")]
-        public Int32? CommonLocationId
-        {
-            get { return Fields.CommonLocationId[this]; }
-            set { Fields.CommonLocationId[this] = value; }
-        }
-        [LookupEditor("Meter.MeterType")]
+
         [DisplayName("Meter Type"), Column("MeterTypeID"), ForeignKey("[dbo].[MeterType]", "MeterTypeID"), LeftJoin("jMeterType"), TextualField("MeterTypeName")]
         public Int32? MeterTypeId
         {
@@ -121,83 +104,6 @@ namespace EMS.Meter.Entities
         {
             get { return Fields.Deleted[this]; }
             set { Fields.Deleted[this] = value; }
-        }
-
-        [DisplayName("Apartment Section Id"), Expression("jApartment.[SectionID]")]
-        public Int32? ApartmentSectionId
-        {
-            get { return Fields.ApartmentSectionId[this]; }
-            set { Fields.ApartmentSectionId[this] = value; }
-        }
-
-        [DisplayName("Apartment Name"), Expression("jApartment.[Name]")]
-        public String ApartmentName
-        {
-            get { return Fields.ApartmentName[this]; }
-            set { Fields.ApartmentName[this] = value; }
-        }
-
-        [DisplayName("Apartment Type"), Expression("jApartment.[Type]")]
-        public String ApartmentType
-        {
-            get { return Fields.ApartmentType[this]; }
-            set { Fields.ApartmentType[this] = value; }
-        }
-
-        [DisplayName("Apartment Address"), Expression("jApartment.[Address]")]
-        public String ApartmentAddress
-        {
-            get { return Fields.ApartmentAddress[this]; }
-            set { Fields.ApartmentAddress[this] = value; }
-        }
-
-        [DisplayName("Apartment Room Number"), Expression("jApartment.[RoomNumber]")]
-        public String ApartmentRoomNumber
-        {
-            get { return Fields.ApartmentRoomNumber[this]; }
-            set { Fields.ApartmentRoomNumber[this] = value; }
-        }
-
-        [DisplayName("Apartment Describtion"), Expression("jApartment.[Describtion]")]
-        public String ApartmentDescribtion
-        {
-            get { return Fields.ApartmentDescribtion[this]; }
-            set { Fields.ApartmentDescribtion[this] = value; }
-        }
-
-        [DisplayName("Apartment Deleted"), Expression("jApartment.[Deleted]")]
-        public Boolean? ApartmentDeleted
-        {
-            get { return Fields.ApartmentDeleted[this]; }
-            set { Fields.ApartmentDeleted[this] = value; }
-        }
-
-        [DisplayName("Common Location Building Id"), Expression("jCommonLocation.[BuildingID]")]
-        public Int32? CommonLocationBuildingId
-        {
-            get { return Fields.CommonLocationBuildingId[this]; }
-            set { Fields.CommonLocationBuildingId[this] = value; }
-        }
-
-        [DisplayName("Common Location Name"), Expression("jCommonLocation.[Name]")]
-        public String CommonLocationName
-        {
-            get { return Fields.CommonLocationName[this]; }
-            set { Fields.CommonLocationName[this] = value; }
-        }
-
-        [DisplayName("Common Location Description"), Expression("jCommonLocation.[Description]")]
-        public String CommonLocationDescription
-        {
-            get { return Fields.CommonLocationDescription[this]; }
-            set { Fields.CommonLocationDescription[this] = value; }
-        }
-
-        [DisplayName("Common Location Deleted"), Expression("jCommonLocation.[Deleted]")]
-        public Boolean? CommonLocationDeleted
-        {
-            get { return Fields.CommonLocationDeleted[this]; }
-            set { Fields.CommonLocationDeleted[this] = value; }
         }
 
         [DisplayName("Meter Type Name"), Expression("jMeterType.[Name]")]
@@ -297,8 +203,6 @@ namespace EMS.Meter.Entities
         public class RowFields : RowFieldsBase
         {
             public Int32Field MeterId;
-            public Int32Field ApartmentId;
-            public Int32Field CommonLocationId;
             public Int32Field MeterTypeId;
             public Int32Field ConsumerId;
             public StringField Name;
@@ -311,19 +215,6 @@ namespace EMS.Meter.Entities
             public DateTimeField RegistrationDate;
             public StringField Notes;
             public BooleanField Deleted;
-
-            public Int32Field ApartmentSectionId;
-            public StringField ApartmentName;
-            public StringField ApartmentType;
-            public StringField ApartmentAddress;
-            public StringField ApartmentRoomNumber;
-            public StringField ApartmentDescribtion;
-            public BooleanField ApartmentDeleted;
-
-            public Int32Field CommonLocationBuildingId;
-            public StringField CommonLocationName;
-            public StringField CommonLocationDescription;
-            public BooleanField CommonLocationDeleted;
 
             public StringField MeterTypeName;
             public BooleanField MeterTypeDeleted;

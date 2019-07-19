@@ -1,12 +1,12 @@
 ﻿@{
-    ViewData["Title"] = Serenity.LocalText.Get("Db.Meter.MeterParameters.EntityPlural");
+    ViewData["Title"] = Serenity.LocalText.Get("Db.Meter.MeterDetail.EntityPlural");
 }
 
 <div id="GridDiv"></div>
 
 <script type="text/javascript">
     jQuery(function () {
-        new EMS.Meter.MeterParametersGrid($('#GridDiv'), {}).init();
+        new EMS.Meter.MeterDetailGrid($('#GridDiv'), {}).init();
 
         Q.initFullHeightGridPage($('#GridDiv'));
     });

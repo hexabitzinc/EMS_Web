@@ -1,7 +1,6 @@
 ﻿
 namespace EMS.Parameter.Entities
 {
-    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -14,8 +13,6 @@ namespace EMS.Parameter.Entities
     [DisplayName("Parameter"), InstanceName("Parameter")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    [JsonConverter(typeof(JsonRowConverter))]
-    [LookupScript("Parameter.Parameter")]
     public sealed class ParameterRow : Row, IIdRow, INameRow
     {
         [DisplayName("Parameter Id"), Column("ParameterID"), Identity]
@@ -24,7 +21,7 @@ namespace EMS.Parameter.Entities
             get { return Fields.ParameterId[this]; }
             set { Fields.ParameterId[this] = value; }
         }
-        [LookupEditor("Parameter.ParameterType")]
+
         [DisplayName("Parameter Type"), Column("ParameterTypeID"), ForeignKey("[dbo].[ParameterType]", "ParameterTypeID"), LeftJoin("jParameterType"), TextualField("ParameterTypeName")]
         public Int32? ParameterTypeId
         {
@@ -37,13 +34,6 @@ namespace EMS.Parameter.Entities
         {
             get { return Fields.Name[this]; }
             set { Fields.Name[this] = value; }
-        }
-
-        [DisplayName("Value"), Size(200)]
-        public String Value
-        {
-            get { return Fields.Value[this]; }
-            set { Fields.Value[this] = value; }
         }
 
         [DisplayName("Address"), Size(200)]
@@ -103,7 +93,6 @@ namespace EMS.Parameter.Entities
             public Int32Field ParameterId;
             public Int32Field ParameterTypeId;
             public StringField Name;
-            public StringField Value;
             public StringField Address;
             public StringField Notes;
             public BooleanField Deleted;

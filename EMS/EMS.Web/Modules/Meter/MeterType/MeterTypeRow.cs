@@ -1,7 +1,6 @@
 ﻿
 namespace EMS.Meter.Entities
 {
-    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -14,8 +13,6 @@ namespace EMS.Meter.Entities
     [DisplayName("Meter Type"), InstanceName("Meter Type")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    [JsonConverter(typeof(JsonRowConverter))]
-    [LookupScript("Meter.MeterType")]
     public sealed class MeterTypeRow : Row, IIdRow, INameRow
     {
         [DisplayName("Meter Type Id"), Column("MeterTypeID"), Identity]

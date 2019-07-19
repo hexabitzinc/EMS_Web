@@ -1,7 +1,6 @@
 ﻿
 namespace EMS.Zoning.Entities
 {
-    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -14,8 +13,6 @@ namespace EMS.Zoning.Entities
     [DisplayName("Section"), InstanceName("Section")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    [JsonConverter(typeof(JsonRowConverter))]
-    [LookupScript("Zoning.Section")]
     public sealed class SectionRow : Row, IIdRow, INameRow
     {
         [DisplayName("Section Id"), Column("SectionID"), Identity]
@@ -26,7 +23,6 @@ namespace EMS.Zoning.Entities
         }
 
         [DisplayName("Floor"), Column("FloorID"), ForeignKey("[dbo].[Floor]", "FloorID"), LeftJoin("jFloor"), TextualField("FloorName")]
-        [LookupEditor("Zoning.Floor")]
         public Int32? FloorId
         {
             get { return Fields.FloorId[this]; }
@@ -40,11 +36,11 @@ namespace EMS.Zoning.Entities
             set { Fields.Name[this] = value; }
         }
 
-        [DisplayName("Describtion"), Size(200)]
-        public String Describtion
+        [DisplayName("Description"), Size(200)]
+        public String Description
         {
-            get { return Fields.Describtion[this]; }
-            set { Fields.Describtion[this] = value; }
+            get { return Fields.Description[this]; }
+            set { Fields.Description[this] = value; }
         }
 
         [DisplayName("Deleted"), NotNull]
@@ -75,11 +71,11 @@ namespace EMS.Zoning.Entities
             set { Fields.FloorFloorNumber[this] = value; }
         }
 
-        [DisplayName("Floor Describtion"), Expression("jFloor.[Describtion]")]
-        public String FloorDescribtion
+        [DisplayName("Floor Description"), Expression("jFloor.[Description]")]
+        public String FloorDescription
         {
-            get { return Fields.FloorDescribtion[this]; }
-            set { Fields.FloorDescribtion[this] = value; }
+            get { return Fields.FloorDescription[this]; }
+            set { Fields.FloorDescription[this] = value; }
         }
 
         [DisplayName("Floor Deleted"), Expression("jFloor.[Deleted]")]
@@ -111,13 +107,13 @@ namespace EMS.Zoning.Entities
             public Int32Field SectionId;
             public Int32Field FloorId;
             public StringField Name;
-            public StringField Describtion;
+            public StringField Description;
             public BooleanField Deleted;
 
             public Int32Field FloorBuildingId;
             public StringField FloorName;
             public Int32Field FloorFloorNumber;
-            public StringField FloorDescribtion;
+            public StringField FloorDescription;
             public BooleanField FloorDeleted;
         }
     }

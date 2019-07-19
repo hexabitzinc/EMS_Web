@@ -1,17 +1,17 @@
 ﻿
-namespace EMS.Meter.Endpoints
+namespace EMS.Consumer.Endpoints
 {
     using Serenity;
     using Serenity.Data;
     using Serenity.Services;
     using System.Data;
     using Microsoft.AspNetCore.Mvc;
-    using MyRepository = Repositories.MeterParametersRepository;
-    using MyRow = Entities.MeterParametersRow;
+    using MyRepository = Repositories.ConsumerRepository;
+    using MyRow = Entities.ConsumerRow;
 
-    [Route("Services/Meter/MeterParameters/[action]")]
+    [Route("Services/Consumer/Consumer/[action]")]
     [ConnectionKey(typeof(MyRow)), ServiceAuthorize(typeof(MyRow))]
-    public class MeterParametersController : ServiceEndpoint
+    public class ConsumerController : ServiceEndpoint
     {
         [HttpPost, AuthorizeCreate(typeof(MyRow))]
         public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request)

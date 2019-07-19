@@ -6,11 +6,11 @@
         Type?: string;
         Address?: string;
         RoomNumber?: string;
-        Describtion?: string;
+        Description?: string;
         Deleted?: boolean;
         SectionFloorId?: number;
         SectionName?: string;
-        SectionDescribtion?: string;
+        SectionDescription?: string;
         SectionDeleted?: boolean;
     }
 
@@ -18,11 +18,6 @@
         export const idProperty = 'ApartmentId';
         export const nameProperty = 'Name';
         export const localTextPrefix = 'Zoning.Apartment';
-        export const lookupKey = 'Zoning.Apartment';
-
-        export function getLookup(): Q.Lookup<ApartmentRow> {
-            return Q.getLookup<ApartmentRow>('Zoning.Apartment');
-        }
 
         export declare const enum Fields {
             ApartmentId = "ApartmentId",
@@ -31,11 +26,11 @@
             Type = "Type",
             Address = "Address",
             RoomNumber = "RoomNumber",
-            Describtion = "Describtion",
+            Description = "Description",
             Deleted = "Deleted",
             SectionFloorId = "SectionFloorId",
             SectionName = "SectionName",
-            SectionDescribtion = "SectionDescribtion",
+            SectionDescription = "SectionDescription",
             SectionDeleted = "SectionDeleted"
         }
     }

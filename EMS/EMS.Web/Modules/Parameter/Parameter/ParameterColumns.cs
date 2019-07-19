@@ -18,7 +18,6 @@ namespace EMS.Parameter.Columns
         public String ParameterTypeName { get; set; }
         [EditLink]
         public String Name { get; set; }
-        public String Value { get; set; }
         public String Address { get; set; }
         public String Notes { get; set; }
         public Boolean Deleted { get; set; }

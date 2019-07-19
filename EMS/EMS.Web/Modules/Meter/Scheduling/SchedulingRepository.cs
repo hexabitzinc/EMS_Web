@@ -6,9 +6,9 @@ namespace EMS.Meter.Repositories
     using Serenity.Services;
     using System;
     using System.Data;
-    using MyRow = Entities.MeterParametersRow;
+    using MyRow = Entities.SchedulingRow;
 
-    public class MeterParametersRepository
+    public class SchedulingRepository
     {
         private static MyRow.RowFields fld { get { return MyRow.Fields; } }
 

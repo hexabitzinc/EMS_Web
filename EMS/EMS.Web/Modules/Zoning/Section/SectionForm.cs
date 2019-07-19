@@ -15,7 +15,7 @@ namespace EMS.Zoning.Forms
     {
         public Int32 FloorId { get; set; }
         public String Name { get; set; }
-        public String Describtion { get; set; }
+        public String Description { get; set; }
         public Boolean Deleted { get; set; }
     }
 }

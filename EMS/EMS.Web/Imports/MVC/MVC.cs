@@ -103,6 +103,15 @@ namespace MVC
 
         }
 
+        public static class Consumer
+        {
+            public static class Consumer_
+            {
+                public const string ConsumerIndex = "~/Modules/Consumer/Consumer/ConsumerIndex.cshtml";
+            }
+
+        }
+
         public static class EMSDevice
         {
             public static class EmsDevice
@@ -168,14 +177,19 @@ namespace MVC
                 public const string MeterIndex = "~/Modules/Meter/Meter/MeterIndex.cshtml";
             }
 
-            public static class MeterParameters
+            public static class MeterDetail
             {
-                public const string MeterParametersIndex = "~/Modules/Meter/MeterParameters/MeterParametersIndex.cshtml";
+                public const string MeterDetailIndex = "~/Modules/Meter/MeterDetail/MeterDetailIndex.cshtml";
             }
 
             public static class MeterType
             {
                 public const string MeterTypeIndex = "~/Modules/Meter/MeterType/MeterTypeIndex.cshtml";
+            }
+
+            public static class Scheduling
+            {
+                public const string SchedulingIndex = "~/Modules/Meter/Scheduling/SchedulingIndex.cshtml";
             }
 
         }

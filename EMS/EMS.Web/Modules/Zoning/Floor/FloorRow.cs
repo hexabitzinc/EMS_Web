@@ -1,7 +1,6 @@
 ﻿
 namespace EMS.Zoning.Entities
 {
-    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -14,8 +13,6 @@ namespace EMS.Zoning.Entities
     [DisplayName("Floor"), InstanceName("Floor")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    [JsonConverter(typeof(JsonRowConverter))]
-    [LookupScript("Zoning.Floor")]
     public sealed class FloorRow : Row, IIdRow, INameRow
     {
         [DisplayName("Floor Id"), Column("FloorID"), Identity]
@@ -26,7 +23,6 @@ namespace EMS.Zoning.Entities
         }
 
         [DisplayName("Building"), Column("BuildingID"), ForeignKey("[dbo].[Building]", "BuildingID"), LeftJoin("jBuilding"), TextualField("BuildingName")]
-        [LookupEditor("Zoning.Building")]
         public Int32? BuildingId
         {
             get { return Fields.BuildingId[this]; }
@@ -47,11 +43,11 @@ namespace EMS.Zoning.Entities
             set { Fields.FloorNumber[this] = value; }
         }
 
-        [DisplayName("Describtion"), Size(200)]
-        public String Describtion
+        [DisplayName("Description"), Size(200)]
+        public String Description
         {
-            get { return Fields.Describtion[this]; }
-            set { Fields.Describtion[this] = value; }
+            get { return Fields.Description[this]; }
+            set { Fields.Description[this] = value; }
         }
 
         [DisplayName("Deleted"), NotNull]
@@ -133,7 +129,7 @@ namespace EMS.Zoning.Entities
             public Int32Field BuildingId;
             public StringField Name;
             public Int32Field FloorNumber;
-            public StringField Describtion;
+            public StringField Description;
             public BooleanField Deleted;
 
             public Int32Field BuildingCityId;

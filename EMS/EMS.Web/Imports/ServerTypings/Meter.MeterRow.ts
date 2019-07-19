@@ -1,8 +1,6 @@
 ﻿namespace EMS.Meter {
     export interface MeterRow {
         MeterId?: number;
-        ApartmentId?: number;
-        CommonLocationId?: number;
         MeterTypeId?: number;
         ConsumerId?: number;
         Name?: string;
@@ -15,17 +13,6 @@
         RegistrationDate?: string;
         Notes?: string;
         Deleted?: boolean;
-        ApartmentSectionId?: number;
-        ApartmentName?: string;
-        ApartmentType?: string;
-        ApartmentAddress?: string;
-        ApartmentRoomNumber?: string;
-        ApartmentDescribtion?: string;
-        ApartmentDeleted?: boolean;
-        CommonLocationBuildingId?: number;
-        CommonLocationName?: string;
-        CommonLocationDescription?: string;
-        CommonLocationDeleted?: boolean;
         MeterTypeName?: string;
         MeterTypeDeleted?: boolean;
         ConsumerFirstName?: string;
@@ -43,16 +30,9 @@
         export const idProperty = 'MeterId';
         export const nameProperty = 'Name';
         export const localTextPrefix = 'Meter.Meter';
-        export const lookupKey = 'Zoning.Meter';
-
-        export function getLookup(): Q.Lookup<MeterRow> {
-            return Q.getLookup<MeterRow>('Zoning.Meter');
-        }
 
         export declare const enum Fields {
             MeterId = "MeterId",
-            ApartmentId = "ApartmentId",
-            CommonLocationId = "CommonLocationId",
             MeterTypeId = "MeterTypeId",
             ConsumerId = "ConsumerId",
             Name = "Name",
@@ -65,17 +45,6 @@
             RegistrationDate = "RegistrationDate",
             Notes = "Notes",
             Deleted = "Deleted",
-            ApartmentSectionId = "ApartmentSectionId",
-            ApartmentName = "ApartmentName",
-            ApartmentType = "ApartmentType",
-            ApartmentAddress = "ApartmentAddress",
-            ApartmentRoomNumber = "ApartmentRoomNumber",
-            ApartmentDescribtion = "ApartmentDescribtion",
-            ApartmentDeleted = "ApartmentDeleted",
-            CommonLocationBuildingId = "CommonLocationBuildingId",
-            CommonLocationName = "CommonLocationName",
-            CommonLocationDescription = "CommonLocationDescription",
-            CommonLocationDeleted = "CommonLocationDeleted",
             MeterTypeName = "MeterTypeName",
             MeterTypeDeleted = "MeterTypeDeleted",
             ConsumerFirstName = "ConsumerFirstName",

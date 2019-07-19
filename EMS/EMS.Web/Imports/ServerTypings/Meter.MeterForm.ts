@@ -1,8 +1,6 @@
 ﻿namespace EMS.Meter {
     export interface MeterForm {
-        ApartmentId: Serenity.LookupEditor;
-        CommonLocationId: Serenity.LookupEditor;
-        MeterTypeId: Serenity.LookupEditor;
+        MeterTypeId: Serenity.IntegerEditor;
         ConsumerId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
         SerialNumber: Serenity.StringEditor;
@@ -27,27 +25,24 @@
                 MeterForm.init = true;
 
                 var s = Serenity;
-                var w0 = s.LookupEditor;
-                var w1 = s.IntegerEditor;
-                var w2 = s.StringEditor;
-                var w3 = s.DateEditor;
-                var w4 = s.BooleanEditor;
+                var w0 = s.IntegerEditor;
+                var w1 = s.StringEditor;
+                var w2 = s.DateEditor;
+                var w3 = s.BooleanEditor;
 
                 Q.initFormType(MeterForm, [
-                    'ApartmentId', w0,
-                    'CommonLocationId', w0,
                     'MeterTypeId', w0,
-                    'ConsumerId', w1,
-                    'Name', w2,
-                    'SerialNumber', w2,
-                    'Make', w2,
-                    'PhysicalLocation', w2,
-                    'AssignedLocation', w2,
-                    'CommunicationMethod', w2,
-                    'SerialCommunicationSetting', w2,
-                    'RegistrationDate', w3,
-                    'Notes', w2,
-                    'Deleted', w4
+                    'ConsumerId', w0,
+                    'Name', w1,
+                    'SerialNumber', w1,
+                    'Make', w1,
+                    'PhysicalLocation', w1,
+                    'AssignedLocation', w1,
+                    'CommunicationMethod', w1,
+                    'SerialCommunicationSetting', w1,
+                    'RegistrationDate', w2,
+                    'Notes', w1,
+                    'Deleted', w3
                 ]);
             }
         }

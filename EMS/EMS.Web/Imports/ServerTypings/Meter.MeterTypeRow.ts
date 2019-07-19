@@ -9,11 +9,6 @@
         export const idProperty = 'MeterTypeId';
         export const nameProperty = 'Name';
         export const localTextPrefix = 'Meter.MeterType';
-        export const lookupKey = 'Meter.MeterType';
-
-        export function getLookup(): Q.Lookup<MeterTypeRow> {
-            return Q.getLookup<MeterTypeRow>('Meter.MeterType');
-        }
 
         export declare const enum Fields {
             MeterTypeId = "MeterTypeId",
