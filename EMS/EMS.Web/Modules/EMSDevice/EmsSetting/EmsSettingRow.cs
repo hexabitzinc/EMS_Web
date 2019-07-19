@@ -15,7 +15,7 @@ namespace EMS.EMSDevice.Entities
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     [JsonConverter(typeof(JsonRowConverter))]
-    [LookupScript("EMSDevice.EMSParameter")]
+    [LookupScript("EMSDevice.EMSSetting")]
     public sealed class EmsSettingRow : Row, IIdRow, INameRow
     {
         [DisplayName("Ems Setting Id"), Column("EMSSettingID"), Identity]

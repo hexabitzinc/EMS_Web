@@ -763,7 +763,7 @@ declare namespace EMS.EMSDevice {
         const idProperty = "EmsSettingId";
         const nameProperty = "Name";
         const localTextPrefix = "EMSDevice.EmsSetting";
-        const lookupKey = "EMSDevice.EMSParameter";
+        const lookupKey = "EMSDevice.EMSSetting";
         function getLookup(): Q.Lookup<EmsSettingRow>;
         const enum Fields {
             EmsSettingId = "EmsSettingId",

@@ -612,9 +612,9 @@ var EMS;
             EmsSettingRow.idProperty = 'EmsSettingId';
             EmsSettingRow.nameProperty = 'Name';
             EmsSettingRow.localTextPrefix = 'EMSDevice.EmsSetting';
-            EmsSettingRow.lookupKey = 'EMSDevice.EMSParameter';
+            EmsSettingRow.lookupKey = 'EMSDevice.EMSSetting';
             function getLookup() {
-                return Q.getLookup('EMSDevice.EMSParameter');
+                return Q.getLookup('EMSDevice.EMSSetting');
             }
             EmsSettingRow.getLookup = getLookup;
         })(EmsSettingRow = EMSDevice.EmsSettingRow || (EMSDevice.EmsSettingRow = {}));
