@@ -49,6 +49,11 @@
         export const idProperty = 'EmsDeviceId';
         export const nameProperty = 'Name';
         export const localTextPrefix = 'EMSDevice.EmsDevice';
+        export const lookupKey = 'EMSDevice.EMSDevice';
+
+        export function getLookup(): Q.Lookup<EmsDeviceRow> {
+            return Q.getLookup<EmsDeviceRow>('EMSDevice.EMSDevice');
+        }
 
         export declare const enum Fields {
             EmsDeviceId = "EmsDeviceId",

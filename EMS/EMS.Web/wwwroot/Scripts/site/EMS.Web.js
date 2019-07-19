@@ -396,6 +396,11 @@ var EMS;
             ConsumerRow.idProperty = 'ConsumerId';
             ConsumerRow.nameProperty = 'FirstName';
             ConsumerRow.localTextPrefix = 'Consumer.Consumer';
+            ConsumerRow.lookupKey = 'Consumer.Consumer';
+            function getLookup() {
+                return Q.getLookup('Consumer.Consumer');
+            }
+            ConsumerRow.getLookup = getLookup;
         })(ConsumerRow = Consumer.ConsumerRow || (Consumer.ConsumerRow = {}));
     })(Consumer = EMS.Consumer || (EMS.Consumer = {}));
 })(EMS || (EMS = {}));
@@ -431,7 +436,7 @@ var EMS;
                 if (!EmsDeviceForm.init) {
                     EmsDeviceForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
+                    var w0 = s.LookupEditor;
                     var w1 = s.StringEditor;
                     var w2 = s.DateEditor;
                     var w3 = s.BooleanEditor;
@@ -469,6 +474,11 @@ var EMS;
             EmsDeviceRow.idProperty = 'EmsDeviceId';
             EmsDeviceRow.nameProperty = 'Name';
             EmsDeviceRow.localTextPrefix = 'EMSDevice.EmsDevice';
+            EmsDeviceRow.lookupKey = 'EMSDevice.EMSDevice';
+            function getLookup() {
+                return Q.getLookup('EMSDevice.EMSDevice');
+            }
+            EmsDeviceRow.getLookup = getLookup;
         })(EmsDeviceRow = EMSDevice.EmsDeviceRow || (EMSDevice.EmsDeviceRow = {}));
     })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
 })(EMS || (EMS = {}));
@@ -504,7 +514,7 @@ var EMS;
                 if (!EmsParameterForm.init) {
                     EmsParameterForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
+                    var w0 = s.LookupEditor;
                     var w1 = s.StringEditor;
                     var w2 = s.BooleanEditor;
                     Q.initFormType(EmsParameterForm, [
@@ -533,6 +543,11 @@ var EMS;
             EmsParameterRow.idProperty = 'EmsParameterId';
             EmsParameterRow.nameProperty = 'Name';
             EmsParameterRow.localTextPrefix = 'EMSDevice.EmsParameter';
+            EmsParameterRow.lookupKey = 'EMSDevice.EMSParameter';
+            function getLookup() {
+                return Q.getLookup('EMSDevice.EMSParameter');
+            }
+            EmsParameterRow.getLookup = getLookup;
         })(EmsParameterRow = EMSDevice.EmsParameterRow || (EMSDevice.EmsParameterRow = {}));
     })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
 })(EMS || (EMS = {}));
@@ -568,7 +583,7 @@ var EMS;
                 if (!EmsSettingForm.init) {
                     EmsSettingForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
+                    var w0 = s.LookupEditor;
                     var w1 = s.StringEditor;
                     var w2 = s.BooleanEditor;
                     Q.initFormType(EmsSettingForm, [
@@ -597,6 +612,11 @@ var EMS;
             EmsSettingRow.idProperty = 'EmsSettingId';
             EmsSettingRow.nameProperty = 'Name';
             EmsSettingRow.localTextPrefix = 'EMSDevice.EmsSetting';
+            EmsSettingRow.lookupKey = 'EMSDevice.EMSParameter';
+            function getLookup() {
+                return Q.getLookup('EMSDevice.EMSParameter');
+            }
+            EmsSettingRow.getLookup = getLookup;
         })(EmsSettingRow = EMSDevice.EmsSettingRow || (EMSDevice.EmsSettingRow = {}));
     })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
 })(EMS || (EMS = {}));

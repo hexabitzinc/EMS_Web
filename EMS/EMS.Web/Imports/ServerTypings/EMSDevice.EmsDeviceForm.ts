@@ -1,9 +1,9 @@
 ﻿namespace EMS.EMSDevice {
     export interface EmsDeviceForm {
-        BuildingId: Serenity.IntegerEditor;
-        EmsParameterId: Serenity.IntegerEditor;
-        EmsSettingId: Serenity.IntegerEditor;
-        ConsumerId: Serenity.IntegerEditor;
+        BuildingId: Serenity.LookupEditor;
+        EmsParameterId: Serenity.LookupEditor;
+        EmsSettingId: Serenity.LookupEditor;
+        ConsumerId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         SerialNumber: Serenity.StringEditor;
         Make: Serenity.StringEditor;
@@ -27,7 +27,7 @@
                 EmsDeviceForm.init = true;
 
                 var s = Serenity;
-                var w0 = s.IntegerEditor;
+                var w0 = s.LookupEditor;
                 var w1 = s.StringEditor;
                 var w2 = s.DateEditor;
                 var w3 = s.BooleanEditor;

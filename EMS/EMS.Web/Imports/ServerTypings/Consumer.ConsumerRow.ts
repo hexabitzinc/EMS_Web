@@ -16,6 +16,11 @@
         export const idProperty = 'ConsumerId';
         export const nameProperty = 'FirstName';
         export const localTextPrefix = 'Consumer.Consumer';
+        export const lookupKey = 'Consumer.Consumer';
+
+        export function getLookup(): Q.Lookup<ConsumerRow> {
+            return Q.getLookup<ConsumerRow>('Consumer.Consumer');
+        }
 
         export declare const enum Fields {
             ConsumerId = "ConsumerId",

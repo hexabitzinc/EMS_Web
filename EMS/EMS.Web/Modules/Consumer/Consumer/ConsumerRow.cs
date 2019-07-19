@@ -1,6 +1,7 @@
 ﻿
 namespace EMS.Consumer.Entities
 {
+    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -13,6 +14,8 @@ namespace EMS.Consumer.Entities
     [DisplayName("Consumer"), InstanceName("Consumer")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [JsonConverter(typeof(JsonRowConverter))]
+    [LookupScript("Consumer.Consumer")]
     public sealed class ConsumerRow : Row, IIdRow, INameRow
     {
         [DisplayName("Consumer Id"), Column("ConsumerID"), Identity]
