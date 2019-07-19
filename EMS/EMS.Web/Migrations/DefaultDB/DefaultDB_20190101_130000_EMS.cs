@@ -179,6 +179,7 @@ namespace EMS.Migrations.DefaultDB
                .WithColumn("EMSParameterID").AsInt32().Identity().PrimaryKey()
                .WithColumn("ParameterTypeID").AsInt32().Nullable().ForeignKey("FK_EMSParameter_ParameterType", "dbo", "ParameterType", "ParameterTypeID")
                .WithColumn("Name").AsString(200).NotNullable()
+               .WithColumn("Value").AsString(200).Nullable()
                .WithColumn("Address").AsString(200).Nullable()
                .WithColumn("Notes").AsString(int.MaxValue).Nullable()
                .WithColumn("Deleted").AsBoolean().NotNullable().WithDefaultValue(false);
