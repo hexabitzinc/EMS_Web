@@ -458,9 +458,9 @@ declare namespace EMS.EMSDevice {
 }
 declare namespace EMS.EMSDevice {
     interface EmsDeviceForm {
-        BuildingId: Serenity.IntegerEditor;
-        EmsParameterId: Serenity.IntegerEditor;
-        EmsSettingId: Serenity.IntegerEditor;
+        BuildingId: Serenity.LookupEditor;
+        EmsParameterId: Serenity.LookupEditor;
+        EmsSettingId: Serenity.LookupEditor;
         ConsumerId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
         SerialNumber: Serenity.StringEditor;
@@ -529,6 +529,8 @@ declare namespace EMS.EMSDevice {
         const idProperty = "EmsDeviceId";
         const nameProperty = "Name";
         const localTextPrefix = "EMSDevice.EmsDevice";
+        const lookupKey = "EMSDevice.EMSDevice";
+        function getLookup(): Q.Lookup<EmsDeviceRow>;
         const enum Fields {
             EmsDeviceId = "EmsDeviceId",
             BuildingId = "BuildingId",
@@ -597,7 +599,7 @@ declare namespace EMS.EMSDevice {
 }
 declare namespace EMS.EMSDevice {
     interface EmsParameterForm {
-        ParameterTypeId: Serenity.IntegerEditor;
+        ParameterTypeId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         Value: Serenity.StringEditor;
         Address: Serenity.StringEditor;
@@ -626,6 +628,8 @@ declare namespace EMS.EMSDevice {
         const idProperty = "EmsParameterId";
         const nameProperty = "Name";
         const localTextPrefix = "EMSDevice.EmsParameter";
+        const lookupKey = "EMSDevice.EMSParameter";
+        function getLookup(): Q.Lookup<EmsParameterRow>;
         const enum Fields {
             EmsParameterId = "EmsParameterId",
             ParameterTypeId = "ParameterTypeId",
@@ -660,7 +664,7 @@ declare namespace EMS.EMSDevice {
 }
 declare namespace EMS.EMSDevice {
     interface EmsSettingForm {
-        ParameterTypeId: Serenity.IntegerEditor;
+        ParameterTypeId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         Value: Serenity.StringEditor;
         Address: Serenity.StringEditor;
@@ -689,6 +693,8 @@ declare namespace EMS.EMSDevice {
         const idProperty = "EmsSettingId";
         const nameProperty = "Name";
         const localTextPrefix = "EMSDevice.EmsSetting";
+        const lookupKey = "EMSDevice.EMSSetting";
+        function getLookup(): Q.Lookup<EmsSettingRow>;
         const enum Fields {
             EmsSettingId = "EmsSettingId",
             ParameterTypeId = "ParameterTypeId",
@@ -837,9 +843,9 @@ declare namespace EMS.Meter {
 }
 declare namespace EMS.Meter {
     interface MeterForm {
-        ApartmentId: Serenity.IntegerEditor;
-        CommonLocationId: Serenity.IntegerEditor;
-        MeterTypeId: Serenity.IntegerEditor;
+        ApartmentId: Serenity.LookupEditor;
+        CommonLocationId: Serenity.LookupEditor;
+        MeterTypeId: Serenity.LookupEditor;
         ConsumerId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
         SerialNumber: Serenity.StringEditor;
@@ -862,8 +868,8 @@ declare namespace EMS.Meter {
 }
 declare namespace EMS.Meter {
     interface MeterParametersForm {
-        ParameterGroupId: Serenity.IntegerEditor;
-        ParameterId: Serenity.IntegerEditor;
+        ParameterGroupId: Serenity.LookupEditor;
+        ParameterId: Serenity.LookupEditor;
         Deleted: Serenity.BooleanEditor;
     }
     class MeterParametersForm extends Serenity.PrefixedContext {
@@ -890,6 +896,8 @@ declare namespace EMS.Meter {
     namespace MeterParametersRow {
         const idProperty = "MeterParameterId";
         const localTextPrefix = "Meter.MeterParameters";
+        const lookupKey = "Meter.MeterParameters";
+        function getLookup(): Q.Lookup<MeterParametersRow>;
         const enum Fields {
             MeterParameterId = "MeterParameterId",
             ParameterGroupId = "ParameterGroupId",
@@ -967,6 +975,8 @@ declare namespace EMS.Meter {
         const idProperty = "MeterId";
         const nameProperty = "Name";
         const localTextPrefix = "Meter.Meter";
+        const lookupKey = "Zoning.Meter";
+        function getLookup(): Q.Lookup<MeterRow>;
         const enum Fields {
             MeterId = "MeterId",
             ApartmentId = "ApartmentId",
@@ -1048,6 +1058,8 @@ declare namespace EMS.Meter {
         const idProperty = "MeterTypeId";
         const nameProperty = "Name";
         const localTextPrefix = "Meter.MeterType";
+        const lookupKey = "Meter.MeterType";
+        function getLookup(): Q.Lookup<MeterTypeRow>;
         const enum Fields {
             MeterTypeId = "MeterTypeId",
             Name = "Name",
@@ -1076,7 +1088,7 @@ declare namespace EMS.Parameter {
 }
 declare namespace EMS.Parameter {
     interface ParameterForm {
-        ParameterTypeId: Serenity.IntegerEditor;
+        ParameterTypeId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         Value: Serenity.StringEditor;
         Address: Serenity.StringEditor;
@@ -1112,6 +1124,8 @@ declare namespace EMS.Parameter {
         const idProperty = "ParameterGroupId";
         const nameProperty = "Name";
         const localTextPrefix = "Parameter.ParameterGroup";
+        const lookupKey = "Parameter.ParameterGroup";
+        function getLookup(): Q.Lookup<ParameterGroupRow>;
         const enum Fields {
             ParameterGroupId = "ParameterGroupId",
             Name = "Name",
@@ -1152,6 +1166,8 @@ declare namespace EMS.Parameter {
         const idProperty = "ParameterId";
         const nameProperty = "Name";
         const localTextPrefix = "Parameter.Parameter";
+        const lookupKey = "Parameter.Parameter";
+        function getLookup(): Q.Lookup<ParameterRow>;
         const enum Fields {
             ParameterId = "ParameterId",
             ParameterTypeId = "ParameterTypeId",
@@ -1205,6 +1221,8 @@ declare namespace EMS.Parameter {
         const idProperty = "ParameterTypeId";
         const nameProperty = "Name";
         const localTextPrefix = "Parameter.ParameterType";
+        const lookupKey = "Parameter.ParameterType";
+        function getLookup(): Q.Lookup<ParameterTypeRow>;
         const enum Fields {
             ParameterTypeId = "ParameterTypeId",
             Name = "Name",

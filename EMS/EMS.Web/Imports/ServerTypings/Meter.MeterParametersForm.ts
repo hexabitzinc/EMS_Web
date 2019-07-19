@@ -1,7 +1,7 @@
 ﻿namespace EMS.Meter {
     export interface MeterParametersForm {
-        ParameterGroupId: Serenity.IntegerEditor;
-        ParameterId: Serenity.IntegerEditor;
+        ParameterGroupId: Serenity.LookupEditor;
+        ParameterId: Serenity.LookupEditor;
         Deleted: Serenity.BooleanEditor;
     }
 
@@ -16,7 +16,7 @@
                 MeterParametersForm.init = true;
 
                 var s = Serenity;
-                var w0 = s.IntegerEditor;
+                var w0 = s.LookupEditor;
                 var w1 = s.BooleanEditor;
 
                 Q.initFormType(MeterParametersForm, [

@@ -1,6 +1,7 @@
 ﻿
 namespace EMS.EMSDevice.Entities
 {
+    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -13,6 +14,8 @@ namespace EMS.EMSDevice.Entities
     [DisplayName("Ems Device"), InstanceName("Ems Device")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [JsonConverter(typeof(JsonRowConverter))]
+    [LookupScript("EMSDevice.EMSDevice")]
     public sealed class EmsDeviceRow : Row, IIdRow, INameRow
     {
         [DisplayName("Ems Device Id"), Column("EMSDeviceID"), Identity]
@@ -21,21 +24,21 @@ namespace EMS.EMSDevice.Entities
             get { return Fields.EmsDeviceId[this]; }
             set { Fields.EmsDeviceId[this] = value; }
         }
-
+        [LookupEditor("Zoning.Building")]
         [DisplayName("Building"), Column("BuildingID"), ForeignKey("[dbo].[Building]", "BuildingID"), LeftJoin("jBuilding"), TextualField("BuildingName")]
         public Int32? BuildingId
         {
             get { return Fields.BuildingId[this]; }
             set { Fields.BuildingId[this] = value; }
         }
-
+        [LookupEditor("EMSDevice.EMSParameter")]
         [DisplayName("Ems Parameter"), Column("EMSParameterID"), ForeignKey("[dbo].[EMSParameter]", "EMSParameterID"), LeftJoin("jEmsParameter"), TextualField("EmsParameterName")]
         public Int32? EmsParameterId
         {
             get { return Fields.EmsParameterId[this]; }
             set { Fields.EmsParameterId[this] = value; }
         }
-
+        [LookupEditor("EMSDevice.EMSSetting")]
         [DisplayName("Ems Setting"), Column("EMSSettingID"), ForeignKey("[dbo].[EMSSetting]", "EMSSettingID"), LeftJoin("jEmsSetting"), TextualField("EmsSettingName")]
         public Int32? EmsSettingId
         {

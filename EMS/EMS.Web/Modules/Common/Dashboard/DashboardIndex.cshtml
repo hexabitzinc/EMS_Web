@@ -5,8 +5,10 @@
 }
 
 @section Head {
-@Html.StyleBundle("Pages/Dashboard")
-@Html.ScriptBundle("Pages/Dashboard")
+    @Html.StyleBundle("Pages/Dashboard")
+    @Html.ScriptBundle("Pages/Dashboard")
+    <script src="~/Scripts/chartjs/Chart.min.js"></script>
+    <script src="~/Scripts/adminlte/demo.js"></script>
 }
 
 @section ContentHeader {
@@ -101,7 +103,6 @@
                 </div>
             </div><!-- /.box-body -->
         </div><!-- /.box -->
-
 
 
     </section><!-- /.Left col -->

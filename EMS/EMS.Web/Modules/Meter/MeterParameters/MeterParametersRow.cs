@@ -1,6 +1,7 @@
 ﻿
 namespace EMS.Meter.Entities
 {
+    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -13,6 +14,8 @@ namespace EMS.Meter.Entities
     [DisplayName("Meter Parameters"), InstanceName("Meter Parameters")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [JsonConverter(typeof(JsonRowConverter))]
+    [LookupScript("Meter.MeterParameters")]
     public sealed class MeterParametersRow : Row, IIdRow
     {
         [DisplayName("Meter Parameter Id"), Column("MeterParameterID"), Identity]
@@ -21,14 +24,14 @@ namespace EMS.Meter.Entities
             get { return Fields.MeterParameterId[this]; }
             set { Fields.MeterParameterId[this] = value; }
         }
-
+        [LookupEditor("Parameter.ParameterGroup")]
         [DisplayName("Parameter Group"), Column("ParameterGroupID"), ForeignKey("[dbo].[ParameterGroup]", "ParameterGroupID"), LeftJoin("jParameterGroup"), TextualField("ParameterGroupName")]
         public Int32? ParameterGroupId
         {
             get { return Fields.ParameterGroupId[this]; }
             set { Fields.ParameterGroupId[this] = value; }
         }
-
+        [LookupEditor("Parameter.Parameter")]
         [DisplayName("Parameter"), Column("ParameterID"), ForeignKey("[dbo].[Parameter]", "ParameterID"), LeftJoin("jParameter"), TextualField("ParameterName")]
         public Int32? ParameterId
         {

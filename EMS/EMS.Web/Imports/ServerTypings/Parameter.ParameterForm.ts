@@ -1,6 +1,6 @@
 ﻿namespace EMS.Parameter {
     export interface ParameterForm {
-        ParameterTypeId: Serenity.IntegerEditor;
+        ParameterTypeId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         Value: Serenity.StringEditor;
         Address: Serenity.StringEditor;
@@ -19,7 +19,7 @@
                 ParameterForm.init = true;
 
                 var s = Serenity;
-                var w0 = s.IntegerEditor;
+                var w0 = s.LookupEditor;
                 var w1 = s.StringEditor;
                 var w2 = s.BooleanEditor;
 

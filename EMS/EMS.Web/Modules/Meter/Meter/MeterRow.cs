@@ -1,6 +1,7 @@
 ﻿
 namespace EMS.Meter.Entities
 {
+    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -13,6 +14,8 @@ namespace EMS.Meter.Entities
     [DisplayName("Meter"), InstanceName("Meter")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [JsonConverter(typeof(JsonRowConverter))]
+    [LookupScript("Zoning.Meter")]
     public sealed class MeterRow : Row, IIdRow, INameRow
     {
         [DisplayName("Meter Id"), Column("MeterID"), Identity]
@@ -21,21 +24,21 @@ namespace EMS.Meter.Entities
             get { return Fields.MeterId[this]; }
             set { Fields.MeterId[this] = value; }
         }
-
+        [LookupEditor("Zoning.Apartment")]
         [DisplayName("Apartment"), Column("ApartmentID"), ForeignKey("[dbo].[Apartment]", "ApartmentID"), LeftJoin("jApartment"), TextualField("ApartmentName")]
         public Int32? ApartmentId
         {
             get { return Fields.ApartmentId[this]; }
             set { Fields.ApartmentId[this] = value; }
         }
-
+        [LookupEditor("Zoning.CommonLocation")]
         [DisplayName("Common Location"), Column("CommonLocationID"), ForeignKey("[dbo].[CommonLocation]", "CommonLocationID"), LeftJoin("jCommonLocation"), TextualField("CommonLocationName")]
         public Int32? CommonLocationId
         {
             get { return Fields.CommonLocationId[this]; }
             set { Fields.CommonLocationId[this] = value; }
         }
-
+        [LookupEditor("Meter.MeterType")]
         [DisplayName("Meter Type"), Column("MeterTypeID"), ForeignKey("[dbo].[MeterType]", "MeterTypeID"), LeftJoin("jMeterType"), TextualField("MeterTypeName")]
         public Int32? MeterTypeId
         {

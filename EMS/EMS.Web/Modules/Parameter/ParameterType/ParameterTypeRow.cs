@@ -1,6 +1,7 @@
 ﻿
 namespace EMS.Parameter.Entities
 {
+    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -13,6 +14,8 @@ namespace EMS.Parameter.Entities
     [DisplayName("Parameter Type"), InstanceName("Parameter Type")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [JsonConverter(typeof(JsonRowConverter))]
+    [LookupScript("Parameter.ParameterType")]
     public sealed class ParameterTypeRow : Row, IIdRow, INameRow
     {
         [DisplayName("Parameter Type Id"), Column("ParameterTypeID"), Identity]

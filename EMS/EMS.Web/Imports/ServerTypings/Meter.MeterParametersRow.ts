@@ -17,6 +17,11 @@
     export namespace MeterParametersRow {
         export const idProperty = 'MeterParameterId';
         export const localTextPrefix = 'Meter.MeterParameters';
+        export const lookupKey = 'Meter.MeterParameters';
+
+        export function getLookup(): Q.Lookup<MeterParametersRow> {
+            return Q.getLookup<MeterParametersRow>('Meter.MeterParameters');
+        }
 
         export declare const enum Fields {
             MeterParameterId = "MeterParameterId",

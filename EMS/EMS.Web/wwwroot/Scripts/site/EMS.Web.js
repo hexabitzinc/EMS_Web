@@ -365,25 +365,26 @@ var EMS;
                 if (!EmsDeviceForm.init) {
                     EmsDeviceForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
-                    var w1 = s.StringEditor;
-                    var w2 = s.DateEditor;
-                    var w3 = s.BooleanEditor;
+                    var w0 = s.LookupEditor;
+                    var w1 = s.IntegerEditor;
+                    var w2 = s.StringEditor;
+                    var w3 = s.DateEditor;
+                    var w4 = s.BooleanEditor;
                     Q.initFormType(EmsDeviceForm, [
                         'BuildingId', w0,
                         'EmsParameterId', w0,
                         'EmsSettingId', w0,
-                        'ConsumerId', w0,
-                        'Name', w1,
-                        'SerialNumber', w1,
-                        'Make', w1,
-                        'PhysicalLocation', w1,
-                        'AssignedLocation', w1,
-                        'CommunicationMethod', w1,
-                        'SerialCommunicationSetting', w1,
-                        'RegistrationDate', w2,
-                        'Notes', w1,
-                        'Deleted', w3
+                        'ConsumerId', w1,
+                        'Name', w2,
+                        'SerialNumber', w2,
+                        'Make', w2,
+                        'PhysicalLocation', w2,
+                        'AssignedLocation', w2,
+                        'CommunicationMethod', w2,
+                        'SerialCommunicationSetting', w2,
+                        'RegistrationDate', w3,
+                        'Notes', w2,
+                        'Deleted', w4
                     ]);
                 }
                 return _this;
@@ -403,6 +404,11 @@ var EMS;
             EmsDeviceRow.idProperty = 'EmsDeviceId';
             EmsDeviceRow.nameProperty = 'Name';
             EmsDeviceRow.localTextPrefix = 'EMSDevice.EmsDevice';
+            EmsDeviceRow.lookupKey = 'EMSDevice.EMSDevice';
+            function getLookup() {
+                return Q.getLookup('EMSDevice.EMSDevice');
+            }
+            EmsDeviceRow.getLookup = getLookup;
         })(EmsDeviceRow = EMSDevice.EmsDeviceRow || (EMSDevice.EmsDeviceRow = {}));
     })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
 })(EMS || (EMS = {}));
@@ -438,7 +444,7 @@ var EMS;
                 if (!EmsParameterForm.init) {
                     EmsParameterForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
+                    var w0 = s.LookupEditor;
                     var w1 = s.StringEditor;
                     var w2 = s.BooleanEditor;
                     Q.initFormType(EmsParameterForm, [
@@ -467,6 +473,11 @@ var EMS;
             EmsParameterRow.idProperty = 'EmsParameterId';
             EmsParameterRow.nameProperty = 'Name';
             EmsParameterRow.localTextPrefix = 'EMSDevice.EmsParameter';
+            EmsParameterRow.lookupKey = 'EMSDevice.EMSParameter';
+            function getLookup() {
+                return Q.getLookup('EMSDevice.EMSParameter');
+            }
+            EmsParameterRow.getLookup = getLookup;
         })(EmsParameterRow = EMSDevice.EmsParameterRow || (EMSDevice.EmsParameterRow = {}));
     })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
 })(EMS || (EMS = {}));
@@ -502,7 +513,7 @@ var EMS;
                 if (!EmsSettingForm.init) {
                     EmsSettingForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
+                    var w0 = s.LookupEditor;
                     var w1 = s.StringEditor;
                     var w2 = s.BooleanEditor;
                     Q.initFormType(EmsSettingForm, [
@@ -531,6 +542,11 @@ var EMS;
             EmsSettingRow.idProperty = 'EmsSettingId';
             EmsSettingRow.nameProperty = 'Name';
             EmsSettingRow.localTextPrefix = 'EMSDevice.EmsSetting';
+            EmsSettingRow.lookupKey = 'EMSDevice.EMSSetting';
+            function getLookup() {
+                return Q.getLookup('EMSDevice.EMSSetting');
+            }
+            EmsSettingRow.getLookup = getLookup;
         })(EmsSettingRow = EMSDevice.EmsSettingRow || (EMSDevice.EmsSettingRow = {}));
     })(EMSDevice = EMS.EMSDevice || (EMS.EMSDevice = {}));
 })(EMS || (EMS = {}));
@@ -697,25 +713,26 @@ var EMS;
                 if (!MeterForm.init) {
                     MeterForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
-                    var w1 = s.StringEditor;
-                    var w2 = s.DateEditor;
-                    var w3 = s.BooleanEditor;
+                    var w0 = s.LookupEditor;
+                    var w1 = s.IntegerEditor;
+                    var w2 = s.StringEditor;
+                    var w3 = s.DateEditor;
+                    var w4 = s.BooleanEditor;
                     Q.initFormType(MeterForm, [
                         'ApartmentId', w0,
                         'CommonLocationId', w0,
                         'MeterTypeId', w0,
-                        'ConsumerId', w0,
-                        'Name', w1,
-                        'SerialNumber', w1,
-                        'Make', w1,
-                        'PhysicalLocation', w1,
-                        'AssignedLocation', w1,
-                        'CommunicationMethod', w1,
-                        'SerialCommunicationSetting', w1,
-                        'RegistrationDate', w2,
-                        'Notes', w1,
-                        'Deleted', w3
+                        'ConsumerId', w1,
+                        'Name', w2,
+                        'SerialNumber', w2,
+                        'Make', w2,
+                        'PhysicalLocation', w2,
+                        'AssignedLocation', w2,
+                        'CommunicationMethod', w2,
+                        'SerialCommunicationSetting', w2,
+                        'RegistrationDate', w3,
+                        'Notes', w2,
+                        'Deleted', w4
                     ]);
                 }
                 return _this;
@@ -737,7 +754,7 @@ var EMS;
                 if (!MeterParametersForm.init) {
                     MeterParametersForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
+                    var w0 = s.LookupEditor;
                     var w1 = s.BooleanEditor;
                     Q.initFormType(MeterParametersForm, [
                         'ParameterGroupId', w0,
@@ -761,6 +778,11 @@ var EMS;
         (function (MeterParametersRow) {
             MeterParametersRow.idProperty = 'MeterParameterId';
             MeterParametersRow.localTextPrefix = 'Meter.MeterParameters';
+            MeterParametersRow.lookupKey = 'Meter.MeterParameters';
+            function getLookup() {
+                return Q.getLookup('Meter.MeterParameters');
+            }
+            MeterParametersRow.getLookup = getLookup;
         })(MeterParametersRow = Meter.MeterParametersRow || (Meter.MeterParametersRow = {}));
     })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
@@ -794,6 +816,11 @@ var EMS;
             MeterRow.idProperty = 'MeterId';
             MeterRow.nameProperty = 'Name';
             MeterRow.localTextPrefix = 'Meter.Meter';
+            MeterRow.lookupKey = 'Zoning.Meter';
+            function getLookup() {
+                return Q.getLookup('Zoning.Meter');
+            }
+            MeterRow.getLookup = getLookup;
         })(MeterRow = Meter.MeterRow || (Meter.MeterRow = {}));
     })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
@@ -853,6 +880,11 @@ var EMS;
             MeterTypeRow.idProperty = 'MeterTypeId';
             MeterTypeRow.nameProperty = 'Name';
             MeterTypeRow.localTextPrefix = 'Meter.MeterType';
+            MeterTypeRow.lookupKey = 'Meter.MeterType';
+            function getLookup() {
+                return Q.getLookup('Meter.MeterType');
+            }
+            MeterTypeRow.getLookup = getLookup;
         })(MeterTypeRow = Meter.MeterTypeRow || (Meter.MeterTypeRow = {}));
     })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
@@ -888,7 +920,7 @@ var EMS;
                 if (!ParameterForm.init) {
                     ParameterForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
+                    var w0 = s.LookupEditor;
                     var w1 = s.StringEditor;
                     var w2 = s.BooleanEditor;
                     Q.initFormType(ParameterForm, [
@@ -943,6 +975,11 @@ var EMS;
             ParameterGroupRow.idProperty = 'ParameterGroupId';
             ParameterGroupRow.nameProperty = 'Name';
             ParameterGroupRow.localTextPrefix = 'Parameter.ParameterGroup';
+            ParameterGroupRow.lookupKey = 'Parameter.ParameterGroup';
+            function getLookup() {
+                return Q.getLookup('Parameter.ParameterGroup');
+            }
+            ParameterGroupRow.getLookup = getLookup;
         })(ParameterGroupRow = Parameter.ParameterGroupRow || (Parameter.ParameterGroupRow = {}));
     })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
 })(EMS || (EMS = {}));
@@ -976,6 +1013,11 @@ var EMS;
             ParameterRow.idProperty = 'ParameterId';
             ParameterRow.nameProperty = 'Name';
             ParameterRow.localTextPrefix = 'Parameter.Parameter';
+            ParameterRow.lookupKey = 'Parameter.Parameter';
+            function getLookup() {
+                return Q.getLookup('Parameter.Parameter');
+            }
+            ParameterRow.getLookup = getLookup;
         })(ParameterRow = Parameter.ParameterRow || (Parameter.ParameterRow = {}));
     })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
 })(EMS || (EMS = {}));
@@ -1035,6 +1077,11 @@ var EMS;
             ParameterTypeRow.idProperty = 'ParameterTypeId';
             ParameterTypeRow.nameProperty = 'Name';
             ParameterTypeRow.localTextPrefix = 'Parameter.ParameterType';
+            ParameterTypeRow.lookupKey = 'Parameter.ParameterType';
+            function getLookup() {
+                return Q.getLookup('Parameter.ParameterType');
+            }
+            ParameterTypeRow.getLookup = getLookup;
         })(ParameterTypeRow = Parameter.ParameterTypeRow || (Parameter.ParameterTypeRow = {}));
     })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
 })(EMS || (EMS = {}));
