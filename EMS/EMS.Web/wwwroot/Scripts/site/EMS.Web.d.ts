@@ -915,11 +915,11 @@ declare namespace EMS.Meter {
 }
 declare namespace EMS.Meter {
     interface MeterDetailForm {
-        ParameterGroupId: Serenity.IntegerEditor;
-        ParameterId: Serenity.IntegerEditor;
-        SchedulingId: Serenity.IntegerEditor;
-        ApartmentId: Serenity.IntegerEditor;
-        CommonLocationId: Serenity.IntegerEditor;
+        ParameterGroupId: Serenity.LookupEditor;
+        ParameterId: Serenity.LookupEditor;
+        SchedulingId: Serenity.LookupEditor;
+        ApartmentId: Serenity.LookupEditor;
+        CommonLocationId: Serenity.LookupEditor;
         Value: Serenity.StringEditor;
         Deleted: Serenity.BooleanEditor;
     }
@@ -968,6 +968,8 @@ declare namespace EMS.Meter {
         const idProperty = "MeterDetailId";
         const nameProperty = "Value";
         const localTextPrefix = "Meter.MeterDetail";
+        const lookupKey = "Meter.MeterDetail";
+        function getLookup(): Q.Lookup<MeterDetailRow>;
         const enum Fields {
             MeterDetailId = "MeterDetailId",
             ParameterGroupId = "ParameterGroupId",
@@ -1023,8 +1025,8 @@ declare namespace EMS.Meter {
 }
 declare namespace EMS.Meter {
     interface MeterForm {
-        MeterTypeId: Serenity.IntegerEditor;
-        ConsumerId: Serenity.IntegerEditor;
+        MeterTypeId: Serenity.LookupEditor;
+        ConsumerId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         SerialNumber: Serenity.StringEditor;
         Make: Serenity.StringEditor;
@@ -1073,6 +1075,8 @@ declare namespace EMS.Meter {
         const idProperty = "MeterId";
         const nameProperty = "Name";
         const localTextPrefix = "Meter.Meter";
+        const lookupKey = "Meter.Meter";
+        function getLookup(): Q.Lookup<MeterRow>;
         const enum Fields {
             MeterId = "MeterId",
             MeterTypeId = "MeterTypeId",
@@ -1141,6 +1145,8 @@ declare namespace EMS.Meter {
         const idProperty = "MeterTypeId";
         const nameProperty = "Name";
         const localTextPrefix = "Meter.MeterType";
+        const lookupKey = "Meter.MeterType";
+        function getLookup(): Q.Lookup<MeterTypeRow>;
         const enum Fields {
             MeterTypeId = "MeterTypeId",
             Name = "Name",
@@ -1196,6 +1202,8 @@ declare namespace EMS.Meter {
         const idProperty = "SchedulingId";
         const nameProperty = "Year";
         const localTextPrefix = "Meter.Scheduling";
+        const lookupKey = "Meter.Scheduling";
+        function getLookup(): Q.Lookup<SchedulingRow>;
         const enum Fields {
             SchedulingId = "SchedulingId",
             Year = "Year",
@@ -1228,7 +1236,7 @@ declare namespace EMS.Parameter {
 }
 declare namespace EMS.Parameter {
     interface ParameterForm {
-        ParameterTypeId: Serenity.IntegerEditor;
+        ParameterTypeId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         Address: Serenity.StringEditor;
         Notes: Serenity.StringEditor;
@@ -1263,6 +1271,8 @@ declare namespace EMS.Parameter {
         const idProperty = "ParameterGroupId";
         const nameProperty = "Name";
         const localTextPrefix = "Parameter.ParameterGroup";
+        const lookupKey = "Parameter.ParameterGroup";
+        function getLookup(): Q.Lookup<ParameterGroupRow>;
         const enum Fields {
             ParameterGroupId = "ParameterGroupId",
             Name = "Name",
@@ -1302,6 +1312,8 @@ declare namespace EMS.Parameter {
         const idProperty = "ParameterId";
         const nameProperty = "Name";
         const localTextPrefix = "Parameter.Parameter";
+        const lookupKey = "Parameter.Parameter";
+        function getLookup(): Q.Lookup<ParameterRow>;
         const enum Fields {
             ParameterId = "ParameterId",
             ParameterTypeId = "ParameterTypeId",
@@ -1354,6 +1366,8 @@ declare namespace EMS.Parameter {
         const idProperty = "ParameterTypeId";
         const nameProperty = "Name";
         const localTextPrefix = "Parameter.ParameterType";
+        const lookupKey = "Parameter.ParameterType";
+        function getLookup(): Q.Lookup<ParameterTypeRow>;
         const enum Fields {
             ParameterTypeId = "ParameterTypeId",
             Name = "Name",
@@ -1394,7 +1408,7 @@ declare namespace EMS.Zoning {
 }
 declare namespace EMS.Zoning {
     interface ApartmentForm {
-        SectionId: Serenity.IntegerEditor;
+        SectionId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         Type: Serenity.StringEditor;
         Address: Serenity.StringEditor;
@@ -1427,6 +1441,8 @@ declare namespace EMS.Zoning {
         const idProperty = "ApartmentId";
         const nameProperty = "Name";
         const localTextPrefix = "Zoning.Apartment";
+        const lookupKey = "Zoning.Apartment";
+        function getLookup(): Q.Lookup<ApartmentRow>;
         const enum Fields {
             ApartmentId = "ApartmentId",
             SectionId = "SectionId",
@@ -1655,7 +1671,7 @@ declare namespace EMS.Zoning {
 }
 declare namespace EMS.Zoning {
     interface FloorForm {
-        BuildingId: Serenity.IntegerEditor;
+        BuildingId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         FloorNumber: Serenity.IntegerEditor;
         Description: Serenity.StringEditor;
@@ -1687,6 +1703,8 @@ declare namespace EMS.Zoning {
         const idProperty = "FloorId";
         const nameProperty = "Name";
         const localTextPrefix = "Zoning.Floor";
+        const lookupKey = "Zoning.Floor";
+        function getLookup(): Q.Lookup<FloorRow>;
         const enum Fields {
             FloorId = "FloorId",
             BuildingId = "BuildingId",
@@ -1725,7 +1743,7 @@ declare namespace EMS.Zoning {
 }
 declare namespace EMS.Zoning {
     interface SectionForm {
-        FloorId: Serenity.IntegerEditor;
+        FloorId: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         Description: Serenity.StringEditor;
         Deleted: Serenity.BooleanEditor;
@@ -1753,6 +1771,8 @@ declare namespace EMS.Zoning {
         const idProperty = "SectionId";
         const nameProperty = "Name";
         const localTextPrefix = "Zoning.Section";
+        const lookupKey = "Zoning.Section";
+        function getLookup(): Q.Lookup<SectionRow>;
         const enum Fields {
             SectionId = "SectionId",
             FloorId = "FloorId",

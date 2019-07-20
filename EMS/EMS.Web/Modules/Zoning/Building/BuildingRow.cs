@@ -26,7 +26,7 @@ namespace EMS.Zoning.Entities
         }
 
         [DisplayName("City"), Column("CityID"), ForeignKey("[dbo].[City]", "CityID"), LeftJoin("jCity"), TextualField("CityName")]
-        [LookupEditor("Zoning.City")]
+        [LookupEditor("Zoning.City", InplaceAdd = true)]
         public Int32? CityId
         {
             get { return Fields.CityId[this]; }

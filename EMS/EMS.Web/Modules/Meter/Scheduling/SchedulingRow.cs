@@ -1,6 +1,7 @@
 ﻿
 namespace EMS.Meter.Entities
 {
+    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -13,6 +14,8 @@ namespace EMS.Meter.Entities
     [DisplayName("Scheduling"), InstanceName("Scheduling")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [JsonConverter(typeof(JsonRowConverter))]
+    [LookupScript("Meter.Scheduling")]
     public sealed class SchedulingRow : Row, IIdRow, INameRow
     {
         [DisplayName("Scheduling Id"), Column("SchedulingID"), Identity]

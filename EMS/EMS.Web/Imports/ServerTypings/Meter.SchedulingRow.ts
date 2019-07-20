@@ -13,6 +13,11 @@
         export const idProperty = 'SchedulingId';
         export const nameProperty = 'Year';
         export const localTextPrefix = 'Meter.Scheduling';
+        export const lookupKey = 'Meter.Scheduling';
+
+        export function getLookup(): Q.Lookup<SchedulingRow> {
+            return Q.getLookup<SchedulingRow>('Meter.Scheduling');
+        }
 
         export declare const enum Fields {
             SchedulingId = "SchedulingId",

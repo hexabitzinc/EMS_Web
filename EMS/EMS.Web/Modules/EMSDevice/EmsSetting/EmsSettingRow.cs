@@ -24,7 +24,7 @@ namespace EMS.EMSDevice.Entities
             get { return Fields.EmsSettingId[this]; }
             set { Fields.EmsSettingId[this] = value; }
         }
-        [LookupEditor("Parameter.ParameterType")]
+        [LookupEditor("Parameter.ParameterType", InplaceAdd = true)]
         [DisplayName("Parameter Type"), Column("ParameterTypeID"), ForeignKey("[dbo].[ParameterType]", "ParameterTypeID"), LeftJoin("jParameterType"), TextualField("ParameterTypeName")]
         public Int32? ParameterTypeId
         {

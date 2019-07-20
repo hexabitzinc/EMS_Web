@@ -26,7 +26,7 @@ namespace EMS.Zoning.Entities
         }
 
         [DisplayName("Building"), Column("BuildingID"), ForeignKey("[dbo].[Building]", "BuildingID"), LeftJoin("jBuilding"), TextualField("BuildingName")]
-        [LookupEditor("Zoning.Building")]
+        [LookupEditor("Zoning.Building", InplaceAdd = true)]
         public Int32? BuildingId
         {
             get { return Fields.BuildingId[this]; }

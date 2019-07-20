@@ -24,28 +24,28 @@ namespace EMS.EMSDevice.Entities
             get { return Fields.EmsDeviceId[this]; }
             set { Fields.EmsDeviceId[this] = value; }
         }
-        [LookupEditor("Zoning.Building")]
+        [LookupEditor("Zoning.Building", InplaceAdd = true)]
         [DisplayName("Building"), Column("BuildingID"), ForeignKey("[dbo].[Building]", "BuildingID"), LeftJoin("jBuilding"), TextualField("BuildingName")]
         public Int32? BuildingId
         {
             get { return Fields.BuildingId[this]; }
             set { Fields.BuildingId[this] = value; }
         }
-        [LookupEditor("EMSDevice.EMSParameter")]
+        [LookupEditor("EMSDevice.EMSParameter", InplaceAdd = true)]
         [DisplayName("Ems Parameter"), Column("EMSParameterID"), ForeignKey("[dbo].[EMSParameter]", "EMSParameterID"), LeftJoin("jEmsParameter"), TextualField("EmsParameterName")]
         public Int32? EmsParameterId
         {
             get { return Fields.EmsParameterId[this]; }
             set { Fields.EmsParameterId[this] = value; }
         }
-        [LookupEditor("EMSDevice.EMSSetting")]
+        [LookupEditor("EMSDevice.EMSSetting", InplaceAdd = true)]
         [DisplayName("Ems Setting"), Column("EMSSettingID"), ForeignKey("[dbo].[EMSSetting]", "EMSSettingID"), LeftJoin("jEmsSetting"), TextualField("EmsSettingName")]
         public Int32? EmsSettingId
         {
             get { return Fields.EmsSettingId[this]; }
             set { Fields.EmsSettingId[this] = value; }
         }
-        [LookupEditor("Consumer.Consumer")]
+        [LookupEditor("Consumer.Consumer", InplaceAdd = true)]
         [DisplayName("Consumer"), Column("ConsumerID"), ForeignKey("[dbo].[Consumer]", "ConsumerID"), LeftJoin("jConsumer"), TextualField("ConsumerFirstName")]
         public Int32? ConsumerId
         {

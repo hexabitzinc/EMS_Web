@@ -783,7 +783,7 @@ var EMS;
                 if (!MeterDetailForm.init) {
                     MeterDetailForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
+                    var w0 = s.LookupEditor;
                     var w1 = s.StringEditor;
                     var w2 = s.BooleanEditor;
                     Q.initFormType(MeterDetailForm, [
@@ -813,6 +813,11 @@ var EMS;
             MeterDetailRow.idProperty = 'MeterDetailId';
             MeterDetailRow.nameProperty = 'Value';
             MeterDetailRow.localTextPrefix = 'Meter.MeterDetail';
+            MeterDetailRow.lookupKey = 'Meter.MeterDetail';
+            function getLookup() {
+                return Q.getLookup('Meter.MeterDetail');
+            }
+            MeterDetailRow.getLookup = getLookup;
         })(MeterDetailRow = Meter.MeterDetailRow || (Meter.MeterDetailRow = {}));
     })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
@@ -848,7 +853,7 @@ var EMS;
                 if (!MeterForm.init) {
                     MeterForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
+                    var w0 = s.LookupEditor;
                     var w1 = s.StringEditor;
                     var w2 = s.DateEditor;
                     var w3 = s.BooleanEditor;
@@ -884,6 +889,11 @@ var EMS;
             MeterRow.idProperty = 'MeterId';
             MeterRow.nameProperty = 'Name';
             MeterRow.localTextPrefix = 'Meter.Meter';
+            MeterRow.lookupKey = 'Meter.Meter';
+            function getLookup() {
+                return Q.getLookup('Meter.Meter');
+            }
+            MeterRow.getLookup = getLookup;
         })(MeterRow = Meter.MeterRow || (Meter.MeterRow = {}));
     })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
@@ -943,6 +953,11 @@ var EMS;
             MeterTypeRow.idProperty = 'MeterTypeId';
             MeterTypeRow.nameProperty = 'Name';
             MeterTypeRow.localTextPrefix = 'Meter.MeterType';
+            MeterTypeRow.lookupKey = 'Meter.MeterType';
+            function getLookup() {
+                return Q.getLookup('Meter.MeterType');
+            }
+            MeterTypeRow.getLookup = getLookup;
         })(MeterTypeRow = Meter.MeterTypeRow || (Meter.MeterTypeRow = {}));
     })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
@@ -1007,6 +1022,11 @@ var EMS;
             SchedulingRow.idProperty = 'SchedulingId';
             SchedulingRow.nameProperty = 'Year';
             SchedulingRow.localTextPrefix = 'Meter.Scheduling';
+            SchedulingRow.lookupKey = 'Meter.Scheduling';
+            function getLookup() {
+                return Q.getLookup('Meter.Scheduling');
+            }
+            SchedulingRow.getLookup = getLookup;
         })(SchedulingRow = Meter.SchedulingRow || (Meter.SchedulingRow = {}));
     })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));
@@ -1042,7 +1062,7 @@ var EMS;
                 if (!ParameterForm.init) {
                     ParameterForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
+                    var w0 = s.LookupEditor;
                     var w1 = s.StringEditor;
                     var w2 = s.BooleanEditor;
                     Q.initFormType(ParameterForm, [
@@ -1096,6 +1116,11 @@ var EMS;
             ParameterGroupRow.idProperty = 'ParameterGroupId';
             ParameterGroupRow.nameProperty = 'Name';
             ParameterGroupRow.localTextPrefix = 'Parameter.ParameterGroup';
+            ParameterGroupRow.lookupKey = 'Parameter.ParameterGroup';
+            function getLookup() {
+                return Q.getLookup('Parameter.ParameterGroup');
+            }
+            ParameterGroupRow.getLookup = getLookup;
         })(ParameterGroupRow = Parameter.ParameterGroupRow || (Parameter.ParameterGroupRow = {}));
     })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
 })(EMS || (EMS = {}));
@@ -1129,6 +1154,11 @@ var EMS;
             ParameterRow.idProperty = 'ParameterId';
             ParameterRow.nameProperty = 'Name';
             ParameterRow.localTextPrefix = 'Parameter.Parameter';
+            ParameterRow.lookupKey = 'Parameter.Parameter';
+            function getLookup() {
+                return Q.getLookup('Parameter.Parameter');
+            }
+            ParameterRow.getLookup = getLookup;
         })(ParameterRow = Parameter.ParameterRow || (Parameter.ParameterRow = {}));
     })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
 })(EMS || (EMS = {}));
@@ -1188,6 +1218,11 @@ var EMS;
             ParameterTypeRow.idProperty = 'ParameterTypeId';
             ParameterTypeRow.nameProperty = 'Name';
             ParameterTypeRow.localTextPrefix = 'Parameter.ParameterType';
+            ParameterTypeRow.lookupKey = 'Parameter.ParameterType';
+            function getLookup() {
+                return Q.getLookup('Parameter.ParameterType');
+            }
+            ParameterTypeRow.getLookup = getLookup;
         })(ParameterTypeRow = Parameter.ParameterTypeRow || (Parameter.ParameterTypeRow = {}));
     })(Parameter = EMS.Parameter || (EMS.Parameter = {}));
 })(EMS || (EMS = {}));
@@ -1230,7 +1265,7 @@ var EMS;
                 if (!ApartmentForm.init) {
                     ApartmentForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
+                    var w0 = s.LookupEditor;
                     var w1 = s.StringEditor;
                     var w2 = s.BooleanEditor;
                     Q.initFormType(ApartmentForm, [
@@ -1260,6 +1295,11 @@ var EMS;
             ApartmentRow.idProperty = 'ApartmentId';
             ApartmentRow.nameProperty = 'Name';
             ApartmentRow.localTextPrefix = 'Zoning.Apartment';
+            ApartmentRow.lookupKey = 'Zoning.Apartment';
+            function getLookup() {
+                return Q.getLookup('Zoning.Apartment');
+            }
+            ApartmentRow.getLookup = getLookup;
         })(ApartmentRow = Zoning.ApartmentRow || (Zoning.ApartmentRow = {}));
     })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
 })(EMS || (EMS = {}));
@@ -1497,15 +1537,16 @@ var EMS;
                 if (!FloorForm.init) {
                     FloorForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
+                    var w0 = s.LookupEditor;
                     var w1 = s.StringEditor;
-                    var w2 = s.BooleanEditor;
+                    var w2 = s.IntegerEditor;
+                    var w3 = s.BooleanEditor;
                     Q.initFormType(FloorForm, [
                         'BuildingId', w0,
                         'Name', w1,
-                        'FloorNumber', w0,
+                        'FloorNumber', w2,
                         'Description', w1,
-                        'Deleted', w2
+                        'Deleted', w3
                     ]);
                 }
                 return _this;
@@ -1525,6 +1566,11 @@ var EMS;
             FloorRow.idProperty = 'FloorId';
             FloorRow.nameProperty = 'Name';
             FloorRow.localTextPrefix = 'Zoning.Floor';
+            FloorRow.lookupKey = 'Zoning.Floor';
+            function getLookup() {
+                return Q.getLookup('Zoning.Floor');
+            }
+            FloorRow.getLookup = getLookup;
         })(FloorRow = Zoning.FloorRow || (Zoning.FloorRow = {}));
     })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
 })(EMS || (EMS = {}));
@@ -1560,7 +1606,7 @@ var EMS;
                 if (!SectionForm.init) {
                     SectionForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
+                    var w0 = s.LookupEditor;
                     var w1 = s.StringEditor;
                     var w2 = s.BooleanEditor;
                     Q.initFormType(SectionForm, [
@@ -1587,6 +1633,11 @@ var EMS;
             SectionRow.idProperty = 'SectionId';
             SectionRow.nameProperty = 'Name';
             SectionRow.localTextPrefix = 'Zoning.Section';
+            SectionRow.lookupKey = 'Zoning.Section';
+            function getLookup() {
+                return Q.getLookup('Zoning.Section');
+            }
+            SectionRow.getLookup = getLookup;
         })(SectionRow = Zoning.SectionRow || (Zoning.SectionRow = {}));
     })(Zoning = EMS.Zoning || (EMS.Zoning = {}));
 })(EMS || (EMS = {}));

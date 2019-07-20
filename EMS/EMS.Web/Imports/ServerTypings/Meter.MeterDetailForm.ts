@@ -1,10 +1,10 @@
 ﻿namespace EMS.Meter {
     export interface MeterDetailForm {
-        ParameterGroupId: Serenity.IntegerEditor;
-        ParameterId: Serenity.IntegerEditor;
-        SchedulingId: Serenity.IntegerEditor;
-        ApartmentId: Serenity.IntegerEditor;
-        CommonLocationId: Serenity.IntegerEditor;
+        ParameterGroupId: Serenity.LookupEditor;
+        ParameterId: Serenity.LookupEditor;
+        SchedulingId: Serenity.LookupEditor;
+        ApartmentId: Serenity.LookupEditor;
+        CommonLocationId: Serenity.LookupEditor;
         Value: Serenity.StringEditor;
         Deleted: Serenity.BooleanEditor;
     }
@@ -20,7 +20,7 @@
                 MeterDetailForm.init = true;
 
                 var s = Serenity;
-                var w0 = s.IntegerEditor;
+                var w0 = s.LookupEditor;
                 var w1 = s.StringEditor;
                 var w2 = s.BooleanEditor;
 

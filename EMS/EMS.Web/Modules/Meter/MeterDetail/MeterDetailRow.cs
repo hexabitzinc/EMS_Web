@@ -1,6 +1,7 @@
 ﻿
 namespace EMS.Meter.Entities
 {
+    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -13,6 +14,8 @@ namespace EMS.Meter.Entities
     [DisplayName("Meter Detail"), InstanceName("Meter Detail")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [JsonConverter(typeof(JsonRowConverter))]
+    [LookupScript("Meter.MeterDetail")]
     public sealed class MeterDetailRow : Row, IIdRow, INameRow
     {
         [DisplayName("Meter Detail Id"), Column("MeterDetailID"), Identity]
@@ -21,35 +24,35 @@ namespace EMS.Meter.Entities
             get { return Fields.MeterDetailId[this]; }
             set { Fields.MeterDetailId[this] = value; }
         }
-
+        [LookupEditor("Parameter.ParameterGroup")]
         [DisplayName("Parameter Group"), Column("ParameterGroupID"), ForeignKey("[dbo].[ParameterGroup]", "ParameterGroupID"), LeftJoin("jParameterGroup"), TextualField("ParameterGroupName")]
         public Int32? ParameterGroupId
         {
             get { return Fields.ParameterGroupId[this]; }
             set { Fields.ParameterGroupId[this] = value; }
         }
-
+        [LookupEditor("Parameter.Parameter")]
         [DisplayName("Parameter"), Column("ParameterID"), ForeignKey("[dbo].[Parameter]", "ParameterID"), LeftJoin("jParameter"), TextualField("ParameterName")]
         public Int32? ParameterId
         {
             get { return Fields.ParameterId[this]; }
             set { Fields.ParameterId[this] = value; }
         }
-
+        [LookupEditor("Meter.Scheduling")]
         [DisplayName("Scheduling"), Column("SchedulingID"), ForeignKey("[dbo].[Scheduling]", "SchedulingID"), LeftJoin("jScheduling"), TextualField("SchedulingYear")]
         public Int32? SchedulingId
         {
             get { return Fields.SchedulingId[this]; }
             set { Fields.SchedulingId[this] = value; }
         }
-
+        [LookupEditor("Zoning.Apartment")]
         [DisplayName("Apartment"), Column("ApartmentID"), ForeignKey("[dbo].[Apartment]", "ApartmentID"), LeftJoin("jApartment"), TextualField("ApartmentName")]
         public Int32? ApartmentId
         {
             get { return Fields.ApartmentId[this]; }
             set { Fields.ApartmentId[this] = value; }
         }
-
+        [LookupEditor("Zoning.CommonLocation")]
         [DisplayName("Common Location"), Column("CommonLocationID"), ForeignKey("[dbo].[CommonLocation]", "CommonLocationID"), LeftJoin("jCommonLocation"), TextualField("CommonLocationName")]
         public Int32? CommonLocationId
         {

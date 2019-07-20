@@ -14,6 +14,11 @@
         export const idProperty = 'ParameterId';
         export const nameProperty = 'Name';
         export const localTextPrefix = 'Parameter.Parameter';
+        export const lookupKey = 'Parameter.Parameter';
+
+        export function getLookup(): Q.Lookup<ParameterRow> {
+            return Q.getLookup<ParameterRow>('Parameter.Parameter');
+        }
 
         export declare const enum Fields {
             ParameterId = "ParameterId",

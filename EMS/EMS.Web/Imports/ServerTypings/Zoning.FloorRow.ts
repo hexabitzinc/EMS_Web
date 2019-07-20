@@ -19,6 +19,11 @@
         export const idProperty = 'FloorId';
         export const nameProperty = 'Name';
         export const localTextPrefix = 'Zoning.Floor';
+        export const lookupKey = 'Zoning.Floor';
+
+        export function getLookup(): Q.Lookup<FloorRow> {
+            return Q.getLookup<FloorRow>('Zoning.Floor');
+        }
 
         export declare const enum Fields {
             FloorId = "FloorId",
