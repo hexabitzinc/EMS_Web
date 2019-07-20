@@ -108,7 +108,7 @@ namespace EMS.Migrations.DefaultDB
 
             #endregion
 
-            #region parameters
+            #region Parameter
 
             Create.Table("ParameterType")
                .WithColumn("ParameterTypeID").AsInt32().Identity().PrimaryKey()
