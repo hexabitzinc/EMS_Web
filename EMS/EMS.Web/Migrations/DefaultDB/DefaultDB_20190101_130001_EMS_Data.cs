@@ -8,7 +8,9 @@ namespace EMS.Migrations.DefaultDB
     {
         public override void Up()
         {
-           
+
+
+            #region Zooning Data
 
             Insert.IntoTable("City")
                 .Row(new
@@ -62,7 +64,12 @@ namespace EMS.Migrations.DefaultDB
                     Description = "Deir ez-Zor is the largest city in eastern Syria and the seventh largest in the country. Located 450 km to the northeast of the capital Damascus on the banks of the Euphrates River, Deir ez-Zor is the capital of the Deir ez-Zor Governorate. In the 2004 census, it had a population of 211,857 people."
                 });
 
-
+            Insert.IntoTable("City")
+                .Row(new
+                {
+                    Name = "City 1",
+                    Description = "Description"
+                });
 
             Insert.IntoTable("Building")
                 .Row(new
@@ -74,6 +81,32 @@ namespace EMS.Migrations.DefaultDB
                     StreetAddress = "Street address",
                     Description = "Description"
                 });
+
+            Insert.IntoTable("Floor")
+                .Row(new
+                {
+                    Name = "Floor 1",
+                    BuildingID = "1"
+                });
+
+            Insert.IntoTable("Section")
+                .Row(new
+                {
+                    Name = "Section",
+                    FloorID = "1",
+                    Description = "Description"
+                });
+
+            Insert.IntoTable("Apartment")
+                .Row(new
+                {
+                    Name = "Apartment ID 1",
+                    SectionID = "1"
+                });
+
+            #endregion
+
+            #region Meter Data
 
             Insert.IntoTable("MeterType")
                 .Row(new
@@ -975,6 +1008,60 @@ namespace EMS.Migrations.DefaultDB
                     Name = "Schneider Prameters of Gas Meter",
                     Deleted = false
                 });
+
+            Insert.IntoTable("Scheduling")
+                .Row(new
+                {
+                    Year = "2019",
+                    Month = "7",
+                    Day = "1",
+                    FullDate = DateTime.Now,
+                })
+                .Row(new
+                {
+                    Year = "2019",
+                    Month = "7",
+                    Day = "2",
+                    FullDate = DateTime.Now,
+                })
+                .Row(new
+                {
+                    Year = "2019",
+                    Month = "7",
+                    Day = "3",
+                    FullDate = DateTime.Now,
+                })
+                .Row(new
+                {
+                    Year = "2019",
+                    Month = "7",
+                    Day = "4",
+                    FullDate = DateTime.Now,
+                })
+                .Row(new
+                {
+                    Year = "2019",
+                    Month = "7",
+                    Day = "5",
+                    FullDate = DateTime.Now,
+                });
+
+            #endregion
+
+            #region Parameter Values
+
+            Insert.IntoTable("MeterDetail")
+                .Row(new
+                {
+                    ParameterGroupID = 1,
+                    ParameterID = 1,
+                    SchedulingID = 1,
+                    ApartmentID = 1,
+                    Value = "55",
+                    Deleted = false
+                });
+
+            #endregion
         }
     }
 }
