@@ -39,7 +39,7 @@ namespace EMS.Meter.Entities
             set { Fields.ParameterId[this] = value; }
         }
         [LookupEditor("Meter.Scheduling")]
-        [DisplayName("Scheduling"), Column("SchedulingID"), ForeignKey("[dbo].[Scheduling]", "SchedulingID"), LeftJoin("jScheduling"), TextualField("SchedulingYear")]
+        [DisplayName("Scheduling"), Column("SchedulingID"), ForeignKey("[dbo].[Scheduling]", "SchedulingID"), LeftJoin("jScheduling"), TextualField("SchedulingID")]
         public Int32? SchedulingId
         {
             get { return Fields.SchedulingId[this]; }

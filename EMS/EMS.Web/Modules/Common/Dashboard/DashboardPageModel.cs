@@ -3,16 +3,17 @@ namespace EMS.Common
 {
     public class DashboardPageModel
     {
-        public int OpenOrders { get; set; }
-        public int ClosedOrderPercent { get; set; }
-        public int CustomerCount { get; set; }
-        public int ProductCount { get; set; }
-
-
-
-        public int TotalCities { get; set; }
-        public int TotalConsumption { get; set; }
         public int CurrentCost = 150;
+
+        public int TotalBuildings { get; set; }
+        public int TotalApartments{ get; set; }
+        
+
+        public int TotalMeters { get; set; }
+
+
+        public int TotalEMSDevices { get; set; }
+
 
 
     }

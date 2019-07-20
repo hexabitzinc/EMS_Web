@@ -7,6 +7,8 @@ namespace EMS.Common.Pages
     using System;
     using Microsoft.AspNetCore.Mvc;
     using EMS.Zoning.Entities;
+    using EMS.Meter.Entities;
+    using EMS.EMSDevice.Entities;
 
     [Route("Dashboard/[action]")]
     public class DashboardController : Controller
@@ -16,21 +18,21 @@ namespace EMS.Common.Pages
         {
             //<if:Northwind>
             var cachedModel = TwoLevelCache.GetLocalStoreOnly("DashboardPageModel", TimeSpan.FromMinutes(5),
-                CityRow.Fields.GenerationKey, () =>
+                "DashboardPageModel", () =>
                 {
                     var model = new DashboardPageModel();
-                    var o = CityRow.Fields;
-                    var connection = SqlConnections.NewFor<CityRow>();
-                    model.TotalCities = connection.Count<CityRow>();
+
+                    var ZoningConnection = SqlConnections.NewFor<BuildingRow>();
+                    model.TotalBuildings = ZoningConnection.Count<BuildingRow>();
+                    model.TotalApartments = ZoningConnection.Count<ApartmentRow>();
+
+                    var MeterConnection = SqlConnections.NewFor<MeterRow>();
+                    model.TotalMeters = MeterConnection.Count<MeterRow>();
 
 
-                    //model.OpenOrders = connection.Count<CityRow>(o.ShippingState == (int)OrderShippingState.NotShipped);
-                    //var closedOrders = connection.Count<CityRow>(o.ShippingState == (int)OrderShippingState.Shipped);
-                    //var totalOrders = model.OpenOrders + closedOrders;
-                    //model.ClosedOrderPercent = (int)Math.Round(totalOrders == 0 ? 100 :
-                    //    ((double)closedOrders / (double)totalOrders * 100));
-                    //model.CustomerCount = connection.Count<CityRow>();
-                    //model.ProductCount = connection.Count<CityRow>();
+                    var EMSDeviceConnection = SqlConnections.NewFor<EmsDeviceRow>();
+                    model.TotalEMSDevices = EMSDeviceConnection.Count<EmsDeviceRow>();
+
                     return model;
                 });
             return View(MVC.Views.Common.Dashboard.DashboardIndex, cachedModel);
