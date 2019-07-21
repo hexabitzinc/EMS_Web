@@ -75,7 +75,25 @@ namespace EMS.Migrations.DefaultDB
                 Insert.IntoTable("Building")
                     .Row(new
                     {
-                        Name = "The HQ building",
+                        Name = "HQ building 1",
+                        CityID = "1",
+                        ZipCode = "+9846",
+                        Address = "The Address",
+                        StreetAddress = "Street address",
+                        Description = "Description"
+                    })
+                    .Row(new
+                    {
+                        Name = "HQ building 2",
+                        CityID = "1",
+                        ZipCode = "+9846",
+                        Address = "The Address",
+                        StreetAddress = "Street address",
+                        Description = "Description"
+                    })
+                    .Row(new
+                    {
+                        Name = "HQ building 3",
                         CityID = "1",
                         ZipCode = "+9846",
                         Address = "The Address",
@@ -92,6 +110,26 @@ namespace EMS.Migrations.DefaultDB
                     {
                         Name = "Floor 1",
                         BuildingID = "1"
+                    })
+                    .Row(new
+                    {
+                        Name = "Floor 2",
+                        BuildingID = "1"
+                    })
+                    .Row(new
+                    {
+                        Name = "Floor 3",
+                        BuildingID = "1"
+                    })
+                    .Row(new
+                    {
+                        Name = "Floor 4",
+                        BuildingID = "1"
+                    })
+                    .Row(new
+                    {
+                        Name = "Floor 5",
+                        BuildingID = "1"
                     });
                 #endregion
             
@@ -100,21 +138,344 @@ namespace EMS.Migrations.DefaultDB
                 Insert.IntoTable("Section")
                     .Row(new
                     {
-                        Name = "Section",
+                        Name = "Section 1",
+                        FloorID = "1",
+                        Description = "Description"
+                    })
+                    .Row(new
+                    {
+                        Name = "Section 2",
                         FloorID = "1",
                         Description = "Description"
                     });
-                #endregion
-            
+
+            #endregion
+
             #region Apartment
 
-                Insert.IntoTable("Apartment")
-                    .Row(new
-                    {
-                        Name = "Apartment ID 1",
-                        SectionID = "1"
-                    });
-                #endregion
+            Insert.IntoTable("Apartment")
+                .Row(new
+                {
+                    Name = "A 1",
+                    SectionID = 1,
+                    Address = "Address 1",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 2",
+                    SectionID = 1,
+                    Address = "Address 2",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 3",
+                    SectionID = 1,
+                    Address = "Address 3",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 4",
+                    SectionID = 1,
+                    Address = "Address 4",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 5",
+                    SectionID = 1,
+                    Address = "Address 5",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 6",
+                    SectionID = 1,
+                    Address = "Address 6",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 7",
+                    SectionID = 1,
+                    Address = "Address 7",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 8",
+                    SectionID = 1,
+                    Address = "Address 8",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 9",
+                    SectionID = 1,
+                    Address = "Address 9",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 10",
+                    SectionID = 1,
+                    Address = "Address 10",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 11",
+                    SectionID = 1,
+                    Address = "Address 11",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 12",
+                    SectionID = 1,
+                    Address = "Address 12",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 13",
+                    SectionID = 1,
+                    Address = "Address 13",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 14",
+                    SectionID = 1,
+                    Address = "Address 14",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 15",
+                    SectionID = 1,
+                    Address = "Address 15",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 16",
+                    SectionID = 1,
+                    Address = "Address 16",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 17",
+                    SectionID = 1,
+                    Address = "Address 17",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 18",
+                    SectionID = 1,
+                    Address = "Address 18",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 19",
+                    SectionID = 1,
+                    Address = "Address 19",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 20",
+                    SectionID = 1,
+                    Address = "Address 20",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 21",
+                    SectionID = 2,
+                    Address = "Address 21",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 22",
+                    SectionID = 2,
+                    Address = "Address 22",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 23",
+                    SectionID = 2,
+                    Address = "Address 23",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 24",
+                    SectionID = 2,
+                    Address = "Address 24",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 25",
+                    SectionID = 2,
+                    Address = "Address 25",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 26",
+                    SectionID = 2,
+                    Address = "Address 26",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 27",
+                    SectionID = 2,
+                    Address = "Address 27",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 28",
+                    SectionID = 2,
+                    Address = "Address 28",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 29",
+                    SectionID = 2,
+                    Address = "Address 29",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 30",
+                    SectionID = 2,
+                    Address = "Address 30",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 31",
+                    SectionID = 2,
+                    Address = "Address 31",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 32",
+                    SectionID = 2,
+                    Address = "Address 32",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 33",
+                    SectionID = 2,
+                    Address = "Address 33",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 34",
+                    SectionID = 2,
+                    Address = "Address 34",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 35",
+                    SectionID = 2,
+                    Address = "Address 35",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 36",
+                    SectionID = 2,
+                    Address = "Address 36",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 37",
+                    SectionID = 2,
+                    Address = "Address 37",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 38",
+                    SectionID = 2,
+                    Address = "Address 38",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 39",
+                    SectionID = 2,
+                    Address = "Address 39",
+                    RoomNumber = "5",
+                    Description = "Description"
+                })
+                .Row(new
+                {
+                    Name = "A 40",
+                    SectionID = 2,
+                    Address = "Address 40",
+                    RoomNumber = "5",
+                    Description = "Description"
+                });
+            
+            #endregion
 
             #endregion
 
