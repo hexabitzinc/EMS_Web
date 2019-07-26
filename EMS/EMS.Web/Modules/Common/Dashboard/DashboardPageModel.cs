@@ -7,14 +7,8 @@ namespace EMS.Common
 
         public int TotalBuildings { get; set; }
         public int TotalApartments{ get; set; }
-        
-
         public int TotalMeters { get; set; }
-
-
         public int TotalEMSDevices { get; set; }
-
-
 
     }
 }

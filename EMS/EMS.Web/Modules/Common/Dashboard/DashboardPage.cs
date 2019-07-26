@@ -35,6 +35,7 @@ namespace EMS.Common.Pages
 
                     return model;
                 });
+
             return View(MVC.Views.Common.Dashboard.DashboardIndex, cachedModel);
         }
     }

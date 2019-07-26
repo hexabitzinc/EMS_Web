@@ -1403,6 +1403,95 @@ namespace EMS.Migrations.DefaultDB
                 });
             #endregion
 
+            #region Consumer
+
+            Insert.IntoTable("Consumer")
+                .Row(new
+                {
+                    FirstName = "Asaad",
+                    LastName = "Kaadan",
+                    Gender = "Male",
+                    Deleted = false
+                })
+                .Row(new
+                {
+                    FirstName = "Anas",
+                    LastName = "Kaadan",
+                    Gender = "Male",
+                    Deleted = false
+                })
+                .Row(new
+                {
+                    FirstName = "Hani",
+                    LastName = "Mulla",
+                    Gender = "Male",
+                    Deleted = false
+                })
+                .Row(new
+                {
+                    FirstName = "Mohammad",
+                    LastName = "Alyasfo",
+                    Gender = "Male",
+                    Deleted = false
+                })
+                .Row(new
+                {
+                    FirstName = "Mohammad",
+                    LastName = "Shehabi",
+                    Gender = "Male",
+                    Deleted = false
+                });
+
+            #endregion
+
+            #region Meter
+
+            Insert.IntoTable("Meter")
+                .Row(new
+                {
+                    MeterTypeID = 1,
+                    ConsumerID = 1,
+                    Name = "Schneider PM1200 Electricity",
+                    RegistrationDate = DateTime.Now
+                })
+                .Row(new
+                {
+                    MeterTypeID = 1,
+                    ConsumerID = 1,
+                    Name = "Schneider EasyLogic PM1130H Electricity",
+                    RegistrationDate = DateTime.Now
+                })
+                .Row(new
+                {
+                    MeterTypeID = 1,
+                    ConsumerID = 1,
+                    Name = "Schneider PowerLogic ION9000 Electricity",
+                    RegistrationDate = DateTime.Now
+                })
+                .Row(new
+                {
+                    MeterTypeID = 1,
+                    ConsumerID = 1,
+                    Name = "Schneider Water",
+                    RegistrationDate = DateTime.Now
+                })
+                .Row(new
+                {
+                    MeterTypeID = 1,
+                    ConsumerID = 1,
+                    Name = "Schneider Gas",
+                    RegistrationDate = DateTime.Now
+                })
+                .Row(new
+                {
+                    MeterTypeID = 1,
+                    ConsumerID = 1,
+                    Name = "Schneider PM1200",
+                    RegistrationDate = DateTime.Now
+                });
+
+            #endregion
+
             #region scheduling
 
             Insert.IntoTable("Scheduling")
