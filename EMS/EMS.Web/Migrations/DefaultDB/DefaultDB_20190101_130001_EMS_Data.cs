@@ -1377,8 +1377,6 @@ namespace EMS.Migrations.DefaultDB
 
             #endregion
 
-
-
             #endregion
 
             #region Meter

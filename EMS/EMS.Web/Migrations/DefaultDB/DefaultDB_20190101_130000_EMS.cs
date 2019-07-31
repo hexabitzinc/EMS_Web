@@ -169,6 +169,7 @@ namespace EMS.Migrations.DefaultDB
                 .WithColumn("SchedulingID").AsInt32().Nullable().ForeignKey("FK_MeterDetail_Scheduling", "dbo", "Scheduling", "SchedulingID")
                 .WithColumn("ApartmentID").AsInt32().Nullable().ForeignKey("FK_MeterDetail_Apartment", "dbo", "Apartment", "ApartmentID")
                 .WithColumn("CommonLocationID").AsInt32().Nullable().ForeignKey("FK_MeterDetail_CommonLocation", "dbo", "CommonLocation", "CommonLocationID")
+                .WithColumn("MeterID").AsInt32().Nullable().ForeignKey("FK_MeterDetail_Meter", "dbo", "Meter", "MeterID")
                 .WithColumn("Value").AsString(200).Nullable()
                 .WithColumn("Deleted").AsBoolean().NotNullable().WithDefaultValue(false);
 
