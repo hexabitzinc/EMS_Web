@@ -15,6 +15,7 @@ namespace EMS.Meter.Columns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
         public Int32 MeterDetailId { get; set; }
+        public String MeterName { get; set; }
         public String ParameterGroupName { get; set; }
         public String ParameterName { get; set; }
         public String SchedulingYear { get; set; }

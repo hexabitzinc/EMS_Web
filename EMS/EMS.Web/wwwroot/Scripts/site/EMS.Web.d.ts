@@ -915,11 +915,12 @@ declare namespace EMS.Meter {
 }
 declare namespace EMS.Meter {
     interface MeterDetailForm {
+        MeterId: Serenity.LookupEditor;
         ParameterGroupId: Serenity.LookupEditor;
         ParameterId: Serenity.LookupEditor;
-        SchedulingId: Serenity.LookupEditor;
-        ApartmentId: Serenity.LookupEditor;
-        CommonLocationId: Serenity.LookupEditor;
+        SchedulingId: Serenity.IntegerEditor;
+        ApartmentId: Serenity.IntegerEditor;
+        CommonLocationId: Serenity.IntegerEditor;
         Value: Serenity.StringEditor;
         Deleted: Serenity.BooleanEditor;
     }
@@ -932,6 +933,7 @@ declare namespace EMS.Meter {
 declare namespace EMS.Meter {
     interface MeterDetailRow {
         MeterDetailId?: number;
+        MeterId?: number;
         ParameterGroupId?: number;
         ParameterId?: number;
         SchedulingId?: number;
@@ -939,6 +941,18 @@ declare namespace EMS.Meter {
         CommonLocationId?: number;
         Value?: string;
         Deleted?: boolean;
+        MeterMeterTypeId?: number;
+        MeterConsumerId?: number;
+        MeterName?: string;
+        MeterSerialNumber?: string;
+        MeterMake?: string;
+        MeterPhysicalLocation?: string;
+        MeterAssignedLocation?: string;
+        MeterCommunicationMethod?: string;
+        MeterSerialCommunicationSetting?: string;
+        MeterRegistrationDate?: string;
+        MeterNotes?: string;
+        MeterDeleted?: boolean;
         ParameterGroupName?: string;
         ParameterGroupDeleted?: boolean;
         ParameterParameterTypeId?: number;
@@ -972,6 +986,7 @@ declare namespace EMS.Meter {
         function getLookup(): Q.Lookup<MeterDetailRow>;
         const enum Fields {
             MeterDetailId = "MeterDetailId",
+            MeterId = "MeterId",
             ParameterGroupId = "ParameterGroupId",
             ParameterId = "ParameterId",
             SchedulingId = "SchedulingId",
@@ -979,6 +994,18 @@ declare namespace EMS.Meter {
             CommonLocationId = "CommonLocationId",
             Value = "Value",
             Deleted = "Deleted",
+            MeterMeterTypeId = "MeterMeterTypeId",
+            MeterConsumerId = "MeterConsumerId",
+            MeterName = "MeterName",
+            MeterSerialNumber = "MeterSerialNumber",
+            MeterMake = "MeterMake",
+            MeterPhysicalLocation = "MeterPhysicalLocation",
+            MeterAssignedLocation = "MeterAssignedLocation",
+            MeterCommunicationMethod = "MeterCommunicationMethod",
+            MeterSerialCommunicationSetting = "MeterSerialCommunicationSetting",
+            MeterRegistrationDate = "MeterRegistrationDate",
+            MeterNotes = "MeterNotes",
+            MeterDeleted = "MeterDeleted",
             ParameterGroupName = "ParameterGroupName",
             ParameterGroupDeleted = "ParameterGroupDeleted",
             ParameterParameterTypeId = "ParameterParameterTypeId",
@@ -1025,8 +1052,8 @@ declare namespace EMS.Meter {
 }
 declare namespace EMS.Meter {
     interface MeterForm {
-        MeterTypeId: Serenity.LookupEditor;
-        ConsumerId: Serenity.LookupEditor;
+        MeterTypeId: Serenity.IntegerEditor;
+        ConsumerId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
         SerialNumber: Serenity.StringEditor;
         Make: Serenity.StringEditor;
@@ -1075,8 +1102,6 @@ declare namespace EMS.Meter {
         const idProperty = "MeterId";
         const nameProperty = "Name";
         const localTextPrefix = "Meter.Meter";
-        const lookupKey = "Meter.Meter";
-        function getLookup(): Q.Lookup<MeterRow>;
         const enum Fields {
             MeterId = "MeterId",
             MeterTypeId = "MeterTypeId",

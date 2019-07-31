@@ -1,10 +1,11 @@
 ﻿namespace EMS.Meter {
     export interface MeterDetailForm {
+        MeterId: Serenity.LookupEditor;
         ParameterGroupId: Serenity.LookupEditor;
         ParameterId: Serenity.LookupEditor;
-        SchedulingId: Serenity.LookupEditor;
-        ApartmentId: Serenity.LookupEditor;
-        CommonLocationId: Serenity.LookupEditor;
+        SchedulingId: Serenity.IntegerEditor;
+        ApartmentId: Serenity.IntegerEditor;
+        CommonLocationId: Serenity.IntegerEditor;
         Value: Serenity.StringEditor;
         Deleted: Serenity.BooleanEditor;
     }
@@ -21,17 +22,19 @@
 
                 var s = Serenity;
                 var w0 = s.LookupEditor;
-                var w1 = s.StringEditor;
-                var w2 = s.BooleanEditor;
+                var w1 = s.IntegerEditor;
+                var w2 = s.StringEditor;
+                var w3 = s.BooleanEditor;
 
                 Q.initFormType(MeterDetailForm, [
+                    'MeterId', w0,
                     'ParameterGroupId', w0,
                     'ParameterId', w0,
-                    'SchedulingId', w0,
-                    'ApartmentId', w0,
-                    'CommonLocationId', w0,
-                    'Value', w1,
-                    'Deleted', w2
+                    'SchedulingId', w1,
+                    'ApartmentId', w1,
+                    'CommonLocationId', w1,
+                    'Value', w2,
+                    'Deleted', w3
                 ]);
             }
         }

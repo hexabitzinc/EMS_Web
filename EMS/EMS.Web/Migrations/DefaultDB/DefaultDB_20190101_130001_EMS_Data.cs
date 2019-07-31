@@ -1773,7 +1773,8 @@ namespace EMS.Migrations.DefaultDB
             Insert.IntoTable("MeterDetail")
                 .Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1781,7 +1782,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1789,7 +1791,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1797,7 +1800,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1805,7 +1809,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1813,7 +1818,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1821,7 +1827,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1829,7 +1836,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1837,7 +1845,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1845,7 +1854,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1853,7 +1863,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1861,7 +1872,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1869,7 +1881,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1877,7 +1890,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1885,7 +1899,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1893,7 +1908,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1901,7 +1917,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1909,7 +1926,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1917,7 +1935,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1925,7 +1944,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 1,
                     ApartmentID = 1,
@@ -1933,7 +1953,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -1941,7 +1962,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -1949,7 +1971,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -1957,7 +1980,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -1965,7 +1989,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -1973,7 +1998,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -1981,7 +2007,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -1989,7 +2016,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -1997,7 +2025,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -2005,7 +2034,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -2013,7 +2043,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -2021,7 +2052,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -2029,7 +2061,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -2037,7 +2070,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -2045,7 +2079,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -2053,7 +2088,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -2061,7 +2097,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -2069,7 +2106,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -2077,7 +2115,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -2085,7 +2124,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 2,
                     ApartmentID = 1,
@@ -2093,7 +2133,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2101,7 +2142,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2109,7 +2151,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2117,7 +2160,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2125,7 +2169,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2133,7 +2178,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2141,7 +2187,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2149,7 +2196,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2157,7 +2205,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2165,7 +2214,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2173,7 +2223,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2181,7 +2232,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2189,7 +2241,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2197,7 +2250,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2205,7 +2259,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2213,7 +2268,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2221,7 +2277,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2229,7 +2286,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2237,7 +2295,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2245,7 +2304,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 3,
                     ApartmentID = 1,
@@ -2253,7 +2313,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2261,7 +2322,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2269,7 +2331,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2277,7 +2340,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2285,7 +2349,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2293,7 +2358,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2301,7 +2367,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2309,7 +2376,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2317,7 +2385,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2325,7 +2394,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2333,7 +2403,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2341,7 +2412,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2349,7 +2421,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2357,7 +2430,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2365,7 +2439,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2373,7 +2448,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2381,7 +2457,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2389,7 +2466,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2397,7 +2475,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2405,7 +2484,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 4,
                     ApartmentID = 1,
@@ -2413,7 +2493,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2421,7 +2502,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2429,7 +2511,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2437,7 +2520,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2445,7 +2529,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2453,7 +2538,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2461,7 +2547,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2469,7 +2556,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2477,7 +2565,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2485,7 +2574,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2493,7 +2583,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2501,7 +2592,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2509,7 +2601,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2517,7 +2610,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2525,7 +2619,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2533,7 +2628,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2541,7 +2637,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2549,7 +2646,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2557,7 +2655,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2565,7 +2664,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 5,
                     ApartmentID = 1,
@@ -2573,7 +2673,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2581,7 +2682,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2589,7 +2691,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2597,7 +2700,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2605,7 +2709,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2613,7 +2718,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2621,7 +2727,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2629,7 +2736,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2637,7 +2745,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2645,7 +2754,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2653,7 +2763,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2661,7 +2772,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2669,7 +2781,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2677,7 +2790,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2685,7 +2799,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2693,7 +2808,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2701,7 +2817,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2709,7 +2826,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2717,7 +2835,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2725,7 +2844,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 6,
                     ApartmentID = 1,
@@ -2733,7 +2853,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2741,7 +2862,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2749,7 +2871,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2757,7 +2880,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2765,7 +2889,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2773,7 +2898,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2781,7 +2907,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2789,7 +2916,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2797,7 +2925,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2805,7 +2934,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2813,7 +2943,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2821,7 +2952,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2829,7 +2961,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2837,7 +2970,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2845,7 +2979,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2853,7 +2988,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2861,7 +2997,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2869,7 +3006,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2877,7 +3015,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2885,7 +3024,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 7,
                     ApartmentID = 1,
@@ -2893,7 +3033,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -2901,7 +3042,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -2909,7 +3051,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -2917,7 +3060,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -2925,7 +3069,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -2933,7 +3078,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -2941,7 +3087,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -2949,7 +3096,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -2957,7 +3105,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -2965,7 +3114,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -2973,7 +3123,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -2981,7 +3132,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -2989,7 +3141,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -2997,7 +3150,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -3005,7 +3159,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -3013,7 +3168,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -3021,7 +3177,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -3029,7 +3186,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -3037,7 +3195,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -3045,7 +3204,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 8,
                     ApartmentID = 1,
@@ -3053,7 +3213,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3061,7 +3222,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3069,7 +3231,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3077,7 +3240,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3085,7 +3249,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3093,7 +3258,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3101,7 +3267,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3109,7 +3276,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3117,7 +3285,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3125,7 +3294,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3133,7 +3303,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3141,7 +3312,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3149,7 +3321,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3157,7 +3330,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3165,7 +3339,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3173,7 +3348,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3181,7 +3357,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3189,7 +3366,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3197,7 +3375,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3205,7 +3384,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 9,
                     ApartmentID = 1,
@@ -3213,7 +3393,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3221,7 +3402,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3229,7 +3411,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3237,7 +3420,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3245,7 +3429,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3253,7 +3438,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3261,7 +3447,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3269,7 +3456,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3277,7 +3465,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3285,7 +3474,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3293,7 +3483,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3301,7 +3492,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3309,7 +3501,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3317,7 +3510,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3325,7 +3519,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3333,7 +3528,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3341,7 +3537,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3349,7 +3546,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3357,7 +3555,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3365,7 +3564,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 10,
                     ApartmentID = 1,
@@ -3373,7 +3573,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3381,7 +3582,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3389,7 +3591,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3397,7 +3600,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3405,7 +3609,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3413,7 +3618,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3421,7 +3627,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3429,7 +3636,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3437,7 +3645,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3445,7 +3654,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3453,7 +3663,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3461,7 +3672,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3469,7 +3681,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3477,7 +3690,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3485,7 +3699,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3493,7 +3708,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3501,7 +3717,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3509,7 +3726,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3517,7 +3735,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3525,7 +3744,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 11,
                     ApartmentID = 1,
@@ -3533,7 +3753,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3541,7 +3762,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3549,7 +3771,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3557,7 +3780,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3565,7 +3789,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3573,7 +3798,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3581,7 +3807,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3589,7 +3816,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3597,7 +3825,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3605,7 +3834,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3613,7 +3843,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3621,7 +3852,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3629,7 +3861,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3637,7 +3870,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3645,7 +3879,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3653,7 +3888,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3661,7 +3897,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3669,7 +3906,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3677,7 +3915,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3685,7 +3924,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 12,
                     ApartmentID = 1,
@@ -3693,7 +3933,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3701,7 +3942,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3709,7 +3951,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3717,7 +3960,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3725,7 +3969,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3733,7 +3978,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3741,7 +3987,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3749,7 +3996,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3757,7 +4005,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3765,7 +4014,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3773,7 +4023,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3781,7 +4032,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3789,7 +4041,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3797,7 +4050,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3805,7 +4059,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3813,7 +4068,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3821,7 +4077,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3829,7 +4086,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3837,7 +4095,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3845,7 +4104,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 13,
                     ApartmentID = 1,
@@ -3853,7 +4113,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3861,7 +4122,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3869,7 +4131,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3877,7 +4140,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3885,7 +4149,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3893,7 +4158,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3901,7 +4167,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3909,7 +4176,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3917,7 +4185,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3925,7 +4194,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3933,7 +4203,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3941,7 +4212,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3949,7 +4221,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3957,7 +4230,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3965,7 +4239,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3973,7 +4248,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3981,7 +4257,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3989,7 +4266,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -3997,7 +4275,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -4005,7 +4284,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 14,
                     ApartmentID = 1,
@@ -4013,7 +4293,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4021,7 +4302,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4029,7 +4311,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4037,7 +4320,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4045,7 +4329,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4053,7 +4338,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4061,7 +4347,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4069,7 +4356,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4077,7 +4365,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4085,7 +4374,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4093,7 +4383,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4101,7 +4392,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4109,7 +4401,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4117,7 +4410,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4125,7 +4419,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4133,7 +4428,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4141,7 +4437,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4149,7 +4446,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4157,7 +4455,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4165,7 +4464,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 15,
                     ApartmentID = 1,
@@ -4173,7 +4473,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4181,7 +4482,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4189,7 +4491,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4197,7 +4500,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4205,7 +4509,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4213,7 +4518,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4221,7 +4527,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4229,7 +4536,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4237,7 +4545,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4245,7 +4554,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4253,7 +4563,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4261,7 +4572,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4269,7 +4581,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4277,7 +4590,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4285,7 +4599,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4293,7 +4608,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4301,7 +4617,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4309,7 +4626,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4317,7 +4635,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4325,7 +4644,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 16,
                     ApartmentID = 1,
@@ -4333,7 +4653,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4341,7 +4662,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4349,7 +4671,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4357,7 +4680,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4365,7 +4689,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4373,7 +4698,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4381,7 +4707,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4389,7 +4716,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4397,7 +4725,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4405,7 +4734,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4413,7 +4743,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4421,7 +4752,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4429,7 +4761,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4437,7 +4770,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4445,7 +4779,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4453,7 +4788,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4461,7 +4797,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4469,7 +4806,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4477,7 +4815,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4485,7 +4824,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 17,
                     ApartmentID = 1,
@@ -4493,7 +4833,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4501,7 +4842,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4509,7 +4851,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4517,7 +4860,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4525,7 +4869,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4533,7 +4878,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4541,7 +4887,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4549,7 +4896,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4557,7 +4905,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4565,7 +4914,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4573,7 +4923,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4581,7 +4932,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4589,7 +4941,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4597,7 +4950,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4605,7 +4959,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4613,7 +4968,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4621,7 +4977,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4629,7 +4986,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4637,7 +4995,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4645,7 +5004,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 18,
                     ApartmentID = 1,
@@ -4653,7 +5013,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4661,7 +5022,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4669,7 +5031,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4677,7 +5040,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4685,7 +5049,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4693,7 +5058,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4701,7 +5067,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4709,7 +5076,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4717,7 +5085,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4725,7 +5094,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4733,7 +5103,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4741,7 +5112,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4749,7 +5121,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4757,7 +5130,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4765,7 +5139,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4773,7 +5148,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4781,7 +5157,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4789,7 +5166,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4797,7 +5175,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4805,7 +5184,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 19,
                     ApartmentID = 1,
@@ -4813,7 +5193,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4821,7 +5202,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4829,7 +5211,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4837,7 +5220,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4845,7 +5229,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4853,7 +5238,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4861,7 +5247,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4869,7 +5256,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4877,7 +5265,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4885,7 +5274,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4893,7 +5283,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4901,7 +5292,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4909,7 +5301,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4917,7 +5310,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4925,7 +5319,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4933,7 +5328,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4941,7 +5337,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4949,7 +5346,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4957,7 +5355,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4965,7 +5364,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 20,
                     ApartmentID = 1,
@@ -4973,7 +5373,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -4981,7 +5382,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -4989,7 +5391,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -4997,7 +5400,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5005,7 +5409,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5013,7 +5418,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5021,7 +5427,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5029,7 +5436,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5037,7 +5445,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5045,7 +5454,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5053,7 +5463,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5061,7 +5472,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5069,7 +5481,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5077,7 +5490,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5085,7 +5499,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5093,7 +5508,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5101,7 +5517,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5109,7 +5526,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5117,7 +5535,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5125,7 +5544,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 21,
                     ApartmentID = 1,
@@ -5133,7 +5553,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5141,7 +5562,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5149,7 +5571,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5157,7 +5580,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5165,7 +5589,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5173,7 +5598,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5181,7 +5607,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5189,7 +5616,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5197,7 +5625,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5205,7 +5634,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5213,7 +5643,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5221,7 +5652,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5229,7 +5661,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5237,7 +5670,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5245,7 +5679,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5253,7 +5688,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5261,7 +5697,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5269,7 +5706,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5277,7 +5715,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5285,7 +5724,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 22,
                     ApartmentID = 1,
@@ -5293,7 +5733,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5301,7 +5742,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5309,7 +5751,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5317,7 +5760,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5325,7 +5769,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5333,7 +5778,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5341,7 +5787,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5349,7 +5796,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5357,7 +5805,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5365,7 +5814,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5373,7 +5823,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5381,7 +5832,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5389,7 +5841,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5397,7 +5850,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5405,7 +5859,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5413,7 +5868,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5421,7 +5877,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5429,7 +5886,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5437,7 +5895,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5445,7 +5904,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 23,
                     ApartmentID = 1,
@@ -5453,7 +5913,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5461,7 +5922,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5469,7 +5931,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5477,7 +5940,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5485,7 +5949,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5493,7 +5958,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5501,7 +5967,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5509,7 +5976,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5517,7 +5985,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5525,7 +5994,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5533,7 +6003,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5541,7 +6012,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5549,7 +6021,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5557,7 +6030,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5565,7 +6039,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5573,7 +6048,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5581,7 +6057,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5589,7 +6066,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5597,7 +6075,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5605,7 +6084,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 24,
                     ApartmentID = 1,
@@ -5613,7 +6093,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5621,7 +6102,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5629,7 +6111,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5637,7 +6120,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5645,7 +6129,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5653,7 +6138,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5661,7 +6147,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5669,7 +6156,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5677,7 +6165,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5685,7 +6174,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5693,7 +6183,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5701,7 +6192,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5709,7 +6201,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5717,7 +6210,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5725,7 +6219,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5733,7 +6228,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5741,7 +6237,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5749,7 +6246,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5757,7 +6255,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5765,7 +6264,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 25,
                     ApartmentID = 1,
@@ -5773,7 +6273,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5781,7 +6282,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5789,7 +6291,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5797,7 +6300,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5805,7 +6309,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5813,7 +6318,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5821,7 +6327,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5829,7 +6336,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5837,7 +6345,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5845,7 +6354,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5853,7 +6363,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5861,7 +6372,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5869,7 +6381,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5877,7 +6390,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5885,7 +6399,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5893,7 +6408,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5901,7 +6417,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5909,7 +6426,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5917,7 +6435,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5925,7 +6444,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 26,
                     ApartmentID = 1,
@@ -5933,7 +6453,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -5941,7 +6462,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -5949,7 +6471,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -5957,7 +6480,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -5965,7 +6489,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -5973,7 +6498,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -5981,7 +6507,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -5989,7 +6516,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -5997,7 +6525,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -6005,7 +6534,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -6013,7 +6543,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -6021,7 +6552,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -6029,7 +6561,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -6037,7 +6570,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -6045,7 +6579,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -6053,7 +6588,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -6061,7 +6597,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -6069,7 +6606,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -6077,7 +6615,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -6085,7 +6624,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 27,
                     ApartmentID = 1,
@@ -6093,7 +6633,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6101,7 +6642,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6109,7 +6651,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6117,7 +6660,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6125,7 +6669,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6133,7 +6678,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6141,7 +6687,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6149,7 +6696,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6157,7 +6705,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6165,7 +6714,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6173,7 +6723,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6181,7 +6732,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6189,7 +6741,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6197,7 +6750,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6205,7 +6759,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6213,7 +6768,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6221,7 +6777,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6229,7 +6786,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6237,7 +6795,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6245,7 +6804,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 28,
                     ApartmentID = 1,
@@ -6253,7 +6813,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6261,7 +6822,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6269,7 +6831,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6277,7 +6840,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6285,7 +6849,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6293,7 +6858,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6301,7 +6867,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6309,7 +6876,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6317,7 +6885,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6325,7 +6894,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6333,7 +6903,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6341,7 +6912,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6349,7 +6921,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6357,7 +6930,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6365,7 +6939,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6373,7 +6948,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6381,7 +6957,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6389,7 +6966,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6397,7 +6975,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6405,7 +6984,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 29,
                     ApartmentID = 1,
@@ -6413,7 +6993,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 1,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6421,7 +7002,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 2,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6429,7 +7011,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 3,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6437,7 +7020,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 4,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6445,7 +7029,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 5,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6453,7 +7038,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 6,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6461,7 +7047,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 7,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6469,7 +7056,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 8,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6477,7 +7065,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 9,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6485,7 +7074,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 10,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6493,7 +7083,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 11,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6501,7 +7092,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 12,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6509,7 +7101,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 13,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6517,7 +7110,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 14,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6525,7 +7119,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 15,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6533,7 +7128,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 16,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6541,7 +7137,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 17,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6549,7 +7146,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 18,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6557,7 +7155,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 19,
                     SchedulingID = 30,
                     ApartmentID = 1,
@@ -6565,7 +7164,8 @@ namespace EMS.Migrations.DefaultDB
                     Deleted = false
                 }).Row(new
                 {
-                    ParameterGroupID = 1,
+                    MeterID = 1,
+					ParameterGroupID = 1,
                     ParameterID = 20,
                     SchedulingID = 30,
                     ApartmentID = 1,

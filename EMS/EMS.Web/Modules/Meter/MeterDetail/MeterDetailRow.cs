@@ -1,7 +1,6 @@
 ﻿
 namespace EMS.Meter.Entities
 {
-    using Newtonsoft.Json;
     using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
@@ -14,7 +13,6 @@ namespace EMS.Meter.Entities
     [DisplayName("Meter Detail"), InstanceName("Meter Detail")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    [JsonConverter(typeof(JsonRowConverter))]
     [LookupScript("Meter.MeterDetail")]
     public sealed class MeterDetailRow : Row, IIdRow, INameRow
     {
@@ -24,35 +22,42 @@ namespace EMS.Meter.Entities
             get { return Fields.MeterDetailId[this]; }
             set { Fields.MeterDetailId[this] = value; }
         }
-        [LookupEditor("Parameter.ParameterGroup")]
+        [LookupEditor("Metter.Meter", InplaceAdd = true)]
+        [DisplayName("Meter"), Column("MeterID"), ForeignKey("[dbo].[Meter]", "MeterID"), LeftJoin("jMeter"), TextualField("MeterName")]
+        public Int32? MeterId
+        {
+            get { return Fields.MeterId[this]; }
+            set { Fields.MeterId[this] = value; }
+        }
+        [LookupEditor("Parameter.ParameterGroup", InplaceAdd = true)]
         [DisplayName("Parameter Group"), Column("ParameterGroupID"), ForeignKey("[dbo].[ParameterGroup]", "ParameterGroupID"), LeftJoin("jParameterGroup"), TextualField("ParameterGroupName")]
         public Int32? ParameterGroupId
         {
             get { return Fields.ParameterGroupId[this]; }
             set { Fields.ParameterGroupId[this] = value; }
         }
-        [LookupEditor("Parameter.Parameter")]
+        [LookupEditor("Parameter.Parameter", InplaceAdd = true)]
         [DisplayName("Parameter"), Column("ParameterID"), ForeignKey("[dbo].[Parameter]", "ParameterID"), LeftJoin("jParameter"), TextualField("ParameterName")]
         public Int32? ParameterId
         {
             get { return Fields.ParameterId[this]; }
             set { Fields.ParameterId[this] = value; }
         }
-        [LookupEditor("Meter.Scheduling")]
+
         [DisplayName("Scheduling"), Column("SchedulingID"), ForeignKey("[dbo].[Scheduling]", "SchedulingID"), LeftJoin("jScheduling"), TextualField("SchedulingID")]
         public Int32? SchedulingId
         {
             get { return Fields.SchedulingId[this]; }
             set { Fields.SchedulingId[this] = value; }
         }
-        [LookupEditor("Zoning.Apartment")]
+
         [DisplayName("Apartment"), Column("ApartmentID"), ForeignKey("[dbo].[Apartment]", "ApartmentID"), LeftJoin("jApartment"), TextualField("ApartmentName")]
         public Int32? ApartmentId
         {
             get { return Fields.ApartmentId[this]; }
             set { Fields.ApartmentId[this] = value; }
         }
-        [LookupEditor("Zoning.CommonLocation")]
+
         [DisplayName("Common Location"), Column("CommonLocationID"), ForeignKey("[dbo].[CommonLocation]", "CommonLocationID"), LeftJoin("jCommonLocation"), TextualField("CommonLocationName")]
         public Int32? CommonLocationId
         {
@@ -72,6 +77,90 @@ namespace EMS.Meter.Entities
         {
             get { return Fields.Deleted[this]; }
             set { Fields.Deleted[this] = value; }
+        }
+
+        [DisplayName("Meter Meter Type Id"), Expression("jMeter.[MeterTypeID]")]
+        public Int32? MeterMeterTypeId
+        {
+            get { return Fields.MeterMeterTypeId[this]; }
+            set { Fields.MeterMeterTypeId[this] = value; }
+        }
+
+        [DisplayName("Meter Consumer Id"), Expression("jMeter.[ConsumerID]")]
+        public Int32? MeterConsumerId
+        {
+            get { return Fields.MeterConsumerId[this]; }
+            set { Fields.MeterConsumerId[this] = value; }
+        }
+
+        [DisplayName("Meter Name"), Expression("jMeter.[Name]")]
+        public String MeterName
+        {
+            get { return Fields.MeterName[this]; }
+            set { Fields.MeterName[this] = value; }
+        }
+
+        [DisplayName("Meter Serial Number"), Expression("jMeter.[SerialNumber]")]
+        public String MeterSerialNumber
+        {
+            get { return Fields.MeterSerialNumber[this]; }
+            set { Fields.MeterSerialNumber[this] = value; }
+        }
+
+        [DisplayName("Meter Make"), Expression("jMeter.[Make]")]
+        public String MeterMake
+        {
+            get { return Fields.MeterMake[this]; }
+            set { Fields.MeterMake[this] = value; }
+        }
+
+        [DisplayName("Meter Physical Location"), Expression("jMeter.[PhysicalLocation]")]
+        public String MeterPhysicalLocation
+        {
+            get { return Fields.MeterPhysicalLocation[this]; }
+            set { Fields.MeterPhysicalLocation[this] = value; }
+        }
+
+        [DisplayName("Meter Assigned Location"), Expression("jMeter.[AssignedLocation]")]
+        public String MeterAssignedLocation
+        {
+            get { return Fields.MeterAssignedLocation[this]; }
+            set { Fields.MeterAssignedLocation[this] = value; }
+        }
+
+        [DisplayName("Meter Communication Method"), Expression("jMeter.[CommunicationMethod]")]
+        public String MeterCommunicationMethod
+        {
+            get { return Fields.MeterCommunicationMethod[this]; }
+            set { Fields.MeterCommunicationMethod[this] = value; }
+        }
+
+        [DisplayName("Meter Serial Communication Setting"), Expression("jMeter.[SerialCommunicationSetting]")]
+        public String MeterSerialCommunicationSetting
+        {
+            get { return Fields.MeterSerialCommunicationSetting[this]; }
+            set { Fields.MeterSerialCommunicationSetting[this] = value; }
+        }
+
+        [DisplayName("Meter Registration Date"), Expression("jMeter.[RegistrationDate]")]
+        public DateTime? MeterRegistrationDate
+        {
+            get { return Fields.MeterRegistrationDate[this]; }
+            set { Fields.MeterRegistrationDate[this] = value; }
+        }
+
+        [DisplayName("Meter Notes"), Expression("jMeter.[Notes]")]
+        public String MeterNotes
+        {
+            get { return Fields.MeterNotes[this]; }
+            set { Fields.MeterNotes[this] = value; }
+        }
+
+        [DisplayName("Meter Deleted"), Expression("jMeter.[Deleted]")]
+        public Boolean? MeterDeleted
+        {
+            get { return Fields.MeterDeleted[this]; }
+            set { Fields.MeterDeleted[this] = value; }
         }
 
         [DisplayName("Parameter Group Name"), Expression("jParameterGroup.[Name]")]
@@ -262,6 +351,7 @@ namespace EMS.Meter.Entities
         public class RowFields : RowFieldsBase
         {
             public Int32Field MeterDetailId;
+            public Int32Field MeterId;
             public Int32Field ParameterGroupId;
             public Int32Field ParameterId;
             public Int32Field SchedulingId;
@@ -269,6 +359,19 @@ namespace EMS.Meter.Entities
             public Int32Field CommonLocationId;
             public StringField Value;
             public BooleanField Deleted;
+
+            public Int32Field MeterMeterTypeId;
+            public Int32Field MeterConsumerId;
+            public StringField MeterName;
+            public StringField MeterSerialNumber;
+            public StringField MeterMake;
+            public StringField MeterPhysicalLocation;
+            public StringField MeterAssignedLocation;
+            public StringField MeterCommunicationMethod;
+            public StringField MeterSerialCommunicationSetting;
+            public DateTimeField MeterRegistrationDate;
+            public StringField MeterNotes;
+            public BooleanField MeterDeleted;
 
             public StringField ParameterGroupName;
             public BooleanField ParameterGroupDeleted;

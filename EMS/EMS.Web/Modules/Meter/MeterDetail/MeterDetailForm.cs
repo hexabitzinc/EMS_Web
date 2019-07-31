@@ -13,6 +13,7 @@ namespace EMS.Meter.Forms
     [BasedOnRow(typeof(Entities.MeterDetailRow), CheckNames = true)]
     public class MeterDetailForm
     {
+        public Int32 MeterId { get; set; }
         public Int32 ParameterGroupId { get; set; }
         public Int32 ParameterId { get; set; }
         public Int32 SchedulingId { get; set; }

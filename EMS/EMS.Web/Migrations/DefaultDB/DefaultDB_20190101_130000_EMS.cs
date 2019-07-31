@@ -163,6 +163,7 @@ namespace EMS.Migrations.DefaultDB
 
             Create.Table("MeterDetail")
                 .WithColumn("MeterDetailID").AsInt32().Identity().PrimaryKey()
+                .WithColumn("MeterID").AsInt32().Nullable().ForeignKey("FK_MeterDetail_Meter", "dbo", "Meter", "MeterID")
                 .WithColumn("ParameterGroupID").AsInt32().Nullable().ForeignKey("FK_MeterDetail_ParameterGroup", "dbo", "ParameterGroup", "ParameterGroupID")
                 .WithColumn("ParameterID").AsInt32().Nullable().ForeignKey("FK_MeterDetail_Parameter", "dbo", "Parameter", "ParameterID")
                 .WithColumn("SchedulingID").AsInt32().Nullable().ForeignKey("FK_MeterDetail_Scheduling", "dbo", "Scheduling", "SchedulingID")

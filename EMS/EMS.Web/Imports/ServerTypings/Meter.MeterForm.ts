@@ -1,7 +1,7 @@
 ﻿namespace EMS.Meter {
     export interface MeterForm {
-        MeterTypeId: Serenity.LookupEditor;
-        ConsumerId: Serenity.LookupEditor;
+        MeterTypeId: Serenity.IntegerEditor;
+        ConsumerId: Serenity.IntegerEditor;
         Name: Serenity.StringEditor;
         SerialNumber: Serenity.StringEditor;
         Make: Serenity.StringEditor;
@@ -25,7 +25,7 @@
                 MeterForm.init = true;
 
                 var s = Serenity;
-                var w0 = s.LookupEditor;
+                var w0 = s.IntegerEditor;
                 var w1 = s.StringEditor;
                 var w2 = s.DateEditor;
                 var w3 = s.BooleanEditor;

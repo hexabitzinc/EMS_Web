@@ -1,6 +1,7 @@
 ﻿namespace EMS.Meter {
     export interface MeterDetailRow {
         MeterDetailId?: number;
+        MeterId?: number;
         ParameterGroupId?: number;
         ParameterId?: number;
         SchedulingId?: number;
@@ -8,6 +9,18 @@
         CommonLocationId?: number;
         Value?: string;
         Deleted?: boolean;
+        MeterMeterTypeId?: number;
+        MeterConsumerId?: number;
+        MeterName?: string;
+        MeterSerialNumber?: string;
+        MeterMake?: string;
+        MeterPhysicalLocation?: string;
+        MeterAssignedLocation?: string;
+        MeterCommunicationMethod?: string;
+        MeterSerialCommunicationSetting?: string;
+        MeterRegistrationDate?: string;
+        MeterNotes?: string;
+        MeterDeleted?: boolean;
         ParameterGroupName?: string;
         ParameterGroupDeleted?: boolean;
         ParameterParameterTypeId?: number;
@@ -46,6 +59,7 @@
 
         export declare const enum Fields {
             MeterDetailId = "MeterDetailId",
+            MeterId = "MeterId",
             ParameterGroupId = "ParameterGroupId",
             ParameterId = "ParameterId",
             SchedulingId = "SchedulingId",
@@ -53,6 +67,18 @@
             CommonLocationId = "CommonLocationId",
             Value = "Value",
             Deleted = "Deleted",
+            MeterMeterTypeId = "MeterMeterTypeId",
+            MeterConsumerId = "MeterConsumerId",
+            MeterName = "MeterName",
+            MeterSerialNumber = "MeterSerialNumber",
+            MeterMake = "MeterMake",
+            MeterPhysicalLocation = "MeterPhysicalLocation",
+            MeterAssignedLocation = "MeterAssignedLocation",
+            MeterCommunicationMethod = "MeterCommunicationMethod",
+            MeterSerialCommunicationSetting = "MeterSerialCommunicationSetting",
+            MeterRegistrationDate = "MeterRegistrationDate",
+            MeterNotes = "MeterNotes",
+            MeterDeleted = "MeterDeleted",
             ParameterGroupName = "ParameterGroupName",
             ParameterGroupDeleted = "ParameterGroupDeleted",
             ParameterParameterTypeId = "ParameterParameterTypeId",
