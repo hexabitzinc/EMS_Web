@@ -23,7 +23,7 @@ namespace EMS.Common.Pages
             //<if:Northwind>
             var data = new DataDetails();
             var cachedModel = TwoLevelCache.GetLocalStoreOnly("DashboardPageModel", TimeSpan.FromMinutes(5),
-                "DashboardPageModel", () =>
+                BuildingRow.Fields.GenerationKey, () =>
                 {
                     var model = new DashboardPageModel();
 
@@ -41,8 +41,17 @@ namespace EMS.Common.Pages
                     //var DataChartConnection = SqlConnections.NewFor<MeterDetailRow>();
                     //data.Details = DataChartConnection.List<MeterDetailRow>(q => q.SelectTableFields());
                     //model.dataChart = data.Details;
-                    model.LstModel = new List<SimpleReportViewModel>();
-                    model.LstModel = Bar();
+                    model.BarLstModel = new List<SimpleReportViewModel>();
+                    model.BarLstModel = Bar();
+
+                    model.LineLstModel = new List<SimpleReportViewModel>();
+                    model.LineLstModel = Line();
+
+                    model.PieLstModel = new List<SimpleReportViewModel>();
+                    model.PieLstModel = Pie();
+
+                    model.StackedLstModel = new List<StackedViewModel>();
+                    model.StackedLstModel = Stacked();
 
                     return model;
                 });
@@ -54,46 +63,18 @@ namespace EMS.Common.Pages
         {
             //list of department
             var lstModel = new List<SimpleReportViewModel>();
-            lstModel.Add(new SimpleReportViewModel
+
+            var ChartConnection = SqlConnections.NewFor<MeterDetailRow>();
+            var SchedulingConnection = SqlConnections.NewFor<SchedulingRow>();
+            foreach (var item in ChartConnection.List<MeterDetailRow>())
             {
-                DimensionOne = "Technology",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Sales",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Marketing",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Human Resource",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Research and Development",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Acconting",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Support",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Logistics",
-                Quantity = rnd.Next(10)
-            });
+                //SchedulingConnection.ExistsById(item.SchedulingId);
+                lstModel.Add(new SimpleReportViewModel
+                {
+                    DimensionOne = item.SchedulingId.ToString(),
+                    Quantity = int.Parse(item.Value)
+                });
+            }
             return lstModel;
         }
 

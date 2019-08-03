@@ -3,10 +3,23 @@
     ViewData["Title"] = "Dashboard";
     ViewData["PageId"] = "Dashboard";
 
-    var Data = Model.LstModel;
-    var XLabels = Newtonsoft.Json.JsonConvert.SerializeObject(Data.Select(x => x.DimensionOne).ToList());
-    var YValues = Newtonsoft.Json.JsonConvert.SerializeObject(Data.Select(x => x.Quantity).ToList());
-    
+    var BarData = Model.BarLstModel;
+    var BarXLabels = Newtonsoft.Json.JsonConvert.SerializeObject(BarData.Select(x => x.DimensionOne).ToList());
+    var BarYValues = Newtonsoft.Json.JsonConvert.SerializeObject(BarData.Select(x => x.Quantity).ToList());
+
+    var LineData = Model.LineLstModel;
+    var LineXLabels = Newtonsoft.Json.JsonConvert.SerializeObject(LineData.Select(x => x.DimensionOne).ToList());
+    var LineYValues = Newtonsoft.Json.JsonConvert.SerializeObject(LineData.Select(x => x.Quantity).ToList());
+
+    var PieData = Model.PieLstModel;
+    var PieXLabels = Newtonsoft.Json.JsonConvert.SerializeObject(PieData.Select(x => x.DimensionOne).ToList());
+    var PieYValues = Newtonsoft.Json.JsonConvert.SerializeObject(PieData.Select(x => x.Quantity).ToList());
+
+    var StackedData = Model.StackedLstModel;
+    var StackedXLabels = Newtonsoft.Json.JsonConvert.SerializeObject(StackedData.FirstOrDefault().LstData.Select(x => x.DimensionOne).ToList());
+    var StackedYValues = Newtonsoft.Json.JsonConvert.SerializeObject(StackedData.Select(x => x.LstData.Select(w => w.Quantity)).ToList());
+    var StackedLabel2 = Newtonsoft.Json.JsonConvert.SerializeObject(StackedData.Select(x => x.StackedDimensionOne).ToList());
+
 }
 
 @section Head {
@@ -14,12 +27,28 @@
     @Html.ScriptBundle("Pages/Dashboard")
     <script src="~/Scripts/chartjs/Chart.min.js"></script>
     <script src="~/Scripts/adminlte/demo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 }
 
 @section ContentHeader {
     <h1>@LocalText.Get("Navigation.Dashboard")<small>@Html.Raw(Texts.Site.Dashboard.ContentDescription)</small></h1>
 }
 
+<div class="box-body">
+
+    <div class="chart-container">
+        <canvas id="chartBar" style="width:100%; height:500px"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="chartLine" style="width:100%; height:500px"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="chartPie" style="width:100%; height:500px"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="chartStacked" style="width:100%; height:500px"></canvas>
+    </div>
+</div>
 <!-- Small boxes (Stat box) -->
 <div class="row">
     <div class="col-lg-3 col-xs-6">
@@ -207,12 +236,13 @@
     </section><!-- right col -->
 </div><!-- /.row (main row) -->
 
+<!-- Bar Chart -->
 <script type="text/javascript">
         $(function () {
-    var chartName = "chart";
+    var chartName = "chartBar";
         var ctx = document.getElementById(chartName).getContext('2d');
         var data = {
-                labels: @Html.Raw(XLabels),
+                labels: @Html.Raw(BarXLabels),
                 datasets: [{
                     label: "Departments Chart",
                     backgroundColor: [
@@ -244,7 +274,7 @@
                         'rgba(255, 0, 255)'
                     ],
                     borderWidth: 1,
-                    data: @Html.Raw(YValues)
+                    data: @Html.Raw(BarYValues)
     }]
             };
 
@@ -277,6 +307,223 @@ var options = {
                 options: options,
                 data: data,
                 type:'bar'
+
+            });
+        });
+</script>
+
+<!-- Line Chart -->
+<script type="text/javascript">
+        $(function () {
+    var chartName = "chartLine";
+        var ctx = document.getElementById(chartName).getContext('2d');
+        var data = {
+                labels: @Html.Raw(LineXLabels),
+                datasets: [{
+                    label: "Countries Chart",
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 0, 0)',
+                        'rgba(0, 255, 0)',
+                        'rgba(0, 0, 255)',
+                        'rgba(192, 192, 192)',
+                        'rgba(255, 255, 0)',
+                        'rgba(255, 0, 255)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(255, 0, 0)',
+                        'rgba(0, 255, 0)',
+                        'rgba(0, 0, 255)',
+                        'rgba(192, 192, 192)',
+                        'rgba(255, 255, 0)',
+                        'rgba(255, 0, 255)'
+                    ],
+                    borderWidth: 1,
+                    //hoverBackgroundColor: "rgba(255,99,132,0.4)",
+                    //hoverBorderColor: "rgba(255,99,132,1)",
+                    data: @Html.Raw(LineYValues)
+                    }]
+            };
+
+var options = {
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            min: 0,
+                            beginAtZero: true
+                        },
+                        gridLines: {
+                            display: true,
+                            color: "rgba(255,99,164,0.2)"
+                        }
+}],
+                    xAxes: [{
+                        ticks: {
+                            min: 0,
+                            beginAtZero: true
+                        },
+                        gridLines: {
+                            display: false
+                        }
+                    }]
+                }
+            };
+
+       var myChart = new  Chart(ctx, {
+                options: options,
+                data: data,
+                type:'line'
+
+            });
+        });
+</script>
+
+<!-- Pie Chart -->
+<script type="text/javascript">
+        $(function () {
+    var chartName = "chartPie";
+        var ctx = document.getElementById(chartName).getContext('2d');
+        var data = {
+                labels: @Html.Raw(PieXLabels),
+                datasets: [{
+                    label: "Drinks Chart",
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 0, 0)',
+                        'rgba(0, 255, 0)',
+                        'rgba(0, 0, 255)',
+                        'rgba(192, 192, 192)',
+                        'rgba(255, 255, 0)',
+                        'rgba(255, 0, 255)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(255, 0, 0)',
+                        'rgba(0, 255, 0)',
+                        'rgba(0, 0, 255)',
+                        'rgba(192, 192, 192)',
+                        'rgba(255, 255, 0)',
+                        'rgba(255, 0, 255)'
+                    ],
+                    borderWidth: 1,
+                    data: @Html.Raw(PieYValues)
+    }]
+            };
+
+var options = {
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            min: 0,
+                            beginAtZero: true
+                        },
+                        gridLines: {
+                            display: true,
+                            color: "rgba(255,99,164,0.2)"
+                        }
+}],
+                    xAxes: [{
+                        ticks: {
+                            min: 0,
+                            beginAtZero: true
+                        },
+                        gridLines: {
+                            display: false
+                        }
+                    }]
+                }
+            };
+
+       var myChart = new  Chart(ctx, {
+                options: options,
+                data: data,
+                type:'pie'
+
+            });
+        });
+</script>
+
+<!-- Stacked Chart -->
+<script type="text/javascript">
+        $(function () {
+            var chartName = "chartStacked";
+            var ctx = document.getElementById(chartName).getContext('2d');
+            var XLabels = @Html.Raw(StackedXLabels);
+            var YValues = @Html.Raw(StackedYValues );
+            var label = @Html.Raw( StackedLabel2 );
+            var aux = 0;
+
+            var barChartData = {
+                labels:  @Html.Raw(StackedLabel2),
+                datasets: []
+            }
+
+            XLabels.forEach(function (a, i) {
+                var data = [];
+                YValues.forEach(function (a, i) {
+                    data.push(a[aux]);
+                });
+
+            barChartData.datasets.push({
+                label: XLabels[aux],
+                backgroundColor: random_rgba(),
+                data: data
+                });
+                aux++;
+            });
+            var options = {
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            min: 0,
+                            beginAtZero: true
+                        },
+                        stacked: true,
+                        gridLines: {
+                            display: true,
+                            color: "rgba(255,99,164,0.2)"
+                        }
+                    }],
+                    xAxes: [{
+                        stacked: true,
+                        gridLines: {
+                            display: false
+                        }
+                    }]
+                }
+            };
+            function random_rgba() {
+                var o = Math.round, r = Math.random, s = 255;
+                return 'rgba(' + o(r() * s) + ',' + o(r() * s) + ',' + o(r() * s) + ',' + r().toFixed(1) + ')';
+            }
+            var myChart = new Chart(ctx, {
+                options: options,
+                data: barChartData,
+                type: 'bar'
 
             });
         });

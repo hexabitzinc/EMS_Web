@@ -9,8 +9,10 @@ namespace EMS.Common
         public int TotalApartments { get; set; }
         public int TotalMeters { get; set; }
         public int TotalEMSDevices { get; set; }
-        public System.Collections.Generic.List<SimpleReportViewModel> LstModel { get; set; }
-        public System.Collections.Generic.List<Meter.Entities.MeterDetailRow> dataChart { get; set; }
+        public System.Collections.Generic.List<SimpleReportViewModel> BarLstModel { get; set; }
+        public System.Collections.Generic.List<SimpleReportViewModel> LineLstModel { get; set; }
+        public System.Collections.Generic.List<SimpleReportViewModel> PieLstModel { get; set; }
+        public System.Collections.Generic.List<StackedViewModel> StackedLstModel { get; set; }
     }
 
     public class SimpleReportViewModel
