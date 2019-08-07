@@ -133,25 +133,11 @@
             </div>
             <div class="row margin">
                 <div class="col-sm-12">
-                    <input id="range_4" type="text" name="range_4" value="10000;100000">
+                    <input id="range_1" type="text" name="range_1">
                 </div>
             </div>
         </div><!-- /.nav-tabs-custom -->
-        <!-- LINE CHART -->
-        <div class="box box-info">
-            <div class="box-header with-border">
-                <h3 class="box-title">Line Chart</h3>
-                <div class="box-tools pull-right">
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                </div>
-            </div>
-            <div class="box-body">
-                <div class="chart">
-                    <canvas id="lineChart" style="height:250px"></canvas>
-                </div>
-            </div><!-- /.box-body -->
-        </div><!-- /.box -->
+       
     </section><!-- /.Left col -->
     <!-- right col (We are only adding the ID to make the widgets sortable)-->
     <section class="col-lg-5 connectedSortable">
@@ -185,299 +171,193 @@
                 </div><!-- /.row -->
             </div><!-- /.box-footer -->
         </div><!-- /.box -->
-        <!-- Calendar -->
-        <div class="box box-solid bg-green-gradient">
-            <div class="box-header">
-                <i class="fa fa-calendar"></i>
-                <h3 class="box-title">Calendar</h3>
-                <!-- tools box -->
-                <div class="pull-right box-tools">
-                    <!-- button with a dropdown -->
-                    <div class="btn-group">
-                        <button class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
-                        <ul class="dropdown-menu pull-right" role="menu">
-                            <li><a href="#">Add new event</a></li>
-                            <li><a href="#">Clear events</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">View calendar</a></li>
-                        </ul>
-                    </div>
-                    <button class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                    <button class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
-                </div><!-- /. tools -->
-            </div><!-- /.box-header -->
-            <div class="box-body no-padding">
-                <!--The calendar -->
-                <div id="calendar" style="width: 100%"></div>
-            </div><!-- /.box-body -->
-            <div class="box-footer text-black">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <!-- Progress bars -->
-                        <div class="clearfix">
-                            <span class="pull-left">Task #1</span>
-                            <small class="pull-right">90%</small>
-                        </div>
-                        <div class="progress xs">
-                            <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
-                        </div>
-                        <div class="clearfix">
-                            <span class="pull-left">Task #2</span>
-                            <small class="pull-right">70%</small>
-                        </div>
-                        <div class="progress xs">
-                            <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
-                        </div>
-                    </div><!-- /.col -->
-                    <div class="col-sm-6">
-                        <div class="clearfix">
-                            <span class="pull-left">Task #3</span>
-                            <small class="pull-right">60%</small>
-                        </div>
-                        <div class="progress xs">
-                            <div class="progress-bar progress-bar-green" style="width: 60%;"></div>
-                        </div>
-                        <div class="clearfix">
-                            <span class="pull-left">Task #4</span>
-                            <small class="pull-right">40%</small>
-                        </div>
-                        <div class="progress xs">
-                            <div class="progress-bar progress-bar-green" style="width: 40%;"></div>
-                        </div>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div>
-        </div><!-- /.box -->
+        
     </section><!-- right col -->
 </div><!-- /.row (main row) -->
 <!-- Bar Chart -->
 <script type="text/javascript">
-        $(function () {
-    var chartName = "chartBar";
+    $(function () {
+        var chartName = "chartBar";
         var ctx = document.getElementById(chartName).getContext('2d');
         var data = {
-                labels: @Html.Raw(BarXLabels),
-                datasets: [{
-                    label: "Departments Chart",
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)',
-                        'rgba(255, 0, 0)',
-                        'rgba(0, 255, 0)',
-                        'rgba(0, 0, 255)',
-                        'rgba(192, 192, 192)',
-                        'rgba(255, 255, 0)',
-                        'rgba(255, 0, 255)'
-                    ],
-                    borderColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 0, 0)',
-                        'rgba(0, 255, 0)',
-                        'rgba(0, 0, 255)',
-                        'rgba(192, 192, 192)',
-                        'rgba(255, 255, 0)',
-                        'rgba(255, 0, 255)'
-                    ],
-                    borderWidth: 1,
-                    data: @Html.Raw(BarYValues)
-    }]
-            };
+            labels: @Html.Raw(BarXLabels),
+            datasets: [{
+                label: "Departments Chart",
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                ],
+                borderWidth: 1,
+                data: @Html.Raw(BarYValues)
+            }]
+        };
 
-var options = {
-                maintainAspectRatio: false,
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            min: 0,
-                            beginAtZero: true
-                        },
-                        gridLines: {
-                            display: true,
-                            color: "rgba(255,99,164,0.2)"
-                        }
-}],
-                    xAxes: [{
-                        ticks: {
-                            min: 0,
-                            beginAtZero: true
-                        },
-                        gridLines: {
-                            display: false
-                        }
-                    }]
-                }
-            };
+        var options = {
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        beginAtZero: true
+                    },
+                    gridLines: {
+                        display: true,
+                        color: "rgba(255,99,164,0.2)"
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        min: 0,
+                        beginAtZero: true
+                    },
+                    gridLines: {
+                        display: false
+                    }
+                }]
+            }
+        };
 
-       var myChart = new  Chart(ctx, {
-                options: options,
-                data: data,
-                type:'bar'
+        var myChart = new Chart(ctx, {
+            options: options,
+            data: data,
+            type: 'bar'
 
-            });
         });
+    });
 </script>
 
 <!-- Line Chart -->
 <script type="text/javascript">
-        $(function () {
-    var chartName = "chartLine";
+    $(function () {
+        var chartName = "chartLine";
         var ctx = document.getElementById(chartName).getContext('2d');
         var data = {
-                labels: @Html.Raw(LineXLabels),
-                datasets: [{
-                    label: "Countries Chart",
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)',
-                        'rgba(255, 0, 0)',
-                        'rgba(0, 255, 0)',
-                        'rgba(0, 0, 255)',
-                        'rgba(192, 192, 192)',
-                        'rgba(255, 255, 0)',
-                        'rgba(255, 0, 255)'
-                    ],
-                    borderColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 0, 0)',
-                        'rgba(0, 255, 0)',
-                        'rgba(0, 0, 255)',
-                        'rgba(192, 192, 192)',
-                        'rgba(255, 255, 0)',
-                        'rgba(255, 0, 255)'
-                    ],
-                    borderWidth: 1,
-                    //hoverBackgroundColor: "rgba(255,99,132,0.4)",
-                    //hoverBorderColor: "rgba(255,99,132,1)",
-                    data: @Html.Raw(LineYValues)
+            labels: @Html.Raw(LineXLabels),
+            datasets: [{
+                label: "Countries Chart",
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                ],
+                borderWidth: 1,
+                //hoverBackgroundColor: "rgba(255,99,132,0.4)",
+                //hoverBorderColor: "rgba(255,99,132,1)",
+                data: @Html.Raw(LineYValues)
                     }]
-            };
+        };
 
-var options = {
-                maintainAspectRatio: false,
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            min: 0,
-                            beginAtZero: true
-                        },
-                        gridLines: {
-                            display: true,
-                            color: "rgba(255,99,164,0.2)"
-                        }
-}],
-                    xAxes: [{
-                        ticks: {
-                            min: 0,
-                            beginAtZero: true
-                        },
-                        gridLines: {
-                            display: false
-                        }
-                    }]
-                }
-            };
+        var options = {
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        beginAtZero: true
+                    },
+                    gridLines: {
+                        display: true,
+                        color: "rgba(255,99,164,0.2)"
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        min: 0,
+                        beginAtZero: true
+                    },
+                    gridLines: {
+                        display: false
+                    }
+                }]
+            }
+        };
 
-       var myChart = new  Chart(ctx, {
-                options: options,
-                data: data,
-                type:'line'
+        var myChart = new Chart(ctx, {
+            options: options,
+            data: data,
+            type: 'line'
 
-            });
         });
+    });
 </script>
 
 <!-- Pie Chart -->
 <script type="text/javascript">
-        $(function () {
-    var chartName = "chartPie";
+    $(function () {
+        var chartName = "chartPie";
         var ctx = document.getElementById(chartName).getContext('2d');
         var data = {
-                labels: @Html.Raw(PieXLabels),
-                datasets: [{
-                    label: "Drinks Chart",
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)',
-                        'rgba(255, 0, 0)',
-                        'rgba(0, 255, 0)',
-                        'rgba(0, 0, 255)',
-                        'rgba(192, 192, 192)',
-                        'rgba(255, 255, 0)',
-                        'rgba(255, 0, 255)'
-                    ],
-                    borderColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 0, 0)',
-                        'rgba(0, 255, 0)',
-                        'rgba(0, 0, 255)',
-                        'rgba(192, 192, 192)',
-                        'rgba(255, 255, 0)',
-                        'rgba(255, 0, 255)'
-                    ],
-                    borderWidth: 1,
-                    data: @Html.Raw(PieYValues)
+            labels: @Html.Raw(PieXLabels),
+            datasets: [{
+                label: "Drinks Chart",
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 0, 0)',
+                    'rgba(0, 255, 0)',
+                    'rgba(0, 0, 255)',
+                    'rgba(192, 192, 192)',
+                    'rgba(255, 255, 0)',
+                    'rgba(255, 0, 255)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 0, 0)',
+                    'rgba(0, 255, 0)',
+                    'rgba(0, 0, 255)',
+                    'rgba(192, 192, 192)',
+                    'rgba(255, 255, 0)',
+                    'rgba(255, 0, 255)'
+                ],
+                borderWidth: 1,
+                data: @Html.Raw(PieYValues)
     }]
-            };
+        };
 
-var options = {
-                maintainAspectRatio: false,
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            min: 0,
-                            beginAtZero: true
-                        },
-                        gridLines: {
-                            display: true,
-                            color: "rgba(255,99,164,0.2)"
-                        }
-}],
-                    xAxes: [{
-                        ticks: {
-                            min: 0,
-                            beginAtZero: true
-                        },
-                        gridLines: {
-                            display: false
-                        }
-                    }]
-                }
-            };
+        var options = {
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        beginAtZero: true
+                    },
+                    gridLines: {
+                        display: true,
+                        color: "rgba(255,99,164,0.2)"
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        min: 0,
+                        beginAtZero: true
+                    },
+                    gridLines: {
+                        display: false
+                    }
+                }]
+            }
+        };
 
-       var myChart = new  Chart(ctx, {
-                options: options,
-                data: data,
-                type:'pie'
+        var myChart = new Chart(ctx, {
+            options: options,
+            data: data,
+            type: 'pie'
 
-            });
         });
+    });
 </script>
 
 <!-- Stacked Chart -->
@@ -559,7 +439,7 @@ var options = {
             type: 'double',
             step: 1,
             prefix: "$",
-            prettify: false,
+            prettify: true,
             hasGrid: true
         });
         $("#range_2").ionRangeSlider();
