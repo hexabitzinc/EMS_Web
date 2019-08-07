@@ -101,7 +101,7 @@ namespace EMS.Administration.Repositories
             });
         }
 
-        public ListResponse<MyRow> List(IDbConnection connection, UserPermissionListRequest request)
+        public ListResponse<UserPermissionRow> List(IDbConnection connection, UserPermissionListRequest request)
         {
             Check.NotNull(request, "request");
             Check.NotNull(request.UserID, "userID");
@@ -116,7 +116,7 @@ namespace EMS.Administration.Repositories
             if (submodule.Length > 0)
                 prefix += ":" + submodule;
 
-            var response = new ListResponse<MyRow>();
+            var response = new ListResponse<UserPermissionRow>();
 
             response.Entities = GetExisting(connection, request.UserID.Value, request.Module, request.Submodule);
 

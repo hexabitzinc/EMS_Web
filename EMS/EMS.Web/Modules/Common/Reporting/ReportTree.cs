@@ -39,11 +39,11 @@ namespace EMS
 
             var tree = new ReportTree();
 
-            var categoryByKey = new Dictionary<string, Category>(StringComparer.CurrentCultureIgnoreCase);
+            var categoryByKey = new Dictionary<string, ReportTree.Category>(StringComparer.CurrentCultureIgnoreCase);
 
             foreach (var report in reports)
             {
-                Category category;
+                ReportTree.Category category;
                 if (categoryByKey.TryGetValue(report.Category.Key ?? "", out category))
                 {
                     category.Reports.Add(report);
@@ -69,7 +69,7 @@ namespace EMS
 
                     if (!categoryByKey.TryGetValue(current ?? "", out category))
                     {
-                        category = new Category();
+                        category = new ReportTree.Category();
                         category.Key = current;
                         category.Title = ReportRegistry.GetReportCategoryTitle(current);
                         categoryByKey[current] = category;
@@ -99,7 +99,7 @@ namespace EMS
                     order[xt] = i++;
             }
 
-            Comparison<Category> sort = (x, y) =>
+            Comparison<ReportTree.Category> sort = (x, y) =>
             {
                 var c = 0;
 

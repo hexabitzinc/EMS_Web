@@ -239,7 +239,7 @@ namespace EMS.Common.Pages
 
         public class DataDetails
         {
-            public List<MeterDetailRow> Details { get; set; }
+            public System.Collections.Generic.List<MeterDetailRow> Details { get; set; }
         }
     }
 }

@@ -83,7 +83,7 @@ namespace EMS
             SqlSettings.AutoQuotedIdentifiers = true;
             RegisterDataProviders();
 
-            Dependency.SetResolver(new DependencyResolver(app.ApplicationServices));
+            Dependency.SetResolver(new AppServices.DependencyResolver(app.ApplicationServices));
 
             var textRegistry = app.ApplicationServices.GetRequiredService<ILocalTextRegistry>();
             textRegistry.AddNestedTexts();
