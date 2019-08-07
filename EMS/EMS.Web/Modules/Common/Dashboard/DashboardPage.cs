@@ -21,26 +21,21 @@ namespace EMS.Common.Pages
         {
 
             //<if:Northwind>
-            var data = new DataDetails();
             var cachedModel = TwoLevelCache.GetLocalStoreOnly("DashboardPageModel", TimeSpan.FromMinutes(5),
                 BuildingRow.Fields.GenerationKey, () =>
                 {
                     var model = new DashboardPageModel();
 
-                    var ZoningConnection = SqlConnections.NewFor<BuildingRow>();
-                    model.TotalBuildings = ZoningConnection.Count<BuildingRow>();
-                    model.TotalApartments = ZoningConnection.Count<ApartmentRow>();
+                    using (var ZoningConnection = SqlConnections.NewFor<BuildingRow>())
+                    using (var MeterConnection = SqlConnections.NewFor<MeterRow>())
+                    using (var EMSDeviceConnection = SqlConnections.NewFor<EmsDeviceRow>())
+                    {
+                        model.TotalBuildings = ZoningConnection.Count<BuildingRow>();
+                        model.TotalApartments = ZoningConnection.Count<ApartmentRow>();
+                        model.TotalMeters = MeterConnection.Count<MeterRow>();
+                        model.TotalEMSDevices = EMSDeviceConnection.Count<EmsDeviceRow>();
+                    }
 
-                    var MeterConnection = SqlConnections.NewFor<MeterRow>();
-                    model.TotalMeters = MeterConnection.Count<MeterRow>();
-
-
-                    var EMSDeviceConnection = SqlConnections.NewFor<EmsDeviceRow>();
-                    model.TotalEMSDevices = EMSDeviceConnection.Count<EmsDeviceRow>();
-
-                    //var DataChartConnection = SqlConnections.NewFor<MeterDetailRow>();
-                    //data.Details = DataChartConnection.List<MeterDetailRow>(q => q.SelectTableFields());
-                    //model.dataChart = data.Details;
                     model.BarLstModel = new List<SimpleReportViewModel>();
                     model.BarLstModel = Bar();
 
@@ -64,18 +59,20 @@ namespace EMS.Common.Pages
             //list of department
             var lstModel = new List<SimpleReportViewModel>();
 
-            var ChartConnection = SqlConnections.NewFor<MeterDetailRow>();
-            var SchedulingConnection = SqlConnections.NewFor<SchedulingRow>();
-            foreach (var item in ChartConnection.List<MeterDetailRow>())
+            using (var ChartConnection = SqlConnections.NewByKey("Default"))
             {
-                //SchedulingConnection.ExistsById(item.SchedulingId);
-                lstModel.Add(new SimpleReportViewModel
+                foreach (var item in ChartConnection.List<MeterDetailRow>())
                 {
-                    DimensionOne = item.SchedulingId.ToString(),
-                    Quantity = int.Parse(item.Value)
-                });
+                    var x = ChartConnection.ById<SchedulingRow>(item.SchedulingId);
+                    lstModel.Add(new SimpleReportViewModel
+                    {
+                        DimensionOne = x.Day,
+                        Quantity = int.Parse(item.Value)
+                    });
+                }
+                return lstModel;
             }
-            return lstModel;
+
         }
 
         public List<SimpleReportViewModel> Line()
@@ -235,11 +232,6 @@ namespace EMS.Common.Pages
                 }
             });
             return lstModel;
-        }
-
-        public class DataDetails
-        {
-            public System.Collections.Generic.List<MeterDetailRow> Details { get; set; }
         }
     }
 }
