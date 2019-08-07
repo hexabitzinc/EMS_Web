@@ -233,5 +233,10 @@ namespace EMS.Common.Pages
             });
             return lstModel;
         }
+
+        public class DataDetails
+        {
+            public List<MeterDetailRow> Details { get; set; }
+        }
     }
 }

@@ -13,7 +13,7 @@
 
         private UserDefinition GetFirst(IDbConnection connection, BaseCriteria criteria)
         {
-            var user = connection.TrySingle<Entities.UserRow>(criteria);
+            var user = connection.TrySingle<MyRow>(criteria);
             if (user != null)
                 return new UserDefinition
                 {
@@ -35,7 +35,7 @@
 
         public IUserDefinition ById(string id)
         {
-            return TwoLevelCache.Get<UserDefinition>("UserByID_" + id, TimeSpan.Zero, TimeSpan.FromDays(1), fld.GenerationKey, () =>
+            return TwoLevelCache.Get("UserByID_" + id, TimeSpan.Zero, TimeSpan.FromDays(1), fld.GenerationKey, () =>
             {
                 using (var connection = SqlConnections.NewByKey("Default"))
                     return GetFirst(connection, new Criteria(fld.UserId) == Int32.Parse(id));
@@ -47,7 +47,7 @@
             if (username.IsEmptyOrNull())
                 return null;
 
-            return TwoLevelCache.Get<UserDefinition>("UserByName_" + username.ToLowerInvariant(),
+            return TwoLevelCache.Get("UserByName_" + username.ToLowerInvariant(),
                 TimeSpan.Zero, TimeSpan.FromDays(1), fld.GenerationKey, () =>
             {
                 using (var connection = SqlConnections.NewByKey("Default"))
