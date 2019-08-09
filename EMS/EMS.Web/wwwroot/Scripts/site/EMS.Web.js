@@ -891,6 +891,11 @@ var EMS;
             MeterRow.idProperty = 'MeterId';
             MeterRow.nameProperty = 'Name';
             MeterRow.localTextPrefix = 'Meter.Meter';
+            MeterRow.lookupKey = 'Meter.Meter';
+            function getLookup() {
+                return Q.getLookup('Meter.Meter');
+            }
+            MeterRow.getLookup = getLookup;
         })(MeterRow = Meter.MeterRow || (Meter.MeterRow = {}));
     })(Meter = EMS.Meter || (EMS.Meter = {}));
 })(EMS || (EMS = {}));

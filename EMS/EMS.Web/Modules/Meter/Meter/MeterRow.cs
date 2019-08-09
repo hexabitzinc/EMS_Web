@@ -11,6 +11,7 @@ namespace EMS.Meter.Entities
     [DisplayName("Meter"), InstanceName("Meter")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [LookupScript("Meter.Meter")]
     public sealed class MeterRow : Row, IIdRow, INameRow
     {
         [DisplayName("Meter Id"), Column("MeterID"), Identity]

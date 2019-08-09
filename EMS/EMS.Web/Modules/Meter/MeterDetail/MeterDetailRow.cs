@@ -20,7 +20,7 @@ namespace EMS.Meter.Entities
             get { return Fields.MeterDetailId[this]; }
             set { Fields.MeterDetailId[this] = value; }
         }
-        [LookupEditor("Metter.Meter", InplaceAdd = true)]
+        [LookupEditor("Meter.Meter", InplaceAdd = true)]
         [DisplayName("Meter"), Column("MeterID"), ForeignKey("[dbo].[Meter]", "MeterID"), LeftJoin("jMeter"), TextualField("MeterName")]
         public Int32? MeterId
         {

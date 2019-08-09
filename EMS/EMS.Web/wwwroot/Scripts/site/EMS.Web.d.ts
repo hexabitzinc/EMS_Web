@@ -1102,6 +1102,8 @@ declare namespace EMS.Meter {
         const idProperty = "MeterId";
         const nameProperty = "Name";
         const localTextPrefix = "Meter.Meter";
+        const lookupKey = "Meter.Meter";
+        function getLookup(): Q.Lookup<MeterRow>;
         const enum Fields {
             MeterId = "MeterId",
             MeterTypeId = "MeterTypeId",
