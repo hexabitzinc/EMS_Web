@@ -474,7 +474,20 @@ namespace EMS.Migrations.DefaultDB
                     RoomNumber = "5",
                     Description = "Description"
                 });
-            
+
+            #endregion
+
+            #region CommonLocation
+
+            Insert.IntoTable("CommonLocation")
+               .Row(new
+               {
+                   BuildingID = 1,
+                   Name = "The CommonLocation",
+                   Description = "Description",
+                   Deleted = false
+               });
+
             #endregion
 
             #endregion

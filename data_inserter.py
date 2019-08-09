@@ -2,8 +2,10 @@ import datetime
 from random import randrange
 
 
+total_days_with_hours = 365 * 24
+
 base = datetime.datetime.now()
-date_list = [base - datetime.timedelta(hours=x) for x in range(365*24)]
+date_list = [base - datetime.timedelta(hours=x) for x in range(total_days_with_hours)]
 
 
 f = open("SchedulingData.sql","w+")
@@ -22,14 +24,14 @@ for date in date_list:
     
     
 f = open("MeterDetailData.sql","w+")
-for schedulingID in range(1, 365*24):
+for schedulingID in range(1, total_days_with_hours):
     meterID = randrange(1,6)
     parameterGroupID = randrange(1,6)
-    parameterID = randrange(1,100)
+    parameterID = randrange(1,90)
     apartmentID = randrange(1,40)
     value = randrange(-10, 10)
-    meterDetail_query = "insert into MeterDetail (MeterID, ParameterGroupID, ParameterID, SchedulingID, ApartmentID, Value)\
-    values (%s, %s, %s, %s, %s, '%s')"%(meterID, parameterGroupID, parameterID, schedulingID, apartmentID, value)
+    meterDetail_query = "insert into MeterDetail (MeterID, ParameterGroupID, ParameterID, SchedulingID, ApartmentID,CommonLocationID, Value)\
+    values (%s, %s, %s, %s, %s, %s, '%s')"%(meterID, parameterGroupID, parameterID, schedulingID, apartmentID, "1", value)
     f.write(meterDetail_query + "\n")
     
 f.close()
