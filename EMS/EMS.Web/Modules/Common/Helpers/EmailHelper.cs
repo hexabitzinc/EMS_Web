@@ -1,5 +1,4 @@
-﻿using System.Web.Hosting;
-using System.IO;
+﻿using System.IO;
 using Serenity.ComponentModel;
 using Serenity;
 using Microsoft.AspNetCore.Hosting;
@@ -7,7 +6,6 @@ using System;
 #if COREFX
 using MailKit.Net.Smtp;
 using MimeKit;
-using MailKit.Security;
 #else
 using System.Net.Mail;
 #endif

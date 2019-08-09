@@ -2,13 +2,11 @@
 namespace EMS.Parameter.Entities
 {
     using Newtonsoft.Json;
-    using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
     using Serenity.Data.Mapping;
     using System;
     using System.ComponentModel;
-    using System.IO;
 
     [ConnectionKey("Default"), Module("Parameter"), TableName("[dbo].[ParameterType]")]
     [DisplayName("Parameter Type"), InstanceName("Parameter Type")]

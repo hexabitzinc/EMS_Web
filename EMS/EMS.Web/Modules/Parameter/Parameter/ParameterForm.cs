@@ -1,13 +1,8 @@
 ﻿
 namespace EMS.Parameter.Forms
 {
-    using Serenity;
     using Serenity.ComponentModel;
-    using Serenity.Data;
     using System;
-    using System.ComponentModel;
-    using System.Collections.Generic;
-    using System.IO;
 
     [FormScript("Parameter.Parameter")]
     [BasedOnRow(typeof(Entities.ParameterRow), CheckNames = true)]

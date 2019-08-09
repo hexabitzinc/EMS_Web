@@ -3,7 +3,6 @@ namespace EMS.AdminLTE
 {
     using Serenity.Web;
     using Microsoft.AspNetCore.Mvc;
-    using EMS.Meter.Entities;
 
     [PageAuthorize, Route("AdminLTE/Charts/[action]")]
     public class ChartsController : Controller

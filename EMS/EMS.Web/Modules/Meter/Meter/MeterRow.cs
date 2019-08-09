@@ -1,13 +1,11 @@
 ﻿
 namespace EMS.Meter.Entities
 {
-    using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
     using Serenity.Data.Mapping;
     using System;
     using System.ComponentModel;
-    using System.IO;
 
     [ConnectionKey("Default"), Module("Meter"), TableName("[dbo].[Meter]")]
     [DisplayName("Meter"), InstanceName("Meter")]

@@ -1,13 +1,8 @@
 ﻿
 namespace EMS.EMSDevice.Forms
 {
-    using Serenity;
     using Serenity.ComponentModel;
-    using Serenity.Data;
     using System;
-    using System.ComponentModel;
-    using System.Collections.Generic;
-    using System.IO;
 
     [FormScript("EMSDevice.EmsDevice")]
     [BasedOnRow(typeof(Entities.EmsDeviceRow), CheckNames = true)]

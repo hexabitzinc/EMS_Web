@@ -11,16 +11,11 @@ namespace EMS.Membership.Pages
     using System;
     using System.IO;
 #if COREFX
-    using MailKit.Net.Smtp;
-    using MimeKit;
-    using MailKit.Security;
 #else
     using System.Net.Mail;
 #endif
-    using System.Web;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.DataProtection;
-    using System.Web.Hosting;
 
     public partial class AccountController : Controller
     {

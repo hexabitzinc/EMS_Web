@@ -1,13 +1,11 @@
 ﻿
 namespace EMS.Zoning.Entities
 {
-    using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
     using Serenity.Data.Mapping;
     using System;
     using System.ComponentModel;
-    using System.IO;
 
     [ConnectionKey("Default"), Module("Zoning"), TableName("[dbo].[ZoningGroup]")]
     [DisplayName("Zoning Group"), InstanceName("Zoning Group")]

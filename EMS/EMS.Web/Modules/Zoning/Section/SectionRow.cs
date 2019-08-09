@@ -2,18 +2,16 @@
 namespace EMS.Zoning.Entities
 {
     using Newtonsoft.Json;
-    using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
     using Serenity.Data.Mapping;
     using System;
     using System.ComponentModel;
-    using System.IO;
 
     [ConnectionKey("Default"), Module("Zoning"), TableName("[dbo].[Section]")]
     [DisplayName("Section"), InstanceName("Section")]
-    [ReadPermission("Administration:General")]
-    [ModifyPermission("Administration:General")]
+    [ReadPermission("Administration:Operator")]
+    [ModifyPermission("Administration:Operator")]
     [JsonConverter(typeof(JsonRowConverter))]
     [LookupScript("Zoning.Section")]
     public sealed class SectionRow : Row, IIdRow, INameRow

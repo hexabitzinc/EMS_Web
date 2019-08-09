@@ -1,5 +1,4 @@
 ﻿using Serenity.Navigation;
-using Administration = EMS.Administration.Pages;
 
 [assembly: NavigationLink(1000, "Dashboard", url: "~/", permission: "", icon: "fa-tachometer")]
 [assembly: NavigationLink(2000, "Consumer", url: "", permission: "", icon: "fa fa-user")]

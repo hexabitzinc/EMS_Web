@@ -1,7 +1,6 @@
 ﻿
 namespace EMS.EMSDevice.Pages
 {
-    using Serenity;
     using Serenity.Web;
     using Microsoft.AspNetCore.Mvc;
 

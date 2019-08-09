@@ -2,13 +2,11 @@
 namespace EMS.Meter.Entities
 {
     using Newtonsoft.Json;
-    using Serenity;
     using Serenity.ComponentModel;
     using Serenity.Data;
     using Serenity.Data.Mapping;
     using System;
     using System.ComponentModel;
-    using System.IO;
 
     [ConnectionKey("Default"), Module("Meter"), TableName("[dbo].[MeterType]")]
     [DisplayName("Meter Type"), InstanceName("Meter Type")]

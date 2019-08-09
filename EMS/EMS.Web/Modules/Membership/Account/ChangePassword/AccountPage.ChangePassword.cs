@@ -8,7 +8,6 @@ namespace EMS.Membership.Pages
     using Serenity.Data;
     using Serenity.Services;
     using Serenity.Web;
-    using Serenity.Web.Providers;
     using System;
     using Microsoft.AspNetCore.Mvc;
 

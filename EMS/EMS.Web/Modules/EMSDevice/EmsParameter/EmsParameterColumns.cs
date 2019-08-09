@@ -1,13 +1,9 @@
 ﻿
 namespace EMS.EMSDevice.Columns
 {
-    using Serenity;
     using Serenity.ComponentModel;
-    using Serenity.Data;
     using System;
     using System.ComponentModel;
-    using System.Collections.Generic;
-    using System.IO;
 
     [ColumnsScript("EMSDevice.EmsParameter")]
     [BasedOnRow(typeof(Entities.EmsParameterRow), CheckNames = true)]
