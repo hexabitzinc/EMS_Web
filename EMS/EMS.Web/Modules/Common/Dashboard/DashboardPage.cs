@@ -10,6 +10,7 @@ namespace EMS.Common.Pages
     using EMS.Meter.Entities;
     using EMS.EMSDevice.Entities;
     using System.Collections.Generic;
+    using System.Threading.Tasks;
 
     [Route("Dashboard/[action]")]
     public class DashboardController : Controller
@@ -26,29 +27,22 @@ namespace EMS.Common.Pages
                 {
                     var model = new DashboardPageModel();
 
-                    using (var ZoningConnection = SqlConnections.NewFor<BuildingRow>())
-                    using (var MeterConnection = SqlConnections.NewFor<MeterRow>())
-                    using (var EMSDeviceConnection = SqlConnections.NewFor<EmsDeviceRow>())
+                    using (var connection = SqlConnections.NewByKey("Default"))
                     {
-                        model.TotalBuildings = ZoningConnection.Count<BuildingRow>();
-                        model.TotalApartments = ZoningConnection.Count<ApartmentRow>();
-                        model.TotalMeters = MeterConnection.Count<MeterRow>();
-                        model.TotalEMSDevices = EMSDeviceConnection.Count<EmsDeviceRow>();
+
+                        model.TotalBuildings = connection.Count<BuildingRow>();
+                        model.TotalApartments = connection.Count<ApartmentRow>();
+                        model.TotalMeters = connection.Count<MeterRow>();
+                        model.TotalEMSDevices = connection.Count<EmsDeviceRow>();
+
+                        model.BarLstModel = new List<SimpleReportViewModel>();
+                        model.BarLstModel = Bar();
+
+                        model.PieLstModel = new List<SimpleReportViewModel>();
+                        model.PieLstModel = Pie();
+
+                        return model;
                     }
-
-                    model.BarLstModel = new List<SimpleReportViewModel>();
-                    model.BarLstModel = Bar();
-
-                    model.LineLstModel = new List<SimpleReportViewModel>();
-                    model.LineLstModel = Line();
-
-                    model.PieLstModel = new List<SimpleReportViewModel>();
-                    model.PieLstModel = Pie();
-
-                    model.StackedLstModel = new List<StackedViewModel>();
-                    model.StackedLstModel = Stacked();
-
-                    return model;
                 });
 
             return View(MVC.Views.Common.Dashboard.DashboardIndex, cachedModel);
@@ -61,18 +55,60 @@ namespace EMS.Common.Pages
 
             using (var ChartConnection = SqlConnections.NewByKey("Default"))
             {
-                foreach (var item in ChartConnection.List<MeterDetailRow>())
+                //var xx = ChartConnection.List<SchedulingRow>().FindAll(s => s.Month == DateTime.Now.Month.ToString());
+                string query = @"select fullDate, Value
+from MeterDetail inner join Scheduling 
+on MeterDetail.SchedulingID = Scheduling.SchedulingID
+where FullDate between '2019-06-14 11:43:21' and '2019-08-09 15:43:21'
+and ApartmentID = 4
+--and MeterID = 3
+and ParameterID in (1,2,3,4,5)";
+                var chartConnection = ChartConnection.Query(query);
+                foreach (var item in chartConnection)
                 {
-                    var x = ChartConnection.ById<SchedulingRow>(item.SchedulingId);
+                    string date = item.fullDate + "";
+                    int v = int.Parse(item.Value);
                     lstModel.Add(new SimpleReportViewModel
                     {
-                        DimensionOne = x.Day,
-                        Quantity = int.Parse(item.Value)
+                        DimensionOne = date,
+                        Quantity = v
                     });
                 }
                 return lstModel;
             }
 
+        }
+
+        public List<SimpleReportViewModel> Pie()
+        {
+            //list of drinks
+            var lstModel = new List<SimpleReportViewModel>();
+
+            using (var ChartConnection = SqlConnections.NewByKey("Default"))
+            {
+                
+            }
+            lstModel.Add(new SimpleReportViewModel
+            {
+                DimensionOne = "Beer",
+                Quantity = rnd.Next(10)
+            });
+            lstModel.Add(new SimpleReportViewModel
+            {
+                DimensionOne = "Wine",
+                Quantity = rnd.Next(10)
+            });
+            lstModel.Add(new SimpleReportViewModel
+            {
+                DimensionOne = "Whisky",
+                Quantity = rnd.Next(10)
+            });
+            lstModel.Add(new SimpleReportViewModel
+            {
+                DimensionOne = "Water",
+                Quantity = rnd.Next(10)
+            });
+            return lstModel;
         }
 
         public List<SimpleReportViewModel> Queries(DateTime start, DateTime end, int consumerId, List<int?> meterId, List<int> parameterId)
@@ -82,7 +118,7 @@ namespace EMS.Common.Pages
             bool isOperator = false;
             bool isConsumer = false;
 
-            using(var connection = SqlConnections.NewByKey("Default"))
+            using (var connection = SqlConnections.NewByKey("Default"))
             {
                 if (isAdmin)
                 {
@@ -145,174 +181,144 @@ namespace EMS.Common.Pages
                     }
                     return lstModel;
                 }
-                
+
             }
 
             return lstModel;
         }
 
-        public List<SimpleReportViewModel> Line()
-        {
-            //list of countries
-            var lstModel = new List<SimpleReportViewModel>();
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Brazil",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "USA",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Portugal",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Russia",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Ireland",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Germany",
-                Quantity = rnd.Next(10)
-            });
-            return lstModel;
-        }
 
-        public List<SimpleReportViewModel> Pie()
-        {
-            //list of drinks
-            var lstModel = new List<SimpleReportViewModel>();
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Beer",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Wine",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Whisky",
-                Quantity = rnd.Next(10)
-            });
-            lstModel.Add(new SimpleReportViewModel
-            {
-                DimensionOne = "Water",
-                Quantity = rnd.Next(10)
-            });
-            return lstModel;
-        }
+        //public List<SimpleReportViewModel> Line()
+        //{
+        //    //list of countries
+        //    var lstModel = new List<SimpleReportViewModel>();
+        //    lstModel.Add(new SimpleReportViewModel
+        //    {
+        //        DimensionOne = "Brazil",
+        //        Quantity = rnd.Next(10)
+        //    });
+        //    lstModel.Add(new SimpleReportViewModel
+        //    {
+        //        DimensionOne = "USA",
+        //        Quantity = rnd.Next(10)
+        //    });
+        //    lstModel.Add(new SimpleReportViewModel
+        //    {
+        //        DimensionOne = "Portugal",
+        //        Quantity = rnd.Next(10)
+        //    });
+        //    lstModel.Add(new SimpleReportViewModel
+        //    {
+        //        DimensionOne = "Russia",
+        //        Quantity = rnd.Next(10)
+        //    });
+        //    lstModel.Add(new SimpleReportViewModel
+        //    {
+        //        DimensionOne = "Ireland",
+        //        Quantity = rnd.Next(10)
+        //    });
+        //    lstModel.Add(new SimpleReportViewModel
+        //    {
+        //        DimensionOne = "Germany",
+        //        Quantity = rnd.Next(10)
+        //    });
+        //    return lstModel;
+        //}
 
-        public List<StackedViewModel> Stacked()
-        {
-            var lstModel = new List<StackedViewModel>();
-            //sales of product sales by quarter
-            lstModel.Add(new StackedViewModel
-            {
-                StackedDimensionOne = "First Quarter",
-                LstData = new List<SimpleReportViewModel>()
-                {
-                    new SimpleReportViewModel()
-                    {
-                        DimensionOne="TV",
-                        Quantity = rnd.Next(10)
-                    },
-                    new SimpleReportViewModel()
-                    {
-                        DimensionOne="Games",
-                        Quantity = rnd.Next(10)
-                    },
-                    new SimpleReportViewModel()
-                    {
-                        DimensionOne="Books",
-                        Quantity = rnd.Next(10)
-                    }
-                }
-            });
-            lstModel.Add(new StackedViewModel
-            {
-                StackedDimensionOne = "Second Quarter",
-                LstData = new List<SimpleReportViewModel>()
-                {
-                    new SimpleReportViewModel()
-                    {
-                        DimensionOne="TV",
-                        Quantity = rnd.Next(10)
-                    },
-                    new SimpleReportViewModel()
-                    {
-                        DimensionOne="Games",
-                        Quantity = rnd.Next(10)
-                    },
-                    new SimpleReportViewModel()
-                    {
-                        DimensionOne="Books",
-                        Quantity = rnd.Next(10)
-                    }
-                }
-            });
-            lstModel.Add(new StackedViewModel
-            {
-                StackedDimensionOne = "Third Quarter",
-                LstData = new List<SimpleReportViewModel>()
-                {
-                    new SimpleReportViewModel()
-                    {
-                        DimensionOne="TV",
-                        Quantity = rnd.Next(10)
-                    },
-                    new SimpleReportViewModel()
-                    {
-                        DimensionOne="Games",
-                        Quantity = rnd.Next(10)
-                    },
-                    new SimpleReportViewModel()
-                    {
-                        DimensionOne="Books",
-                        Quantity = rnd.Next(10)
-                    }
-                }
-            });
-            lstModel.Add(new StackedViewModel
-            {
-                StackedDimensionOne = "Fourth Quarter",
-                LstData = new List<SimpleReportViewModel>()
-                {
-                    new SimpleReportViewModel()
-                    {
-                        DimensionOne="TV",
-                        Quantity = rnd.Next(10)
-                    },
-                    new SimpleReportViewModel()
-                    {
-                        DimensionOne="Games",
-                        Quantity = rnd.Next(10)
-                    },
-                    new SimpleReportViewModel()
-                    {
-                        DimensionOne="Books",
-                        Quantity = rnd.Next(10)
-                    }
-                }
-            });
-            return lstModel;
-        }
+        //public List<StackedViewModel> Stacked()
+        //{
+        //    var lstModel = new List<StackedViewModel>();
+        //    //sales of product sales by quarter
+        //    lstModel.Add(new StackedViewModel
+        //    {
+        //        StackedDimensionOne = "First Quarter",
+        //        LstData = new List<SimpleReportViewModel>()
+        //        {
+        //            new SimpleReportViewModel()
+        //            {
+        //                DimensionOne="TV",
+        //                Quantity = rnd.Next(10)
+        //            },
+        //            new SimpleReportViewModel()
+        //            {
+        //                DimensionOne="Games",
+        //                Quantity = rnd.Next(10)
+        //            },
+        //            new SimpleReportViewModel()
+        //            {
+        //                DimensionOne="Books",
+        //                Quantity = rnd.Next(10)
+        //            }
+        //        }
+        //    });
+        //    lstModel.Add(new StackedViewModel
+        //    {
+        //        StackedDimensionOne = "Second Quarter",
+        //        LstData = new List<SimpleReportViewModel>()
+        //        {
+        //            new SimpleReportViewModel()
+        //            {
+        //                DimensionOne="TV",
+        //                Quantity = rnd.Next(10)
+        //            },
+        //            new SimpleReportViewModel()
+        //            {
+        //                DimensionOne="Games",
+        //                Quantity = rnd.Next(10)
+        //            },
+        //            new SimpleReportViewModel()
+        //            {
+        //                DimensionOne="Books",
+        //                Quantity = rnd.Next(10)
+        //            }
+        //        }
+        //    });
+        //    lstModel.Add(new StackedViewModel
+        //    {
+        //        StackedDimensionOne = "Third Quarter",
+        //        LstData = new List<SimpleReportViewModel>()
+        //        {
+        //            new SimpleReportViewModel()
+        //            {
+        //                DimensionOne="TV",
+        //                Quantity = rnd.Next(10)
+        //            },
+        //            new SimpleReportViewModel()
+        //            {
+        //                DimensionOne="Games",
+        //                Quantity = rnd.Next(10)
+        //            },
+        //            new SimpleReportViewModel()
+        //            {
+        //                DimensionOne="Books",
+        //                Quantity = rnd.Next(10)
+        //            }
+        //        }
+        //    });
+        //    lstModel.Add(new StackedViewModel
+        //    {
+        //        StackedDimensionOne = "Fourth Quarter",
+        //        LstData = new List<SimpleReportViewModel>()
+        //        {
+        //            new SimpleReportViewModel()
+        //            {
+        //                DimensionOne="TV",
+        //                Quantity = rnd.Next(10)
+        //            },
+        //            new SimpleReportViewModel()
+        //            {
+        //                DimensionOne="Games",
+        //                Quantity = rnd.Next(10)
+        //            },
+        //            new SimpleReportViewModel()
+        //            {
+        //                DimensionOne="Books",
+        //                Quantity = rnd.Next(10)
+        //            }
+        //        }
+        //    });
+        //    return lstModel;
+        //}
 
-        public class DataDetails
-        {
-            public List<MeterDetailRow> Details { get; set; }
-        }
     }
 }
