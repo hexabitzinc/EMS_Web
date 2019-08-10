@@ -75,6 +75,82 @@ namespace EMS.Common.Pages
 
         }
 
+        public List<SimpleReportViewModel> Queries(DateTime start, DateTime end, int consumerId, List<int?> meterId, List<int> parameterId)
+        {
+            var lstModel = new List<SimpleReportViewModel>();
+            bool isAdmin = false;
+            bool isOperator = false;
+            bool isConsumer = false;
+
+            using(var connection = SqlConnections.NewByKey("Default"))
+            {
+                if (isAdmin)
+                {
+                    List<MeterRow> meters = connection.List<MeterRow>();
+                    List<MeterDetailRow> meterDetails = new List<MeterDetailRow>();
+                    meterDetails.AddRange(connection.List<MeterDetailRow>().FindAll(md => meterId.Contains(md.MeterId)));
+
+                    foreach (var item in meterDetails)
+                    {
+                        var x = connection.ById<SchedulingRow>(item.SchedulingId);
+                        lstModel.Add(new SimpleReportViewModel
+                        {
+                            DimensionOne = x.FullDate.ToString(),
+                            Quantity = int.Parse(item.Value)
+                        });
+                    }
+                    return lstModel;
+                }
+                if (isOperator)
+                {
+                    List<MeterRow> meters = new List<MeterRow>();
+                    var meterRows = connection.List<MeterRow>();
+                    meters = meterRows.FindAll(m => m.ConsumerId == consumerId);
+                    List<MeterDetailRow> meterDetails = new List<MeterDetailRow>();
+                    foreach (var item in meters)
+                    {
+                        meterDetails.AddRange(connection.List<MeterDetailRow>().FindAll(md => md.MeterId == item.MeterId));
+                    }
+
+                    foreach (var item in meterDetails)
+                    {
+                        var x = connection.ById<SchedulingRow>(item.SchedulingId);
+                        lstModel.Add(new SimpleReportViewModel
+                        {
+                            DimensionOne = x.FullDate.ToString(),
+                            Quantity = int.Parse(item.Value)
+                        });
+                    }
+                    return lstModel;
+                }
+                if (isConsumer)
+                {
+                    List<MeterRow> meters = new List<MeterRow>();
+                    var meterRows = connection.List<MeterRow>();
+                    meters = meterRows.FindAll(m => m.ConsumerId == consumerId);
+                    List<MeterDetailRow> meterDetails = new List<MeterDetailRow>();
+                    foreach (var item in meters)
+                    {
+                        meterDetails.AddRange(connection.List<MeterDetailRow>().FindAll(md => md.MeterId == item.MeterId));
+                    }
+
+                    foreach (var item in meterDetails)
+                    {
+                        var x = connection.ById<SchedulingRow>(item.SchedulingId);
+                        lstModel.Add(new SimpleReportViewModel
+                        {
+                            DimensionOne = x.FullDate.ToString(),
+                            Quantity = int.Parse(item.Value)
+                        });
+                    }
+                    return lstModel;
+                }
+                
+            }
+
+            return lstModel;
+        }
+
         public List<SimpleReportViewModel> Line()
         {
             //list of countries

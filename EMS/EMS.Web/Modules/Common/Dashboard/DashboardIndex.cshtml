@@ -37,28 +37,25 @@
     <script src="~/Scripts/bootstrap-slider/bootstrap-slider.js"></script>
     <script src="~/Scripts/adminlte/demo.js"></script>
 
+    <link rel="stylesheet" href="~/Scripts/daterangepicker/daterangepicker-bs3.css" />
+    <link rel="stylesheet" href="~/Content/iCheck/all.css" />
+    <link rel="stylesheet" href="~/Scripts/colorpicker/bootstrap-colorpicker.min.css" />
+    <link rel="stylesheet" href="~/Scripts/timepicker/bootstrap-timepicker.min.css" />
 
+    <script src="~/Scripts/input-mask/jquery.inputmask.js"></script>
+    <script src="~/Scripts/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script src="~/Scripts/input-mask/jquery.inputmask.extensions.js"></script>
+    <script src="~/Scripts/daterangepicker/moment.min.js"></script>
+    <script src="~/Scripts/daterangepicker/daterangepicker.js"></script>
+    <script src="~/Scripts/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script src="~/Scripts/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="~/Scripts/jquery.icheck.min.js"></script>
 }
 
 @section ContentHeader {
     <h1>@LocalText.Get("Navigation.Dashboard")<small>@Html.Raw(Texts.Site.Dashboard.ContentDescription)</small></h1>
 }
 
-<div class="box-body">
-
-    <div class="chart-container">
-        <canvas id="chartBar" style="width:100%; height:500px"></canvas>
-    </div>
-    <div class="chart-container">
-        <canvas id="chartLine" style="width:100%; height:500px"></canvas>
-    </div>
-    <div class="chart-container">
-        <canvas id="chartPie" style="width:100%; height:500px"></canvas>
-    </div>
-    <div class="chart-container">
-        <canvas id="chartStacked" style="width:100%; height:500px"></canvas>
-    </div>
-</div>
 <!-- Small boxes (Stat box) -->
 <div class="row">
     <div class="col-lg-3 col-xs-6">
@@ -116,64 +113,102 @@
 </div><!-- /.row -->
 <!-- Main row -->
 <div class="row">
-    <!-- Left col -->
-    <section class="col-lg-7 connectedSortable">
-        <!-- Custom tabs (Charts with tabs)-->
-        <div class="nav-tabs-custom">
-            <!-- Tabs within a box -->
-            <ul class="nav nav-tabs pull-right">
-                <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-                <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
-                <li class="pull-left header"><i class="fa fa-tachometer"></i> Consumption</li>
-            </ul>
-            <div class="tab-content no-padding">
-                <!-- Morris chart - Sales -->
-                <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-                <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
-            </div>
-            <div class="row margin">
-                <div class="col-sm-12">
-                    <input id="range_1" type="text" name="range_1">
+    <div class="box-body">
+        <!-- Date range -->
+        <div class="form-group">
+            <label>Date range:</label>
+            <div class="input-group">
+                <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
                 </div>
+                <input type="text" class="form-control pull-right" id="reservation" name="Test">
+            </div><!-- /.input group -->
+        </div><!-- /.form group -->
+        <!-- Date and time range -->
+        <div class="form-group">
+            <label>Date range button:</label>
+            <div class="input-group">
+                <button class="btn btn-default pull-right" id="daterange-btn">
+                    <i class="fa fa-calendar"></i> Date range picker
+                    <i class="fa fa-caret-down"></i>
+                </button>
             </div>
-        </div><!-- /.nav-tabs-custom -->
-       
-    </section><!-- /.Left col -->
-    <!-- right col (We are only adding the ID to make the widgets sortable)-->
-    <section class="col-lg-5 connectedSortable">
-        <!-- solid sales graph -->
-        <div class="box box-solid bg-teal-gradient">
-            <div class="box-header">
-                <i class="fa fa-th"></i>
-                <h3 class="box-title">Sales Graph</h3>
-                <div class="box-tools pull-right">
-                    <button class="btn bg-teal btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                    <button class="btn bg-teal btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
+        </div><!-- /.box-body -->
+        <div class="chart-container">
+            <canvas id="chartBar" style="width:100%; height:500px"></canvas>
+        </div>
+        @*<div class="chart-container">
+                <canvas id="chartLine" style="width:100%; height:500px"></canvas>
+            </div>*@
+        <div class="chart-container">
+            <canvas id="chartPie" style="width:100%; height:500px"></canvas>
+        </div>
+        @*<div class="chart-container">
+                <canvas id="chartStacked" style="width:100%; height:500px"></canvas>
+            </div>*@
+    </div>
+</div>
+@*
+    <div class="row">
+        <!-- Left col -->
+        <section class="col-lg-7 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+            <div class="nav-tabs-custom">
+                <!-- Tabs within a box -->
+                <ul class="nav nav-tabs pull-right">
+                    <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
+                    <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
+                    <li class="pull-left header"><i class="fa fa-tachometer"></i> Consumption</li>
+                </ul>
+                <div class="tab-content no-padding">
+                    <!-- Morris chart - Sales -->
+                    <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
+                    <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
                 </div>
-            </div>
-            <div class="box-body border-radius-none">
-                <div class="chart" id="line-chart" style="height: 250px;"></div>
-            </div><!-- /.box-body -->
-            <div class="box-footer no-border">
-                <div class="row">
-                    <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                        <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                        <div class="knob-label">Mail-Orders</div>
-                    </div><!-- ./col -->
-                    <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                        <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                        <div class="knob-label">Online</div>
-                    </div><!-- ./col -->
-                    <div class="col-xs-4 text-center">
-                        <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                        <div class="knob-label">In-Store</div>
-                    </div><!-- ./col -->
-                </div><!-- /.row -->
-            </div><!-- /.box-footer -->
-        </div><!-- /.box -->
-        
-    </section><!-- right col -->
-</div><!-- /.row (main row) -->
+                <div class="row margin">
+                    <div class="col-sm-12">
+                        <input id="range_1" type="text" name="range_1">
+                    </div>
+                </div>
+            </div><!-- /.nav-tabs-custom -->
+
+        </section><!-- /.Left col -->
+        <!-- right col (We are only adding the ID to make the widgets sortable)-->
+        <section class="col-lg-5 connectedSortable">
+            <!-- solid sales graph -->
+            <div class="box box-solid bg-teal-gradient">
+                <div class="box-header">
+                    <i class="fa fa-th"></i>
+                    <h3 class="box-title">Sales Graph</h3>
+                    <div class="box-tools pull-right">
+                        <button class="btn bg-teal btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <button class="btn bg-teal btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="box-body border-radius-none">
+                    <div class="chart" id="line-chart" style="height: 250px;"></div>
+                </div><!-- /.box-body -->
+                <div class="box-footer no-border">
+                    <div class="row">
+                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                            <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgColor="#39CCCC">
+                            <div class="knob-label">Mail-Orders</div>
+                        </div><!-- ./col -->
+                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                            <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#39CCCC">
+                            <div class="knob-label">Online</div>
+                        </div><!-- ./col -->
+                        <div class="col-xs-4 text-center">
+                            <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#39CCCC">
+                            <div class="knob-label">In-Store</div>
+                        </div><!-- ./col -->
+                    </div><!-- /.row -->
+                </div><!-- /.box-footer -->
+            </div><!-- /.box -->
+
+        </section><!-- right col -->
+    </div><!-- /.row (main row) -->
+*@
 <!-- Bar Chart -->
 <script type="text/javascript">
     $(function () {
@@ -229,60 +264,60 @@
 </script>
 
 <!-- Line Chart -->
-<script type="text/javascript">
-    $(function () {
-        var chartName = "chartLine";
-        var ctx = document.getElementById(chartName).getContext('2d');
-        var data = {
-            labels: @Html.Raw(LineXLabels),
-            datasets: [{
-                label: "Countries Chart",
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                ],
-                borderWidth: 1,
-                //hoverBackgroundColor: "rgba(255,99,132,0.4)",
-                //hoverBorderColor: "rgba(255,99,132,1)",
-                data: @Html.Raw(LineYValues)
+@*<script type="text/javascript">
+        $(function () {
+            var chartName = "chartLine";
+            var ctx = document.getElementById(chartName).getContext('2d');
+            var data = {
+                labels: @Html.Raw(LineXLabels),
+                datasets: [{
+                    label: "Countries Chart",
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                    ],
+                    borderWidth: 1,
+                    //hoverBackgroundColor: "rgba(255,99,132,0.4)",
+                    //hoverBorderColor: "rgba(255,99,132,1)",
+                    data: @Html.Raw(LineYValues)
+                        }]
+            };
+
+            var options = {
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            min: 0,
+                            beginAtZero: true
+                        },
+                        gridLines: {
+                            display: true,
+                            color: "rgba(255,99,164,0.2)"
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            min: 0,
+                            beginAtZero: true
+                        },
+                        gridLines: {
+                            display: false
+                        }
                     }]
-        };
+                }
+            };
 
-        var options = {
-            maintainAspectRatio: false,
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        min: 0,
-                        beginAtZero: true
-                    },
-                    gridLines: {
-                        display: true,
-                        color: "rgba(255,99,164,0.2)"
-                    }
-                }],
-                xAxes: [{
-                    ticks: {
-                        min: 0,
-                        beginAtZero: true
-                    },
-                    gridLines: {
-                        display: false
-                    }
-                }]
-            }
-        };
+            var myChart = new Chart(ctx, {
+                options: options,
+                data: data,
+                type: 'line'
 
-        var myChart = new Chart(ctx, {
-            options: options,
-            data: data,
-            type: 'line'
-
+            });
         });
-    });
-</script>
+    </script>*@
 
 <!-- Pie Chart -->
 <script type="text/javascript">
@@ -361,67 +396,67 @@
 </script>
 
 <!-- Stacked Chart -->
-<script type="text/javascript">
-        $(function () {
-            var chartName = "chartStacked";
-            var ctx = document.getElementById(chartName).getContext('2d');
-            var XLabels = @Html.Raw(StackedXLabels);
-            var YValues = @Html.Raw(StackedYValues );
-            var label = @Html.Raw( StackedLabel2 );
-            var aux = 0;
+@*<script type="text/javascript">
+            $(function () {
+                var chartName = "chartStacked";
+                var ctx = document.getElementById(chartName).getContext('2d');
+                var XLabels = @Html.Raw(StackedXLabels);
+                var YValues = @Html.Raw(StackedYValues );
+                var label = @Html.Raw( StackedLabel2 );
+                var aux = 0;
 
-            var barChartData = {
-                labels:  @Html.Raw(StackedLabel2),
-                datasets: []
-            }
-
-            XLabels.forEach(function (a, i) {
-                var data = [];
-                YValues.forEach(function (a, i) {
-                    data.push(a[aux]);
-                });
-
-            barChartData.datasets.push({
-                label: XLabels[aux],
-                backgroundColor: random_rgba(),
-                data: data
-                });
-                aux++;
-            });
-            var options = {
-                maintainAspectRatio: false,
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            min: 0,
-                            beginAtZero: true
-                        },
-                        stacked: true,
-                        gridLines: {
-                            display: true,
-                            color: "rgba(255,99,164,0.2)"
-                        }
-                    }],
-                    xAxes: [{
-                        stacked: true,
-                        gridLines: {
-                            display: false
-                        }
-                    }]
+                var barChartData = {
+                    labels:  @Html.Raw(StackedLabel2),
+                    datasets: []
                 }
-            };
-            function random_rgba() {
-                var o = Math.round, r = Math.random, s = 255;
-                return 'rgba(' + o(r() * s) + ',' + o(r() * s) + ',' + o(r() * s) + ',' + r().toFixed(1) + ')';
-            }
-            var myChart = new Chart(ctx, {
-                options: options,
-                data: barChartData,
-                type: 'bar'
 
+                XLabels.forEach(function (a, i) {
+                    var data = [];
+                    YValues.forEach(function (a, i) {
+                        data.push(a[aux]);
+                    });
+
+                barChartData.datasets.push({
+                    label: XLabels[aux],
+                    backgroundColor: random_rgba(),
+                    data: data
+                    });
+                    aux++;
+                });
+                var options = {
+                    maintainAspectRatio: false,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                min: 0,
+                                beginAtZero: true
+                            },
+                            stacked: true,
+                            gridLines: {
+                                display: true,
+                                color: "rgba(255,99,164,0.2)"
+                            }
+                        }],
+                        xAxes: [{
+                            stacked: true,
+                            gridLines: {
+                                display: false
+                            }
+                        }]
+                    }
+                };
+                function random_rgba() {
+                    var o = Math.round, r = Math.random, s = 255;
+                    return 'rgba(' + o(r() * s) + ',' + o(r() * s) + ',' + o(r() * s) + ',' + r().toFixed(1) + ')';
+                }
+                var myChart = new Chart(ctx, {
+                    options: options,
+                    data: barChartData,
+                    type: 'bar'
+
+                });
             });
-        });
-</script>
+    </script>*@
 
 
 <!-- Sliders -->
@@ -489,5 +524,32 @@
                 //
             }
         });
+    });
+</script>
+
+<script>
+    $(function () {
+        $("#datemask").inputmask("dd/mm/yyyy", { "placeholder": "dd/mm/yyyy" });
+        $("[data-mask]").inputmask();
+        //Date range picker
+        $('#reservation').daterangepicker();
+        //Date range as a button
+        $('#daterange-btn').daterangepicker(
+            {
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+                startDate: moment().subtract(29, 'days'),
+                endDate: moment()
+            },
+            function (start, end) {
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            }
+        );
     });
 </script>
