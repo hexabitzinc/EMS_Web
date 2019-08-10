@@ -57,16 +57,15 @@ namespace EMS.Common.Pages
             {
                 //var xx = ChartConnection.List<SchedulingRow>().FindAll(s => s.Month == DateTime.Now.Month.ToString());
                 string query = @"select fullDate, Value
-from MeterDetail inner join Scheduling 
-on MeterDetail.SchedulingID = Scheduling.SchedulingID
-where FullDate between '2019-06-14 11:43:21' and '2019-08-09 15:43:21'
-and ApartmentID = 4
---and MeterID = 3
-and ParameterID in (1,2,3,4,5)";
+                                from MeterDetail inner join Scheduling 
+                                on MeterDetail.SchedulingID = Scheduling.SchedulingID
+                                where FullDate between '2019-06-14 11:43:21' and '2019-08-09 15:43:21'
+                                --and MeterID = 3
+                                and ParameterID in (1,2,3,4,5)";
                 var chartConnection = ChartConnection.Query(query);
                 foreach (var item in chartConnection)
                 {
-                    string date = item.fullDate + "";
+                    string date = item.Day + "";
                     int v = int.Parse(item.Value);
                     lstModel.Add(new SimpleReportViewModel
                     {
@@ -76,7 +75,6 @@ and ParameterID in (1,2,3,4,5)";
                 }
                 return lstModel;
             }
-
         }
 
         public List<SimpleReportViewModel> Pie()
@@ -188,42 +186,42 @@ and ParameterID in (1,2,3,4,5)";
         }
 
 
-        //public List<SimpleReportViewModel> Line()
-        //{
-        //    //list of countries
-        //    var lstModel = new List<SimpleReportViewModel>();
-        //    lstModel.Add(new SimpleReportViewModel
-        //    {
-        //        DimensionOne = "Brazil",
-        //        Quantity = rnd.Next(10)
-        //    });
-        //    lstModel.Add(new SimpleReportViewModel
-        //    {
-        //        DimensionOne = "USA",
-        //        Quantity = rnd.Next(10)
-        //    });
-        //    lstModel.Add(new SimpleReportViewModel
-        //    {
-        //        DimensionOne = "Portugal",
-        //        Quantity = rnd.Next(10)
-        //    });
-        //    lstModel.Add(new SimpleReportViewModel
-        //    {
-        //        DimensionOne = "Russia",
-        //        Quantity = rnd.Next(10)
-        //    });
-        //    lstModel.Add(new SimpleReportViewModel
-        //    {
-        //        DimensionOne = "Ireland",
-        //        Quantity = rnd.Next(10)
-        //    });
-        //    lstModel.Add(new SimpleReportViewModel
-        //    {
-        //        DimensionOne = "Germany",
-        //        Quantity = rnd.Next(10)
-        //    });
-        //    return lstModel;
-        //}
+        public List<SimpleReportViewModel> Line()
+        {
+            //list of countries
+            var lstModel = new List<SimpleReportViewModel>();
+            lstModel.Add(new SimpleReportViewModel
+            {
+                DimensionOne = "Brazil",
+                Quantity = rnd.Next(10)
+            });
+            lstModel.Add(new SimpleReportViewModel
+            {
+                DimensionOne = "USA",
+                Quantity = rnd.Next(10)
+            });
+            lstModel.Add(new SimpleReportViewModel
+            {
+                DimensionOne = "Portugal",
+                Quantity = rnd.Next(10)
+            });
+            lstModel.Add(new SimpleReportViewModel
+            {
+                DimensionOne = "Russia",
+                Quantity = rnd.Next(10)
+            });
+            lstModel.Add(new SimpleReportViewModel
+            {
+                DimensionOne = "Ireland",
+                Quantity = rnd.Next(10)
+            });
+            lstModel.Add(new SimpleReportViewModel
+            {
+                DimensionOne = "Germany",
+                Quantity = rnd.Next(10)
+            });
+            return lstModel;
+        }
 
         //public List<StackedViewModel> Stacked()
         //{
