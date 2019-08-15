@@ -47,7 +47,8 @@ namespace EMS.Common.Pages
 
             return View(MVC.Views.Common.Dashboard.DashboardIndex, cachedModel);
         }
-
+        [HttpPost]
+        [Route("~/chart")]
         public List<SimpleReportViewModel> Bar()
         {
             //list of department
@@ -59,10 +60,47 @@ namespace EMS.Common.Pages
                 string query = @"select fullDate, Value
                                 from MeterDetail inner join Scheduling 
                                 on MeterDetail.SchedulingID = Scheduling.SchedulingID
-                                where FullDate between '2019-06-14 11:43:21' and '2019-08-09 15:43:21'
-                                --and MeterID = 3
-                                and ParameterID in (1,2,3,4,5)";
-                var chartConnection = ChartConnection.Query(query);
+                                where FullDate between @DateStart and @DateEnd
+                                --and MeterID = @MeterId
+                                and ParameterID in @ParameterId";
+
+                string dateStart = "2019-06-14 11:43:21";
+                string dateEnd = "2019-08-09 15:43:21";
+                int meterId = 1;
+                int[] parameterId = { 1, 2, 3, 4, 5 };
+
+                var chartConnection = ChartConnection.Query(query,
+                    param: new
+                    {
+                        MeterId = meterId,
+                        ParameterId = parameterId,
+                        DateStart = dateStart,
+                        DateEnd = dateEnd
+                    });
+
+                string queryTwo = @"select * from Meter inner join Consumer on Meter.ConsumerID = Consumer.ConsumerID";
+                var meters = ChartConnection.Query(queryTwo);
+
+                string queryThree = @"select * from Parameter inner join MeterDetail on MeterDetail.ParameterID = Parameter.ParameterID where MeterID = @MeterId";
+                var parameters = ChartConnection.Query(queryThree,
+                    param: new
+                    {
+                        MeterId = meterId
+                    });
+
+                string queryFour = @"select ParameterID,FullDate, Value
+                                     from MeterDetail inner join Scheduling
+                                     on MeterDetail.SchedulingID = Scheduling.SchedulingID
+                                     where FullDate between @DateStart and @DateEnd and MeterID = @MeterId and ParameterID in @ParameterId
+                                     order by ParameterID";
+                var chartDataset = ChartConnection.Query(queryFour,
+                    param: new
+                    {
+                        MeterId = meterId,
+                        ParameterId = parameterId,
+                        DateStart = dateStart,
+                        DateEnd = dateEnd
+                    });
                 foreach (var item in chartConnection)
                 {
                     string date = item.Day + "";
