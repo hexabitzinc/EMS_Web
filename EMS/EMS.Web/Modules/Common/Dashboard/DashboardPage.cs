@@ -10,7 +10,7 @@ namespace EMS.Common.Pages
     using EMS.Meter.Entities;
     using EMS.EMSDevice.Entities;
     using System.Collections.Generic;
-    using System.Threading.Tasks;
+    using EMS.Parameter.Entities;
 
     [Route("Dashboard/[action]")]
     public class DashboardController : Controller
@@ -20,29 +20,43 @@ namespace EMS.Common.Pages
         [PageAuthorize, HttpGet, Route("~/")]
         public ActionResult Index()
         {
-
-            //<if:Northwind>
             var cachedModel = TwoLevelCache.GetLocalStoreOnly("DashboardPageModel", TimeSpan.FromMinutes(5),
                 BuildingRow.Fields.GenerationKey, () =>
                 {
                     var model = new DashboardPageModel();
+                    var connection = SqlConnections.NewByKey("Default");
+                    
+                    #region Zoning
+                    model.TotalBuildings = connection.Count<BuildingRow>();
+                    model.TotalApartments = connection.Count<ApartmentRow>();
 
-                    using (var connection = SqlConnections.NewByKey("Default"))
-                    {
+                    #endregion
 
-                        model.TotalBuildings = connection.Count<BuildingRow>();
-                        model.TotalApartments = connection.Count<ApartmentRow>();
-                        model.TotalMeters = connection.Count<MeterRow>();
-                        model.TotalEMSDevices = connection.Count<EmsDeviceRow>();
 
-                        model.BarLstModel = new List<SimpleReportViewModel>();
-                        model.BarLstModel = Bar();
+                    #region Parameter
+                    model.ParametersList = connection.List<ParameterRow>();
+                    #endregion
 
-                        model.PieLstModel = new List<SimpleReportViewModel>();
-                        model.PieLstModel = Pie();
 
-                        return model;
-                    }
+                    #region Meter
+                    model.TotalMeters = connection.Count<MeterRow>();
+                    #endregion
+
+
+                    #region EMSDevice
+                    model.TotalEMSDevices = connection.Count<EmsDeviceRow>();
+                    #endregion
+
+                    #region Charts
+                    model.BarLstModel = new List<SimpleReportViewModel>();
+                    model.BarLstModel = Bar();
+
+                    model.PieLstModel = new List<SimpleReportViewModel>();
+                    model.PieLstModel = Pie();
+
+                    #endregion
+
+                    return model;
                 });
 
             return View(MVC.Views.Common.Dashboard.DashboardIndex, cachedModel);

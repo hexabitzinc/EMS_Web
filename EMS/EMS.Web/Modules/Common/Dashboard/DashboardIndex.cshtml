@@ -118,31 +118,21 @@
 <!-- Main row -->
 <div class="row">
     <div class="box-body">
-        <!-- Date and time range -->
+
         <div class="example">
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    $('#boot-multiselect-demo').multiselect({
-                        nonSelectedText: 'Select expertise!',
-                        buttonWidth: 250,
-                        enableFiltering: true
-                    });
-                    $('#boot-multiselect-demo').options()
-                });
-            </script>
-            <select id="boot-multiselect-demo" multiple="multiple">
-                <option value="Param">Param</option>
-                <option value="Param">Param</option>
-                <option value="Param">Param</option>
-                <option value="Param">Param</option>
-                <option value="Param">Param</option>
-                <option value="Param">Param</option>
-                <option value="Param">Param</option>
-                <option value="Param">Param</option>
+            <select id="paramtersComboBox">
+                @{
+                    foreach (var parameter in @Model.ParametersList)
+                    {
+                        <option value="@parameter.ParameterId">@parameter.Name</option>
+                    }
+                }
             </select>
         </div>
+
+        <!-- Date and time range -->
         <div class="form-group">
-            <label>Date range button:</label>
+            <label>Date: </label>
             <div class="input-group">
                 <button class="btn btn-default pull-right" id="daterange-btn">
                     <i class="fa fa-calendar"></i> Date range picker
@@ -164,67 +154,7 @@
         </div>*@
     </div>
 </div>
-@*
-    <div class="row">
-        <!-- Left col -->
-        <section class="col-lg-7 connectedSortable">
-            <!-- Custom tabs (Charts with tabs)-->
-            <div class="nav-tabs-custom">
-                <!-- Tabs within a box -->
-                <ul class="nav nav-tabs pull-right">
-                    <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-                    <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
-                    <li class="pull-left header"><i class="fa fa-tachometer"></i> Consumption</li>
-                </ul>
-                <div class="tab-content no-padding">
-                    <!-- Morris chart - Sales -->
-                    <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-                    <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
-                </div>
-                <div class="row margin">
-                    <div class="col-sm-12">
-                        <input id="range_1" type="text" name="range_1">
-                    </div>
-                </div>
-            </div><!-- /.nav-tabs-custom -->
 
-        </section><!-- /.Left col -->
-        <!-- right col (We are only adding the ID to make the widgets sortable)-->
-        <section class="col-lg-5 connectedSortable">
-            <!-- solid sales graph -->
-            <div class="box box-solid bg-teal-gradient">
-                <div class="box-header">
-                    <i class="fa fa-th"></i>
-                    <h3 class="box-title">Sales Graph</h3>
-                    <div class="box-tools pull-right">
-                        <button class="btn bg-teal btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                        <button class="btn bg-teal btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
-                    </div>
-                </div>
-                <div class="box-body border-radius-none">
-                    <div class="chart" id="line-chart" style="height: 250px;"></div>
-                </div><!-- /.box-body -->
-                <div class="box-footer no-border">
-                    <div class="row">
-                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                            <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                            <div class="knob-label">Mail-Orders</div>
-                        </div><!-- ./col -->
-                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                            <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                            <div class="knob-label">Online</div>
-                        </div><!-- ./col -->
-                        <div class="col-xs-4 text-center">
-                            <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                            <div class="knob-label">In-Store</div>
-                        </div><!-- ./col -->
-                    </div><!-- /.row -->
-                </div><!-- /.box-footer -->
-            </div><!-- /.box -->
-
-        </section><!-- right col -->
-    </div><!-- /.row (main row) -->
-*@
 <!-- Bar Chart -->
 <script type="text/javascript">
     $(function () {
@@ -411,139 +341,17 @@
     });
 </script>
 
-<!-- Stacked Chart -->
-@*<script type="text/javascript">
-            $(function () {
-                var chartName = "chartStacked";
-                var ctx = document.getElementById(chartName).getContext('2d');
-                var XLabels = @Html.Raw(StackedXLabels);
-                var YValues = @Html.Raw(StackedYValues );
-                var label = @Html.Raw( StackedLabel2 );
-                var aux = 0;
-
-                var barChartData = {
-                    labels:  @Html.Raw(StackedLabel2),
-                    datasets: []
-                }
-
-                XLabels.forEach(function (a, i) {
-                    var data = [];
-                    YValues.forEach(function (a, i) {
-                        data.push(a[aux]);
-                    });
-
-                barChartData.datasets.push({
-                    label: XLabels[aux],
-                    backgroundColor: random_rgba(),
-                    data: data
-                    });
-                    aux++;
-                });
-                var options = {
-                    maintainAspectRatio: false,
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                min: 0,
-                                beginAtZero: true
-                            },
-                            stacked: true,
-                            gridLines: {
-                                display: true,
-                                color: "rgba(255,99,164,0.2)"
-                            }
-                        }],
-                        xAxes: [{
-                            stacked: true,
-                            gridLines: {
-                                display: false
-                            }
-                        }]
-                    }
-                };
-                function random_rgba() {
-                    var o = Math.round, r = Math.random, s = 255;
-                    return 'rgba(' + o(r() * s) + ',' + o(r() * s) + ',' + o(r() * s) + ',' + r().toFixed(1) + ')';
-                }
-                var myChart = new Chart(ctx, {
-                    options: options,
-                    data: barChartData,
-                    type: 'bar'
-
-                });
-            });
-    </script>*@
-
-
-<!-- Sliders -->
 <script>
-    $(function () {
-        /* BOOTSTRAP SLIDER */
-        $('.slider').bootstrapSlider();
-
-        /* ION SLIDER */
-        $("#range_1").ionRangeSlider({
-            min: 0,
-            max: 5000,
-            from: 1000,
-            to: 4000,
-            type: 'double',
-            step: 1,
-            prefix: "$",
-            prettify: true,
-            hasGrid: true
-        });
-        $("#range_2").ionRangeSlider();
-
-        $("#range_5").ionRangeSlider({
-            min: 0,
-            max: 10,
-            type: 'single',
-            step: 0.1,
-            postfix: " mm",
-            prettify: false,
-            hasGrid: true
-        });
-        $("#range_6").ionRangeSlider({
-            min: -50,
-            max: 50,
-            from: 0,
-            type: 'single',
-            step: 1,
-            postfix: "°",
-            prettify: false,
-            hasGrid: true
-        });
-
-        $("#range_4").ionRangeSlider({
-            type: "single",
-            step: 100,
-            postfix: " Date",
-            from: 55000,
-            hideMinMax: true,
-            hideFromTo: false
-        });
-        $("#range_3").ionRangeSlider({
-            type: "double",
-            postfix: " miles",
-            step: 10000,
-            from: 25000000,
-            to: 35000000,
-            onChange: function (obj) {
-                var t = "";
-                for (var prop in obj) {
-                    t += prop + ": " + obj[prop] + "\r\n";
-                }
-                $("#result").html(t);
-            },
-            onLoad: function (obj) {
-                //
-            }
+    //Paramters script
+    $(document).ready(function () {
+        $('#paramtersComboBox').multiselect({
+            nonSelectedText: 'Select Parameter',
+            buttonWidth: 300,
+            enableFiltering: true
         });
     });
-</script>
 
-<script>
+    //Date range script
     $(function () {
         $("#datemask").inputmask("dd/mm/yyyy", { "placeholder": "dd/mm/yyyy" });
         $("[data-mask]").inputmask();

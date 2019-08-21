@@ -1,6 +1,7 @@
 ﻿
 using System.Collections.Generic;
 using EMS.Meter.Entities;
+using EMS.Parameter.Entities;
 
 namespace EMS.Common
 {
@@ -8,14 +9,42 @@ namespace EMS.Common
     {
         public int CurrentCost = 150;
 
+        #region Zoning
+
         public int TotalBuildings { get; set; }
         public int TotalApartments { get; set; }
 
+        #endregion
+
+        #region Consumers
+
+        #endregion
+
+        #region Advertisment
+
+        #endregion
+
+        #region Parameter
+
+        public List<ParameterRow> ParametersList { get; set; }
+
+
+        #endregion
+
+        #region Meter
+
         public int TotalMeters { get; set; }
+        public List<MeterDetailRow> MeterDetailsList { get; set; }
+
+        #endregion
+
+        #region EMS Devices
 
         public int TotalEMSDevices { get; set; }
+        
+        #endregion
 
-        public List<MeterDetailRow> MeterDetailsList {get;set;}
+
 
 
         public List<SimpleReportViewModel> BarLstModel { get; set; }
