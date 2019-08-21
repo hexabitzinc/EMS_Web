@@ -118,13 +118,21 @@
 <!-- Main row -->
 <div class="row">
     <div class="box-body">
-
         <div class="example">
+            <select id="metersComboBox">
+                @{
+                    foreach (var meter in @Model.MetersList)
+                    {
+                    <option value="@meter.MeterId">@meter.Name</option>
+                    }
+                }
+            </select>
+
             <select id="paramtersComboBox">
                 @{
                     foreach (var parameter in @Model.ParametersList)
                     {
-                        <option value="@parameter.ParameterId">@parameter.Name</option>
+                    <option value="@parameter.ParameterId">@parameter.Name</option>
                     }
                 }
             </select>
@@ -132,10 +140,9 @@
 
         <!-- Date and time range -->
         <div class="form-group">
-            <label>Date: </label>
             <div class="input-group">
                 <button class="btn btn-default pull-right" id="daterange-btn">
-                    <i class="fa fa-calendar"></i> Date range picker
+                    <i class="fa fa-calendar"></i> Date filter
                     <i class="fa fa-caret-down"></i>
                 </button>
             </div>
@@ -236,7 +243,7 @@
                 scales: {
                     yAxes: [{
                         ticks: {
-                            min: 0,
+                            min: -10,
                             beginAtZero: true
                         },
                         gridLines: {
@@ -342,12 +349,25 @@
 </script>
 
 <script>
-    //Paramters script
+    //combo boxes
     $(document).ready(function () {
+        $('#metersComboBox').multiselect({
+            nonSelectedText: 'Select Meter',
+            buttonWidth: 300,
+            enableFiltering: true,
+            
+        });
+
         $('#paramtersComboBox').multiselect({
             nonSelectedText: 'Select Parameter',
             buttonWidth: 300,
             enableFiltering: true
+        });
+
+        $("#metersComboBox").change(function () {
+            var $this = $(this);
+            var url = "/Meter/Meter#edit/" + $this.val();
+            window.location.href = url;
         });
     });
 

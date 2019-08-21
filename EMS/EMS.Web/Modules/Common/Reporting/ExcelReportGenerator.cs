@@ -236,7 +236,7 @@ namespace Serenity.Reporting
 #if COREFX
                         if (!string.IsNullOrEmpty(decorator.Background) ||
                             !string.IsNullOrEmpty(decorator.Foreground) ||
-                            !Object.Equals(decorator.Value, value) ||
+                            !object.Equals(decorator.Value, value) ||
                             decorator.Format != null)
                         {
                             var cell = worksheet.Cells[rowNum, colNum];
@@ -258,7 +258,7 @@ namespace Serenity.Reporting
                             if (decorator.Format != null)
                                 cell.Style.Numberformat.Format = FixFormatSpecifier(decorator.Format, col.DataType);
 
-                            if (!Object.Equals(decorator.Value, value))
+                            if (!object.Equals(decorator.Value, value))
                                 cell.Value = decorator.Value;
                         }
 

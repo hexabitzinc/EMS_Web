@@ -19,14 +19,14 @@ namespace EMS
         public static void HandleDeleteForeignKeyException(Exception e)
         {
             ForeignKeyExceptionInfo fk;
-            if (SqlExceptionHelper.IsForeignKeyException(e, out fk))
+            if (IsForeignKeyException(e, out fk))
                 throw new ValidationError(String.Format(Texts.Validation.DeleteForeignKeyError, fk.TableName));
         }
 
         public static void HandleSavePrimaryKeyException(Exception e, string fieldName = "ID")
         {
             PrimaryKeyExceptionInfo fk;
-            if (SqlExceptionHelper.IsPrimaryKeyException(e, out fk))
+            if (IsPrimaryKeyException(e, out fk))
                 throw new ValidationError(String.Format(Texts.Validation.SavePrimaryKeyError, fk.TableName, fieldName));
         }
 

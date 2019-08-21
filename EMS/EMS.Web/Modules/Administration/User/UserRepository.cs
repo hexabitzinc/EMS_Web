@@ -109,7 +109,7 @@ namespace EMS.Administration.Repositories
             {
                 base.GetEditableFields(editable);
 
-                if (!Authorization.HasPermission(Administration.PermissionKeys.Security))
+                if (!Authorization.HasPermission(PermissionKeys.Security))
                 {
                     editable.Remove(fld.Source);
                     editable.Remove(fld.IsActive);
@@ -190,7 +190,7 @@ namespace EMS.Administration.Repositories
                         password = Row.Password = ValidatePassword(Old.Username, Row.Password, false);
 
                     if (Row.Username != Old.Username)
-                        Row.Username = MySaveHandler.ValidateUsername(this.Connection, Row.Username, Old.UserId.Value);
+                        Row.Username = ValidateUsername(this.Connection, Row.Username, Old.UserId.Value);
 
                     if (Row.DisplayName != Old.DisplayName)
                         Row.DisplayName = ValidateDisplayName(this.Connection, Row.DisplayName, Old.UserId.Value);

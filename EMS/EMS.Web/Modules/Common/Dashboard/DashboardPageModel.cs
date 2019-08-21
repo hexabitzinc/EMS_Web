@@ -33,6 +33,9 @@ namespace EMS.Common
 
         #region Meter
 
+        public List<MeterRow> MetersList { get; set; }
+
+
         public int TotalMeters { get; set; }
         public List<MeterDetailRow> MeterDetailsList { get; set; }
 

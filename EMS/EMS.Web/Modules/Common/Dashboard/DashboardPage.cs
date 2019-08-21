@@ -29,19 +29,16 @@ namespace EMS.Common.Pages
                     #region Zoning
                     model.TotalBuildings = connection.Count<BuildingRow>();
                     model.TotalApartments = connection.Count<ApartmentRow>();
-
                     #endregion
-
 
                     #region Parameter
                     model.ParametersList = connection.List<ParameterRow>();
                     #endregion
 
-
                     #region Meter
+                    model.MetersList = connection.List<MeterRow>();
                     model.TotalMeters = connection.Count<MeterRow>();
                     #endregion
-
 
                     #region EMSDevice
                     model.TotalEMSDevices = connection.Count<EmsDeviceRow>();
@@ -53,7 +50,6 @@ namespace EMS.Common.Pages
 
                     model.PieLstModel = new List<SimpleReportViewModel>();
                     model.PieLstModel = Pie();
-
                     #endregion
 
                     return model;
@@ -61,6 +57,84 @@ namespace EMS.Common.Pages
 
             return View(MVC.Views.Common.Dashboard.DashboardIndex, cachedModel);
         }
+
+        public List<SimpleReportViewModel> Queries(DateTime start, DateTime end, int consumerId, List<int?> meterId, List<int> parameterId)
+        {
+            var lstModel = new List<SimpleReportViewModel>();
+            bool isAdmin = false;
+            bool isOperator = false;
+            bool isConsumer = false;
+
+            using (var connection = SqlConnections.NewByKey("Default"))
+            {
+                if (isAdmin)
+                {
+                    List<MeterRow> meters = connection.List<MeterRow>();
+                    List<MeterDetailRow> meterDetails = new List<MeterDetailRow>();
+                    meterDetails.AddRange(connection.List<MeterDetailRow>().FindAll(md => meterId.Contains(md.MeterId)));
+
+                    foreach (var item in meterDetails)
+                    {
+                        var x = connection.ById<SchedulingRow>(item.SchedulingId);
+                        lstModel.Add(new SimpleReportViewModel
+                        {
+                            DimensionOne = x.FullDate.ToString(),
+                            Quantity = int.Parse(item.Value)
+                        });
+                    }
+                    return lstModel;
+                }
+                if (isOperator)
+                {
+                    List<MeterRow> meters = new List<MeterRow>();
+                    var meterRows = connection.List<MeterRow>();
+                    meters = meterRows.FindAll(m => m.ConsumerId == consumerId);
+                    List<MeterDetailRow> meterDetails = new List<MeterDetailRow>();
+                    foreach (var item in meters)
+                    {
+                        meterDetails.AddRange(connection.List<MeterDetailRow>().FindAll(md => md.MeterId == item.MeterId));
+                    }
+
+                    foreach (var item in meterDetails)
+                    {
+                        var x = connection.ById<SchedulingRow>(item.SchedulingId);
+                        lstModel.Add(new SimpleReportViewModel
+                        {
+                            DimensionOne = x.FullDate.ToString(),
+                            Quantity = int.Parse(item.Value)
+                        });
+                    }
+                    return lstModel;
+                }
+                if (isConsumer)
+                {
+                    List<MeterRow> meters = new List<MeterRow>();
+                    var meterRows = connection.List<MeterRow>();
+                    meters = meterRows.FindAll(m => m.ConsumerId == consumerId);
+                    List<MeterDetailRow> meterDetails = new List<MeterDetailRow>();
+                    foreach (var item in meters)
+                    {
+                        meterDetails.AddRange(connection.List<MeterDetailRow>().FindAll(md => md.MeterId == item.MeterId));
+                    }
+
+                    foreach (var item in meterDetails)
+                    {
+                        var x = connection.ById<SchedulingRow>(item.SchedulingId);
+                        lstModel.Add(new SimpleReportViewModel
+                        {
+                            DimensionOne = x.FullDate.ToString(),
+                            Quantity = int.Parse(item.Value)
+                        });
+                    }
+                    return lstModel;
+                }
+
+            }
+
+            return lstModel;
+        }
+
+
         [HttpPost]
         [Route("~/chart")]
         public List<SimpleReportViewModel> Bar()
@@ -78,7 +152,7 @@ namespace EMS.Common.Pages
                                 --and MeterID = @MeterId
                                 and ParameterID in @ParameterId";
 
-                string dateStart = "2019-06-14 11:43:21";
+                string dateStart = "2019-03-14 11:43:21";
                 string dateEnd = "2019-08-09 15:43:21";
                 int meterId = 1;
                 int[] parameterId = { 1, 2, 3, 4, 5 };
@@ -161,82 +235,6 @@ namespace EMS.Common.Pages
             return lstModel;
         }
 
-        public List<SimpleReportViewModel> Queries(DateTime start, DateTime end, int consumerId, List<int?> meterId, List<int> parameterId)
-        {
-            var lstModel = new List<SimpleReportViewModel>();
-            bool isAdmin = false;
-            bool isOperator = false;
-            bool isConsumer = false;
-
-            using (var connection = SqlConnections.NewByKey("Default"))
-            {
-                if (isAdmin)
-                {
-                    List<MeterRow> meters = connection.List<MeterRow>();
-                    List<MeterDetailRow> meterDetails = new List<MeterDetailRow>();
-                    meterDetails.AddRange(connection.List<MeterDetailRow>().FindAll(md => meterId.Contains(md.MeterId)));
-
-                    foreach (var item in meterDetails)
-                    {
-                        var x = connection.ById<SchedulingRow>(item.SchedulingId);
-                        lstModel.Add(new SimpleReportViewModel
-                        {
-                            DimensionOne = x.FullDate.ToString(),
-                            Quantity = int.Parse(item.Value)
-                        });
-                    }
-                    return lstModel;
-                }
-                if (isOperator)
-                {
-                    List<MeterRow> meters = new List<MeterRow>();
-                    var meterRows = connection.List<MeterRow>();
-                    meters = meterRows.FindAll(m => m.ConsumerId == consumerId);
-                    List<MeterDetailRow> meterDetails = new List<MeterDetailRow>();
-                    foreach (var item in meters)
-                    {
-                        meterDetails.AddRange(connection.List<MeterDetailRow>().FindAll(md => md.MeterId == item.MeterId));
-                    }
-
-                    foreach (var item in meterDetails)
-                    {
-                        var x = connection.ById<SchedulingRow>(item.SchedulingId);
-                        lstModel.Add(new SimpleReportViewModel
-                        {
-                            DimensionOne = x.FullDate.ToString(),
-                            Quantity = int.Parse(item.Value)
-                        });
-                    }
-                    return lstModel;
-                }
-                if (isConsumer)
-                {
-                    List<MeterRow> meters = new List<MeterRow>();
-                    var meterRows = connection.List<MeterRow>();
-                    meters = meterRows.FindAll(m => m.ConsumerId == consumerId);
-                    List<MeterDetailRow> meterDetails = new List<MeterDetailRow>();
-                    foreach (var item in meters)
-                    {
-                        meterDetails.AddRange(connection.List<MeterDetailRow>().FindAll(md => md.MeterId == item.MeterId));
-                    }
-
-                    foreach (var item in meterDetails)
-                    {
-                        var x = connection.ById<SchedulingRow>(item.SchedulingId);
-                        lstModel.Add(new SimpleReportViewModel
-                        {
-                            DimensionOne = x.FullDate.ToString(),
-                            Quantity = int.Parse(item.Value)
-                        });
-                    }
-                    return lstModel;
-                }
-
-            }
-
-            return lstModel;
-        }
-
 
         public List<SimpleReportViewModel> Line()
         {
@@ -274,101 +272,6 @@ namespace EMS.Common.Pages
             });
             return lstModel;
         }
-
-        //public List<StackedViewModel> Stacked()
-        //{
-        //    var lstModel = new List<StackedViewModel>();
-        //    //sales of product sales by quarter
-        //    lstModel.Add(new StackedViewModel
-        //    {
-        //        StackedDimensionOne = "First Quarter",
-        //        LstData = new List<SimpleReportViewModel>()
-        //        {
-        //            new SimpleReportViewModel()
-        //            {
-        //                DimensionOne="TV",
-        //                Quantity = rnd.Next(10)
-        //            },
-        //            new SimpleReportViewModel()
-        //            {
-        //                DimensionOne="Games",
-        //                Quantity = rnd.Next(10)
-        //            },
-        //            new SimpleReportViewModel()
-        //            {
-        //                DimensionOne="Books",
-        //                Quantity = rnd.Next(10)
-        //            }
-        //        }
-        //    });
-        //    lstModel.Add(new StackedViewModel
-        //    {
-        //        StackedDimensionOne = "Second Quarter",
-        //        LstData = new List<SimpleReportViewModel>()
-        //        {
-        //            new SimpleReportViewModel()
-        //            {
-        //                DimensionOne="TV",
-        //                Quantity = rnd.Next(10)
-        //            },
-        //            new SimpleReportViewModel()
-        //            {
-        //                DimensionOne="Games",
-        //                Quantity = rnd.Next(10)
-        //            },
-        //            new SimpleReportViewModel()
-        //            {
-        //                DimensionOne="Books",
-        //                Quantity = rnd.Next(10)
-        //            }
-        //        }
-        //    });
-        //    lstModel.Add(new StackedViewModel
-        //    {
-        //        StackedDimensionOne = "Third Quarter",
-        //        LstData = new List<SimpleReportViewModel>()
-        //        {
-        //            new SimpleReportViewModel()
-        //            {
-        //                DimensionOne="TV",
-        //                Quantity = rnd.Next(10)
-        //            },
-        //            new SimpleReportViewModel()
-        //            {
-        //                DimensionOne="Games",
-        //                Quantity = rnd.Next(10)
-        //            },
-        //            new SimpleReportViewModel()
-        //            {
-        //                DimensionOne="Books",
-        //                Quantity = rnd.Next(10)
-        //            }
-        //        }
-        //    });
-        //    lstModel.Add(new StackedViewModel
-        //    {
-        //        StackedDimensionOne = "Fourth Quarter",
-        //        LstData = new List<SimpleReportViewModel>()
-        //        {
-        //            new SimpleReportViewModel()
-        //            {
-        //                DimensionOne="TV",
-        //                Quantity = rnd.Next(10)
-        //            },
-        //            new SimpleReportViewModel()
-        //            {
-        //                DimensionOne="Games",
-        //                Quantity = rnd.Next(10)
-        //            },
-        //            new SimpleReportViewModel()
-        //            {
-        //                DimensionOne="Books",
-        //                Quantity = rnd.Next(10)
-        //            }
-        //        }
-        //    });
-        //    return lstModel;
-        //}
-
+        
     }
 }

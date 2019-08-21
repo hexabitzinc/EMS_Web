@@ -55,7 +55,7 @@ namespace EMS.Migrations
 
             addColumns(
                 addAsType(
-                    addSchema(migration.IfDatabase(Utils.AllExceptOracle)
+                    addSchema(migration.IfDatabase(AllExceptOracle)
                         .Create.Table(table))
                             .WithColumn(idField))
                             .Identity().PrimaryKey().NotNullable());

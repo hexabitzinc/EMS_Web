@@ -91,9 +91,9 @@ namespace EMS
             textRegistry.AddEnumTexts();
             textRegistry.AddRowTexts();
             var contentRoot = env.ContentRootPath;
-            textRegistry.AddJsonTexts(System.IO.Path.Combine(env.WebRootPath, "Scripts/serenity/texts".Replace('/', Path.DirectorySeparatorChar)));
-            textRegistry.AddJsonTexts(System.IO.Path.Combine(env.WebRootPath, "Scripts/site/texts".Replace('/', Path.DirectorySeparatorChar)));
-            textRegistry.AddJsonTexts(System.IO.Path.Combine(env.ContentRootPath, "App_Data/texts".Replace('/', Path.DirectorySeparatorChar)));
+            textRegistry.AddJsonTexts(Path.Combine(env.WebRootPath, "Scripts/serenity/texts".Replace('/', Path.DirectorySeparatorChar)));
+            textRegistry.AddJsonTexts(Path.Combine(env.WebRootPath, "Scripts/site/texts".Replace('/', Path.DirectorySeparatorChar)));
+            textRegistry.AddJsonTexts(Path.Combine(env.ContentRootPath, "App_Data/texts".Replace('/', Path.DirectorySeparatorChar)));
 
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
@@ -123,6 +123,25 @@ namespace EMS
             });
 
             DataMigrations.Initialize();
+
+
+            #region EMS
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=DashboardPage}/{action=Index}/{id?}");
+
+                // New code to handle requests like '/Users/1/BuyProduct/2'
+                routes.MapRoute(
+                    // Name of the new route, we'll need it later to generate URLs in the templates
+                    name: "twoids",
+                    // Route pattern
+                    template: "{controller}/{name}/{action}/{name2}");
+            });
+
+
+            #endregion
         }
 
         public static void RegisterDataProviders()
